@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="除授：用于理解宋代官制、官名、制度沿革与人物官履的交互式知识工具。"
+    />
+    <title>除授｜宋代官制知识图谱</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#overview" aria-label="返回首页">
+          <span class="brand-mark">除</span>
+          <span>
+            <strong>除授</strong>
+            <small>宋代官制知识图谱</small>
+          </span>
+        </a>
+        <nav class="main-nav" aria-label="主导航">
+          <button class="nav-item is-active" data-view="overview">总览</button>
+          <button class="nav-item" data-view="institutions">制度地图</button>
+          <button class="nav-item" data-view="titles">官名通解</button>
+          <button class="nav-item" data-view="changes">制度沿革</button>
+          <button class="nav-item" data-view="careers">人物官履</button>
+          <button class="nav-item" data-view="decoder">原文解码</button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="view is-visible" id="overview" data-view-panel="overview">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">SONG OFFICIAL SYSTEM · MVP</p>
+              <h1>不只记官名，<br />而是看懂一个人<br />在制度里处于哪里。</h1>
+              <p class="hero-intro">
+                “除授”把机构、官阶、职名、差遣、制度版本和人物任官事件放在同一张底图上。
+                第一版以北宋文官制度为主，并用苏轼的仕途作为检验入口。
+              </p>
+              <div class="hero-actions">
+                <button class="primary-button" data-jump="decoder">试着解码一串官衔</button>
+                <button class="secondary-button" data-jump="institutions">打开制度地图</button>
+              </div>
+            </div>
+
+            <aside class="hero-panel" aria-label="示例官衔拆解">
+              <div class="panel-label">示例官衔</div>
+              <h2>朝奉郎、龙图阁学士、知杭州军州事</h2>
+              <div class="title-stack">
+                <div>
+                  <span class="badge badge-rank">寄禄官</span>
+                  <strong>朝奉郎</strong>
+                  <p>主要表示官阶、资序与禄秩。</p>
+                </div>
+                <div>
+                  <span class="badge badge-honor">职名</span>
+                  <strong>龙图阁学士</strong>
+                  <p>体现资望与文学侍从身份。</p>
+                </div>
+                <div>
+                  <span class="badge badge-duty">实际职务</span>
+                  <strong>知杭州军州事</strong>
+                  <p>真正主持杭州地方政务。</p>
+                </div>
+              </div>
+              <p class="plain-summary">
+                白话总结：此人实际在杭州主政；另外两个头衔主要说明他的官阶和政治资望。
+              </p>
+            </aside>
+          </div>
+
+          <div class="stats-strip" aria-label="当前示例数据规模">
+            <div><strong id="title-count">0</strong><span>个示例官名</span></div>
+            <div><strong id="institution-count">0</strong><span>个制度节点</span></div>
+            <div><strong id="career-count">0</strong><span>条人物任官记录</span></div>
+            <div><strong>5</strong><span>个制度观察时期</span></div>
+          </div>
+
+          <section class="question-section">
+            <div class="section-heading">
+              <p class="eyebrow">从问题进入制度</p>
+              <h2>这个应用首先要回答什么？</h2>
+            </div>
+            <div class="question-grid">
+              <article class="question-card" data-jump="titles">
+                <span>01</span>
+                <h3>它是什么性质的官名？</h3>
+                <p>区分官阶、职名、差遣、爵位、勋号与实际职务。</p>
+              </article>
+              <article class="question-card" data-jump="institutions">
+                <span>02</span>
+                <h3>它在国家机器的哪里？</h3>
+                <p>查看所属机构、上下级、平行机关与中央—地方层级。</p>
+              </article>
+              <article class="question-card" data-jump="changes">
+                <span>03</span>
+                <h3>同一官名为何前后不同？</h3>
+                <p>切换时期，观察元丰改制前后名称与职掌的变化。</p>
+              </article>
+              <article class="question-card" data-jump="careers">
+                <span>04</span>
+                <h3>这次任命究竟是升是降？</h3>
+                <p>同时比较官阶、实际差遣、政治中心度和任职背景。</p>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="institutions" data-view-panel="institutions">
+          <div class="section-heading page-heading">
+            <p class="eyebrow">制度地图</p>
+            <h1>先看机构，再看官员</h1>
+            <p>这不是一棵简单官职树，而是中央、地方与官员身份三套结构的叠合。</p>
+          </div>
+
+          <div class="toolbar">
+            <div class="segmented-control" id="institution-scope" aria-label="制度地图范围">
+              <button class="is-active" data-scope="central">中央</button>
+              <button data-scope="local">地方</button>
+              <button data-scope="identity">官员身份</button>
+            </div>
+            <label class="select-label">
+              观察时期
+              <select id="institution-period"></select>
+            </label>
+          </div>
+
+          <div class="map-layout">
+            <div class="institution-map" id="institution-map"></div>
+            <aside class="detail-panel" id="institution-detail">
+              <p class="muted">点击左侧节点，查看职掌、关系和时期说明。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="titles" data-view-panel="titles">
+          <div class="section-heading page-heading">
+            <p class="eyebrow">官名通解</p>
+            <h1>一个名称，必须带着时期解释</h1>
+            <p>同一名称可能经历阶官化、差遣化或重新恢复职掌，不能只存一条静态定义。</p>
+          </div>
+
+          <div class="toolbar title-toolbar">
+            <label class="search-field">
+              <span>搜索</span>
+              <input id="title-search" type="search" placeholder="例如：通判、朝奉郎、学士……" />
+            </label>
+            <label class="select-label">
+              类型
+              <select id="title-category"></select>
+            </label>
+            <label class="select-label">
+              时期
+              <select id="title-period"></select>
+            </label>
+          </div>
+
+          <div class="content-layout">
+            <div class="title-list" id="title-list"></div>
+            <aside class="detail-panel" id="title-detail">
+              <p class="muted">选择一个官名，查看完整解释。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="changes" data-view-panel="changes">
+          <div class="section-heading page-heading">
+            <p class="eyebrow">制度沿革</p>
+            <h1>把“元丰改制”放回长时间轴</h1>
+            <p>时间轴不是装饰，而是每一条官名解释的版本控制系统。</p>
+          </div>
+
+          <div class="period-switcher" id="period-switcher"></div>
+          <div class="change-layout">
+            <div class="change-summary" id="change-summary"></div>
+            <div class="before-after" id="before-after"></div>
+          </div>
+          <div class="timeline" id="reform-timeline"></div>
+        </section>
+
+        <section class="view" id="careers" data-view-panel="careers">
+          <div class="section-heading page-heading">
+            <p class="eyebrow">人物官履</p>
+            <h1>人物是制度模型的压力测试</h1>
+            <p>苏轼不是数据库的中心，而是检验“官名—时期—任命事件”模型是否成立的最佳案例之一。</p>
+          </div>
+
+          <div class="toolbar">
+            <label class="select-label">
+              人物
+              <select id="person-select"></select>
+            </label>
+            <label class="select-label">
+              观察维度
+              <select id="career-dimension">
+                <option value="all">综合</option>
+                <option value="actual">实际职务</option>
+                <option value="rank">官阶与资序</option>
+                <option value="political">政治位置</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="career-layout">
+            <div class="career-timeline" id="career-timeline"></div>
+            <aside class="detail-panel" id="career-detail">
+              <p class="muted">点击任官节点，查看完整官衔拆解。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="decoder" data-view-panel="decoder">
+          <div class="section-heading page-heading">
+            <p class="eyebrow">原文解码</p>
+            <h1>把一串官衔拆成“身份”和“工作”</h1>
+            <p>当前是规则驱动的演示版；后续可加入异名表、原文句法与人工校订。</p>
+          </div>
+
+          <div class="decoder-grid">
+            <div class="decoder-input-card">
+              <label for="decoder-input">输入官衔或任官原文</label>
+              <textarea id="decoder-input" rows="8">朝奉郎、龙图阁学士、知杭州军州事</textarea>
+              <div class="sample-row">
+                <span>示例：</span>
+                <button data-sample="朝奉郎、龙图阁学士、知杭州军州事">知杭州</button>
+                <button data-sample="大理评事、签书凤翔府判官厅公事">凤翔任官</button>
+                <button data-sample="黄州团练副使、本州安置">黄州贬谪</button>
+              </div>
+              <button class="primary-button full-width" id="decode-button">开始解码</button>
+            </div>
+
+            <div class="decoder-output-card" id="decoder-output">
+              <p class="muted">解码结果会显示在这里。</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>
+          <strong>除授 Chushou</strong>
+          <p>从官制系统出发，理解两宋人物与政治运行。</p>
+        </div>
+        <p>当前为研究型 MVP。示例数据需继续依据《宋史·职官志》、会要、年谱与专门研究逐条校订。</p>
+      </footer>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
