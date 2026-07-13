@@ -29,12 +29,15 @@
 - 建立静态性能预算，当前 HTML、JS、CSS、最大路由 chunk 与站点投影全部通过。
 - 对 13 个代表性深链接完成 axe WCAG A／AA 与 console error 自动检查，并补齐搜索、证据侧栏、skip link 和移动导航的键盘旅程。
 - 补齐贡献指南、代码／数据许可证、机器可读引用元数据、性能／无障碍报告与最终交付说明。
+- 建立可复现 Lighthouse 移动模拟运行器；首页／官名详情／苏轼官履 Performance 为 98／93／98，Accessibility 均为 100。
+- 补齐 README 生产构建截图与 Pages 目标地址；地址在 2026-07-13 仍为 404，需合并 `main` 后由 workflow 首次发布。
 
 ## 后续研究工作
 
 - 继续扩充品秩方案覆盖，但保持局部 sequence 与全表绝对编号的区别。
 - 在取得合法年谱文本前，按卷338 gap 优先补高价值真实 appointment；三名反例人物先保持诚实的小切片边界。
 - 在固定辅助技术和网络环境中继续人工 WCAG／Lighthouse 基线抽查。
+- GitHub Pages 的首次远端发布需要经授权推送并合并当前分支；本地不伪装为已上线。
 
 ## 已运行证据
 
@@ -52,13 +55,18 @@ npm run test:e2e
 
 npm run quality:budget
 7 static asset budgets passed.
+
+npm run quality:lighthouse
+Home 98/100; title detail 93/100; Su Shi career 98/100
+(Performance/Accessibility, mobile simulated throttling)
 ```
 
 ## 下一步
 
 1. 取得可合法使用的孔凡礼年谱纸本／数据库文本并建立权威分母；在此之前不声称完整。
 2. 继续从卷169补全品秩方案，同时逐条核对时段边界。
-3. 在固定屏幕阅读器、浏览器缩放和网络节流配置中扩展人工质量基线。
+3. 在固定屏幕阅读器、浏览器缩放和真实网络设备中扩展人工质量基线。
+4. 获得远端写入／合并授权后触发 Pages 首次发布并复核在线深链接。
 
 ## 尚未声称完成的事项
 

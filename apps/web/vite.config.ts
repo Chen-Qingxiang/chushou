@@ -7,6 +7,11 @@ import { defineConfig, type Plugin } from "vite";
 const appRoot = path.dirname(fileURLToPath(import.meta.url));
 const repositoryRoot = path.resolve(appRoot, "../..");
 const outputRoot = path.resolve(repositoryRoot, "dist");
+const generatedSite = JSON.parse(
+  await readFile(path.join(repositoryRoot, "data", "generated", "site.json"), "utf8"),
+) as {
+  metadata: { curatedAt: string; datasetVersion: string; releaseStage: string };
+};
 const downloadFiles = [
   "release.json",
   "manifest.json",
@@ -59,6 +64,11 @@ function researchArtifacts(): Plugin {
 export default defineConfig({
   root: appRoot,
   base: "/chushou/",
+  define: {
+    __CURATED_AT__: JSON.stringify(generatedSite.metadata.curatedAt),
+    __DATASET_VERSION__: JSON.stringify(generatedSite.metadata.datasetVersion),
+    __RELEASE_STAGE__: JSON.stringify(generatedSite.metadata.releaseStage),
+  },
   plugins: [react(), researchArtifacts()],
   server: {
     fs: { allow: [repositoryRoot] },

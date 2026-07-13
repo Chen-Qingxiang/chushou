@@ -21,6 +21,8 @@ npm run test:e2e
 
 `npm run ci` 校验格式、lint、严格类型、curated 数据、提交的 JSON Schema、9 条单元／集成测试、生产构建和静态性能预算。Playwright 运行 13 条 Chromium 测试，其中包含 13 个代表性页面的 axe WCAG A／AA 扫描、console error 检查和键盘焦点旅程。GitHub Pages workflow 只上传并发布通过这些门禁的同一份 `dist/`。
 
+独立的 `npm run quality:lighthouse` 在移动模拟下测量首页、官名详情和苏轼官履：Performance 98／93／98，Accessibility 均为 100，LCP 2.12–2.49 秒，CLS 均为 0.009。原始基线保存在 `docs/reports/lighthouse-baseline.json`。
+
 ## 明确边界
 
 - 59 个官名是北宋中央核心切片，不是全宋官名全集；
@@ -28,5 +30,6 @@ npm run test:e2e
 - 人物任命顺序不被解释成因果、概率或通用晋升树；
 - 自动 axe 和静态体积预算不等于完整辅助技术审计或 Lighthouse 实测；
 - 研究预览应回查可靠点校本，并同时引用 assertion／passage ID 与底层来源定位。
+- Pages workflow 已完成但尚未远端触发；目标 URL 在 2026-07-13 核验为 404，不能声称已上线。
 
 后续扩展应优先取得合法年谱核对条件、补卷 338 gap、扩大品秩方案及反例人物覆盖，而不削弱现有 evidence gate。

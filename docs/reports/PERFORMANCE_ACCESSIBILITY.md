@@ -23,12 +23,26 @@ Playwright 在 13 个代表性深链接上运行 axe-core，规则标签覆盖 W
 
 | 资产                    |     测量值 |    预算 | 结果 |
 | ----------------------- | ---------: | ------: | ---- |
-| HTML raw                |   0.81 KiB |   5 KiB | PASS |
-| 最大 JS gzip            |  56.00 KiB |  65 KiB | PASS |
-| 全部入口与 lazy JS gzip | 109.35 KiB | 125 KiB | PASS |
-| CSS gzip                |  10.94 KiB |  14 KiB | PASS |
-| 最大路由 chunk gzip     |   7.37 KiB |  12 KiB | PASS |
+| HTML raw                |   1.08 KiB |   5 KiB | PASS |
+| 最大 JS gzip            |  58.28 KiB |  65 KiB | PASS |
+| 全部入口与 lazy JS gzip | 109.93 KiB | 125 KiB | PASS |
+| CSS gzip                |  10.97 KiB |  14 KiB | PASS |
+| 最大路由 chunk gzip     |   7.38 KiB |  12 KiB | PASS |
 | 站点投影 raw            | 537.81 KiB | 650 KiB | PASS |
 | 站点投影 gzip           |  62.91 KiB |  80 KiB | PASS |
 
-这里的预算约束静态传输体积，不等同于网络环境中的 Lighthouse 指标。仓库目前没有稳定的受控 Lighthouse 运行器，因此不伪造 LCP、CLS 或性能分数；后续应在固定设备／网络节流配置上建立并保存独立基线。
+这里的预算约束静态传输体积，不等同于网络环境中的 Lighthouse 指标。独立移动模拟基线由 `npm run quality:lighthouse` 写入 `lighthouse-baseline.json`；运行器固定工具、浏览器、路由和阈值，下一节记录最终实测。
+
+## Lighthouse 移动模拟基线
+
+Lighthouse 12.6.1 使用 Playwright Chromium、mobile form factor 和 simulated throttling，对本地生产构建进行压缩静态传输测量。运行器会生成 `lighthouse-baseline.json`，并在 Performance < 90 或 Accessibility < 95 时失败。
+
+| 路由     | Performance | Accessibility |     LCP |    TBT |   CLS |
+| -------- | ----------: | ------------: | ------: | -----: | ----: |
+| 首页     |          98 |           100 | 2124 ms |  28 ms | 0.009 |
+| 官名详情 |          93 |           100 | 2487 ms | 191 ms | 0.009 |
+| 苏轼官履 |          98 |           100 | 2144 ms |  57 ms | 0.009 |
+
+三条路由均达到目标。优化前诊断显示整站投影未压缩传输时 LCP 约 5.5 秒、启动与页脚位移使 CLS 最高达到 0.339；最终运行器模拟静态托管的 gzip 与缓存响应，应用则提前 preload 数据、让无数据依赖的外壳先渲染、把搜索拆成按需 chunk，并确保载入时页脚保持首屏外。尚存的主要体积风险是 537.81 KiB raw 的整站投影和 58.28 KiB gzip 的入口 JS；二者已纳入失败预算，数据扩大时应优先拆分按领域投影，而不是提高阈值。
+
+Lighthouse 分数存在运行波动，因此没有加入每次 GitHub Actions 的硬门禁；确定性的 gzip 体积预算仍在 CI 中执行。发布前可用 `npm run quality:lighthouse` 重新生成有时间戳的基线。

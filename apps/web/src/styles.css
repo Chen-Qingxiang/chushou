@@ -212,7 +212,7 @@ kbd {
   background: var(--ink);
 }
 main {
-  min-height: 70vh;
+  min-height: calc(100vh - 40px);
   padding-top: 62px;
 }
 main:focus {
@@ -2875,6 +2875,11 @@ textarea:focus {
   text-align: center;
   background: var(--surface);
   font: 12px var(--sans);
+}
+.boot-pending {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
 }
 .boot-shell strong {
   color: var(--ink);

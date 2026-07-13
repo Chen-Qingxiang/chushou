@@ -4,6 +4,10 @@
 
 “除授”不把官衔压成一条高低刻度。系统分别保存身份／官阶、荣衔与专长、实际职务、地点和政治状态，并区分任命动作与实际任事。每项可发布主张都能展开到短引文、版本和来源定位。
 
+GitHub Pages 目标地址：[在线研究预览](https://chen-qingxiang.github.io/chushou/)（合并到 `main` 后由 workflow 发布；2026-07-13 核验时尚未上线）。
+
+![除授首页：证据驱动的宋代官制研究入口](docs/assets/chushou-home.png)
+
 当前是 `0.3.0-research.1` 研究预览版：59 个时期化官名概念、3 个局部品秩方案、13 条苏轼任命动作、3 条反例人物任命、120 条结构化主张和 139 条证据关联；《宋史》卷 338 的 38 条任官／身份语句已穷尽枚举为 coverage ledger。数量是覆盖进度，不代表宋代官制或任何人物官履已经完整。
 
 ## 目前可用
@@ -52,9 +56,10 @@ npm test
 npm run build
 npm run quality:budget
 npm run test:e2e
+npm run quality:lighthouse
 ```
 
-`npm run ci` 串联除浏览器测试外的全部门禁，包括已提交 JSON Schema 的新鲜度和生产产物体积预算。GitHub Actions 还会在 Chromium 中执行 13 条关键与无障碍旅程，再把通过验证的同一份 `dist/` 发布到 Pages。终检范围与基线见[性能与无障碍报告](docs/reports/PERFORMANCE_ACCESSIBILITY.md)。
+`npm run ci` 串联除浏览器测试外的全部门禁，包括已提交 JSON Schema 的新鲜度和生产产物体积预算。GitHub Actions 还会在 Chromium 中执行 13 条关键与无障碍旅程，再把通过验证的同一份 `dist/` 发布到 Pages。`quality:lighthouse` 使用已安装的 Playwright Chromium 对三个主要路由复测移动模拟基线。终检范围与基线见[性能与无障碍报告](docs/reports/PERFORMANCE_ACCESSIBILITY.md)。
 
 ## 仓库结构
 

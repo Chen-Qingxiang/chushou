@@ -1,0 +1,43 @@
+{
+  "measuredAt": "2026-07-13T11:41:31.910Z",
+  "environment": {
+    "node": "v24.18.0",
+    "lighthouse": "12.6.1",
+    "browser": "Playwright Chromium",
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate"
+  },
+  "thresholds": {
+    "performance": 90,
+    "accessibility": 95
+  },
+  "results": [
+    {
+      "name": "home",
+      "path": "/chushou/",
+      "performance": 98,
+      "accessibility": 100,
+      "largestContentfulPaintMs": 2124.47755,
+      "totalBlockingTimeMs": 28,
+      "cumulativeLayoutShift": 0.00850546780072904
+    },
+    {
+      "name": "title-detail",
+      "path": "/chushou/titles/canzhi-zhengshi",
+      "performance": 93,
+      "accessibility": 100,
+      "largestContentfulPaintMs": 2487.3526,
+      "totalBlockingTimeMs": 191.10789999999997,
+      "cumulativeLayoutShift": 0.00850546780072904
+    },
+    {
+      "name": "su-shi-career",
+      "path": "/chushou/people/su-shi/career",
+      "performance": 98,
+      "accessibility": 100,
+      "largestContentfulPaintMs": 2144.48385,
+      "totalBlockingTimeMs": 57,
+      "cumulativeLayoutShift": 0.00850546780072904
+    }
+  ]
+}

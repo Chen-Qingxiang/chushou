@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { App } from "./App";
 import "./styles.css";
 
 const baseName = import.meta.env.BASE_URL.replace(/^\/+|\/+$/gu, "");
@@ -10,9 +11,8 @@ if (root === null) throw new Error("Missing #root mount point");
 const routerProps = baseName === "" ? {} : { basename: `/${baseName}` };
 const reactRoot = createRoot(root);
 
-async function bootstrap(): Promise<void> {
+function bootstrap(): void {
   try {
-    const { App } = await import("./App");
     reactRoot.render(
       <StrictMode>
         <BrowserRouter {...routerProps}>
@@ -34,4 +34,4 @@ async function bootstrap(): Promise<void> {
   }
 }
 
-void bootstrap();
+bootstrap();
