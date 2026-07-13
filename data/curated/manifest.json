@@ -1,0 +1,38 @@
+{
+  "metadata": "metadata.json",
+  "files": {
+    "periodLenses": "period-lenses.json",
+    "reforms": "reforms.json",
+    "sources": "sources/sources.json",
+    "editions": "sources/editions.json",
+    "sourceLocators": ["sources/locators.json", "sources/locators-core-offices.json"],
+    "passages": ["sources/passages.json", "sources/passages-core-offices.json"],
+    "assertions": [
+      "evidence/assertions.json",
+      "evidence/assertions-core-offices.json",
+      "evidence/assertions-institutions.json"
+    ],
+    "evidenceLinks": [
+      "evidence/evidence-links.json",
+      "evidence/evidence-links-core-offices.json",
+      "evidence/evidence-links-institutions.json"
+    ],
+    "interpretations": "evidence/interpretations.json",
+    "editorialReviews": "evidence/reviews.json",
+    "externalIdentifiers": "external-identifiers.json",
+    "people": "people.json",
+    "titleConcepts": ["titles/concepts.json", "titles/concepts-core-offices.json"],
+    "titleUsageVersions": ["titles/usages.json", "titles/usages-core-offices.json"],
+    "institutions": ["institutions/institutions.json", "institutions/institutions-central.json"],
+    "institutionVersions": ["institutions/versions.json", "institutions/versions-central.json"],
+    "institutionRelations": ["institutions/relations.json", "institutions/relations-central.json"],
+    "rankSchemes": "ranks/schemes.json",
+    "ranks": "ranks/ranks.json",
+    "places": "places/places.json",
+    "placeVersions": "places/versions.json",
+    "appointmentActions": "appointments/actions.json",
+    "appointmentComponents": "appointments/components.json",
+    "serviceEpisodes": "appointments/service-episodes.json",
+    "careerMetricAssessments": "appointments/metrics.json"
+  }
+}

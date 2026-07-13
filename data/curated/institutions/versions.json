@@ -1,0 +1,69 @@
+[
+  {
+    "id": "chs:institution-version:official-identity-pre-reform",
+    "institutionId": "chs:institution:official-identity-system",
+    "label": "元丰改制前的官、职、差遣阅读框架",
+    "validTime": {
+      "originalText": "北宋前期至元丰改制前",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1079-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1079",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "概括性版本；具体官名仍须独立有效期。"
+    },
+    "level": "identity_system",
+    "functions": [
+      {
+        "text": "帮助区分官所表示的禄秩叙位、职所表示的文资资格与差遣所承担的实际事务。",
+        "assertionIds": ["chs:assertion:pre-reform-rank-principle"]
+      }
+    ],
+    "assertionIds": [
+      "chs:assertion:period-pre-reform-system",
+      "chs:assertion:pre-reform-rank-principle"
+    ],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-version:prefectural-government-northern-song",
+    "institutionId": "chs:institution:prefectural-government",
+    "label": "北宋州级官府（知州—通判种子版本）",
+    "validTime": {
+      "originalText": "北宋（当前种子范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "不表示所有州级制度在整个北宋完全不变。"
+    },
+    "level": "prefectural",
+    "functions": [
+      {
+        "text": "当前已核到知州与通判并置，通判为副贰／牵制成分；更多属官和分工待录。",
+        "assertionIds": ["chs:assertion:prefectural-government-principle"]
+      }
+    ],
+    "assertionIds": ["chs:assertion:prefectural-government-principle"],
+    "editorialStatus": "reviewed"
+  }
+]

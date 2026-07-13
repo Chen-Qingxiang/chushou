@@ -1,0 +1,31 @@
+[
+  {
+    "id": "chs:reform:yuanfeng-office-reform",
+    "slug": "yuanfeng-office-reform",
+    "label": "元丰官制改革",
+    "validTime": {
+      "originalText": "元丰三年至六年主要制度建设",
+      "calendar": "chinese_regnal",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1083-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1083",
+      "conversionMethod": "coarse_era_year_mapping",
+      "conversionVersion": "1.0.0",
+      "note": "卷161分别记元丰三、五、六年步骤；当前只做年级边界。"
+    },
+    "summary": {
+      "text": "改革不是改名清单：它改变省、台、寺、监空名与实际职掌的关系，并建立新的寄禄格。",
+      "assertionIds": ["chs:assertion:yuanfeng-reform-start"]
+    },
+    "assertionIds": ["chs:assertion:yuanfeng-reform-start"],
+    "editorialStatus": "reviewed"
+  }
+]

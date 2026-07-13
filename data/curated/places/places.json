@@ -1,0 +1,114 @@
+[
+  {
+    "id": "chs:place:fengxiang-fu",
+    "slug": "fengxiang-fu",
+    "names": [
+      { "text": "凤翔府", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "鳳翔府", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "Fengxiang Fu", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "placeType": "prefecture",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:place:hangzhou",
+    "slug": "hangzhou",
+    "names": [
+      { "text": "杭州", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "Hangzhou", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "placeType": "prefecture",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:place:mizhou",
+    "slug": "mizhou",
+    "names": [
+      { "text": "密州", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "Mizhou", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "placeType": "prefecture",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:place:xuzhou",
+    "slug": "xuzhou",
+    "names": [
+      { "text": "徐州", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "Xuzhou", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "placeType": "prefecture",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:place:huzhou",
+    "slug": "huzhou",
+    "names": [
+      { "text": "湖州", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "Huzhou", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "placeType": "prefecture",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:place:huangzhou",
+    "slug": "huangzhou",
+    "names": [
+      { "text": "黄州", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "黃州", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "Huangzhou", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "placeType": "prefecture",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:place:dengzhou",
+    "slug": "dengzhou",
+    "names": [
+      { "text": "登州", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "Dengzhou", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "placeType": "prefecture",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:place:yingzhou",
+    "slug": "yingzhou",
+    "names": [
+      { "text": "英州", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "Yingzhou", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "placeType": "prefecture",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:place:huizhou",
+    "slug": "huizhou",
+    "names": [
+      { "text": "惠州", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "Huizhou", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "placeType": "prefecture",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:place:changhua",
+    "slug": "changhua",
+    "names": [
+      { "text": "昌化", "script": "zh-Hans", "kind": "preferred", "ambiguous": true },
+      { "text": "Changhua", "script": "pinyin", "kind": "translation", "ambiguous": true }
+    ],
+    "placeType": "region",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "id": "chs:institution:three-departments",
+    "slug": "three-departments",
+    "names": [
+      { "text": "三省", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "三省制", "script": "zh-Hans", "kind": "variant", "ambiguous": false }
+    ],
+    "scopeNote": "作为门下省、中书省、尚书省的制度组合节点；不把三个官署压成一个实体。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution:menxia-sheng",
+    "slug": "menxia-sheng",
+    "names": [
+      { "text": "门下省", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "門下省", "script": "zh-Hant", "kind": "variant", "ambiguous": false }
+    ],
+    "scopeNote": "当前版本聚焦元丰官制行后的门下省职掌与所属官名。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution:zhongshu-sheng",
+    "slug": "zhongshu-sheng",
+    "names": [
+      { "text": "中书省", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "中書省", "script": "zh-Hant", "kind": "variant", "ambiguous": false }
+    ],
+    "scopeNote": "当前版本聚焦元丰官制行后的中书省职掌与所属官名。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution:shangshu-sheng",
+    "slug": "shangshu-sheng",
+    "names": [
+      { "text": "尚书省", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "尚書省", "script": "zh-Hant", "kind": "variant", "ambiguous": false }
+    ],
+    "scopeNote": "当前版本聚焦元丰官制行后的尚书省职掌与左右司。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution:shumi-yuan",
+    "slug": "shumi-yuan",
+    "names": [
+      { "text": "枢密院", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "樞密院", "script": "zh-Hant", "kind": "variant", "ambiguous": false }
+    ],
+    "scopeNote": "军事政务机构；长贰官名在元丰五年前后分版本。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution:sansi",
+    "slug": "sansi",
+    "names": [
+      { "text": "三司", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "计省", "script": "zh-Hans", "kind": "historical", "ambiguous": false },
+      { "text": "計省", "script": "zh-Hant", "kind": "variant", "ambiguous": false }
+    ],
+    "scopeNote": "北宋前期统管盐铁、度支、户部的财政机构；元丰官制行后罢并归户部。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution:hanlin-xueshi-yuan",
+    "slug": "hanlin-xueshi-yuan",
+    "names": [
+      { "text": "翰林学士院", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "翰林學士院", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "学士院", "script": "zh-Hans", "kind": "historical", "ambiguous": true }
+    ],
+    "scopeNote": "当前只覆盖制诰诏令撰述与首批翰林名号，不外推全部院务。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution:longtu-ge",
+    "slug": "longtu-ge",
+    "names": [
+      { "text": "龙图阁", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "龍圖閣", "script": "zh-Hant", "kind": "variant", "ambiguous": false }
+    ],
+    "scopeNote": "当前只以直学士、待制条建立馆阁职名归属；藏书、奉安等功能待另证。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution:yushitai",
+    "slug": "yushitai",
+    "names": [
+      { "text": "御史台", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "御史臺", "script": "zh-Hant", "kind": "variant", "ambiguous": false }
+    ],
+    "scopeNote": "监察机构；当前覆盖台长、台院、殿院与察院的首批职掌。",
+    "editorialStatus": "reviewed"
+  }
+]

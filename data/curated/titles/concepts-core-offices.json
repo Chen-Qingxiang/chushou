@@ -1,0 +1,619 @@
+[
+  {
+    "id": "chs:title:taishi",
+    "slug": "taishi",
+    "names": [
+      { "text": "太师", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "太師", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "taishi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "三师之一；当前版本限于北宋加官语境，不等同于实际宰相职务。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:taifu",
+    "slug": "taifu",
+    "names": [
+      { "text": "太傅", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "taifu", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "三师之一；当前版本限于北宋加官语境。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:taibao",
+    "slug": "taibao",
+    "names": [
+      { "text": "太保", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "taibao", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "三师之一；当前版本限于北宋加官语境。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:taiwei",
+    "slug": "taiwei",
+    "names": [
+      { "text": "太尉", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "taiwei", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "三公之一；本批只发布卷161所述加官性质。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:situ",
+    "slug": "situ",
+    "names": [
+      { "text": "司徒", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "situ", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "三公之一；本批只发布卷161所述加官性质。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:sikong",
+    "slug": "sikong",
+    "names": [
+      { "text": "司空", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "sikong", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "三公之一；本批只发布卷161所述加官性质。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:tongpingzhangshi",
+    "slug": "tongpingzhangshi",
+    "names": [
+      { "text": "同平章事", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "同平章事", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      {
+        "text": "tong pingzhang shi",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "元丰改制前宰相名号入口；南宋同名须另建版本。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:canzhi-zhengshi",
+    "slug": "canzhi-zhengshi",
+    "names": [
+      { "text": "参知政事", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "參知政事", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "canzhi zhengshi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "副宰相／执政名号；元丰新制一度废置，必须分期。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:shizhong",
+    "slug": "shizhong",
+    "names": [
+      { "text": "侍中", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "shizhong", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "门下省长官名号；条文职掌与北宋实际罕除必须同时展示。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:menxia-shilang",
+    "slug": "menxia-shilang",
+    "names": [
+      { "text": "门下侍郎", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "門下侍郎", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "menxia shilang", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "元丰后三省执政官入口。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:zuo-jianyi-dafu",
+    "slug": "zuo-jianyi-dafu",
+    "names": [
+      { "text": "左谏议大夫", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "左諫議大夫", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "zuo jianyi dafu", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "门下省谏官；当前版本限元丰官制后职掌。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:zuo-sijian",
+    "slug": "zuo-sijian",
+    "names": [
+      { "text": "左司谏", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "左司諫", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "zuo sijian", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "门下省谏官；元丰前领他职者未必任谏诤。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:zuo-zhengyan",
+    "slug": "zuo-zhengyan",
+    "names": [
+      { "text": "左正言", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "zuo zhengyan", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "门下省谏官；当前版本限元丰官制后。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:jishizhong",
+    "slug": "jishizhong",
+    "names": [
+      { "text": "给事中", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "給事中", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "jishizhong", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "门下省审读、封驳职事官入口。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:qiju-lang",
+    "slug": "qiju-lang",
+    "names": [
+      { "text": "起居郎", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "qiju lang", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "门下省左史；元丰前寄禄名与改制后职任必须分开。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:fubao-lang",
+    "slug": "fubao-lang",
+    "names": [
+      { "text": "符宝郎", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "符寶郎", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "fubao lang", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "掌外廷符宝的设置；元丰官制行后未尝除人。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:zhongshu-ling",
+    "slug": "zhongshu-ling",
+    "names": [
+      { "text": "中书令", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "中書令", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "zhongshu ling", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "中书省长官名号；北宋未尝真拜与条文职掌并存。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:zhongshu-shilang",
+    "slug": "zhongshu-shilang",
+    "names": [
+      { "text": "中书侍郎", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "中書侍郎", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "zhongshu shilang", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "元丰后三省执政官入口。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:qiju-sheren",
+    "slug": "qiju-sheren",
+    "names": [
+      { "text": "起居舍人", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "qiju sheren", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "中书省右史；同一名称在元丰前为寄禄、改制后为职任。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:you-jianyi-dafu",
+    "slug": "you-jianyi-dafu",
+    "names": [
+      { "text": "右谏议大夫", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "右諫議大夫", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "you jianyi dafu", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "中书省谏官；与左谏议大夫同掌规谏但分属两省。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:you-sijian",
+    "slug": "you-sijian",
+    "names": [
+      { "text": "右司谏", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "右司諫", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "you sijian", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "中书省谏官；与左司谏同掌规谏但分属两省。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:you-zhengyan",
+    "slug": "you-zhengyan",
+    "names": [
+      { "text": "右正言", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "you zhengyan", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "中书省谏官；当前版本限元丰官制后。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:jianzheng-guan",
+    "slug": "jianzheng-guan",
+    "names": [
+      { "text": "检正官", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "檢正官", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "jianzheng guan", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "熙宁设置的省务纠正官；元丰改制后职归左右司。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:shangshu-ling",
+    "slug": "shangshu-ling",
+    "names": [
+      { "text": "尚书令", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "尚書令", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "shangshu ling", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "尚书省长官名号；北宋实际不除人。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:shangshu-zuo-pushe",
+    "slug": "shangshu-zuo-pushe",
+    "names": [
+      { "text": "尚书左仆射", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "尚書左僕射", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "左仆射", "script": "zh-Hans", "kind": "short", "ambiguous": false },
+      {
+        "text": "shangshu zuo pushe",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "元丰后宰相组合的一部分，通常兼门下侍郎。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:shangshu-you-pushe",
+    "slug": "shangshu-you-pushe",
+    "names": [
+      { "text": "尚书右仆射", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "尚書右僕射", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "右仆射", "script": "zh-Hans", "kind": "short", "ambiguous": false },
+      {
+        "text": "shangshu you pushe",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "元丰后宰相组合的一部分，通常兼中书侍郎。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:shangshu-zuo-cheng",
+    "slug": "shangshu-zuo-cheng",
+    "names": [
+      { "text": "尚书左丞", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "尚書左丞", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "左丞", "script": "zh-Hans", "kind": "short", "ambiguous": true },
+      {
+        "text": "shangshu zuo cheng",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "元丰后升为执政的尚书省长贰。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:shangshu-you-cheng",
+    "slug": "shangshu-you-cheng",
+    "names": [
+      { "text": "尚书右丞", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "尚書右丞", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "右丞", "script": "zh-Hans", "kind": "short", "ambiguous": true },
+      {
+        "text": "shangshu you cheng",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "元丰后升为执政的尚书省长贰。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:zuosi-langzhong",
+    "slug": "zuosi-langzhong",
+    "names": [
+      { "text": "左司郎中", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "zuosi langzhong", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "尚书都省左司郎官，分治吏、户、礼等房事务。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:yousi-langzhong",
+    "slug": "yousi-langzhong",
+    "names": [
+      { "text": "右司郎中", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "yousi langzhong", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "尚书都省右司郎官，分治兵、刑、工等房事务。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:zuosi-yuanwailang",
+    "slug": "zuosi-yuanwailang",
+    "names": [
+      { "text": "左司员外郎", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "左司員外郎", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "zuosi yuanwailang", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "尚书都省左司郎官之一。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:yousi-yuanwailang",
+    "slug": "yousi-yuanwailang",
+    "names": [
+      { "text": "右司员外郎", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "右司員外郎", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "yousi yuanwailang", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "尚书都省右司郎官之一。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:shumishi",
+    "slug": "shumishi",
+    "names": [
+      { "text": "枢密使", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "樞密使", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "shumishi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "枢密院长官名号；元丰五年后使名一度罢置。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:zhi-shumiyuan-shi",
+    "slug": "zhi-shumiyuan-shi",
+    "names": [
+      { "text": "知枢密院事", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "知樞密院事", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "知院事", "script": "zh-Hans", "kind": "short", "ambiguous": true },
+      { "text": "zhi shumiyuan shi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "元丰五年后枢密院长官名号。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:tongzhi-shumiyuan-shi",
+    "slug": "tongzhi-shumiyuan-shi",
+    "names": [
+      { "text": "同知枢密院事", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "同知樞密院事", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "同知院事", "script": "zh-Hans", "kind": "short", "ambiguous": true },
+      {
+        "text": "tongzhi shumiyuan shi",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "元丰五年后枢密院副贰名号。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:shumi-fushi",
+    "slug": "shumi-fushi",
+    "names": [
+      { "text": "枢密副使", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "樞密副使", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "shumi fushi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "枢密院副贰名号；元丰五年使、副悉罢，后世复置须另建版本。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:qianshu-shumiyuan-shi",
+    "slug": "qianshu-shumiyuan-shi",
+    "names": [
+      { "text": "签书枢密院事", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "簽書樞密院事", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "签书院事", "script": "zh-Hans", "kind": "short", "ambiguous": true },
+      {
+        "text": "qianshu shumiyuan shi",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "元祐初复置的枢密院副贰名号。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:sansi-shi",
+    "slug": "sansi-shi",
+    "names": [
+      { "text": "三司使", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "三司使", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "计相", "script": "zh-Hans", "kind": "historical", "ambiguous": true },
+      { "text": "sansi shi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "元丰官制前总国计的财政长官；元丰后并归户部。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:hanlin-xueshi-chengzhi",
+    "slug": "hanlin-xueshi-chengzhi",
+    "names": [
+      { "text": "翰林学士承旨", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "翰林學士承旨", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "承旨", "script": "zh-Hans", "kind": "short", "ambiguous": true },
+      {
+        "text": "hanlin xueshi chengzhi",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "翰林学士院资深者所任，不常置；与普通翰林学士分概念。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:zhizhigao",
+    "slug": "zhizhigao",
+    "names": [
+      { "text": "知制诰", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "知制誥", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "zhizhigao", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "元丰前外制／词命相关职名入口；改制后相关职掌变化须另建版本。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:hanlin-shidu-xueshi",
+    "slug": "hanlin-shidu-xueshi",
+    "names": [
+      { "text": "翰林侍读学士", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "翰林侍讀學士", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      {
+        "text": "hanlin shidu xueshi",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "经筵侍读名号；元丰至元符间多次改变是否带“学士”。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:longtu-zhixueshi",
+    "slug": "longtu-zhixueshi",
+    "names": [
+      { "text": "龙图阁直学士", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "龍圖閣直學士", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      {
+        "text": "longtu ge zhixueshi",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "龙图阁贴职序列之一；当前只发布设置与序列线索。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:longtu-daizhi",
+    "slug": "longtu-daizhi",
+    "names": [
+      { "text": "龙图阁待制", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "龍圖閣待制", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "longtu ge daizhi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "龙图阁贴职序列之一；当前只发布设置与迁转线索。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:yushi-zhongcheng",
+    "slug": "yushi-zhongcheng",
+    "names": [
+      { "text": "御史中丞", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "御史中丞", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "中丞", "script": "zh-Hans", "kind": "short", "ambiguous": true },
+      { "text": "yushi zhongcheng", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "御史台长官入口。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:shiyushi",
+    "slug": "shiyushi",
+    "names": [
+      { "text": "侍御史", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "侍御史", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "shiyushi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "御史台台院官，掌贰台政。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:dianzhong-shiyushi",
+    "slug": "dianzhong-shiyushi",
+    "names": [
+      { "text": "殿中侍御史", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "殿中侍御史", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      {
+        "text": "dianzhong shiyushi",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "御史台殿院官，当前版本重点为仪法纠察。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:jiancha-yushi",
+    "slug": "jiancha-yushi",
+    "names": [
+      { "text": "监察御史", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "監察御史", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "jiancha yushi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "御史台察院官，分察六曹与百司。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  }
+]

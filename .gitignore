@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+**/dist-types/
+.DS_Store
+*.tsbuildinfo
+data/generated/*.tmp

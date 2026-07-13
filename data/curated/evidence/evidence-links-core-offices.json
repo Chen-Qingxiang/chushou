@@ -1,0 +1,497 @@
+[
+  {
+    "id": "chs:evidence:core-taishi",
+    "assertionId": "chs:assertion:usage-taishi",
+    "passageId": "chs:passage:song-shi-161-three-high-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "三师三公条直接列名并说明加官和不预政事限制。"
+  },
+  {
+    "id": "chs:evidence:core-taifu",
+    "assertionId": "chs:assertion:usage-taifu",
+    "passageId": "chs:passage:song-shi-161-three-high-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "三师三公条直接列名并说明加官和不预政事限制。"
+  },
+  {
+    "id": "chs:evidence:core-taibao",
+    "assertionId": "chs:assertion:usage-taibao",
+    "passageId": "chs:passage:song-shi-161-three-high-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "三师三公条直接列名并说明加官和不预政事限制。"
+  },
+  {
+    "id": "chs:evidence:core-taiwei",
+    "assertionId": "chs:assertion:usage-taiwei",
+    "passageId": "chs:passage:song-shi-161-three-high-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "三师三公条直接列名并说明加官和不预政事限制。"
+  },
+  {
+    "id": "chs:evidence:core-situ",
+    "assertionId": "chs:assertion:usage-situ",
+    "passageId": "chs:passage:song-shi-161-three-high-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "三师三公条直接列名并说明加官和不预政事限制。"
+  },
+  {
+    "id": "chs:evidence:core-sikong",
+    "assertionId": "chs:assertion:usage-sikong",
+    "passageId": "chs:passage:song-shi-161-three-high-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "三师三公条直接列名并说明加官和不预政事限制。"
+  },
+  {
+    "id": "chs:evidence:core-tongpingzhangshi",
+    "assertionId": "chs:assertion:usage-tongpingzhangshi",
+    "passageId": "chs:passage:song-shi-161-chief-councilor",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直称同平章事为真相之任。"
+  },
+  {
+    "id": "chs:evidence:core-canzhi-zhengshi",
+    "assertionId": "chs:assertion:usage-canzhi-zhengshi",
+    "passageId": "chs:passage:song-shi-161-canzhi-zhengshi",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接说明副宰相职掌。"
+  },
+  {
+    "id": "chs:evidence:core-canzhi-zhengshi-yuanfeng",
+    "assertionId": "chs:assertion:usage-canzhi-zhengshi",
+    "passageId": "chs:passage:song-shi-161-canzhi-yuanfeng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "改革条直接说明元丰废置及替代官名。"
+  },
+  {
+    "id": "chs:evidence:core-shizhong",
+    "assertionId": "chs:assertion:usage-shizhong",
+    "passageId": "chs:passage:song-shi-161-menxia-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "门下省条并载法定职掌、罕除与兼行职事。"
+  },
+  {
+    "id": "chs:evidence:core-menxia-shilang",
+    "assertionId": "chs:assertion:usage-menxia-shilang",
+    "passageId": "chs:passage:song-shi-161-menxia-shilang",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接列职掌及执政官身份。"
+  },
+  {
+    "id": "chs:evidence:core-zuo-jianyi-dafu",
+    "assertionId": "chs:assertion:usage-zuo-jianyi-dafu",
+    "passageId": "chs:passage:song-shi-161-remonstrance",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "门下省谏官条直接列名并说明共同谏正权责。"
+  },
+  {
+    "id": "chs:evidence:core-zuo-sijian",
+    "assertionId": "chs:assertion:usage-zuo-sijian",
+    "passageId": "chs:passage:song-shi-161-remonstrance",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "门下省谏官条直接列名并说明共同谏正权责。"
+  },
+  {
+    "id": "chs:evidence:core-zuo-zhengyan",
+    "assertionId": "chs:assertion:usage-zuo-zhengyan",
+    "passageId": "chs:passage:song-shi-161-remonstrance",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "门下省谏官条直接列名并说明共同谏正权责。"
+  },
+  {
+    "id": "chs:evidence:core-jishizhong",
+    "assertionId": "chs:assertion:usage-jishizhong",
+    "passageId": "chs:passage:song-shi-161-jishizhong",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接说明分房、读出纳与驳正除授。"
+  },
+  {
+    "id": "chs:evidence:core-qiju-lang",
+    "assertionId": "chs:assertion:usage-qiju-lang",
+    "passageId": "chs:passage:song-shi-161-qijulang",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接说明记天子言动及书录事项。"
+  },
+  {
+    "id": "chs:evidence:core-fubao-lang",
+    "assertionId": "chs:assertion:usage-fubao-lang",
+    "passageId": "chs:passage:song-shi-161-fubao-lang",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文同时保存职掌和官制行后未尝除的限制。"
+  },
+  {
+    "id": "chs:evidence:core-zhongshu-ling",
+    "assertionId": "chs:assertion:usage-zhongshu-ling",
+    "passageId": "chs:passage:song-shi-161-zhongshu-ling",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文并载法定职掌、未真拜和兼领不预政事。"
+  },
+  {
+    "id": "chs:evidence:core-zhongshu-shilang",
+    "assertionId": "chs:assertion:usage-zhongshu-shilang",
+    "passageId": "chs:passage:song-shi-161-zhongshu-shilang",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接说明贰令、参议大政与奉诏职掌。"
+  },
+  {
+    "id": "chs:evidence:core-qiju-sheren",
+    "assertionId": "chs:assertion:usage-qiju-sheren",
+    "passageId": "chs:passage:song-shi-161-qijusheren",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "同段直接区分元丰前寄禄和官制行后职任。"
+  },
+  {
+    "id": "chs:evidence:core-you-jianyi-dafu",
+    "assertionId": "chs:assertion:usage-you-jianyi-dafu",
+    "passageId": "chs:passage:song-shi-161-right-remonstrance",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "中书省条直接列右谏官并说明与门下省同职掌。"
+  },
+  {
+    "id": "chs:evidence:core-you-sijian",
+    "assertionId": "chs:assertion:usage-you-sijian",
+    "passageId": "chs:passage:song-shi-161-right-remonstrance",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "中书省条直接列右谏官并说明与门下省同职掌。"
+  },
+  {
+    "id": "chs:evidence:core-you-zhengyan",
+    "assertionId": "chs:assertion:usage-you-zhengyan",
+    "passageId": "chs:passage:song-shi-161-right-remonstrance",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "中书省条直接列右谏官并说明与门下省同职掌。"
+  },
+  {
+    "id": "chs:evidence:core-jianzheng-guan",
+    "assertionId": "chs:assertion:usage-jianzheng-guan",
+    "passageId": "chs:passage:song-shi-161-jianzheng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接保存熙宁设置、职掌及元丰罢并。"
+  },
+  {
+    "id": "chs:evidence:core-shangshu-ling",
+    "assertionId": "chs:assertion:usage-shangshu-ling",
+    "passageId": "chs:passage:song-shi-161-shangshu-ling",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文并载法定职掌、自建隆不除与兼领不预政事。"
+  },
+  {
+    "id": "chs:evidence:core-shangshu-zuo-pushe",
+    "assertionId": "chs:assertion:usage-shangshu-zuo-pushe",
+    "passageId": "chs:passage:song-shi-161-shangshu-pushe",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "仆射条直接说明宰相身份及左兼门下侍郎。"
+  },
+  {
+    "id": "chs:evidence:core-shangshu-you-pushe",
+    "assertionId": "chs:assertion:usage-shangshu-you-pushe",
+    "passageId": "chs:passage:song-shi-161-shangshu-pushe",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "仆射条直接说明宰相身份及右兼中书侍郎。"
+  },
+  {
+    "id": "chs:evidence:core-shangshu-zuo-cheng",
+    "assertionId": "chs:assertion:usage-shangshu-zuo-cheng",
+    "passageId": "chs:passage:song-shi-161-shangshu-cheng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "左右丞条直接说明职掌和改制后升为执政。"
+  },
+  {
+    "id": "chs:evidence:core-shangshu-you-cheng",
+    "assertionId": "chs:assertion:usage-shangshu-you-cheng",
+    "passageId": "chs:passage:song-shi-161-shangshu-cheng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "左右丞条直接说明职掌和改制后升为执政。"
+  },
+  {
+    "id": "chs:evidence:core-zuosi-langzhong",
+    "assertionId": "chs:assertion:usage-zuosi-langzhong",
+    "passageId": "chs:passage:song-shi-161-zuoyou-si",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "左右司条直接列名并说明分掌吏户礼。"
+  },
+  {
+    "id": "chs:evidence:core-yousi-langzhong",
+    "assertionId": "chs:assertion:usage-yousi-langzhong",
+    "passageId": "chs:passage:song-shi-161-zuoyou-si",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "左右司条直接列名并说明分掌兵刑工。"
+  },
+  {
+    "id": "chs:evidence:core-zuosi-yuanwailang",
+    "assertionId": "chs:assertion:usage-zuosi-yuanwailang",
+    "passageId": "chs:passage:song-shi-161-zuoyou-si",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "左右司条直接列名并说明分掌吏户礼。"
+  },
+  {
+    "id": "chs:evidence:core-yousi-yuanwailang",
+    "assertionId": "chs:assertion:usage-yousi-yuanwailang",
+    "passageId": "chs:passage:song-shi-161-zuoyou-si",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "左右司条直接列名并说明分掌兵刑工。"
+  },
+  {
+    "id": "chs:evidence:core-shumishi",
+    "assertionId": "chs:assertion:usage-shumishi",
+    "passageId": "chs:passage:song-shi-162-shumi-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "枢密院条直接说明枢密使与知院主兵政。"
+  },
+  {
+    "id": "chs:evidence:core-shumishi-yuanfeng",
+    "assertionId": "chs:assertion:usage-shumishi",
+    "passageId": "chs:passage:song-shi-162-shumi-yuanfeng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "元丰五年条直接说明使、副悉罢。"
+  },
+  {
+    "id": "chs:evidence:core-zhi-shumiyuan-shi",
+    "assertionId": "chs:assertion:usage-zhi-shumiyuan-shi",
+    "passageId": "chs:passage:song-shi-162-shumi-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "枢密院条直接说明知院与枢密使主兵政。"
+  },
+  {
+    "id": "chs:evidence:core-zhi-shumiyuan-shi-yuanfeng",
+    "assertionId": "chs:assertion:usage-zhi-shumiyuan-shi",
+    "passageId": "chs:passage:song-shi-162-shumi-yuanfeng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "元丰五年条直接说明定置知院。"
+  },
+  {
+    "id": "chs:evidence:core-tongzhi-shumiyuan-shi",
+    "assertionId": "chs:assertion:usage-tongzhi-shumiyuan-shi",
+    "passageId": "chs:passage:song-shi-162-shumi-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "枢密院条直接说明同知为长官之贰。"
+  },
+  {
+    "id": "chs:evidence:core-tongzhi-shumiyuan-shi-yuanfeng",
+    "assertionId": "chs:assertion:usage-tongzhi-shumiyuan-shi",
+    "passageId": "chs:passage:song-shi-162-shumi-yuanfeng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "元丰五年条直接说明定置同知院。"
+  },
+  {
+    "id": "chs:evidence:core-shumi-fushi",
+    "assertionId": "chs:assertion:usage-shumi-fushi",
+    "passageId": "chs:passage:song-shi-162-shumi-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "枢密院条直接说明副使为长官之贰。"
+  },
+  {
+    "id": "chs:evidence:core-shumi-fushi-yuanfeng",
+    "assertionId": "chs:assertion:usage-shumi-fushi",
+    "passageId": "chs:passage:song-shi-162-shumi-yuanfeng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "元丰五年条直接说明使、副悉罢。"
+  },
+  {
+    "id": "chs:evidence:core-qianshu-shumiyuan-shi",
+    "assertionId": "chs:assertion:usage-qianshu-shumiyuan-shi",
+    "passageId": "chs:passage:song-shi-162-shumi-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "枢密院条直接说明签书为长官之贰。"
+  },
+  {
+    "id": "chs:evidence:core-qianshu-shumiyuan-shi-yuanfeng",
+    "assertionId": "chs:assertion:usage-qianshu-shumiyuan-shi",
+    "passageId": "chs:passage:song-shi-162-shumi-yuanfeng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "元祐初条直接说明复置签书院事。"
+  },
+  {
+    "id": "chs:evidence:core-sansi-shi",
+    "assertionId": "chs:assertion:usage-sansi-shi",
+    "passageId": "chs:passage:song-shi-162-sansi-shi",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "三司条直接说明总国计与通管三部。"
+  },
+  {
+    "id": "chs:evidence:core-sansi-shi-yuanfeng",
+    "assertionId": "chs:assertion:usage-sansi-shi",
+    "passageId": "chs:passage:song-shi-162-sansi-yuanfeng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接说明元丰罢三司使并归户部。"
+  },
+  {
+    "id": "chs:evidence:core-hanlin-xueshi-chengzhi",
+    "assertionId": "chs:assertion:usage-hanlin-xueshi-chengzhi",
+    "passageId": "chs:passage:song-shi-162-hanlin",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "翰林条直接列承旨和制诰撰述职掌。"
+  },
+  {
+    "id": "chs:evidence:core-hanlin-xueshi-chengzhi-status",
+    "assertionId": "chs:assertion:usage-hanlin-xueshi-chengzhi",
+    "passageId": "chs:passage:song-shi-162-hanlin-chengzhi",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "承旨条直接说明不常置及由久次学士充任。"
+  },
+  {
+    "id": "chs:evidence:core-zhizhigao",
+    "assertionId": "chs:assertion:usage-zhizhigao",
+    "passageId": "chs:passage:song-shi-162-hanlin",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "翰林条直接列知制诰及制诰撰述职掌。"
+  },
+  {
+    "id": "chs:evidence:core-hanlin-shidu-xueshi",
+    "assertionId": "chs:assertion:usage-hanlin-shidu-xueshi",
+    "passageId": "chs:passage:song-shi-162-hanlin-shidu",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接保存元丰废号、元祐复号与元符省号。"
+  },
+  {
+    "id": "chs:evidence:core-longtu-zhixueshi",
+    "assertionId": "chs:assertion:usage-longtu-zhixueshi",
+    "passageId": "chs:passage:song-shi-162-longtu-subtitles",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "龙图阁条直接记直学士设置年代。"
+  },
+  {
+    "id": "chs:evidence:core-longtu-daizhi",
+    "assertionId": "chs:assertion:usage-longtu-daizhi",
+    "passageId": "chs:passage:song-shi-162-longtu-subtitles",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "龙图阁条直接记待制设置及改制后迁转位置。"
+  },
+  {
+    "id": "chs:evidence:core-yushi-zhongcheng",
+    "assertionId": "chs:assertion:usage-yushi-zhongcheng",
+    "passageId": "chs:passage:song-shi-164-yushi-zhongcheng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接称中丞为台长。"
+  },
+  {
+    "id": "chs:evidence:core-shiyushi",
+    "assertionId": "chs:assertion:usage-shiyushi",
+    "passageId": "chs:passage:song-shi-164-yushi-zhongcheng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接说明侍御史掌贰台政。"
+  },
+  {
+    "id": "chs:evidence:core-dianzhong-shiyushi",
+    "assertionId": "chs:assertion:usage-dianzhong-shiyushi",
+    "passageId": "chs:passage:song-shi-164-yushi-zhongcheng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接说明殿中侍御史以仪法纠百官。"
+  },
+  {
+    "id": "chs:evidence:core-jiancha-yushi",
+    "assertionId": "chs:assertion:usage-jiancha-yushi",
+    "passageId": "chs:passage:song-shi-164-yushi-zhongcheng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文直接说明监察御史分察六曹百司。"
+  }
+]

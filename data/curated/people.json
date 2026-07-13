@@ -1,0 +1,20 @@
+[
+  {
+    "id": "chs:person:su-shi",
+    "slug": "su-shi",
+    "names": [
+      { "text": "苏轼", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "蘇軾", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "子瞻", "script": "zh-Hans", "kind": "historical", "ambiguous": true },
+      { "text": "Su Shi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "lifeSpan": null,
+    "description": {
+      "text": "苏轼，字子瞻；本数据集把他作为官制模型的第一条纵向压力测试，而不是数据库中心。",
+      "assertionIds": ["chs:assertion:su-shi-identity"]
+    },
+    "assertionIds": ["chs:assertion:su-shi-identity"],
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  }
+]

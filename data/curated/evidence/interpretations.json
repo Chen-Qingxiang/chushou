@@ -1,0 +1,31 @@
+[
+  {
+    "id": "chs:interpretation:three-track-reading",
+    "subjectId": "chs:institution-version:official-identity-pre-reform",
+    "kind": "plain_language",
+    "text": "读北宋前期官衔时，先问哪一项管待遇与资序、哪一项标资望、哪一项才负责实际事务。三层是阅读投影，不能替代逐项证据。",
+    "assertionIds": [
+      "chs:assertion:period-pre-reform-system",
+      "chs:assertion:pre-reform-rank-principle"
+    ],
+    "author": "除授项目组",
+    "method": "依据卷161制度概括形成的界面白话",
+    "confidence": "high",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:interpretation:huangzhou-not-command",
+    "subjectId": "chs:appointment:su-shi-huangzhou",
+    "kind": "plain_language",
+    "text": "这不是一次正常的黄州军事副职任命：责授、安置与不得签书公事共同说明它是受限制的贬谪组合；苏轼到达黄州形成的是居住与处分状态，不是主持黄州军务。",
+    "assertionIds": [
+      "chs:assertion:appointment-huangzhou",
+      "chs:assertion:service-huangzhou-arrival",
+      "chs:assertion:service-huangzhou-restriction"
+    ],
+    "author": "除授项目组",
+    "method": "对苏轼本人谢表与《宋史》记载的受控解释",
+    "confidence": "high",
+    "editorialStatus": "reviewed"
+  }
+]

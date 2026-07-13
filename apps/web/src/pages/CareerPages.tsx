@@ -1,0 +1,460 @@
+import { useMemo, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import {
+  actionLabels,
+  appointmentPlace,
+  dateLabel,
+  placeLabel,
+  preferredName,
+  site,
+  titleConceptForUsage,
+  titleUsage,
+  trackLabels,
+} from "../data";
+import { EvidenceButton } from "../evidence";
+import { EmptyState, PageHeader, StatusBadge } from "../Page";
+
+const componentLabels: Record<string, string> = {
+  title: "官名",
+  duty: "职务",
+  rank: "身份／官阶",
+  honor: "荣衔",
+  place: "地点",
+  modifier: "修饰词",
+  punitive_status: "处分状态",
+  restriction: "限制",
+  unresolved: "未决成分",
+};
+
+export function CareerPage() {
+  const [track, setTrack] = useState("all");
+  const [view, setView] = useState<"timeline" | "route">("timeline");
+  const person = site.people[0];
+  const appointments = useMemo(
+    () =>
+      site.appointments.filter(
+        (appointment) =>
+          track === "all" ||
+          appointment.components.some((component) =>
+            component.semanticTracks.includes(track as never),
+          ),
+      ),
+    [track],
+  );
+  const places = [
+    ...new Set(site.appointments.map(appointmentPlace).filter((place) => place !== "地点未定")),
+  ];
+
+  return (
+    <div className="page-container">
+      <PageHeader
+        eyebrow="人物官履 · CAREER AS MODEL TEST"
+        title="苏轼的官履，不压成一条升降线。"
+        intro="这里分别保存授命、官衔成分、实际服务与居住／处分状态。当前卷338矩阵是初步覆盖，不宣称已经等于孔凡礼年谱的完整分母。"
+        actions={
+          <Link className="button secondary-button" to="/compare">
+            比较任命
+          </Link>
+        }
+      />
+      <section className="person-banner">
+        <div className="person-monogram">轼</div>
+        <div>
+          <span>首个完整纵切人物</span>
+          <h2>{preferredName(person)}</h2>
+          <p>{person === undefined ? "人物资料缺失" : person.description.text}</p>
+        </div>
+        <dl>
+          <div>
+            <dt>任命动作</dt>
+            <dd>{site.appointments.length}</dd>
+          </div>
+          <div>
+            <dt>实际服务记录</dt>
+            <dd>{site.appointments.flatMap((item) => item.serviceEpisodes).length}</dd>
+          </div>
+          <div>
+            <dt>涉及地点</dt>
+            <dd>{places.length}</dd>
+          </div>
+        </dl>
+        {person === undefined ? null : (
+          <EvidenceButton assertionIds={[...person.assertionIds]} title={preferredName(person)} />
+        )}
+      </section>
+      <div className="career-toolbar">
+        <div className="segmented-control">
+          {["all", "identity_rank", "honor_expertise", "actual_duty", "political_status"].map(
+            (item) => (
+              <button
+                type="button"
+                key={item}
+                className={track === item ? "is-active" : undefined}
+                onClick={() => setTrack(item)}
+              >
+                {item === "all" ? "综合" : trackLabels[item]}
+              </button>
+            ),
+          )}
+        </div>
+        <div className="view-toggle">
+          <button
+            type="button"
+            className={view === "timeline" ? "is-active" : undefined}
+            onClick={() => setView("timeline")}
+          >
+            时间线
+          </button>
+          <button
+            type="button"
+            className={view === "route" ? "is-active" : undefined}
+            onClick={() => setView("route")}
+          >
+            地点序列
+          </button>
+        </div>
+      </div>
+      {view === "timeline" ? (
+        <section className="career-timeline">
+          {appointments.map((appointment, index) => (
+            <article className="career-node" key={appointment.id}>
+              <div className="timeline-marker">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <div className="career-node-date">
+                <strong>{dateLabel(appointment.time)}</strong>
+                <small>{appointment.time.originalText}</small>
+              </div>
+              <Link
+                className="career-node-card"
+                to={`/people/su-shi/appointments/${encodeURIComponent(appointment.id)}`}
+              >
+                <div>
+                  <div className="tag-row action-tags">
+                    {appointment.actionTypes.map((action) => (
+                      <span key={action}>{actionLabels[action] ?? action}</span>
+                    ))}
+                  </div>
+                  <h3>{appointment.rawText}</h3>
+                  <p>
+                    {appointment.components
+                      .map((component) => component.sourceSpan.text)
+                      .join(" · ")}
+                  </p>
+                </div>
+                <div className="career-card-meta">
+                  <strong>{appointmentPlace(appointment)}</strong>
+                  <StatusBadge status={appointment.editorialStatus} />
+                  <small>
+                    {appointment.serviceEpisodes.length > 0
+                      ? `${appointment.serviceEpisodes.length} 条服务／状态记录`
+                      : "不自动推定到任"}
+                  </small>
+                </div>
+              </Link>
+            </article>
+          ))}
+        </section>
+      ) : (
+        <section className="route-sequence">
+          <header>
+            <div>
+              <p className="eyebrow">地点序列 · 非地理比例图</p>
+              <h2>从任命地点看迁转与贬谪</h2>
+            </div>
+            <p>历史地理坐标尚未与 CHGIS 对齐，因此这里按传记顺序排列，不伪造经纬度或行政边界。</p>
+          </header>
+          <div className="route-line">
+            {site.appointments
+              .filter((item) => appointmentPlace(item) !== "地点未定")
+              .map((appointment, index) => (
+                <Link
+                  to={`/people/su-shi/appointments/${encodeURIComponent(appointment.id)}`}
+                  key={appointment.id}
+                >
+                  <span>{index + 1}</span>
+                  <strong>{appointmentPlace(appointment)}</strong>
+                  <small>{dateLabel(appointment.time)}</small>
+                </Link>
+              ))}
+          </div>
+        </section>
+      )}
+      <aside className="coverage-warning">
+        <strong>覆盖说明</strong>
+        <p>
+          当前 13 条是《宋史》卷338苏轼传的首轮任官矩阵，全部标为
+          partial。下一步须逐条与孔凡礼《苏轼年谱》及同期原始材料对读，再计算真正覆盖率。
+        </p>
+        <Link className="text-link" to="/data">
+          查看覆盖矩阵与研究日志 →
+        </Link>
+      </aside>
+    </div>
+  );
+}
+
+export function AppointmentDetailPage() {
+  const { appointmentId } = useParams();
+  const appointment = site.appointments.find((item) => item.id === appointmentId);
+  if (appointment === undefined)
+    return (
+      <div className="page-container">
+        <EmptyState title="未找到这条任命">链接可能已失效，或该记录尚未发布。</EmptyState>
+      </div>
+    );
+  return (
+    <div className="page-container detail-page">
+      <nav className="breadcrumbs">
+        <Link to="/people/su-shi/career">苏轼官履</Link>
+        <span>/</span>
+        <span>{dateLabel(appointment.time)}</span>
+      </nav>
+      <header className="appointment-header">
+        <div>
+          <p className="eyebrow">APPOINTMENT ACTION · {dateLabel(appointment.time)}</p>
+          <h1>{appointment.rawText}</h1>
+          <p>
+            {appointment.time.originalText} · {appointmentPlace(appointment)}
+          </p>
+        </div>
+        <div className="entity-meta">
+          <StatusBadge status={appointment.editorialStatus} />
+          <div className="tag-row action-tags">
+            {appointment.actionTypes.map((action) => (
+              <span key={action}>{actionLabels[action] ?? action}</span>
+            ))}
+          </div>
+        </div>
+      </header>
+      <div className="appointment-layout">
+        <div className="detail-main">
+          <section className="decomposition-panel">
+            <p className="block-label">原文结构拆解</p>
+            <div className="raw-line" aria-label="任命原文拆解">
+              {appointment.components.map((component) => (
+                <span
+                  className={`raw-component component-${component.componentType}`}
+                  key={component.id}
+                >
+                  {component.sourceSpan.text}
+                </span>
+              ))}
+            </div>
+            <div className="component-detail-list">
+              {appointment.components.map((component) => {
+                const usage = titleUsage(component.titleUsageVersionId);
+                const concept = titleConceptForUsage(component.titleUsageVersionId);
+                return (
+                  <article key={component.id}>
+                    <span className={`component-swatch component-${component.componentType}`} />
+                    <div>
+                      <small>
+                        {componentLabels[component.componentType] ?? component.componentType} · 字符{" "}
+                        {component.sourceSpan.start}–{component.sourceSpan.end}
+                      </small>
+                      <h3>{component.sourceSpan.text}</h3>
+                      <p>
+                        {usage?.plainExplanation.text ??
+                          (component.placeVersionId !== null
+                            ? `${placeLabel(component.placeVersionId)}，作为任命地点记录。`
+                            : "这段文本仍保持未决，不强行规范化。")}
+                      </p>
+                      <div className="tag-row">
+                        {component.semanticTracks.map((track) => (
+                          <span key={track}>{trackLabels[track] ?? track}</span>
+                        ))}
+                      </div>
+                      {concept === undefined ? null : (
+                        <Link className="text-link" to={`/titles/${concept.slug}`}>
+                          打开官名版本 →
+                        </Link>
+                      )}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+          <section className="service-panel">
+            <p className="block-label">授命之后：是否实际任事？</p>
+            {appointment.serviceEpisodes.length === 0 ? (
+              <EmptyState title="没有服务记录">
+                这不等于“必未到任”，只表示当前证据不足以自动生成实际任事。若原文明载“未至”，该否定信息保留在任命成分与注释中。
+              </EmptyState>
+            ) : (
+              appointment.serviceEpisodes.map((episode) => (
+                <article key={episode.id}>
+                  <div>
+                    <strong>
+                      {episode.episodeType === "service"
+                        ? "实际服务"
+                        : episode.episodeType === "punitive_status"
+                          ? "处分状态"
+                          : "居住／其他状态"}
+                    </strong>
+                    <StatusBadge status={episode.editorialStatus} />
+                  </div>
+                  <p>
+                    状态：{episode.serviceStatus} · {episode.time.originalText}
+                  </p>
+                  {episode.endReason === null ? null : <p>{episode.endReason.text}</p>}
+                  <EvidenceButton
+                    assertionIds={[...episode.assertionIds]}
+                    title={`${appointment.rawText}：实际状态`}
+                  />
+                </article>
+              ))
+            )}
+          </section>
+        </div>
+        <aside className="detail-aside appointment-aside">
+          <section>
+            <p className="block-label">日期精度</p>
+            <h3>{appointment.time.originalText}</h3>
+            <p>
+              {appointment.time.normalizedStart === null
+                ? "无可靠绝对日期"
+                : `${appointment.time.normalizedStart} — ${appointment.time.normalizedEnd}`}
+            </p>
+            <small>
+              {appointment.time.qualification} · {appointment.time.conversionMethod ?? "未换算"}
+            </small>
+            <p className="small-note">{appointment.time.note}</p>
+          </section>
+          <section>
+            <p className="block-label">证据门禁</p>
+            <p>
+              这条动作关联 {appointment.assertionIds.length} 项主张；只有关联支持性 passage 的
+              reviewed／accepted 主张才能进入发布数据。
+            </p>
+            <EvidenceButton
+              assertionIds={[...appointment.assertionIds]}
+              title={appointment.rawText}
+              label="打开完整证据链"
+            />
+          </section>
+          <section>
+            <p className="block-label">继续探索</p>
+            <div className="aside-links">
+              <Link to="/compare">
+                <strong>与另一条任命比较</strong>
+                <small>身份、荣衔、职务、地点和政治状态</small>
+              </Link>
+              <Link to="/decoder">
+                <strong>在解码器重放原文</strong>
+                <small>查看规则能识别什么、不能识别什么</small>
+              </Link>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>
+  );
+}
+
+export function MetricsPage() {
+  const actionCounts = Object.entries(
+    site.appointments
+      .flatMap((item) => item.actionTypes)
+      .reduce<Record<string, number>>(
+        (acc, action) => ({ ...acc, [action]: (acc[action] ?? 0) + 1 }),
+        {},
+      ),
+  ).sort(([, left], [, right]) => right - left);
+  const max = Math.max(...actionCounts.map(([, count]) => count), 1);
+  const serviceCount = site.appointments.filter((item) =>
+    item.serviceEpisodes.some((episode) => episode.episodeType === "service"),
+  ).length;
+  const metrics = site.appointments.flatMap((item) => item.metrics);
+  return (
+    <div className="page-container">
+      <PageHeader
+        eyebrow="量化探索 · EXPLICIT RUBRICS ONLY"
+        title="可计算，不等于假装精确。"
+        intro="这里优先展示记录覆盖、动作分布与证据状态。身份高低、实际权力和政治中心度没有可复核评分规则时，就不生成漂亮但虚假的折线。"
+      />
+      <div className="metric-overview">
+        <article>
+          <span>任命动作</span>
+          <strong>{site.counts.appointments}</strong>
+          <small>卷338 初步矩阵</small>
+        </article>
+        <article>
+          <span>有实际服务记录</span>
+          <strong>{serviceCount}</strong>
+          <small>动作与服务分表</small>
+        </article>
+        <article>
+          <span>结构化主张</span>
+          <strong>{site.counts.assertions}</strong>
+          <small>{site.counts.evidenceLinks} 条证据关联</small>
+        </article>
+        <article>
+          <span>数值化升降分</span>
+          <strong>—</strong>
+          <small>规则未建立，不输出</small>
+        </article>
+      </div>
+      <div className="metrics-grid">
+        <section className="chart-panel">
+          <p className="block-label">任命动作类型分布</p>
+          <h2>动作词保留多值，不强压成“升／降”</h2>
+          <div className="bar-chart">
+            {actionCounts.map(([action, count]) => (
+              <div className="bar-row" key={action}>
+                <span>{actionLabels[action] ?? action}</span>
+                <div>
+                  <i style={{ width: `${(count / max) * 100}%` }} />
+                </div>
+                <strong>{count}</strong>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="chart-panel">
+          <p className="block-label">已发布的可计算指标</p>
+          <h2>事实指标可以没有总分</h2>
+          {metrics.length === 0 ? (
+            <EmptyState title="尚无指标">待定义可复核分母与规则。</EmptyState>
+          ) : (
+            metrics.map((metric) => (
+              <article className="fact-metric" key={metric.id}>
+                <span>{metric.dimension}</span>
+                <strong>{metric.value === null ? metric.label : String(metric.value)}</strong>
+                <p>{metric.scaleDescription}</p>
+                <EvidenceButton assertionIds={[...metric.assertionIds]} title={metric.label} />
+              </article>
+            ))
+          )}
+        </section>
+      </div>
+      <section className="rubric-table">
+        <header>
+          <p className="eyebrow">未来评分门槛</p>
+          <h2>每一个数值都必须回答四件事</h2>
+        </header>
+        <div>
+          <span>01</span>
+          <strong>分母是什么？</strong>
+          <p>是完整年谱、某一传记，还是当前样本？</p>
+        </div>
+        <div>
+          <span>02</span>
+          <strong>规则能否重算？</strong>
+          <p>公式、映射表和版本必须公开。</p>
+        </div>
+        <div>
+          <span>03</span>
+          <strong>不确定性去哪了？</strong>
+          <p>缺失与争议不自动归零。</p>
+        </div>
+        <div>
+          <span>04</span>
+          <strong>跨时期可比吗？</strong>
+          <p>官名变化后不得直接沿用分值。</p>
+        </div>
+      </section>
+    </div>
+  );
+}

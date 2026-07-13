@@ -1,0 +1,11 @@
+{
+  "datasetVersion": "0.1.0-research.1",
+  "files": {
+    "release.json": "sha256:06e1676a207e9c4fe776c93d97168587fe9230f8c0215cb4b177424ab0166a51",
+    "site.json": "sha256:60c2b0e5f19a95fa7b3c2256498141b7939651c6c31c905d04281676b27db71d",
+    "titles.csv": "sha256:eff27b13b38d611a2dc950b6e2fd745ac98e7f565496ec1976910f9edb8a7b78"
+  },
+  "generatedAt": "2026-07-13",
+  "projectionVersion": "0.1.0",
+  "schemaVersion": "0.1.0"
+}

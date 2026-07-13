@@ -1,0 +1,154 @@
+[
+  {
+    "id": "chs:title:dali-pingshi",
+    "slug": "dali-pingshi",
+    "names": [
+      { "text": "大理评事", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "大理評事", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "dali pingshi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "跨时期官名入口；当前只发布苏轼凤翔任命及元丰前阅读语境。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:qianshu-panguan",
+    "slug": "qianshu-panguan",
+    "names": [
+      { "text": "签书判官", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "签书某府判官", "script": "zh-Hans", "kind": "full", "ambiguous": false },
+      { "text": "簽書判官", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "qianshu panguan", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "府州幕职差遣概念；当前实例为签书凤翔府判官。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:tongpan",
+    "slug": "tongpan",
+    "names": [
+      { "text": "通判", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "通判某州", "script": "zh-Hans", "kind": "full", "ambiguous": false },
+      { "text": "tongpan", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "州级实际工作层官名；地点构成具体任命的另一个成分。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:zhizhou",
+    "slug": "zhizhou",
+    "names": [
+      { "text": "知州", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "知某州", "script": "zh-Hans", "kind": "full", "ambiguous": false },
+      { "text": "知某州军州事", "script": "zh-Hans", "kind": "full", "ambiguous": false },
+      { "text": "知某州軍州事", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "zhizhou", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "把知密州、知徐州等规范到同一概念，同时保留原文范围和地点成分。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:tuanlian-fushi",
+    "slug": "tuanlian-fushi",
+    "names": [
+      { "text": "团练副使", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "團練副使", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "tuanlian fushi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "名称在不同语境下可能性质不同；当前重点是苏轼黄州处分语境。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:anzhi",
+    "slug": "anzhi",
+    "names": [
+      { "text": "安置", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "本州安置", "script": "zh-Hans", "kind": "full", "ambiguous": false },
+      { "text": "安置", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "anzhi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "处分状态概念，不作为正常地方职务。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:chaofeng-lang",
+    "slug": "chaofeng-lang",
+    "names": [
+      { "text": "朝奉郎", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "chaofeng lang", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "元丰以后文官寄禄官入口；当前品位和迁转序列尚未录入。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:zhongshu-sheren",
+    "slug": "zhongshu-sheren",
+    "names": [
+      { "text": "中书舍人", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "中書舍人", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "zhongshu sheren", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "元丰以后中央职事官入口；当前先发布苏轼元祐任命。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:hanlin-xueshi",
+    "slug": "hanlin-xueshi",
+    "names": [
+      { "text": "翰林学士", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "翰林學士", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "hanlin xueshi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "侍从与文翰官名入口；不同于各殿阁学士。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:longtu-xueshi",
+    "slug": "longtu-xueshi",
+    "names": [
+      { "text": "龙图阁学士", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "龍圖閣學士", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "longtu ge xueshi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "殿阁职名入口；当前只发布与知杭州并列的苏轼个案。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:ningyuan-jiedu-fushi",
+    "slug": "ningyuan-jiedu-fushi",
+    "names": [
+      { "text": "宁远军节度副使", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "寧遠軍節度副使", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      {
+        "text": "ningyuan jun jiedu fushi",
+        "script": "pinyin",
+        "kind": "translation",
+        "ambiguous": false
+      }
+    ],
+    "scopeNote": "当前只发布苏轼惠州安置前的处分性官衔个案。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title:qiongzhou-biejia",
+    "slug": "qiongzhou-biejia",
+    "names": [
+      { "text": "琼州别驾", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "瓊州別駕", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "qiongzhou biejia", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "scopeNote": "当前只发布苏轼再贬后与昌化居住分离的个案。",
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  }
+]

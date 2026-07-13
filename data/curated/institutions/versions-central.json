@@ -1,0 +1,322 @@
+[
+  {
+    "id": "chs:institution-version:three-departments-yuanfeng",
+    "institutionId": "chs:institution:three-departments",
+    "label": "元丰官制行后的三省组合",
+    "validTime": {
+      "originalText": "元丰官制行后至北宋末（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "起点为制度解释镜头，不代替具体诏令日期。"
+    },
+    "level": "central",
+    "functions": [
+      {
+        "text": "由门下、中书、尚书三省构成的中央政务组合；三省长贰的实际配置须按官制版本解释。",
+        "assertionIds": ["chs:assertion:institution-three-departments-yuanfeng"]
+      }
+    ],
+    "assertionIds": ["chs:assertion:institution-three-departments-yuanfeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-version:menxia-sheng-yuanfeng",
+    "institutionId": "chs:institution:menxia-sheng",
+    "label": "元丰官制行后的门下省",
+    "validTime": {
+      "originalText": "元丰官制行后至北宋末（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "以卷161官制行条为当前版本边界。"
+    },
+    "level": "central",
+    "functions": [
+      {
+        "text": "审中外出纳并参与议政；左仆射兼门下侍郎行侍中职，另置侍郎为佐。",
+        "assertionIds": ["chs:assertion:institution-menxia-yuanfeng"]
+      }
+    ],
+    "assertionIds": ["chs:assertion:institution-menxia-yuanfeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-version:zhongshu-sheng-yuanfeng",
+    "institutionId": "chs:institution:zhongshu-sheng",
+    "label": "元丰官制行后的中书省",
+    "validTime": {
+      "originalText": "元丰官制行后至北宋末（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "以卷161官制行条为当前版本边界。"
+    },
+    "level": "central",
+    "functions": [
+      {
+        "text": "参与议政并承宣命令；右仆射兼中书侍郎行中书令职。",
+        "assertionIds": ["chs:assertion:institution-zhongshu-yuanfeng"]
+      }
+    ],
+    "assertionIds": ["chs:assertion:institution-zhongshu-yuanfeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-version:shangshu-sheng-yuanfeng",
+    "institutionId": "chs:institution:shangshu-sheng",
+    "label": "元丰官制行后的尚书省",
+    "validTime": {
+      "originalText": "元丰官制行后至北宋末（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "以卷161官制行条为当前版本边界。"
+    },
+    "level": "central",
+    "functions": [
+      {
+        "text": "会决六曹庶务；左右仆射、左右丞和左右司构成当前已证的长贰与省务结构。",
+        "assertionIds": ["chs:assertion:institution-shangshu-yuanfeng"]
+      }
+    ],
+    "assertionIds": ["chs:assertion:institution-shangshu-yuanfeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-version:shumi-yuan-pre-yuanfeng-five",
+    "institutionId": "chs:institution:shumi-yuan",
+    "label": "元丰五年前的枢密院长贰框架",
+    "validTime": {
+      "originalText": "北宋初至元丰五年改置前",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1081-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1081",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "精确改置月日尚待权威编年材料核定。"
+    },
+    "level": "central",
+    "functions": [
+      {
+        "text": "枢密使、知院事主兵政，同知、副使、签书为贰；军旅常务与三省分班禀奏。",
+        "assertionIds": ["chs:assertion:institution-shumi-pre-yuanfeng"]
+      }
+    ],
+    "assertionIds": ["chs:assertion:institution-shumi-pre-yuanfeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-version:shumi-yuan-yuanfeng-five",
+    "institutionId": "chs:institution:shumi-yuan",
+    "label": "元丰五年后的枢密院长贰框架",
+    "validTime": {
+      "originalText": "元丰五年至北宋末（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1082-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1082/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "元祐初复置签书的变化由官名版本另行表达。"
+    },
+    "level": "central",
+    "functions": [
+      {
+        "text": "定置知院、同知院而罢使、副；兵政职掌延续，但长贰名号发生变化。",
+        "assertionIds": ["chs:assertion:institution-shumi-yuanfeng-five"]
+      }
+    ],
+    "assertionIds": ["chs:assertion:institution-shumi-yuanfeng-five"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-version:sansi-pre-yuanfeng",
+    "institutionId": "chs:institution:sansi",
+    "label": "元丰官制行前的三司",
+    "validTime": {
+      "originalText": "北宋初至元丰官制行前",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1079-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1079",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "制度行用边界按当前改革镜头近似。"
+    },
+    "level": "central",
+    "functions": [
+      {
+        "text": "总国计并通管盐铁、度支、户部；元丰官制行后罢三司使并归户部。",
+        "assertionIds": ["chs:assertion:institution-sansi-pre-yuanfeng"]
+      }
+    ],
+    "assertionIds": ["chs:assertion:institution-sansi-pre-yuanfeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-version:hanlin-xueshi-yuan-northern-song",
+    "institutionId": "chs:institution:hanlin-xueshi-yuan",
+    "label": "北宋翰林学士院（当前职掌版本）",
+    "validTime": {
+      "originalText": "北宋（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "院内名号仍按各自 title usage 有效期解释。"
+    },
+    "level": "central",
+    "functions": [
+      {
+        "text": "承担制、诰、诏、令撰述；承旨、学士、知制诰等名号不能据共同职掌视为同级。",
+        "assertionIds": ["chs:assertion:institution-hanlin-northern-song"]
+      }
+    ],
+    "assertionIds": ["chs:assertion:institution-hanlin-northern-song"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-version:longtu-ge-northern-song",
+    "institutionId": "chs:institution:longtu-ge",
+    "label": "北宋龙图阁（馆职归属种子版本）",
+    "validTime": {
+      "originalText": "景德以后至北宋末（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1004-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1004/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "只表示当前已录直学士与待制名号的范围。"
+    },
+    "level": "central",
+    "functions": [
+      {
+        "text": "当前仅作为龙图阁直学士与待制的归属节点；不据官名条扩张机构全部功能。",
+        "assertionIds": ["chs:assertion:institution-longtu-current-scope"]
+      }
+    ],
+    "assertionIds": ["chs:assertion:institution-longtu-current-scope"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-version:yushitai-northern-song",
+    "institutionId": "chs:institution:yushitai",
+    "label": "北宋御史台（当前职掌版本）",
+    "validTime": {
+      "originalText": "北宋（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "员额与分察规则仍需按时期细分。"
+    },
+    "level": "central",
+    "functions": [
+      {
+        "text": "纠察官邪、肃正纲纪，下分台院、殿院和察院。",
+        "assertionIds": ["chs:assertion:institution-yushitai-northern-song"]
+      }
+    ],
+    "assertionIds": ["chs:assertion:institution-yushitai-northern-song"],
+    "editorialStatus": "reviewed"
+  }
+]

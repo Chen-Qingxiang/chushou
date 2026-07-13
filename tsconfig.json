@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": ["vitest.config.ts", "playwright.config.ts"],
+  "references": [
+    { "path": "./packages/schema" },
+    { "path": "./packages/domain" },
+    { "path": "./tools/ingest" },
+    { "path": "./apps/web" }
+  ]
+}
