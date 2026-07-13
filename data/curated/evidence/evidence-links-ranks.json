@@ -1,0 +1,218 @@
+[
+  {
+    "id": "chs:evidence:rank-scheme-pre-yuanfeng-lines",
+    "assertionId": "chs:assertion:rank-scheme-pre-yuanfeng-yuanwailang-lines",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "换官表直接给出员外郎前行、中行、后行及相应新官。"
+  },
+  {
+    "id": "chs:evidence:rank-scheme-yuanfeng-jilu-overview",
+    "assertionId": "chs:assertion:rank-scheme-yuanfeng-jilu-24",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-jilu-overview",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文明确称寄禄格以阶易官并定为二十四阶。"
+  },
+  {
+    "id": "chs:evidence:rank-scheme-yuanfeng-jilu-local-order",
+    "assertionId": "chs:assertion:rank-scheme-yuanfeng-jilu-24",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "换官表支持当前四个相邻条目的局部顺序。"
+  },
+  {
+    "id": "chs:evidence:rank-scheme-wensan-29",
+    "assertionId": "chs:assertion:rank-scheme-civil-scattered-29",
+    "passageId": "chs:passage:song-shi-169-civil-scattered-rank-slice",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "原文表题称二十九阶，并为当前切片逐项标品。"
+  },
+  {
+    "id": "chs:evidence:rank-pre-qianxing",
+    "assertionId": "chs:assertion:rank-pre-yuanfeng-qianxing-yuanwailang",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "表中朝请郎项直接列前行员外郎。"
+  },
+  {
+    "id": "chs:evidence:rank-pre-zhongxing",
+    "assertionId": "chs:assertion:rank-pre-yuanfeng-zhongxing-yuanwailang",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "表中朝散郎项直接列中行员外郎。"
+  },
+  {
+    "id": "chs:evidence:rank-pre-houxing",
+    "assertionId": "chs:assertion:rank-pre-yuanfeng-houxing-yuanwailang",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "表中朝奉郎项直接列后行员外郎。"
+  },
+  {
+    "id": "chs:evidence:rank-yuanfeng-chaoqing",
+    "assertionId": "chs:assertion:rank-yuanfeng-chaoqing-lang",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "按换官表当前相邻行转录局部顺序。"
+  },
+  {
+    "id": "chs:evidence:rank-yuanfeng-chaosan",
+    "assertionId": "chs:assertion:rank-yuanfeng-chaosan-lang",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "按换官表当前相邻行转录局部顺序。"
+  },
+  {
+    "id": "chs:evidence:rank-yuanfeng-chaofeng",
+    "assertionId": "chs:assertion:rank-yuanfeng-chaofeng-lang",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "按换官表当前相邻行转录局部顺序。"
+  },
+  {
+    "id": "chs:evidence:rank-yuanfeng-chengyi",
+    "assertionId": "chs:assertion:rank-yuanfeng-chengyi-lang",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "按换官表当前相邻行转录局部顺序。"
+  },
+  {
+    "id": "chs:evidence:rank-wensan-zhongsan",
+    "assertionId": "chs:assertion:rank-wensan-zhongsan-daifu",
+    "passageId": "chs:passage:song-shi-169-civil-scattered-rank-slice",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "文散官表直接标作正五上。"
+  },
+  {
+    "id": "chs:evidence:rank-wensan-chaofeng-daifu",
+    "assertionId": "chs:assertion:rank-wensan-chaofeng-daifu",
+    "passageId": "chs:passage:song-shi-169-civil-scattered-rank-slice",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "文散官表直接标作正五。"
+  },
+  {
+    "id": "chs:evidence:rank-wensan-chaosan-daifu",
+    "assertionId": "chs:assertion:rank-wensan-chaosan-daifu",
+    "passageId": "chs:passage:song-shi-169-civil-scattered-rank-slice",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "文散官表直接标作从五上。"
+  },
+  {
+    "id": "chs:evidence:rank-wensan-chaoqing-daifu",
+    "assertionId": "chs:assertion:rank-wensan-chaoqing-daifu",
+    "passageId": "chs:passage:song-shi-169-civil-scattered-rank-slice",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "文散官表直接标作从五。"
+  },
+  {
+    "id": "chs:evidence:rank-wensan-chaofeng-lang",
+    "assertionId": "chs:assertion:rank-wensan-chaofeng-lang",
+    "passageId": "chs:passage:song-shi-169-civil-scattered-rank-slice",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "文散官表直接标作正六上。"
+  },
+  {
+    "id": "chs:evidence:rank-wensan-chengzhi-lang",
+    "assertionId": "chs:assertion:rank-wensan-chengzhi-lang",
+    "passageId": "chs:passage:song-shi-169-civil-scattered-rank-slice",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "文散官表直接标作正六。"
+  },
+  {
+    "id": "chs:evidence:crosswalk-qianxing-chaoqing",
+    "assertionId": "chs:assertion:crosswalk-qianxing-to-chaoqing",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "新官—旧官表直接对应。"
+  },
+  {
+    "id": "chs:evidence:crosswalk-zhongxing-chaosan",
+    "assertionId": "chs:assertion:crosswalk-zhongxing-to-chaosan",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "新官—旧官表直接对应。"
+  },
+  {
+    "id": "chs:evidence:crosswalk-houxing-chaofeng",
+    "assertionId": "chs:assertion:crosswalk-houxing-to-chaofeng",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "新官—旧官表直接对应。"
+  },
+  {
+    "id": "chs:evidence:crosswalk-wensan-candidate-same-label",
+    "assertionId": "chs:assertion:crosswalk-wensan-chaofeng-candidate",
+    "passageId": "chs:passage:song-shi-169-civil-scattered-rank-slice",
+    "relation": "supports",
+    "basis": "contextual_inference",
+    "directness": "indirect",
+    "note": "文散官表证明另一方案中存在同名朝奉郎，但不能单独证明等值。"
+  },
+  {
+    "id": "chs:evidence:crosswalk-wensan-candidate-qualified",
+    "assertionId": "chs:assertion:crosswalk-wensan-chaofeng-candidate",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-jilu-overview",
+    "relation": "qualifies",
+    "basis": "contextual_inference",
+    "directness": "indirect",
+    "note": "寄禄格“杂取唐及国朝旧制”只给一般背景，没有指明这个同名项的直接承继。"
+  },
+  {
+    "id": "chs:evidence:usage-chaofeng-rank-link-person",
+    "assertionId": "chs:assertion:usage-chaofeng-lang-rank-link",
+    "passageId": "chs:passage:song-shi-338-yuanyou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "苏轼传直接记元祐语境中的“复朝奉郎”。"
+  },
+  {
+    "id": "chs:evidence:usage-chaofeng-rank-link-scheme",
+    "assertionId": "chs:assertion:usage-chaofeng-lang-rank-link",
+    "passageId": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "relation": "supports",
+    "basis": "contextual_inference",
+    "directness": "indirect",
+    "note": "卷169把朝奉郎置于元丰寄禄格换官表；链接保持中等置信度和局部范围。"
+  }
+]

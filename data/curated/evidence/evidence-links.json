@@ -1,0 +1,380 @@
+[
+  {
+    "id": "chs:evidence:period-pre-reform-system",
+    "assertionId": "chs:assertion:period-pre-reform-system",
+    "passageId": "chs:passage:song-shi-161-system",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "卷161直接区分官、职、差遣。"
+  },
+  {
+    "id": "chs:evidence:yuanfeng-reform-start",
+    "assertionId": "chs:assertion:yuanfeng-reform-start",
+    "passageId": "chs:passage:song-shi-161-reform",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "卷161直接记元丰三年详定和《寄禄格》。"
+  },
+  {
+    "id": "chs:evidence:period-yuanyou-career",
+    "assertionId": "chs:assertion:period-yuanyou-career-context",
+    "passageId": "chs:passage:song-shi-338-yuanyou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "传记相邻段落保存任官顺序。"
+  },
+  {
+    "id": "chs:evidence:period-shaosheng-punitive",
+    "assertionId": "chs:assertion:period-shaosheng-punitive-context",
+    "passageId": "chs:passage:song-shi-338-late",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "传记直接保存绍圣初的连续处分变化。"
+  },
+  {
+    "id": "chs:evidence:su-shi-identity",
+    "assertionId": "chs:assertion:su-shi-identity",
+    "passageId": "chs:passage:song-shi-338-identity",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "传记首句。"
+  },
+  {
+    "id": "chs:evidence:pre-reform-rank-song-shi",
+    "assertionId": "chs:assertion:pre-reform-rank-principle",
+    "passageId": "chs:passage:song-shi-161-system",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "“官以寓禄秩、叙位著”。"
+  },
+  {
+    "id": "chs:evidence:pre-reform-rank-gong",
+    "assertionId": "chs:assertion:pre-reform-rank-principle",
+    "passageId": "chs:passage:gong-2019-abstract-short",
+    "relation": "supports",
+    "basis": "secondary_scholarship",
+    "directness": "indirect",
+    "note": "现代研究摘要提供解释性支持。"
+  },
+  {
+    "id": "chs:evidence:prefectural-government",
+    "assertionId": "chs:assertion:prefectural-government-principle",
+    "passageId": "chs:passage:song-shi-161-local",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "“用文臣知州，复设通判以贰之”。"
+  },
+  {
+    "id": "chs:evidence:usage-dali-case",
+    "assertionId": "chs:assertion:usage-dali-pingshi",
+    "passageId": "chs:passage:song-shi-338-fengxiang",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "个案显示两个并列成分。"
+  },
+  {
+    "id": "chs:evidence:usage-dali-system",
+    "assertionId": "chs:assertion:usage-dali-pingshi",
+    "passageId": "chs:passage:song-shi-161-system",
+    "relation": "supports",
+    "basis": "contextual_inference",
+    "directness": "indirect",
+    "note": "制度概括支持不按字面自动判实际职掌。"
+  },
+  {
+    "id": "chs:evidence:usage-qianshu",
+    "assertionId": "chs:assertion:usage-qianshu-panguan",
+    "passageId": "chs:passage:song-shi-338-fengxiang",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "任命原文。"
+  },
+  {
+    "id": "chs:evidence:usage-tongpan",
+    "assertionId": "chs:assertion:usage-tongpan",
+    "passageId": "chs:passage:song-shi-161-local",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "职官志原文说明“贰之”。"
+  },
+  {
+    "id": "chs:evidence:usage-zhizhou-system",
+    "assertionId": "chs:assertion:usage-zhizhou",
+    "passageId": "chs:passage:song-shi-161-local",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "职官志明载文臣知州。"
+  },
+  {
+    "id": "chs:evidence:usage-zhizhou-case",
+    "assertionId": "chs:assertion:usage-zhizhou",
+    "passageId": "chs:passage:song-shi-338-mizhou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "人物传记的“徙知密州”个案。"
+  },
+  {
+    "id": "chs:evidence:usage-tuanlian-thank",
+    "assertionId": "chs:assertion:usage-tuanlian-fushi-huangzhou",
+    "passageId": "chs:passage:dao-huangzhou-xiebiao-opening",
+    "relation": "supports",
+    "basis": "contextual_inference",
+    "directness": "direct",
+    "note": "同一句中的责授、安置和不得签书公事限定个案功能。"
+  },
+  {
+    "id": "chs:evidence:usage-tuanlian-song-shi",
+    "assertionId": "chs:assertion:usage-tuanlian-fushi-huangzhou",
+    "passageId": "chs:passage:song-shi-338-huzhou-huangzhou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "传记将其置于台狱后处分叙事。"
+  },
+  {
+    "id": "chs:evidence:usage-anzhi-huangzhou",
+    "assertionId": "chs:assertion:usage-anzhi",
+    "passageId": "chs:passage:dao-huangzhou-xiebiao-opening",
+    "relation": "supports",
+    "basis": "contextual_inference",
+    "directness": "direct",
+    "note": "黄州个案。"
+  },
+  {
+    "id": "chs:evidence:usage-anzhi-huizhou",
+    "assertionId": "chs:assertion:usage-anzhi",
+    "passageId": "chs:passage:song-shi-338-late",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "惠州个案。"
+  },
+  {
+    "id": "chs:evidence:usage-chaofeng",
+    "assertionId": "chs:assertion:usage-chaofeng-lang",
+    "passageId": "chs:passage:song-shi-338-yuanyou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "“复朝奉郎、知登州”。"
+  },
+  {
+    "id": "chs:evidence:usage-zhongshu-sheren",
+    "assertionId": "chs:assertion:usage-zhongshu-sheren",
+    "passageId": "chs:passage:song-shi-338-yuanyou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "“迁中书舍人”。"
+  },
+  {
+    "id": "chs:evidence:usage-hanlin-xueshi",
+    "assertionId": "chs:assertion:usage-hanlin-xueshi",
+    "passageId": "chs:passage:song-shi-338-yuanyou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "“寻除翰林学士”。"
+  },
+  {
+    "id": "chs:evidence:usage-longtu-xueshi",
+    "assertionId": "chs:assertion:usage-longtu-xueshi",
+    "passageId": "chs:passage:song-shi-338-hangzhou-second",
+    "relation": "supports",
+    "basis": "contextual_inference",
+    "directness": "direct",
+    "note": "并列官衔与实际到杭相邻。"
+  },
+  {
+    "id": "chs:evidence:usage-ningyuan-fushi",
+    "assertionId": "chs:assertion:usage-ningyuan-fushi",
+    "passageId": "chs:passage:song-shi-338-late",
+    "relation": "supports",
+    "basis": "contextual_inference",
+    "directness": "direct",
+    "note": "与“贬”“惠州安置”组合。"
+  },
+  {
+    "id": "chs:evidence:usage-qiongzhou-biejia",
+    "assertionId": "chs:assertion:usage-qiongzhou-biejia",
+    "passageId": "chs:passage:song-shi-338-late",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "“又贬琼州别驾，居昌化”。"
+  },
+  {
+    "id": "chs:evidence:appointment-fengxiang",
+    "assertionId": "chs:assertion:appointment-fengxiang",
+    "passageId": "chs:passage:song-shi-338-fengxiang",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "任命句。"
+  },
+  {
+    "id": "chs:evidence:appointment-hangzhou-tongpan",
+    "assertionId": "chs:assertion:appointment-hangzhou-tongpan",
+    "passageId": "chs:passage:song-shi-338-hangzhou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "任命句。"
+  },
+  {
+    "id": "chs:evidence:service-hangzhou-tongpan",
+    "assertionId": "chs:assertion:service-hangzhou-tongpan",
+    "passageId": "chs:passage:song-shi-338-mizhou",
+    "relation": "supports",
+    "basis": "chronological_inference",
+    "directness": "indirect",
+    "note": "在杭州任内叙事之后才徙知密州。"
+  },
+  {
+    "id": "chs:evidence:appointment-mizhou",
+    "assertionId": "chs:assertion:appointment-mizhou",
+    "passageId": "chs:passage:song-shi-338-mizhou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "任命句。"
+  },
+  {
+    "id": "chs:evidence:appointment-xuzhou",
+    "assertionId": "chs:assertion:appointment-xuzhou",
+    "passageId": "chs:passage:song-shi-338-xuzhou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "任命句。"
+  },
+  {
+    "id": "chs:evidence:appointment-huzhou",
+    "assertionId": "chs:assertion:appointment-huzhou",
+    "passageId": "chs:passage:song-shi-338-huzhou-huangzhou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "任命句。"
+  },
+  {
+    "id": "chs:evidence:appointment-huangzhou-thank",
+    "assertionId": "chs:assertion:appointment-huangzhou",
+    "passageId": "chs:passage:dao-huangzhou-xiebiao-opening",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "本人谢表明载完整处分成分。"
+  },
+  {
+    "id": "chs:evidence:appointment-huangzhou-song-shi",
+    "assertionId": "chs:assertion:appointment-huangzhou",
+    "passageId": "chs:passage:song-shi-338-huzhou-huangzhou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "后修正史交叉支持核心成分。"
+  },
+  {
+    "id": "chs:evidence:service-huangzhou-arrival",
+    "assertionId": "chs:assertion:service-huangzhou-arrival",
+    "passageId": "chs:passage:dao-huangzhou-xiebiao-opening",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "“已于今月一日到本所”。"
+  },
+  {
+    "id": "chs:evidence:service-huangzhou-restriction",
+    "assertionId": "chs:assertion:service-huangzhou-restriction",
+    "passageId": "chs:passage:dao-huangzhou-xiebiao-opening",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "“不得签书公事”。"
+  },
+  {
+    "id": "chs:evidence:appointment-yuanyou-restoration",
+    "assertionId": "chs:assertion:appointment-yuanyou-restoration",
+    "passageId": "chs:passage:song-shi-338-yuanyou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "传记任命句。"
+  },
+  {
+    "id": "chs:evidence:appointment-zhongshu-sheren",
+    "assertionId": "chs:assertion:appointment-zhongshu-sheren",
+    "passageId": "chs:passage:song-shi-338-yuanyou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "元祐元年任命句。"
+  },
+  {
+    "id": "chs:evidence:appointment-hanlin-xueshi",
+    "assertionId": "chs:assertion:appointment-hanlin-xueshi",
+    "passageId": "chs:passage:song-shi-338-yuanyou",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "相对时间任命句。"
+  },
+  {
+    "id": "chs:evidence:appointment-hangzhou-second",
+    "assertionId": "chs:assertion:appointment-hangzhou-second",
+    "passageId": "chs:passage:song-shi-338-hangzhou-second",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "元祐四年任命句。"
+  },
+  {
+    "id": "chs:evidence:service-hangzhou-second",
+    "assertionId": "chs:assertion:service-hangzhou-second",
+    "passageId": "chs:passage:song-shi-338-hangzhou-second",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "“既至杭”。"
+  },
+  {
+    "id": "chs:evidence:appointment-yingzhou-not-assumed",
+    "assertionId": "chs:assertion:appointment-yingzhou-not-assumed",
+    "passageId": "chs:passage:song-shi-338-late",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "明载“未至”。"
+  },
+  {
+    "id": "chs:evidence:appointment-huizhou-punitive",
+    "assertionId": "chs:assertion:appointment-huizhou-punitive",
+    "passageId": "chs:passage:song-shi-338-late",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "处分组合句。"
+  },
+  {
+    "id": "chs:evidence:appointment-qiongzhou-changhua",
+    "assertionId": "chs:assertion:appointment-qiongzhou-changhua",
+    "passageId": "chs:passage:song-shi-338-late",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "贬授与居住句。"
+  }
+]

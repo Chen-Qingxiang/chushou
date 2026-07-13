@@ -1,0 +1,2353 @@
+[
+  {
+    "id": "chs:title-usage:taishi-northern-song",
+    "titleConceptId": "chs:title:taishi",
+    "label": "太师（北宋三师加官）",
+    "validTime": {
+      "originalText": "北宋（卷161概括范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "dynasty_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和改制等内部变化尚待另建版本。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["civil_service_rank"],
+    "semanticTracks": ["identity_rank", "honor_expertise"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "卷161列太师为三师之一，主要作为宰相、亲王、使相加官。",
+        "assertionIds": ["chs:assertion:usage-taishi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这里的太师主要表示极高身份与恩数，不能仅凭名号推定他实际主持某项政务。",
+      "assertionIds": ["chs:assertion:usage-taishi"]
+    },
+    "caveat": {
+      "text": "政和以后“三公”名制变化未并入本版本。",
+      "assertionIds": ["chs:assertion:usage-taishi"]
+    },
+    "commonPairingTitleIds": ["chs:title:taifu", "chs:title:taibao"],
+    "assertionIds": ["chs:assertion:usage-taishi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:taifu-northern-song",
+    "titleConceptId": "chs:title:taifu",
+    "label": "太傅（北宋三师加官）",
+    "validTime": {
+      "originalText": "北宋（卷161概括范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "dynasty_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "内部名制变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["civil_service_rank"],
+    "semanticTracks": ["identity_rank", "honor_expertise"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "卷161列太傅为三师之一，主要作为加官。",
+        "assertionIds": ["chs:assertion:usage-taifu"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "太傅在此首先是高等身份加官，不自动说明日常工作。",
+      "assertionIds": ["chs:assertion:usage-taifu"]
+    },
+    "caveat": {
+      "text": "具体人物是否另有实际差遣须看完整除授。",
+      "assertionIds": ["chs:assertion:usage-taifu"]
+    },
+    "commonPairingTitleIds": ["chs:title:taishi", "chs:title:taibao"],
+    "assertionIds": ["chs:assertion:usage-taifu"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:taibao-northern-song",
+    "titleConceptId": "chs:title:taibao",
+    "label": "太保（北宋三师加官）",
+    "validTime": {
+      "originalText": "北宋（卷161概括范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "dynasty_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "内部名制变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["civil_service_rank"],
+    "semanticTracks": ["identity_rank", "honor_expertise"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "卷161列太保为三师之一，主要作为加官。",
+        "assertionIds": ["chs:assertion:usage-taibao"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "太保在此首先是高等身份加官，不自动说明日常工作。",
+      "assertionIds": ["chs:assertion:usage-taibao"]
+    },
+    "caveat": {
+      "text": "具体人物是否另有实际差遣须看完整除授。",
+      "assertionIds": ["chs:assertion:usage-taibao"]
+    },
+    "commonPairingTitleIds": ["chs:title:taishi", "chs:title:taifu"],
+    "assertionIds": ["chs:assertion:usage-taibao"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:taiwei-northern-song",
+    "titleConceptId": "chs:title:taiwei",
+    "label": "太尉（北宋三公加官）",
+    "validTime": {
+      "originalText": "北宋（卷161概括范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "dynasty_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和二年名制变化待另建版本。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["civil_service_rank"],
+    "semanticTracks": ["identity_rank", "honor_expertise"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "卷161列太尉为三公之一，作为加官；特拜者不预政事。",
+        "assertionIds": ["chs:assertion:usage-taiwei"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "此处太尉首先是高等制度身份，不能按字面直接读成实际统兵。",
+      "assertionIds": ["chs:assertion:usage-taiwei"]
+    },
+    "caveat": {
+      "text": "武阶名号与政和改革后的用法须另行核对。",
+      "assertionIds": ["chs:assertion:usage-taiwei"]
+    },
+    "commonPairingTitleIds": ["chs:title:situ", "chs:title:sikong"],
+    "assertionIds": ["chs:assertion:usage-taiwei"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:situ-northern-song",
+    "titleConceptId": "chs:title:situ",
+    "label": "司徒（北宋三公加官）",
+    "validTime": {
+      "originalText": "北宋（卷161概括范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "dynasty_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和名制变化待另建版本。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["civil_service_rank"],
+    "semanticTracks": ["identity_rank", "honor_expertise"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      { "text": "卷161列司徒为三公之一，作为加官。", "assertionIds": ["chs:assertion:usage-situ"] }
+    ],
+    "plainExplanation": {
+      "text": "司徒在当前版本中表示高等加官身份，不据此推定实际职事。",
+      "assertionIds": ["chs:assertion:usage-situ"]
+    },
+    "caveat": {
+      "text": "具体除授组合仍需逐案判断。",
+      "assertionIds": ["chs:assertion:usage-situ"]
+    },
+    "commonPairingTitleIds": ["chs:title:taiwei", "chs:title:sikong"],
+    "assertionIds": ["chs:assertion:usage-situ"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:sikong-northern-song",
+    "titleConceptId": "chs:title:sikong",
+    "label": "司空（北宋三公加官）",
+    "validTime": {
+      "originalText": "北宋（卷161概括范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "dynasty_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和名制变化待另建版本。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["civil_service_rank"],
+    "semanticTracks": ["identity_rank", "honor_expertise"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "卷161列司空为三公之一，作为加官。",
+        "assertionIds": ["chs:assertion:usage-sikong"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "司空在当前版本中表示高等加官身份，不据此推定实际职事。",
+      "assertionIds": ["chs:assertion:usage-sikong"]
+    },
+    "caveat": {
+      "text": "具体除授组合仍需逐案判断。",
+      "assertionIds": ["chs:assertion:usage-sikong"]
+    },
+    "commonPairingTitleIds": ["chs:title:taiwei", "chs:title:situ"],
+    "assertionIds": ["chs:assertion:usage-sikong"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:tongpingzhangshi-pre-yuanfeng",
+    "titleConceptId": "chs:title:tongpingzhangshi",
+    "label": "同平章事（元丰改制前真相名号）",
+    "validTime": {
+      "originalText": "宋初至元丰改制前",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1079-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1079",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "个别起止与恢复情形待任命表细化。"
+    },
+    "periodLensIds": ["chs:period:north-song-pre-yuanfeng"],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "卷161称同平章事为真相之任；二人时分日知印。",
+        "assertionIds": ["chs:assertion:usage-tongpingzhangshi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "在元丰改制前，这一名号直接指向宰相实际职任，而不是单纯荣衔。",
+      "assertionIds": ["chs:assertion:usage-tongpingzhangshi"]
+    },
+    "caveat": {
+      "text": "元丰后宰相组合改用左右仆射兼两省侍郎，不能沿用本版本。",
+      "assertionIds": ["chs:assertion:usage-tongpingzhangshi"]
+    },
+    "commonPairingTitleIds": ["chs:title:canzhi-zhengshi"],
+    "assertionIds": ["chs:assertion:usage-tongpingzhangshi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:canzhi-zhengshi-pre-yuanfeng",
+    "titleConceptId": "chs:title:canzhi-zhengshi",
+    "label": "参知政事（元丰改制前副相）",
+    "validTime": {
+      "originalText": "乾德二年至元丰改制前",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0964-01-01",
+      "normalizedEnd": "1079-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0964/1079",
+      "conversionMethod": "source_year_and_reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "职位权能在宋初逐步变化，当前只给出总括版本。"
+    },
+    "periodLensIds": ["chs:period:north-song-pre-yuanfeng"],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "掌副宰相、参预大政与庶务。",
+        "assertionIds": ["chs:assertion:usage-canzhi-zhengshi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "它是宰相之副的实际执政职务；元丰新制时被两省侍郎和左右丞等替代。",
+      "assertionIds": ["chs:assertion:usage-canzhi-zhengshi"]
+    },
+    "caveat": {
+      "text": "设置初期与后续同升政事堂的权能并非完全一致。",
+      "assertionIds": ["chs:assertion:usage-canzhi-zhengshi"]
+    },
+    "commonPairingTitleIds": [
+      "chs:title:tongpingzhangshi",
+      "chs:title:menxia-shilang",
+      "chs:title:zhongshu-shilang"
+    ],
+    "assertionIds": ["chs:assertion:usage-canzhi-zhengshi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:shizhong-pre-yuanfeng",
+    "titleConceptId": "chs:title:shizhong",
+    "label": "侍中（元丰改制前高秩罕除）",
+    "validTime": {
+      "originalText": "北宋初至元丰改制前",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1079-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1079",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "元丰改制具体施行月日与此前个别真除情形待任命材料细化。"
+    },
+    "periodLensIds": ["chs:period:north-song-pre-yuanfeng"],
+    "categories": ["functional_office"],
+    "semanticTracks": ["identity_rank", "political_status"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "条文保存侍中议大政、审出纳的正式职掌，但北宋改制前因秩高罕除，不能由名号推定实际行职。",
+        "assertionIds": ["chs:assertion:usage-shizhong-pre-yuanfeng"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "元丰改制前读到“侍中”，首先要核查是否真除和是否实际预政，不能直接套用改制后的门下省组织位置。",
+      "assertionIds": ["chs:assertion:usage-shizhong-pre-yuanfeng"]
+    },
+    "caveat": {
+      "text": "“罕除”不等于从未授予；具体人物仍须逐案查任命与任事材料。",
+      "assertionIds": ["chs:assertion:usage-shizhong-pre-yuanfeng"]
+    },
+    "commonPairingTitleIds": ["chs:title:tongpingzhangshi"],
+    "assertionIds": ["chs:assertion:usage-shizhong-pre-yuanfeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:shizhong-yuanfeng",
+    "titleConceptId": "chs:title:shizhong",
+    "label": "侍中（元丰后三省长官虚位）",
+    "validTime": {
+      "originalText": "元丰改制至北宋末",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和改名等内部变化未细分。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:menxia-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "条文为佐天子议大政、审中外出纳，但北宋秩高罕除；元丰后由左仆射兼门下侍郎行职。",
+        "assertionIds": ["chs:assertion:usage-shizhong"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "侍中是门下省最高名号，但元丰后真正履行这层职掌的是左仆射兼门下侍郎组合。",
+      "assertionIds": ["chs:assertion:usage-shizhong"]
+    },
+    "caveat": {
+      "text": "不能把条文上的长官名号自动当作有人实际任职。",
+      "assertionIds": ["chs:assertion:usage-shizhong"]
+    },
+    "commonPairingTitleIds": ["chs:title:shangshu-zuo-pushe", "chs:title:menxia-shilang"],
+    "assertionIds": ["chs:assertion:usage-shizhong"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:menxia-shilang-yuanfeng",
+    "titleConceptId": "chs:title:menxia-shilang",
+    "label": "门下侍郎（元丰后执政官）",
+    "validTime": {
+      "originalText": "元丰改制至北宋末",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和改名阶段待另建版本。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:menxia-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "掌贰侍中之职、省中外出纳，并列为执政官。",
+        "assertionIds": ["chs:assertion:usage-menxia-shilang"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这是元丰后三省体系中的实际执政职务，不只是身份官阶。",
+      "assertionIds": ["chs:assertion:usage-menxia-shilang"]
+    },
+    "caveat": {
+      "text": "与左仆射兼任时的宰相组合和单独侍郎须看完整官衔。",
+      "assertionIds": ["chs:assertion:usage-menxia-shilang"]
+    },
+    "commonPairingTitleIds": ["chs:title:shangshu-zuo-pushe", "chs:title:zhongshu-shilang"],
+    "assertionIds": ["chs:assertion:usage-menxia-shilang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:zuo-jianyi-dafu-yuanfeng",
+    "titleConceptId": "chs:title:zuo-jianyi-dafu",
+    "label": "左谏议大夫（元丰后门下谏官）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "员额与实际除授另见个案。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:menxia-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与左司谏、左正言等同掌规谏讽谕。",
+        "assertionIds": ["chs:assertion:usage-zuo-jianyi-dafu"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "属于门下省谏官系统，职责是对朝政和任官失当提出谏正。",
+      "assertionIds": ["chs:assertion:usage-zuo-jianyi-dafu"]
+    },
+    "caveat": {
+      "text": "元丰前同名可能不实际任谏职。",
+      "assertionIds": ["chs:assertion:usage-zuo-jianyi-dafu"]
+    },
+    "commonPairingTitleIds": [
+      "chs:title:zuo-sijian",
+      "chs:title:zuo-zhengyan",
+      "chs:title:you-jianyi-dafu"
+    ],
+    "assertionIds": ["chs:assertion:usage-zuo-jianyi-dafu"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:zuo-sijian-yuanfeng",
+    "titleConceptId": "chs:title:zuo-sijian",
+    "label": "左司谏（元丰后门下谏官）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "员额与实际除授另见个案。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:menxia-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与左谏议大夫、左正言等同掌规谏讽谕。",
+        "assertionIds": ["chs:assertion:usage-zuo-sijian"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这是实际谏官职务，能针对朝政阙失和任官不当提出谏正。",
+      "assertionIds": ["chs:assertion:usage-zuo-sijian"]
+    },
+    "caveat": {
+      "text": "元丰前领他职的司谏不一定实际谏诤。",
+      "assertionIds": ["chs:assertion:usage-zuo-sijian"]
+    },
+    "commonPairingTitleIds": [
+      "chs:title:zuo-jianyi-dafu",
+      "chs:title:zuo-zhengyan",
+      "chs:title:you-sijian"
+    ],
+    "assertionIds": ["chs:assertion:usage-zuo-sijian"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:zuo-zhengyan-yuanfeng",
+    "titleConceptId": "chs:title:zuo-zhengyan",
+    "label": "左正言（元丰后门下谏官）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "员额与实际除授另见个案。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:menxia-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与左谏议大夫、左司谏等同掌规谏讽谕。",
+        "assertionIds": ["chs:assertion:usage-zuo-zhengyan"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这是门下省的实际谏官职务。",
+      "assertionIds": ["chs:assertion:usage-zuo-zhengyan"]
+    },
+    "caveat": {
+      "text": "元丰前同名与供职状态须逐案判断。",
+      "assertionIds": ["chs:assertion:usage-zuo-zhengyan"]
+    },
+    "commonPairingTitleIds": [
+      "chs:title:zuo-jianyi-dafu",
+      "chs:title:zuo-sijian",
+      "chs:title:you-zhengyan"
+    ],
+    "assertionIds": ["chs:assertion:usage-zuo-zhengyan"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:jishizhong-yuanfeng",
+    "titleConceptId": "chs:title:jishizhong",
+    "label": "给事中（元丰后门下封驳官）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "不同朝次封驳程序变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:menxia-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "分治六房、审读出纳；政令失当或除授非人时可论奏驳正。",
+        "assertionIds": ["chs:assertion:usage-jishizhong"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "给事中不是一般文书官：它在门下省承担审读和封驳，可阻止不当命令或任命直接通过。",
+      "assertionIds": ["chs:assertion:usage-jishizhong"]
+    },
+    "caveat": {
+      "text": "给事中与中书舍人的互察程序在绍圣等时期有变化。",
+      "assertionIds": ["chs:assertion:usage-jishizhong"]
+    },
+    "commonPairingTitleIds": ["chs:title:zhongshu-sheren"],
+    "assertionIds": ["chs:assertion:usage-jishizhong"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:qiju-lang-yuanfeng",
+    "titleConceptId": "chs:title:qiju-lang",
+    "label": "起居郎（元丰后左史职任）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "元丰六年后左右史分记与元祐不分另见细目。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "honor_expertise"],
+    "institutionVersionIds": ["chs:institution-version:menxia-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "掌记天子言动，并记录命令、制度因革、群臣进对与除授等。",
+        "assertionIds": ["chs:assertion:usage-qiju-lang"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "改制后的起居郎是实际史职，负责把皇帝言动和重要政务写入记录。",
+      "assertionIds": ["chs:assertion:usage-qiju-lang"]
+    },
+    "caveat": {
+      "text": "元丰前同名主要寄禄，不能用本解释回填早期。",
+      "assertionIds": ["chs:assertion:usage-qiju-lang"]
+    },
+    "commonPairingTitleIds": ["chs:title:qiju-sheren"],
+    "assertionIds": ["chs:assertion:usage-qiju-lang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:fubao-lang-yuanfeng",
+    "titleConceptId": "chs:title:fubao-lang",
+    "label": "符宝郎（元丰官制设置）",
+    "validTime": {
+      "originalText": "元丰改制至大观增置前",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1106-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1106",
+      "conversionMethod": "source_event_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "大观以后另有增置。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty"],
+    "institutionVersionIds": ["chs:institution-version:menxia-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "条文称掌外廷符宝之事，但元丰官制行后未尝除人。",
+        "assertionIds": ["chs:assertion:usage-fubao-lang"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "制度上设有这个官名，却可能长期没人实际担任；“有职掌条文”不等于“有人任职”。",
+      "assertionIds": ["chs:assertion:usage-fubao-lang"]
+    },
+    "caveat": {
+      "text": "大观初增置后的实际任用须另建版本。",
+      "assertionIds": ["chs:assertion:usage-fubao-lang"]
+    },
+    "commonPairingTitleIds": [],
+    "assertionIds": ["chs:assertion:usage-fubao-lang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:zhongshu-ling-yuanfeng",
+    "titleConceptId": "chs:title:zhongshu-ling",
+    "label": "中书令（元丰后三省长官虚位）",
+    "validTime": {
+      "originalText": "元丰改制至北宋末",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和改制内部变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:zhongshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "条文为佐天子议大政、宣行命令；北宋未尝真拜，元丰后由右仆射兼中书侍郎行职。",
+        "assertionIds": ["chs:assertion:usage-zhongshu-ling"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "中书令是最高长官名号，但这一时期真正履职的是右仆射兼中书侍郎组合。",
+      "assertionIds": ["chs:assertion:usage-zhongshu-ling"]
+    },
+    "caveat": {
+      "text": "不能把兼领或赠官自动视为参与政事。",
+      "assertionIds": ["chs:assertion:usage-zhongshu-ling"]
+    },
+    "commonPairingTitleIds": ["chs:title:shangshu-you-pushe", "chs:title:zhongshu-shilang"],
+    "assertionIds": ["chs:assertion:usage-zhongshu-ling"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:zhongshu-shilang-yuanfeng",
+    "titleConceptId": "chs:title:zhongshu-shilang",
+    "label": "中书侍郎（元丰后执政官）",
+    "validTime": {
+      "originalText": "元丰改制至北宋末",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和改名阶段待另建版本。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:zhongshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "掌贰中书令之职，参议大政，承奉所宣诏旨。",
+        "assertionIds": ["chs:assertion:usage-zhongshu-shilang"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这是元丰后中书省的实际执政职务，侧重参议大政和承奉诏旨。",
+      "assertionIds": ["chs:assertion:usage-zhongshu-shilang"]
+    },
+    "caveat": {
+      "text": "与右仆射兼任时的宰相组合须看完整官衔。",
+      "assertionIds": ["chs:assertion:usage-zhongshu-shilang"]
+    },
+    "commonPairingTitleIds": ["chs:title:shangshu-you-pushe", "chs:title:menxia-shilang"],
+    "assertionIds": ["chs:assertion:usage-zhongshu-shilang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:qiju-sheren-yuanfeng",
+    "titleConceptId": "chs:title:qiju-sheren",
+    "label": "起居舍人（元丰后右史职任）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "左右史分记规则多次变化。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "honor_expertise"],
+    "institutionVersionIds": ["chs:institution-version:zhongshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与起居郎同掌记注；元丰前为寄禄，官制行后成为职任。",
+        "assertionIds": ["chs:assertion:usage-qiju-sheren"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "改制后它是实际史职；同名在改制前却不能这样读。",
+      "assertionIds": ["chs:assertion:usage-qiju-sheren"]
+    },
+    "caveat": {
+      "text": "当前只发布元丰后版本，元丰前寄禄版本尚未单列。",
+      "assertionIds": ["chs:assertion:usage-qiju-sheren"]
+    },
+    "commonPairingTitleIds": ["chs:title:qiju-lang"],
+    "assertionIds": ["chs:assertion:usage-qiju-sheren"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:you-jianyi-dafu-yuanfeng",
+    "titleConceptId": "chs:title:you-jianyi-dafu",
+    "label": "右谏议大夫（元丰后中书谏官）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "员额与实际除授另见个案。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:zhongshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与门下省左谏议大夫等同掌规谏讽谕，分属中书省。",
+        "assertionIds": ["chs:assertion:usage-you-jianyi-dafu"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "属于中书省一侧的谏官系统，实际职责仍是规谏朝政。",
+      "assertionIds": ["chs:assertion:usage-you-jianyi-dafu"]
+    },
+    "caveat": {
+      "text": "左右分属不代表职掌完全相反。",
+      "assertionIds": ["chs:assertion:usage-you-jianyi-dafu"]
+    },
+    "commonPairingTitleIds": [
+      "chs:title:you-sijian",
+      "chs:title:you-zhengyan",
+      "chs:title:zuo-jianyi-dafu"
+    ],
+    "assertionIds": ["chs:assertion:usage-you-jianyi-dafu"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:you-sijian-yuanfeng",
+    "titleConceptId": "chs:title:you-sijian",
+    "label": "右司谏（元丰后中书谏官）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "员额与实际除授另见个案。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:zhongshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与门下省左司谏等同掌规谏讽谕，分属中书省。",
+        "assertionIds": ["chs:assertion:usage-you-sijian"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这是中书省一侧的实际谏官职务。",
+      "assertionIds": ["chs:assertion:usage-you-sijian"]
+    },
+    "caveat": {
+      "text": "左右分属不代表职掌完全相反。",
+      "assertionIds": ["chs:assertion:usage-you-sijian"]
+    },
+    "commonPairingTitleIds": [
+      "chs:title:you-jianyi-dafu",
+      "chs:title:you-zhengyan",
+      "chs:title:zuo-sijian"
+    ],
+    "assertionIds": ["chs:assertion:usage-you-sijian"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:you-zhengyan-yuanfeng",
+    "titleConceptId": "chs:title:you-zhengyan",
+    "label": "右正言（元丰后中书谏官）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "员额与实际除授另见个案。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:zhongshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与门下省左正言等同掌规谏讽谕，分属中书省。",
+        "assertionIds": ["chs:assertion:usage-you-zhengyan"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这是中书省一侧的实际谏官职务。",
+      "assertionIds": ["chs:assertion:usage-you-zhengyan"]
+    },
+    "caveat": {
+      "text": "元丰前同名是否实际供职须逐案判断。",
+      "assertionIds": ["chs:assertion:usage-you-zhengyan"]
+    },
+    "commonPairingTitleIds": [
+      "chs:title:you-jianyi-dafu",
+      "chs:title:you-sijian",
+      "chs:title:zuo-zhengyan"
+    ],
+    "assertionIds": ["chs:assertion:usage-you-zhengyan"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:jianzheng-guan-xining",
+    "titleConceptId": "chs:title:jianzheng-guan",
+    "label": "检正官（熙宁中书五房）",
+    "validTime": {
+      "originalText": "熙宁三年至元丰官制行前后",
+      "calendar": "gregorian_proleptic",
+      "eraName": "熙宁",
+      "eraYear": 3,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1070-01-01",
+      "normalizedEnd": "1080-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1070/1080",
+      "conversionMethod": "source_year_and_reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "罢职精确月日未在本批换算。"
+    },
+    "periodLensIds": ["chs:period:north-song-pre-yuanfeng", "chs:period:yuanfeng-reform"],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "五房各一人，掌纠正省务；元丰官制行后罢，其职归左右司。",
+        "assertionIds": ["chs:assertion:usage-jianzheng-guan"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "检正官是熙宁改革阶段的省务纠正职务，元丰改制后并入尚书左右司，不能画成永久节点。",
+      "assertionIds": ["chs:assertion:usage-jianzheng-guan"]
+    },
+    "caveat": {
+      "text": "南宋复置不属于本版本。",
+      "assertionIds": ["chs:assertion:usage-jianzheng-guan"]
+    },
+    "commonPairingTitleIds": ["chs:title:zuosi-langzhong", "chs:title:yousi-langzhong"],
+    "assertionIds": ["chs:assertion:usage-jianzheng-guan"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:shangshu-ling-yuanfeng",
+    "titleConceptId": "chs:title:shangshu-ling",
+    "label": "尚书令（元丰后三省长官虚位）",
+    "validTime": {
+      "originalText": "元丰改制至北宋末",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和二年罢置和宣和复置另待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:shangshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "条文总六曹庶务，但自建隆以来不除，兼领者不与政事。",
+        "assertionIds": ["chs:assertion:usage-shangshu-ling"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "尚书令是条文上的尚书省最高长官，但北宋实际不除人；不能把机构图最高位误当成真实任职。",
+      "assertionIds": ["chs:assertion:usage-shangshu-ling"]
+    },
+    "caveat": {
+      "text": "政和、宣和名制变动须另建更短版本。",
+      "assertionIds": ["chs:assertion:usage-shangshu-ling"]
+    },
+    "commonPairingTitleIds": ["chs:title:shangshu-zuo-pushe", "chs:title:shangshu-you-pushe"],
+    "assertionIds": ["chs:assertion:usage-shangshu-ling"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:shangshu-zuo-pushe-yuanfeng",
+    "titleConceptId": "chs:title:shangshu-zuo-pushe",
+    "label": "尚书左仆射兼门下侍郎（元丰宰相组合）",
+    "validTime": {
+      "originalText": "元丰改制至政和改名之前",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1115-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1115",
+      "conversionMethod": "reform_and_rename_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和改左仆射为太宰的具体月日未换算。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:shangshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "为宰相之任，并兼门下侍郎行侍中职事。",
+        "assertionIds": ["chs:assertion:usage-shangshu-zuo-pushe"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "元丰新制下，左仆射与门下侍郎组成宰相职衔，负责门下省一侧的最高政务。",
+      "assertionIds": ["chs:assertion:usage-shangshu-zuo-pushe"]
+    },
+    "caveat": {
+      "text": "单写“左仆射”时仍须核对是否兼门下侍郎。",
+      "assertionIds": ["chs:assertion:usage-shangshu-zuo-pushe"]
+    },
+    "commonPairingTitleIds": ["chs:title:menxia-shilang", "chs:title:shangshu-you-pushe"],
+    "assertionIds": ["chs:assertion:usage-shangshu-zuo-pushe"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:shangshu-you-pushe-yuanfeng",
+    "titleConceptId": "chs:title:shangshu-you-pushe",
+    "label": "尚书右仆射兼中书侍郎（元丰宰相组合）",
+    "validTime": {
+      "originalText": "元丰改制至政和改名之前",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1115-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1115",
+      "conversionMethod": "reform_and_rename_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和改右仆射为少宰的具体月日未换算。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:shangshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "为宰相之任，并兼中书侍郎行中书令职事。",
+        "assertionIds": ["chs:assertion:usage-shangshu-you-pushe"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "元丰新制下，右仆射与中书侍郎组成宰相职衔，负责中书省一侧的最高政务。",
+      "assertionIds": ["chs:assertion:usage-shangshu-you-pushe"]
+    },
+    "caveat": {
+      "text": "单写“右仆射”时仍须核对是否兼中书侍郎。",
+      "assertionIds": ["chs:assertion:usage-shangshu-you-pushe"]
+    },
+    "commonPairingTitleIds": ["chs:title:zhongshu-shilang", "chs:title:shangshu-zuo-pushe"],
+    "assertionIds": ["chs:assertion:usage-shangshu-you-pushe"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:shangshu-zuo-cheng-yuanfeng",
+    "titleConceptId": "chs:title:shangshu-zuo-cheng",
+    "label": "尚书左丞（元丰后执政）",
+    "validTime": {
+      "originalText": "元丰改制至北宋末",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和阶段内部变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:shangshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "参议大政、通治省事，辅贰令与仆射；改制后升为执政。",
+        "assertionIds": ["chs:assertion:usage-shangshu-zuo-cheng"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "左丞是尚书省的实际执政长贰，不只是“丞”字所示的普通副手。",
+      "assertionIds": ["chs:assertion:usage-shangshu-zuo-cheng"]
+    },
+    "caveat": {
+      "text": "与右丞的具体分工不能从左右字面自行补造。",
+      "assertionIds": ["chs:assertion:usage-shangshu-zuo-cheng"]
+    },
+    "commonPairingTitleIds": ["chs:title:shangshu-you-cheng"],
+    "assertionIds": ["chs:assertion:usage-shangshu-zuo-cheng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:shangshu-you-cheng-yuanfeng",
+    "titleConceptId": "chs:title:shangshu-you-cheng",
+    "label": "尚书右丞（元丰后执政）",
+    "validTime": {
+      "originalText": "元丰改制至北宋末",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "政和阶段内部变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:shangshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "参议大政、通治省事，辅贰令与仆射；改制后升为执政。",
+        "assertionIds": ["chs:assertion:usage-shangshu-you-cheng"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "右丞是尚书省的实际执政长贰。",
+      "assertionIds": ["chs:assertion:usage-shangshu-you-cheng"]
+    },
+    "caveat": {
+      "text": "与左丞的具体分工不能从左右字面自行补造。",
+      "assertionIds": ["chs:assertion:usage-shangshu-you-cheng"]
+    },
+    "commonPairingTitleIds": ["chs:title:shangshu-zuo-cheng"],
+    "assertionIds": ["chs:assertion:usage-shangshu-you-cheng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:zuosi-langzhong-yuanfeng",
+    "titleConceptId": "chs:title:zuosi-langzhong",
+    "label": "左司郎中（元丰后尚书都司）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "分房细节在后续朝次有变。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty"],
+    "institutionVersionIds": ["chs:institution-version:shangshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "受理六曹事务、举正文书稽失；左司分治吏、户、礼等房。",
+        "assertionIds": ["chs:assertion:usage-zuosi-langzhong"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "它是尚书省内部协调、检查文书并分治吏户礼事务的实际郎官。",
+      "assertionIds": ["chs:assertion:usage-zuosi-langzhong"]
+    },
+    "caveat": {
+      "text": "不能把左司理解成独立于尚书省的机构。",
+      "assertionIds": ["chs:assertion:usage-zuosi-langzhong"]
+    },
+    "commonPairingTitleIds": ["chs:title:yousi-langzhong", "chs:title:zuosi-yuanwailang"],
+    "assertionIds": ["chs:assertion:usage-zuosi-langzhong"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:yousi-langzhong-yuanfeng",
+    "titleConceptId": "chs:title:yousi-langzhong",
+    "label": "右司郎中（元丰后尚书都司）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "分房细节在后续朝次有变。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty"],
+    "institutionVersionIds": ["chs:institution-version:shangshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "受理六曹事务、举正文书稽失；右司分治兵、刑、工等房。",
+        "assertionIds": ["chs:assertion:usage-yousi-langzhong"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "它是尚书省内部协调、检查文书并分治兵刑工事务的实际郎官。",
+      "assertionIds": ["chs:assertion:usage-yousi-langzhong"]
+    },
+    "caveat": {
+      "text": "不能把右司理解成独立于尚书省的机构。",
+      "assertionIds": ["chs:assertion:usage-yousi-langzhong"]
+    },
+    "commonPairingTitleIds": ["chs:title:zuosi-langzhong", "chs:title:yousi-yuanwailang"],
+    "assertionIds": ["chs:assertion:usage-yousi-langzhong"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:zuosi-yuanwailang-yuanfeng",
+    "titleConceptId": "chs:title:zuosi-yuanwailang",
+    "label": "左司员外郎（元丰后尚书都司）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "郎中与员外郎内部权限差异待更多材料。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty"],
+    "institutionVersionIds": ["chs:institution-version:shangshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与左右司郎官共同受理六曹事务、纠正文书稽失；左司分治吏、户、礼等房。",
+        "assertionIds": ["chs:assertion:usage-zuosi-yuanwailang"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "属于尚书左司的实际郎官岗位，参与省务协调与文书检查。",
+      "assertionIds": ["chs:assertion:usage-zuosi-yuanwailang"]
+    },
+    "caveat": {
+      "text": "本批不臆定其与左司郎中的逐项权限差。",
+      "assertionIds": ["chs:assertion:usage-zuosi-yuanwailang"]
+    },
+    "commonPairingTitleIds": ["chs:title:zuosi-langzhong", "chs:title:yousi-yuanwailang"],
+    "assertionIds": ["chs:assertion:usage-zuosi-yuanwailang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:yousi-yuanwailang-yuanfeng",
+    "titleConceptId": "chs:title:yousi-yuanwailang",
+    "label": "右司员外郎（元丰后尚书都司）",
+    "validTime": {
+      "originalText": "元丰改制后北宋范围",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "郎中与员外郎内部权限差异待更多材料。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty"],
+    "institutionVersionIds": ["chs:institution-version:shangshu-sheng-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与左右司郎官共同受理六曹事务、纠正文书稽失；右司分治兵、刑、工等房。",
+        "assertionIds": ["chs:assertion:usage-yousi-yuanwailang"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "属于尚书右司的实际郎官岗位，参与省务协调与文书检查。",
+      "assertionIds": ["chs:assertion:usage-yousi-yuanwailang"]
+    },
+    "caveat": {
+      "text": "本批不臆定其与右司郎中的逐项权限差。",
+      "assertionIds": ["chs:assertion:usage-yousi-yuanwailang"]
+    },
+    "commonPairingTitleIds": ["chs:title:yousi-langzhong", "chs:title:zuosi-yuanwailang"],
+    "assertionIds": ["chs:assertion:usage-yousi-yuanwailang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:shumishi-pre-yuanfeng",
+    "titleConceptId": "chs:title:shumishi",
+    "label": "枢密使（元丰五年前枢密长官）",
+    "validTime": {
+      "originalText": "宋初至元丰五年改制",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1082-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1082",
+      "conversionMethod": "source_year_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "元丰五年具体月日待换算。"
+    },
+    "periodLensIds": ["chs:period:north-song-pre-yuanfeng", "chs:period:yuanfeng-reform"],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:shumi-yuan-pre-yuanfeng-five"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "作为枢密院长官佐天子执兵政；元丰五年改制后使名罢。",
+        "assertionIds": ["chs:assertion:usage-shumishi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "枢密使是军政中枢长官，不应简单等同于领兵出征的将帅。",
+      "assertionIds": ["chs:assertion:usage-shumishi"]
+    },
+    "caveat": {
+      "text": "元丰五年后的同名复置不属于本版本。",
+      "assertionIds": ["chs:assertion:usage-shumishi"]
+    },
+    "commonPairingTitleIds": ["chs:title:shumi-fushi", "chs:title:tongpingzhangshi"],
+    "assertionIds": ["chs:assertion:usage-shumishi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:zhi-shumiyuan-shi-yuanfeng",
+    "titleConceptId": "chs:title:zhi-shumiyuan-shi",
+    "label": "知枢密院事（元丰五年后枢密长官）",
+    "validTime": {
+      "originalText": "元丰五年至北宋末",
+      "calendar": "gregorian_proleptic",
+      "eraName": "元丰",
+      "eraYear": 5,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1082-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1082/1127",
+      "conversionMethod": "source_year_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "具体起始月日待换算。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:shumi-yuan-yuanfeng-five"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "元丰五年定置为枢密院长官，佐天子执兵政。",
+        "assertionIds": ["chs:assertion:usage-zhi-shumiyuan-shi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这是元丰改制后的枢密院主要长官名号，负责中央军政而非一支部队的战场指挥。",
+      "assertionIds": ["chs:assertion:usage-zhi-shumiyuan-shi"]
+    },
+    "caveat": {
+      "text": "与枢密使并置或复置的后续阶段须另分版本。",
+      "assertionIds": ["chs:assertion:usage-zhi-shumiyuan-shi"]
+    },
+    "commonPairingTitleIds": ["chs:title:tongzhi-shumiyuan-shi", "chs:title:menxia-shilang"],
+    "assertionIds": ["chs:assertion:usage-zhi-shumiyuan-shi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:tongzhi-shumiyuan-shi-yuanfeng",
+    "titleConceptId": "chs:title:tongzhi-shumiyuan-shi",
+    "label": "同知枢密院事（元丰五年后枢密副贰）",
+    "validTime": {
+      "originalText": "元丰五年至北宋末",
+      "calendar": "gregorian_proleptic",
+      "eraName": "元丰",
+      "eraYear": 5,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1082-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1082/1127",
+      "conversionMethod": "source_year_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "具体起始月日待换算。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:shumi-yuan-yuanfeng-five"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "元丰五年与知院事并定置，为枢密院副贰。",
+        "assertionIds": ["chs:assertion:usage-tongzhi-shumiyuan-shi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "同知枢密院事是枢密院副贰执政，不是普通协办人员。",
+      "assertionIds": ["chs:assertion:usage-tongzhi-shumiyuan-shi"]
+    },
+    "caveat": {
+      "text": "具体与知院事的分工须按任期材料判断。",
+      "assertionIds": ["chs:assertion:usage-tongzhi-shumiyuan-shi"]
+    },
+    "commonPairingTitleIds": ["chs:title:zhi-shumiyuan-shi", "chs:title:qianshu-shumiyuan-shi"],
+    "assertionIds": ["chs:assertion:usage-tongzhi-shumiyuan-shi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:shumi-fushi-pre-yuanfeng",
+    "titleConceptId": "chs:title:shumi-fushi",
+    "label": "枢密副使（元丰五年前副贰）",
+    "validTime": {
+      "originalText": "宋初至元丰五年改制",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1082-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1082",
+      "conversionMethod": "source_year_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "元丰五年具体月日待换算。"
+    },
+    "periodLensIds": ["chs:period:north-song-pre-yuanfeng", "chs:period:yuanfeng-reform"],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:shumi-yuan-pre-yuanfeng-five"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "作为枢密使副贰参与中央军政；元丰五年使、副悉罢。",
+        "assertionIds": ["chs:assertion:usage-shumi-fushi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这是枢密院副长官，不等于地方军职或节度副使。",
+      "assertionIds": ["chs:assertion:usage-shumi-fushi"]
+    },
+    "caveat": {
+      "text": "元丰五年后和南宋复置须另建版本。",
+      "assertionIds": ["chs:assertion:usage-shumi-fushi"]
+    },
+    "commonPairingTitleIds": ["chs:title:shumishi"],
+    "assertionIds": ["chs:assertion:usage-shumi-fushi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:qianshu-shumiyuan-shi-yuanyou",
+    "titleConceptId": "chs:title:qianshu-shumiyuan-shi",
+    "label": "签书枢密院事（元祐以后副贰）",
+    "validTime": {
+      "originalText": "元祐初至北宋末（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": "元祐",
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1086-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1086/1127",
+      "conversionMethod": "era_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "中间停复与权领情形待细分。"
+    },
+    "periodLensIds": ["chs:period:yuanyou", "chs:period:shaosheng-huizong-opening"],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:shumi-yuan-yuanfeng-five"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "元祐初复置，为枢密院副贰之一。",
+        "assertionIds": ["chs:assertion:usage-qianshu-shumiyuan-shi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "它是枢密院执政副贰，名号中的“签书”不能按一般文书签字理解。",
+      "assertionIds": ["chs:assertion:usage-qianshu-shumiyuan-shi"]
+    },
+    "caveat": {
+      "text": "元丰官制原本未置及徽宗时权领等变化须另建版本。",
+      "assertionIds": ["chs:assertion:usage-qianshu-shumiyuan-shi"]
+    },
+    "commonPairingTitleIds": ["chs:title:zhi-shumiyuan-shi", "chs:title:tongzhi-shumiyuan-shi"],
+    "assertionIds": ["chs:assertion:usage-qianshu-shumiyuan-shi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:sansi-shi-pre-yuanfeng",
+    "titleConceptId": "chs:title:sansi-shi",
+    "label": "三司使（元丰改制前总国计）",
+    "validTime": {
+      "originalText": "宋初至元丰官制行前",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1079-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1079",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "宋初三使分合变化待另分版本。"
+    },
+    "periodLensIds": ["chs:period:north-song-pre-yuanfeng"],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:sansi-pre-yuanfeng"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "总国计并通管盐铁、度支、户部。",
+        "assertionIds": ["chs:assertion:usage-sansi-shi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "三司使是元丰改制前中央财政总管，地位很高；改制后相关事务并归户部。",
+      "assertionIds": ["chs:assertion:usage-sansi-shi"]
+    },
+    "caveat": {
+      "text": "宋初三司分置、复合多次，本版本只作改制前总括。",
+      "assertionIds": ["chs:assertion:usage-sansi-shi"]
+    },
+    "commonPairingTitleIds": ["chs:title:tongpingzhangshi"],
+    "assertionIds": ["chs:assertion:usage-sansi-shi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:hanlin-xueshi-chengzhi-northern-song",
+    "titleConceptId": "chs:title:hanlin-xueshi-chengzhi",
+    "label": "翰林学士承旨（北宋翰林院）",
+    "validTime": {
+      "originalText": "北宋（当前总括版本）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "dynasty_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "个人任命与院制细变待个案化。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["literary_title"],
+    "semanticTracks": ["honor_expertise", "actual_duty"],
+    "institutionVersionIds": ["chs:institution-version:hanlin-xueshi-yuan-northern-song"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与翰林学士等掌制诰诏令撰述；承旨不常置，由久次学士担任。",
+        "assertionIds": ["chs:assertion:usage-hanlin-xueshi-chengzhi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这是翰林学士院资深领衔者，既有很高资望，也承担重要诏令文书工作。",
+      "assertionIds": ["chs:assertion:usage-hanlin-xueshi-chengzhi"]
+    },
+    "caveat": {
+      "text": "“承旨”简称有歧义，须结合翰林学士院语境。",
+      "assertionIds": ["chs:assertion:usage-hanlin-xueshi-chengzhi"]
+    },
+    "commonPairingTitleIds": ["chs:title:hanlin-xueshi", "chs:title:zhizhigao"],
+    "assertionIds": ["chs:assertion:usage-hanlin-xueshi-chengzhi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:zhizhigao-pre-yuanfeng",
+    "titleConceptId": "chs:title:zhizhigao",
+    "label": "知制诰（元丰改制前词命职）",
+    "validTime": {
+      "originalText": "宋初至元丰官制行前（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1079-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1079",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "设置始年和直舍人院关系待专门研究细分。"
+    },
+    "periodLensIds": ["chs:period:north-song-pre-yuanfeng"],
+    "categories": ["literary_title", "assignment"],
+    "semanticTracks": ["honor_expertise", "actual_duty"],
+    "institutionVersionIds": ["chs:institution-version:hanlin-xueshi-yuan-northern-song"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与翰林学士等掌制、诰、诏、令撰述；元丰前与中书舍人外制体系相关。",
+        "assertionIds": ["chs:assertion:usage-zhizhigao"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "知制诰既表示文翰资望，也是一项实际撰写朝廷命词的工作。",
+      "assertionIds": ["chs:assertion:usage-zhizhigao"]
+    },
+    "caveat": {
+      "text": "元丰官制后相关职掌被重新正名，不能沿用本版本。",
+      "assertionIds": ["chs:assertion:usage-zhizhigao"]
+    },
+    "commonPairingTitleIds": ["chs:title:hanlin-xueshi", "chs:title:zhongshu-sheren"],
+    "assertionIds": ["chs:assertion:usage-zhizhigao"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:hanlin-shidu-xueshi-yuanfeng",
+    "titleConceptId": "chs:title:hanlin-shidu-xueshi",
+    "label": "翰林侍读学士（元丰至元符变动）",
+    "validTime": {
+      "originalText": "元丰改制至元符元年",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1098-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1098",
+      "conversionMethod": "source_event_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "其间元祐七年复号、元符元年省号，非连续同制。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["literary_title"],
+    "semanticTracks": ["honor_expertise", "actual_duty"],
+    "institutionVersionIds": ["chs:institution-version:hanlin-xueshi-yuan-northern-song"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "元丰时废学士名而作为兼官，元祐七年复加学士号，元符元年又省。",
+        "assertionIds": ["chs:assertion:usage-hanlin-shidu-xueshi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这是经筵讲读相关资望与工作名号，但“是否带学士”在短期内反复变化。",
+      "assertionIds": ["chs:assertion:usage-hanlin-shidu-xueshi"]
+    },
+    "caveat": {
+      "text": "当前用一个变动区间提示制度不稳定，正式比较应拆成三个更细版本。",
+      "assertionIds": ["chs:assertion:usage-hanlin-shidu-xueshi"]
+    },
+    "commonPairingTitleIds": ["chs:title:hanlin-xueshi"],
+    "assertionIds": ["chs:assertion:usage-hanlin-shidu-xueshi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:longtu-zhixueshi-northern-song",
+    "titleConceptId": "chs:title:longtu-zhixueshi",
+    "label": "龙图阁直学士（北宋贴职）",
+    "validTime": {
+      "originalText": "景德四年至北宋末（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": "景德",
+      "eraYear": 4,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1007-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1007/1127",
+      "conversionMethod": "source_year_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "班序与恩数变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["academy_title"],
+    "semanticTracks": ["honor_expertise"],
+    "institutionVersionIds": ["chs:institution-version:longtu-ge-northern-song"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "景德四年设置，属于龙图阁学士、直学士、待制序列。",
+        "assertionIds": ["chs:assertion:usage-longtu-zhixueshi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "它主要标示馆阁资望和贴职身份，不单独说明外任时实际在哪里工作。",
+      "assertionIds": ["chs:assertion:usage-longtu-zhixueshi"]
+    },
+    "caveat": {
+      "text": "当前证据只支持设置与序列线索，不发布完整品位。",
+      "assertionIds": ["chs:assertion:usage-longtu-zhixueshi"]
+    },
+    "commonPairingTitleIds": ["chs:title:longtu-xueshi", "chs:title:longtu-daizhi"],
+    "assertionIds": ["chs:assertion:usage-longtu-zhixueshi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:longtu-daizhi-northern-song",
+    "titleConceptId": "chs:title:longtu-daizhi",
+    "label": "龙图阁待制（北宋贴职）",
+    "validTime": {
+      "originalText": "景德元年至北宋末（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": "景德",
+      "eraYear": 1,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1004-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1004/1127",
+      "conversionMethod": "source_year_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "改制后迁转和班序变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["academy_title"],
+    "semanticTracks": ["honor_expertise"],
+    "institutionVersionIds": ["chs:institution-version:longtu-ge-northern-song"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "景德元年设置；改制后可作为学士初复之职或由知制诰平出。",
+        "assertionIds": ["chs:assertion:usage-longtu-daizhi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "它主要是馆阁贴职和资望标签，不能按字面理解为在龙图阁每天坐班。",
+      "assertionIds": ["chs:assertion:usage-longtu-daizhi"]
+    },
+    "caveat": {
+      "text": "当前证据不支持输出固定品级或人人一致的迁转路径。",
+      "assertionIds": ["chs:assertion:usage-longtu-daizhi"]
+    },
+    "commonPairingTitleIds": ["chs:title:longtu-zhixueshi", "chs:title:longtu-xueshi"],
+    "assertionIds": ["chs:assertion:usage-longtu-daizhi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:yushi-zhongcheng-northern-song",
+    "titleConceptId": "chs:title:yushi-zhongcheng",
+    "label": "御史中丞（北宋御史台长）",
+    "validTime": {
+      "originalText": "北宋（当前总括版本）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "dynasty_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "权中丞与迁官资格变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:yushitai-northern-song"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "为御史台台长，置一人；统摄纠察官邪、肃正纲纪的台务。",
+        "assertionIds": ["chs:assertion:usage-yushi-zhongcheng"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "御史中丞是御史台长官，制度位置靠近中央监察与政治纠弹核心。",
+      "assertionIds": ["chs:assertion:usage-yushi-zhongcheng"]
+    },
+    "caveat": {
+      "text": "卷164数字页未充分校对，正式引用须回查点校本。",
+      "assertionIds": ["chs:assertion:usage-yushi-zhongcheng"]
+    },
+    "commonPairingTitleIds": ["chs:title:shiyushi", "chs:title:jiancha-yushi"],
+    "assertionIds": ["chs:assertion:usage-yushi-zhongcheng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:shiyushi-northern-song",
+    "titleConceptId": "chs:title:shiyushi",
+    "label": "侍御史（北宋台院）",
+    "validTime": {
+      "originalText": "北宋（当前总括版本）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "dynasty_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "员额和言事权限变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:yushitai-northern-song"],
+    "rankId": null,
+    "functions": [
+      { "text": "隶御史台台院，掌贰台政。", "assertionIds": ["chs:assertion:usage-shiyushi"] }
+    ],
+    "plainExplanation": {
+      "text": "侍御史是御史中丞之副，参与御史台的实际监察台务。",
+      "assertionIds": ["chs:assertion:usage-shiyushi"]
+    },
+    "caveat": {
+      "text": "不能把所有御史官一概解释为相同分工。",
+      "assertionIds": ["chs:assertion:usage-shiyushi"]
+    },
+    "commonPairingTitleIds": ["chs:title:yushi-zhongcheng", "chs:title:dianzhong-shiyushi"],
+    "assertionIds": ["chs:assertion:usage-shiyushi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:dianzhong-shiyushi-northern-song",
+    "titleConceptId": "chs:title:dianzhong-shiyushi",
+    "label": "殿中侍御史（北宋殿院）",
+    "validTime": {
+      "originalText": "北宋（当前总括版本）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "dynasty_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "员额和言事权限变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:yushitai-northern-song"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "隶御史台殿院，以仪法纠百官之失。",
+        "assertionIds": ["chs:assertion:usage-dianzhong-shiyushi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "它是御史台中偏重朝会仪法纠察的实际监察岗位。",
+      "assertionIds": ["chs:assertion:usage-dianzhong-shiyushi"]
+    },
+    "caveat": {
+      "text": "其言事范围随时期变化，当前只发布卷164明载职掌。",
+      "assertionIds": ["chs:assertion:usage-dianzhong-shiyushi"]
+    },
+    "commonPairingTitleIds": ["chs:title:shiyushi", "chs:title:jiancha-yushi"],
+    "assertionIds": ["chs:assertion:usage-dianzhong-shiyushi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:jiancha-yushi-northern-song",
+    "titleConceptId": "chs:title:jiancha-yushi",
+    "label": "监察御史（北宋察院）",
+    "validTime": {
+      "originalText": "北宋（当前总括版本）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "dynasty_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "六察员额和言事权限变化待细分。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty", "political_status"],
+    "institutionVersionIds": ["chs:institution-version:yushitai-northern-song"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "隶御史台察院，分察六曹及百司，纠其谬误。",
+        "assertionIds": ["chs:assertion:usage-jiancha-yushi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "监察御史负责分察中央各部门，是实际监察职务，不只是荣衔。",
+      "assertionIds": ["chs:assertion:usage-jiancha-yushi"]
+    },
+    "caveat": {
+      "text": "具体分察范围与员额会变，当前不发布固定永恒组织图。",
+      "assertionIds": ["chs:assertion:usage-jiancha-yushi"]
+    },
+    "commonPairingTitleIds": ["chs:title:yushi-zhongcheng", "chs:title:dianzhong-shiyushi"],
+    "assertionIds": ["chs:assertion:usage-jiancha-yushi"],
+    "editorialStatus": "reviewed"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "chs:source:song-shi",
+    "title": "宋史",
+    "shortTitle": "《宋史》",
+    "creator": "脱脱等修",
+    "sourceType": "official_history",
+    "language": "文言文",
+    "bibliography": "脱脱等：《宋史》。本数据集当前引用维基文库数字转录，具体 locator 见 edition 与 source locator。",
+    "notes": "元代官修正史；用于制度志和苏轼传的首批定位，后续须与权威点校本交叉核对。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:source:dao-huangzhou-xiebiao",
+    "title": "到黄州谢表",
+    "shortTitle": "《到黄州谢表》",
+    "creator": "苏轼",
+    "sourceType": "contemporary_primary",
+    "language": "文言文",
+    "bibliography": "苏轼：《到黄州谢表》，《东坡全集》收录。当前引用维基文库数字转录。",
+    "notes": "苏轼本人到达黄州后所作谢表，是处分、官衔成分、任事限制和实际到达的重要直接材料。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:source:gong-2019-salary-office",
+    "title": "宋代文官寄禄官制度",
+    "shortTitle": "龚延明《宋代文官寄禄官制度》",
+    "creator": "龚延明",
+    "sourceType": "modern_article",
+    "language": "现代汉语",
+    "bibliography": "龚延明：《宋代文官寄禄官制度》，《河北大学学报（哲学社会科学版）》2019年第6期，DOI: 10.3969/j.issn.1005-6378.2019.06.001。",
+    "notes": "当前只保存书目和摘要中的必要短引文，不复制论文全文。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:source:kong-fanli-su-shi-nianpu",
+    "title": "苏轼年谱",
+    "shortTitle": "孔凡礼《苏轼年谱》",
+    "creator": "孔凡礼",
+    "sourceType": "modern_monograph",
+    "language": "现代汉语",
+    "bibliography": "孔凡礼：《苏轼年谱》（上中下），北京：中华书局，1998年，ISBN 7-101-01473-9。",
+    "notes": "选作苏轼完整官履的权威编年覆盖锚点；当前只核实书目与目录范围，未取得可合法逐条核对的全文，因此不从网络转载本生成史实。",
+    "editorialStatus": "reviewed"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "datasetVersion": "0.3.1-research.1",
+  "files": {
+    "appointments.csv": "sha256:c6409432b74beafc20ef0ad71a27aa2469cb7b4170c4aed1694f675ffa7bdfb5",
+    "coverage.csv": "sha256:8c8e464dabb469632a8bd53421606106f5200770fce5253524165f524687b37e",
+    "data-dictionary.json": "sha256:7b1abeaa24fbc9fcaffb5df76fa273b8872f2807e5876e4ea8a6530bddabdb13",
+    "evidence.csv": "sha256:24a19f35e142edcd863904fccbbbd5f9d5ce9c8f8cd8a41f7c0d02796efb52f5",
+    "release.json": "sha256:266f01e897e728021fa1cf9a7dd8a82d74e5154f3b1f98953384748a62dc7c5d",
+    "site.json": "sha256:a382f8ff73636f3ffd8d9dab9b1f9a5769dcc7f01ae3c7b056e5a8b99318bf9d",
+    "titles.csv": "sha256:2214c4370cfec1e8c0e229730f3e8d18c1360178eb9b05b8246bf47db06b0343"
+  },
+  "generatedAt": "2026-07-13",
+  "projectionVersion": "0.3.1",
+  "schemaVersion": "0.3.0"
+}

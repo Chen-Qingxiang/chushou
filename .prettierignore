@@ -1,0 +1,7 @@
+node_modules
+dist
+coverage
+data/generated
+playwright-report
+test-results
+apps/web/dist-types

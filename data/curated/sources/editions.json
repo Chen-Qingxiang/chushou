@@ -1,0 +1,62 @@
+[
+  {
+    "id": "chs:edition:song-shi-wikisource-zh-hans",
+    "sourceId": "chs:source:song-shi",
+    "label": "维基文库简体数字转录",
+    "editor": null,
+    "publisher": "维基文库",
+    "publicationPlace": null,
+    "publicationYear": null,
+    "editionType": "digital_transcription",
+    "stableUrl": "https://zh.wikisource.org/wiki/宋史",
+    "license": "CC BY-SA 4.0（站点文本）；古代作品为公有领域",
+    "rightsNote": "仅保存研究所需短段落和稳定页面定位；正式研究引用仍应回查纸本点校本。",
+    "accessedAt": "2026-07-13",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:edition:dao-huangzhou-xiebiao-wikisource",
+    "sourceId": "chs:source:dao-huangzhou-xiebiao",
+    "label": "维基文库繁体数字转录 oldid 471355",
+    "editor": null,
+    "publisher": "维基文库",
+    "publicationPlace": null,
+    "publicationYear": null,
+    "editionType": "digital_transcription",
+    "stableUrl": "https://zh.wikisource.org/w/index.php?title=到黃州謝表&oldid=471355",
+    "license": "CC BY-SA；北宋原作为公有领域",
+    "rightsNote": "保存开篇必要短段落；古文原作公有领域，数字转录按页面条款署名。",
+    "accessedAt": "2026-07-13",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:edition:gong-2019-journal-page",
+    "sourceId": "chs:source:gong-2019-salary-office",
+    "label": "河北大学学报论文页面",
+    "editor": null,
+    "publisher": "河北大学学报（哲学社会科学版）",
+    "publicationPlace": "保定",
+    "publicationYear": "2019",
+    "editionType": "digital_transcription",
+    "stableUrl": "https://xb-zsb.hbu.edu.cn/CN/10.3969/j.issn.1005-6378.2019.06.001",
+    "license": null,
+    "rightsNote": "版权状态未授权再发布全文；仅保存书目和摘要中的必要短引文。",
+    "accessedAt": "2026-07-13",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:edition:kong-fanli-su-shi-nianpu-1998",
+    "sourceId": "chs:source:kong-fanli-su-shi-nianpu",
+    "label": "中华书局1998年三册本（书目记录）",
+    "editor": null,
+    "publisher": "中华书局",
+    "publicationPlace": "北京",
+    "publicationYear": "1998",
+    "editionType": "print",
+    "stableUrl": "https://opac.lib.uibe.edu.cn/opac/book/6714076368c7a32d91941efc18d87c40",
+    "license": null,
+    "rightsNote": "现代著作受版权保护；当前仅保存书目，不保存或再发布全文。",
+    "accessedAt": "2026-07-13",
+    "editorialStatus": "reviewed"
+  }
+]

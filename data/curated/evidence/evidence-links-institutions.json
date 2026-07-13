@@ -1,0 +1,110 @@
+[
+  {
+    "id": "chs:evidence:institution-three-departments",
+    "assertionId": "chs:assertion:institution-three-departments-yuanfeng",
+    "passageId": "chs:passage:song-shi-161-chief-councilor-yuanfeng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "元丰官制条直接并列三省长官及左右仆射行职。"
+  },
+  {
+    "id": "chs:evidence:institution-menxia",
+    "assertionId": "chs:assertion:institution-menxia-yuanfeng",
+    "passageId": "chs:passage:song-shi-161-menxia-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "门下省条直接支持职掌与行职结构。"
+  },
+  {
+    "id": "chs:evidence:institution-zhongshu",
+    "assertionId": "chs:assertion:institution-zhongshu-yuanfeng",
+    "passageId": "chs:passage:song-shi-161-zhongshu-ling",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "中书令条直接支持承宣命令与右仆射兼行。"
+  },
+  {
+    "id": "chs:evidence:institution-shangshu",
+    "assertionId": "chs:assertion:institution-shangshu-yuanfeng",
+    "passageId": "chs:passage:song-shi-161-shangshu-ling",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "尚书令条直接支持六曹庶务会决。"
+  },
+  {
+    "id": "chs:evidence:institution-shumi-pre",
+    "assertionId": "chs:assertion:institution-shumi-pre-yuanfeng",
+    "passageId": "chs:passage:song-shi-162-shumi-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "枢密院条直接说明长贰、兵政与三省奏事。"
+  },
+  {
+    "id": "chs:evidence:institution-shumi-yuanfeng-function",
+    "assertionId": "chs:assertion:institution-shumi-yuanfeng-five",
+    "passageId": "chs:passage:song-shi-162-shumi-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "职掌段支持兵政与三省协作。"
+  },
+  {
+    "id": "chs:evidence:institution-shumi-yuanfeng-structure",
+    "assertionId": "chs:assertion:institution-shumi-yuanfeng-five",
+    "passageId": "chs:passage:song-shi-162-shumi-yuanfeng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "改置段直接说明定知院、同知院及罢使、副。"
+  },
+  {
+    "id": "chs:evidence:institution-sansi-function",
+    "assertionId": "chs:assertion:institution-sansi-pre-yuanfeng",
+    "passageId": "chs:passage:song-shi-162-sansi-shi",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "三司条直接支持总国计和通管三部。"
+  },
+  {
+    "id": "chs:evidence:institution-sansi-reform",
+    "assertionId": "chs:assertion:institution-sansi-pre-yuanfeng",
+    "passageId": "chs:passage:song-shi-162-sansi-yuanfeng",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "罢并句支持元丰后归户部。"
+  },
+  {
+    "id": "chs:evidence:institution-hanlin",
+    "assertionId": "chs:assertion:institution-hanlin-northern-song",
+    "passageId": "chs:passage:song-shi-162-hanlin",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "翰林条直接列共同撰述职掌。"
+  },
+  {
+    "id": "chs:evidence:institution-longtu",
+    "assertionId": "chs:assertion:institution-longtu-current-scope",
+    "passageId": "chs:passage:song-shi-162-longtu-subtitles",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "龙图阁条直接记直学士与待制设置。"
+  },
+  {
+    "id": "chs:evidence:institution-yushitai",
+    "assertionId": "chs:assertion:institution-yushitai-northern-song",
+    "passageId": "chs:passage:song-shi-164-yushitai",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "御史台条直接支持监察职掌与三院结构。"
+  }
+]

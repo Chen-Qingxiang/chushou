@@ -1,0 +1,134 @@
+[
+  {
+    "id": "chs:rank-crosswalk:qianxing-yuanwailang-to-chaoqing-lang",
+    "sourceRankId": "chs:rank:pre-yuanfeng-qianxing-yuanwailang",
+    "targetRankId": "chs:rank:yuanfeng-chaoqing-lang",
+    "relationType": "replaced_by",
+    "basis": "explicit_reform_table",
+    "validTime": {
+      "originalText": "元丰寄禄格换官",
+      "calendar": "chinese_regnal",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "month",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "当前未做阴阳历日级换算。"
+    },
+    "description": {
+      "text": "《宋史》换官表直接把前行员外郎列为朝请郎所换旧官之一。",
+      "assertionIds": ["chs:assertion:crosswalk-qianxing-to-chaoqing"]
+    },
+    "confidence": "high",
+    "disputeNote": null,
+    "assertionIds": ["chs:assertion:crosswalk-qianxing-to-chaoqing"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank-crosswalk:zhongxing-yuanwailang-to-chaosan-lang",
+    "sourceRankId": "chs:rank:pre-yuanfeng-zhongxing-yuanwailang",
+    "targetRankId": "chs:rank:yuanfeng-chaosan-lang",
+    "relationType": "replaced_by",
+    "basis": "explicit_reform_table",
+    "validTime": {
+      "originalText": "元丰寄禄格换官",
+      "calendar": "chinese_regnal",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "month",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "当前未做阴阳历日级换算。"
+    },
+    "description": {
+      "text": "《宋史》换官表直接把中行员外郎列为朝散郎所换旧官之一。",
+      "assertionIds": ["chs:assertion:crosswalk-zhongxing-to-chaosan"]
+    },
+    "confidence": "high",
+    "disputeNote": null,
+    "assertionIds": ["chs:assertion:crosswalk-zhongxing-to-chaosan"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank-crosswalk:houxing-yuanwailang-to-chaofeng-lang",
+    "sourceRankId": "chs:rank:pre-yuanfeng-houxing-yuanwailang",
+    "targetRankId": "chs:rank:yuanfeng-chaofeng-lang",
+    "relationType": "replaced_by",
+    "basis": "explicit_reform_table",
+    "validTime": {
+      "originalText": "元丰寄禄格换官",
+      "calendar": "chinese_regnal",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "month",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "当前未做阴阳历日级换算。"
+    },
+    "description": {
+      "text": "《宋史》换官表直接把后行员外郎列为朝奉郎所换旧官之一。",
+      "assertionIds": ["chs:assertion:crosswalk-houxing-to-chaofeng"]
+    },
+    "confidence": "high",
+    "disputeNote": null,
+    "assertionIds": ["chs:assertion:crosswalk-houxing-to-chaofeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank-crosswalk:wensan-chaofeng-to-yuanfeng-chaofeng-candidate",
+    "sourceRankId": "chs:rank:wensan-chaofeng-lang",
+    "targetRankId": "chs:rank:yuanfeng-chaofeng-lang",
+    "relationType": "approximate_equivalent_to",
+    "basis": "same_label_candidate",
+    "validTime": {
+      "originalText": "元丰寄禄格形成语境；具体承继关系未定",
+      "calendar": "unknown",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "unknown",
+      "qualification": "disputed",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "候选边只用于显式保存待考问题。"
+    },
+    "description": {
+      "text": "两方案都有“朝奉郎”，且《宋史》称寄禄格杂取唐与国朝旧制；但当前段落没有说明这个同名项是否直接承继或等值。",
+      "assertionIds": ["chs:assertion:crosswalk-wensan-chaofeng-candidate"]
+    },
+    "confidence": "low",
+    "disputeNote": "同名与一般性“杂取旧制”不足以证明制度实体连续；在找到明确换授条文或可靠研究前不得合并。",
+    "assertionIds": ["chs:assertion:crosswalk-wensan-chaofeng-candidate"],
+    "editorialStatus": "disputed"
+  }
+]

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "chs:period:north-song-pre-yuanfeng",
+    "slug": "north-song-pre-yuanfeng",
+    "label": "元丰改制前",
+    "validTime": {
+      "originalText": "北宋建立至元丰改制前（浏览镜头）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1079-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1079",
+      "conversionMethod": "editorial_browser_lens",
+      "conversionVersion": "1.0.0",
+      "note": "只用于浏览；每个官名和机构另有真实有效期。"
+    },
+    "summary": {
+      "text": "官、职与差遣经常需要分开读；正官名称不能自动等同于实际管理本司事务。",
+      "assertionIds": ["chs:assertion:period-pre-reform-system"]
+    },
+    "focus": {
+      "text": "先找出负责实际治事的差遣，再核对官与职所表示的资序和资格。",
+      "assertionIds": ["chs:assertion:period-pre-reform-system"]
+    },
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:period:yuanfeng-reform",
+    "slug": "yuanfeng-reform",
+    "label": "元丰改制",
+    "validTime": {
+      "originalText": "元丰三年至神宗末（浏览镜头）",
+      "calendar": "chinese_regnal",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1085-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1085",
+      "conversionMethod": "era_year_browser_mapping",
+      "conversionVersion": "1.0.0",
+      "note": "改革分多年推进，不能简化为单一断点。"
+    },
+    "summary": {
+      "text": "元丰三年起详定新官制并建立寄禄格，旧名与新职掌的对应必须分版本核查。",
+      "assertionIds": ["chs:assertion:yuanfeng-reform-start"]
+    },
+    "focus": {
+      "text": "比较改制前本官／差遣结构与改制后寄禄官／职事官结构，不把名称相同视为含义相同。",
+      "assertionIds": ["chs:assertion:yuanfeng-reform-start"]
+    },
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:period:yuanyou",
+    "slug": "yuanyou",
+    "label": "元祐时期",
+    "validTime": {
+      "originalText": "元祐元年至八年",
+      "calendar": "chinese_regnal",
+      "eraName": "元祐",
+      "eraYear": 1,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1086-01-01",
+      "normalizedEnd": "1093-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1086/1093",
+      "conversionMethod": "era_year_browser_mapping",
+      "conversionVersion": "1.0.0",
+      "note": "浏览边界按公历年粗映射，具体日期逐条换算。"
+    },
+    "summary": {
+      "text": "苏轼传在这一镜头中保存连续的中央与地方任命，适合检验官衔三层拆解。",
+      "assertionIds": ["chs:assertion:period-yuanyou-career-context"]
+    },
+    "focus": {
+      "text": "分别观察寄禄官、侍从／馆阁资望与实际中央或地方工作。",
+      "assertionIds": ["chs:assertion:period-yuanyou-career-context"]
+    },
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:period:shaosheng-huizong-opening",
+    "slug": "shaosheng-huizong-opening",
+    "label": "绍圣至徽宗初",
+    "validTime": {
+      "originalText": "绍圣初至建中靖国元年",
+      "calendar": "chinese_regnal",
+      "eraName": "绍圣至建中靖国",
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1094-01-01",
+      "normalizedEnd": "1101-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1094/1101",
+      "conversionMethod": "era_year_browser_mapping",
+      "conversionVersion": "1.0.0",
+      "note": "为苏轼晚年官履设置的浏览镜头。"
+    },
+    "summary": {
+      "text": "同一段传记包含未至、降官、节度副使、安置和居住地点等不同语义。",
+      "assertionIds": ["chs:assertion:period-shaosheng-punitive-context"]
+    },
+    "focus": {
+      "text": "禁止把授命、实际任职、处分身份与居住状态合并。",
+      "assertionIds": ["chs:assertion:period-shaosheng-punitive-context"]
+    },
+    "editorialStatus": "reviewed"
+  }
+]

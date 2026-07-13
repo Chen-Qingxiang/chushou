@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: >-
+  If you use this research preview, cite the dataset version and the specific
+  assertion or passage identifiers alongside the underlying historical source.
+title: "Chushou: an evidence-first platform for Song official appointments"
+type: dataset
+version: 0.3.1-research.1
+date-released: 2026-07-13
+license: CC-BY-4.0
+repository-code: "https://github.com/Chen-Qingxiang/chushou"
+authors:
+  - name: Chushou contributors

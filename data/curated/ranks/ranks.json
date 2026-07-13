@@ -1,0 +1,405 @@
+[
+  {
+    "id": "chs:rank:pre-yuanfeng-qianxing-yuanwailang",
+    "rankSchemeId": "chs:rank-scheme:pre-yuanfeng-yuanwailang-lines",
+    "label": "前行员外郎",
+    "gradeText": null,
+    "sequence": 1,
+    "validTime": {
+      "originalText": "元丰三年九月换官前",
+      "calendar": "relative",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "month",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "换官表局部顺序第一项。"
+    },
+    "description": {
+      "text": "换官表把前行员外郎列为朝请郎所换旧官之一。",
+      "assertionIds": ["chs:assertion:rank-pre-yuanfeng-qianxing-yuanwailang"]
+    },
+    "assertionIds": ["chs:assertion:rank-pre-yuanfeng-qianxing-yuanwailang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank:pre-yuanfeng-zhongxing-yuanwailang",
+    "rankSchemeId": "chs:rank-scheme:pre-yuanfeng-yuanwailang-lines",
+    "label": "中行员外郎",
+    "gradeText": null,
+    "sequence": 2,
+    "validTime": {
+      "originalText": "元丰三年九月换官前",
+      "calendar": "relative",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "month",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "换官表局部顺序第二项。"
+    },
+    "description": {
+      "text": "换官表把中行员外郎列为朝散郎所换旧官之一。",
+      "assertionIds": ["chs:assertion:rank-pre-yuanfeng-zhongxing-yuanwailang"]
+    },
+    "assertionIds": ["chs:assertion:rank-pre-yuanfeng-zhongxing-yuanwailang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank:pre-yuanfeng-houxing-yuanwailang",
+    "rankSchemeId": "chs:rank-scheme:pre-yuanfeng-yuanwailang-lines",
+    "label": "后行员外郎",
+    "gradeText": null,
+    "sequence": 3,
+    "validTime": {
+      "originalText": "元丰三年九月换官前",
+      "calendar": "relative",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "month",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "换官表局部顺序第三项。"
+    },
+    "description": {
+      "text": "换官表把后行员外郎列为朝奉郎所换旧官之一。",
+      "assertionIds": ["chs:assertion:rank-pre-yuanfeng-houxing-yuanwailang"]
+    },
+    "assertionIds": ["chs:assertion:rank-pre-yuanfeng-houxing-yuanwailang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank:yuanfeng-chaoqing-lang",
+    "rankSchemeId": "chs:rank-scheme:yuanfeng-jilu-24",
+    "label": "朝请郎",
+    "gradeText": null,
+    "sequence": 1,
+    "validTime": {
+      "originalText": "元丰寄禄格局部序列",
+      "calendar": "relative",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "reign_period",
+      "qualification": "approximate",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "sequence 仅表示已发布四阶切片中的相对顺序。"
+    },
+    "description": {
+      "text": "换官表在当前切片中先列朝请郎，并以之前行员外郎等旧官。",
+      "assertionIds": ["chs:assertion:rank-yuanfeng-chaoqing-lang"]
+    },
+    "assertionIds": ["chs:assertion:rank-yuanfeng-chaoqing-lang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank:yuanfeng-chaosan-lang",
+    "rankSchemeId": "chs:rank-scheme:yuanfeng-jilu-24",
+    "label": "朝散郎",
+    "gradeText": null,
+    "sequence": 2,
+    "validTime": {
+      "originalText": "元丰寄禄格局部序列",
+      "calendar": "relative",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "reign_period",
+      "qualification": "approximate",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "sequence 仅表示已发布四阶切片中的相对顺序。"
+    },
+    "description": {
+      "text": "换官表把朝散郎列在朝请郎之后、朝奉郎之前，并以之换中行员外郎等旧官。",
+      "assertionIds": ["chs:assertion:rank-yuanfeng-chaosan-lang"]
+    },
+    "assertionIds": ["chs:assertion:rank-yuanfeng-chaosan-lang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank:yuanfeng-chaofeng-lang",
+    "rankSchemeId": "chs:rank-scheme:yuanfeng-jilu-24",
+    "label": "朝奉郎",
+    "gradeText": null,
+    "sequence": 3,
+    "validTime": {
+      "originalText": "元丰寄禄格局部序列",
+      "calendar": "relative",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "reign_period",
+      "qualification": "approximate",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "sequence 仅表示已发布四阶切片中的相对顺序。"
+    },
+    "description": {
+      "text": "换官表把朝奉郎列在朝散郎之后、承议郎之前，并以之换后行员外郎、左右司谏。",
+      "assertionIds": ["chs:assertion:rank-yuanfeng-chaofeng-lang"]
+    },
+    "assertionIds": ["chs:assertion:rank-yuanfeng-chaofeng-lang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank:yuanfeng-chengyi-lang",
+    "rankSchemeId": "chs:rank-scheme:yuanfeng-jilu-24",
+    "label": "承议郎",
+    "gradeText": null,
+    "sequence": 4,
+    "validTime": {
+      "originalText": "元丰寄禄格局部序列",
+      "calendar": "relative",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "reign_period",
+      "qualification": "approximate",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "sequence 仅表示已发布四阶切片中的相对顺序。"
+    },
+    "description": {
+      "text": "换官表在朝奉郎之后列承议郎，并以之换左右正言、太常与国子博士。",
+      "assertionIds": ["chs:assertion:rank-yuanfeng-chengyi-lang"]
+    },
+    "assertionIds": ["chs:assertion:rank-yuanfeng-chengyi-lang"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank:wensan-zhongsan-daifu",
+    "rankSchemeId": "chs:rank-scheme:civil-scattered-29-songzhi",
+    "label": "中散大夫",
+    "gradeText": "正五上",
+    "sequence": 1,
+    "validTime": {
+      "originalText": "卷169文散官表局部",
+      "calendar": "unknown",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "unknown",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "只保存表内文字与局部顺序。"
+    },
+    "description": {
+      "text": "文散官表列中散大夫为正五上。",
+      "assertionIds": ["chs:assertion:rank-wensan-zhongsan-daifu"]
+    },
+    "assertionIds": ["chs:assertion:rank-wensan-zhongsan-daifu"],
+    "editorialStatus": "provisional"
+  },
+  {
+    "id": "chs:rank:wensan-chaofeng-daifu",
+    "rankSchemeId": "chs:rank-scheme:civil-scattered-29-songzhi",
+    "label": "朝奉大夫",
+    "gradeText": "正五",
+    "sequence": 2,
+    "validTime": {
+      "originalText": "卷169文散官表局部",
+      "calendar": "unknown",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "unknown",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "只保存表内文字与局部顺序。"
+    },
+    "description": {
+      "text": "文散官表列朝奉大夫为正五。",
+      "assertionIds": ["chs:assertion:rank-wensan-chaofeng-daifu"]
+    },
+    "assertionIds": ["chs:assertion:rank-wensan-chaofeng-daifu"],
+    "editorialStatus": "provisional"
+  },
+  {
+    "id": "chs:rank:wensan-chaosan-daifu",
+    "rankSchemeId": "chs:rank-scheme:civil-scattered-29-songzhi",
+    "label": "朝散大夫",
+    "gradeText": "从五上",
+    "sequence": 3,
+    "validTime": {
+      "originalText": "卷169文散官表局部",
+      "calendar": "unknown",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "unknown",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "只保存表内文字与局部顺序。"
+    },
+    "description": {
+      "text": "文散官表列朝散大夫为从五上。",
+      "assertionIds": ["chs:assertion:rank-wensan-chaosan-daifu"]
+    },
+    "assertionIds": ["chs:assertion:rank-wensan-chaosan-daifu"],
+    "editorialStatus": "provisional"
+  },
+  {
+    "id": "chs:rank:wensan-chaoqing-daifu",
+    "rankSchemeId": "chs:rank-scheme:civil-scattered-29-songzhi",
+    "label": "朝请大夫",
+    "gradeText": "从五",
+    "sequence": 4,
+    "validTime": {
+      "originalText": "卷169文散官表局部",
+      "calendar": "unknown",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "unknown",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "只保存表内文字与局部顺序。"
+    },
+    "description": {
+      "text": "文散官表列朝请大夫为从五。",
+      "assertionIds": ["chs:assertion:rank-wensan-chaoqing-daifu"]
+    },
+    "assertionIds": ["chs:assertion:rank-wensan-chaoqing-daifu"],
+    "editorialStatus": "provisional"
+  },
+  {
+    "id": "chs:rank:wensan-chaofeng-lang",
+    "rankSchemeId": "chs:rank-scheme:civil-scattered-29-songzhi",
+    "label": "朝奉郎",
+    "gradeText": "正六上",
+    "sequence": 5,
+    "validTime": {
+      "originalText": "卷169文散官表局部",
+      "calendar": "unknown",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "unknown",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "只保存表内文字与局部顺序；不与元丰寄禄阶自动合并。"
+    },
+    "description": {
+      "text": "文散官表列朝奉郎为正六上；这个同名项与元丰寄禄阶保持不同稳定 ID。",
+      "assertionIds": ["chs:assertion:rank-wensan-chaofeng-lang"]
+    },
+    "assertionIds": ["chs:assertion:rank-wensan-chaofeng-lang"],
+    "editorialStatus": "provisional"
+  },
+  {
+    "id": "chs:rank:wensan-chengzhi-lang",
+    "rankSchemeId": "chs:rank-scheme:civil-scattered-29-songzhi",
+    "label": "承直郎",
+    "gradeText": "正六",
+    "sequence": 6,
+    "validTime": {
+      "originalText": "卷169文散官表局部",
+      "calendar": "unknown",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "unknown",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "只保存表内文字与局部顺序。"
+    },
+    "description": {
+      "text": "文散官表列承直郎为正六。",
+      "assertionIds": ["chs:assertion:rank-wensan-chengzhi-lang"]
+    },
+    "assertionIds": ["chs:assertion:rank-wensan-chengzhi-lang"],
+    "editorialStatus": "provisional"
+  }
+]

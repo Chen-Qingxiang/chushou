@@ -1,0 +1,34 @@
+[
+  {
+    "id": "chs:metric:su-shi-huangzhou-punitive-restriction",
+    "subjectId": "chs:service:su-shi-huangzhou-punitive-status",
+    "dimension": "punitive_restriction",
+    "assessmentType": "source_fact",
+    "value": null,
+    "label": "不得签书公事",
+    "scaleDescription": "该维度当前不使用数值；直接显示史料明载的任事限制。",
+    "applicableTime": {
+      "originalText": "本州安置期间",
+      "calendar": "relative",
+      "eraName": "元丰",
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "interval",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "限制终止待考。"
+    },
+    "evaluator": "苏轼《到黄州谢表》原文投影",
+    "method": "source_fact_no_numeric_score",
+    "assertionIds": ["chs:assertion:service-huangzhou-restriction"],
+    "confidence": "high",
+    "editorialStatus": "reviewed"
+  }
+]

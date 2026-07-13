@@ -1,0 +1,558 @@
+[
+  {
+    "id": "chs:title-usage:dali-pingshi-pre-reform",
+    "titleConceptId": "chs:title:dali-pingshi",
+    "label": "大理评事（元丰改制前个案解释）",
+    "validTime": {
+      "originalText": "元丰改制前（当前研究范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1079-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1079",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "一般有效期待职官志和官品研究进一步限定。"
+    },
+    "periodLensIds": ["chs:period:north-song-pre-yuanfeng"],
+    "categories": ["civil_service_rank"],
+    "semanticTracks": ["identity_rank"],
+    "institutionVersionIds": ["chs:institution-version:official-identity-pre-reform"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "在苏轼凤翔任命中与实际地方成分并列，当前按身份／资序层读取。",
+        "assertionIds": ["chs:assertion:usage-dali-pingshi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这项名称不足以证明苏轼当时在大理寺办案；真正工作要继续看同一任命的签书凤翔府判官。",
+      "assertionIds": ["chs:assertion:usage-dali-pingshi"]
+    },
+    "caveat": {
+      "text": "这是一条个案化解释，不能推出所有大理评事都从不治本司事。",
+      "assertionIds": ["chs:assertion:usage-dali-pingshi"]
+    },
+    "commonPairingTitleIds": ["chs:title:qianshu-panguan"],
+    "assertionIds": ["chs:assertion:usage-dali-pingshi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:qianshu-fengxiang-panguan",
+    "titleConceptId": "chs:title:qianshu-panguan",
+    "label": "签书凤翔府判官（苏轼个案）",
+    "validTime": {
+      "originalText": "嘉祐后期任命顺序（精确起止待年谱）",
+      "calendar": "unknown",
+      "eraName": "嘉祐",
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "ordered_only",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "当前只确认在凤翔任命中出现。"
+    },
+    "periodLensIds": ["chs:period:north-song-pre-yuanfeng"],
+    "categories": ["assignment"],
+    "semanticTracks": ["actual_duty"],
+    "institutionVersionIds": ["chs:institution-version:prefectural-government-northern-song"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "作为凤翔府任命成分出现；具体幕职分工尚待专门制度材料。",
+        "assertionIds": ["chs:assertion:usage-qianshu-panguan"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "相较于大理评事，这一成分更直接指向苏轼在凤翔府的实际工作。",
+      "assertionIds": ["chs:assertion:usage-qianshu-panguan"]
+    },
+    "caveat": {
+      "text": "当前证据未细分判官厅内的全部职责。",
+      "assertionIds": ["chs:assertion:usage-qianshu-panguan"]
+    },
+    "commonPairingTitleIds": ["chs:title:dali-pingshi"],
+    "assertionIds": ["chs:assertion:usage-qianshu-panguan"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:tongpan-northern-song",
+    "titleConceptId": "chs:title:tongpan",
+    "label": "通判（北宋州级差遣）",
+    "validTime": {
+      "originalText": "北宋（当前种子范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "具体置废和地区差异待逐条补充。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou"
+    ],
+    "categories": ["assignment"],
+    "semanticTracks": ["actual_duty"],
+    "institutionVersionIds": ["chs:institution-version:prefectural-government-northern-song"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "与知州并置的州级副贰／牵制成分。",
+        "assertionIds": ["chs:assertion:usage-tongpan"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "通判不是单纯随从，而是州级实际工作中的副贰和制衡角色。",
+      "assertionIds": ["chs:assertion:usage-tongpan"]
+    },
+    "caveat": {
+      "text": "“贰之”不能替代各时期联署、监察和具体分工的进一步证据。",
+      "assertionIds": ["chs:assertion:usage-tongpan"]
+    },
+    "commonPairingTitleIds": ["chs:title:zhizhou"],
+    "assertionIds": ["chs:assertion:usage-tongpan"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:zhizhou-northern-song",
+    "titleConceptId": "chs:title:zhizhou",
+    "label": "知州（北宋地方差遣）",
+    "validTime": {
+      "originalText": "北宋（当前种子范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "州、府、军、监以及不同时段的差异尚需版本细分。"
+    },
+    "periodLensIds": [
+      "chs:period:north-song-pre-yuanfeng",
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["assignment"],
+    "semanticTracks": ["actual_duty"],
+    "institutionVersionIds": ["chs:institution-version:prefectural-government-northern-song"],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "表示知某州的地方实际工作层任命。",
+        "assertionIds": ["chs:assertion:usage-zhizhou"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "读苏轼的“知密州”“知徐州”时，这一成分优先回答他实际在哪里主事。",
+      "assertionIds": ["chs:assertion:usage-zhizhou"]
+    },
+    "caveat": {
+      "text": "辖区、州等、兼任与具体权力不能由“知州”二字一概推出。",
+      "assertionIds": ["chs:assertion:usage-zhizhou"]
+    },
+    "commonPairingTitleIds": ["chs:title:tongpan", "chs:title:longtu-xueshi"],
+    "assertionIds": ["chs:assertion:usage-zhizhou"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:tuanlian-fushi-northern-song",
+    "titleConceptId": "chs:title:tuanlian-fushi",
+    "label": "团练副使（北宋；苏轼处分语境已核）",
+    "validTime": {
+      "originalText": "北宋（当前种子范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "uncertain",
+      "edtf": "0960/1127?",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "一般制度版本尚待职官志细目；当前结论严格限于已核个案。"
+    },
+    "periodLensIds": [
+      "chs:period:yuanfeng-reform",
+      "chs:period:yuanyou",
+      "chs:period:shaosheng-huizong-opening"
+    ],
+    "categories": ["military_service_rank"],
+    "semanticTracks": ["identity_rank", "political_status"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "在苏轼黄州个案中属于处分组合的官衔成分，不形成当地军务任职。",
+        "assertionIds": ["chs:assertion:usage-tuanlian-fushi-huangzhou"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "苏轼在黄州带这个名号，但材料同时禁止他签书公事，不能理解成实际掌军。",
+      "assertionIds": ["chs:assertion:usage-tuanlian-fushi-huangzhou"]
+    },
+    "caveat": {
+      "text": "对其他人物和时期必须重新看任命动作、限制词和实际任职证据。",
+      "assertionIds": ["chs:assertion:usage-tuanlian-fushi-huangzhou"]
+    },
+    "commonPairingTitleIds": ["chs:title:anzhi"],
+    "assertionIds": ["chs:assertion:usage-tuanlian-fushi-huangzhou"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:anzhi-northern-song",
+    "titleConceptId": "chs:title:anzhi",
+    "label": "安置（北宋处分状态）",
+    "validTime": {
+      "originalText": "北宋（当前种子范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "uncertain",
+      "edtf": "0960/1127?",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "处分等级与限制须按个案文本细分。"
+    },
+    "periodLensIds": ["chs:period:yuanfeng-reform", "chs:period:shaosheng-huizong-opening"],
+    "categories": ["punitive_status"],
+    "semanticTracks": ["political_status", "place"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "标记受处分者被置于特定地点及其限制状态。",
+        "assertionIds": ["chs:assertion:usage-anzhi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "安置回答的是受限制地位和所在地，不是当地正常官职。",
+      "assertionIds": ["chs:assertion:usage-anzhi"]
+    },
+    "caveat": {
+      "text": "具体能否任事、迁移和通信要看同一处分文本。",
+      "assertionIds": ["chs:assertion:usage-anzhi"]
+    },
+    "commonPairingTitleIds": ["chs:title:tuanlian-fushi", "chs:title:ningyuan-jiedu-fushi"],
+    "assertionIds": ["chs:assertion:usage-anzhi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:chaofeng-lang-yuanyou",
+    "titleConceptId": "chs:title:chaofeng-lang",
+    "label": "朝奉郎（元祐苏轼个案）",
+    "validTime": {
+      "originalText": "哲宗初至元祐时期（当前个案范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": "元祐",
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1085-01-01",
+      "normalizedEnd": "1093-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1085/1093",
+      "conversionMethod": "research_case_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "不是朝奉郎制度本身的完整有效期。"
+    },
+    "periodLensIds": ["chs:period:yuanyou"],
+    "categories": ["civil_service_rank"],
+    "semanticTracks": ["identity_rank"],
+    "institutionVersionIds": [],
+    "rankId": "chs:rank:yuanfeng-chaofeng-lang",
+    "functions": [
+      {
+        "text": "在“复朝奉郎、知登州”中作为与地方工作并列的身份／资序成分。",
+        "assertionIds": ["chs:assertion:usage-chaofeng-lang"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "它先回答苏轼恢复了什么官阶身份；“知登州”才指向地方工作。",
+      "assertionIds": ["chs:assertion:usage-chaofeng-lang"]
+    },
+    "caveat": {
+      "text": "已连接到元丰寄禄格的四阶局部切片；完整二十四阶绝对编号和元祐运行细节仍未发布。",
+      "assertionIds": ["chs:assertion:usage-chaofeng-lang-rank-link"]
+    },
+    "commonPairingTitleIds": ["chs:title:zhizhou"],
+    "assertionIds": [
+      "chs:assertion:usage-chaofeng-lang",
+      "chs:assertion:usage-chaofeng-lang-rank-link"
+    ],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:zhongshu-sheren-yuanyou",
+    "titleConceptId": "chs:title:zhongshu-sheren",
+    "label": "中书舍人（元祐苏轼任命）",
+    "validTime": {
+      "originalText": "元祐元年起（当前个案范围）",
+      "calendar": "chinese_regnal",
+      "eraName": "元祐",
+      "eraYear": 1,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1086-01-01",
+      "normalizedEnd": "1086-12-31",
+      "precision": "year",
+      "qualification": "approximate",
+      "edtf": "1086",
+      "conversionMethod": "coarse_era_year_mapping",
+      "conversionVersion": "1.0.0",
+      "note": "具体任期尚未建立。"
+    },
+    "periodLensIds": ["chs:period:yuanyou"],
+    "categories": ["functional_office"],
+    "semanticTracks": ["actual_duty"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "当前只确认元祐元年苏轼受此中央官名任命；职掌条目正在核录。",
+        "assertionIds": ["chs:assertion:usage-zhongshu-sheren"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这是元丰新制后的中央职事官成分，但当前页面不会越过来源补写详细权限。",
+      "assertionIds": ["chs:assertion:usage-zhongshu-sheren"]
+    },
+    "caveat": {
+      "text": "需补卷161相应条目与实际任事材料。",
+      "assertionIds": ["chs:assertion:usage-zhongshu-sheren"]
+    },
+    "commonPairingTitleIds": [],
+    "assertionIds": ["chs:assertion:usage-zhongshu-sheren"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:hanlin-xueshi-yuanyou",
+    "titleConceptId": "chs:title:hanlin-xueshi",
+    "label": "翰林学士（元祐苏轼任命）",
+    "validTime": {
+      "originalText": "元祐元年后“寻”（当前个案范围）",
+      "calendar": "relative",
+      "eraName": "元祐",
+      "eraYear": 1,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "ordered_only",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "只知在迁中书舍人之后不久。"
+    },
+    "periodLensIds": ["chs:period:yuanyou"],
+    "categories": ["literary_title", "functional_office"],
+    "semanticTracks": ["honor_expertise", "actual_duty"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "当前确认苏轼受任翰林学士；实际入院时间与职掌待同期材料。",
+        "assertionIds": ["chs:assertion:usage-hanlin-xueshi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这项官名兼具清要资望与可能的实际文翰工作，不能只放进荣誉或工作单一轨道。",
+      "assertionIds": ["chs:assertion:usage-hanlin-xueshi"]
+    },
+    "caveat": {
+      "text": "任命不自动证明实际任事阶段；当前记录明确保留这一缺口。",
+      "assertionIds": ["chs:assertion:usage-hanlin-xueshi"]
+    },
+    "commonPairingTitleIds": [],
+    "assertionIds": ["chs:assertion:usage-hanlin-xueshi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:longtu-xueshi-yuanyou",
+    "titleConceptId": "chs:title:longtu-xueshi",
+    "label": "龙图阁学士（元祐四年苏轼个案）",
+    "validTime": {
+      "originalText": "元祐四年",
+      "calendar": "chinese_regnal",
+      "eraName": "元祐",
+      "eraYear": 4,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1089-01-01",
+      "normalizedEnd": "1089-12-31",
+      "precision": "year",
+      "qualification": "approximate",
+      "edtf": "1089",
+      "conversionMethod": "coarse_era_year_mapping",
+      "conversionVersion": "1.0.0",
+      "note": "只是该任命的年级时间，不是制度有效期。"
+    },
+    "periodLensIds": ["chs:period:yuanyou"],
+    "categories": ["academy_title", "literary_title"],
+    "semanticTracks": ["honor_expertise"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "在苏轼第二次杭州任命中与知杭州并列，当前作为荣誉／资历层成分读取。",
+        "assertionIds": ["chs:assertion:usage-longtu-xueshi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "实际到任地点是杭州；现有证据不支持他去管理龙图阁。",
+      "assertionIds": ["chs:assertion:usage-longtu-xueshi"]
+    },
+    "caveat": {
+      "text": "龙图阁学士、直学士、待制与直阁不得仅按“龙图阁”合并。",
+      "assertionIds": ["chs:assertion:usage-longtu-xueshi"]
+    },
+    "commonPairingTitleIds": ["chs:title:zhizhou"],
+    "assertionIds": ["chs:assertion:usage-longtu-xueshi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:ningyuan-jiedu-fushi-shaosheng",
+    "titleConceptId": "chs:title:ningyuan-jiedu-fushi",
+    "label": "宁远军节度副使（苏轼惠州处分个案）",
+    "validTime": {
+      "originalText": "绍圣初",
+      "calendar": "chinese_regnal",
+      "eraName": "绍圣",
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1094-01-01",
+      "normalizedEnd": "1094-12-31",
+      "precision": "year",
+      "qualification": "approximate",
+      "edtf": "1094~",
+      "conversionMethod": "coarse_era_context_mapping",
+      "conversionVersion": "1.0.0",
+      "note": "具体月日待年谱和长编。"
+    },
+    "periodLensIds": ["chs:period:shaosheng-huizong-opening"],
+    "categories": ["military_service_rank"],
+    "semanticTracks": ["identity_rank", "political_status"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "在苏轼个案中作为“贬”之后、惠州安置之前的处分官衔成分。",
+        "assertionIds": ["chs:assertion:usage-ningyuan-fushi"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "这项名称不能被字面解成苏轼实际去宁远军任副职。",
+      "assertionIds": ["chs:assertion:usage-ningyuan-fushi"]
+    },
+    "caveat": {
+      "text": "当前解释只适用于与惠州安置相连的苏轼个案。",
+      "assertionIds": ["chs:assertion:usage-ningyuan-fushi"]
+    },
+    "commonPairingTitleIds": ["chs:title:anzhi"],
+    "assertionIds": ["chs:assertion:usage-ningyuan-fushi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:title-usage:qiongzhou-biejia-shaosheng",
+    "titleConceptId": "chs:title:qiongzhou-biejia",
+    "label": "琼州别驾（苏轼昌化居住前的贬授成分）",
+    "validTime": {
+      "originalText": "惠州居三年后",
+      "calendar": "relative",
+      "eraName": "绍圣",
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1097-01-01",
+      "normalizedEnd": "1097-12-31",
+      "precision": "year",
+      "qualification": "inferred",
+      "edtf": "1097?",
+      "conversionMethod": "relative_year_inference",
+      "conversionVersion": "1.0.0",
+      "note": "按绍圣初与“居三年”推定，仅供排序。"
+    },
+    "periodLensIds": ["chs:period:shaosheng-huizong-opening"],
+    "categories": ["functional_office", "punitive_status"],
+    "semanticTracks": ["identity_rank", "political_status"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "在传记中由“又贬”引出，实际居住状态另落在昌化。",
+        "assertionIds": ["chs:assertion:usage-qiongzhou-biejia"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "官衔写琼州别驾，实际生活地点写昌化；两者不能合成一个字段。",
+      "assertionIds": ["chs:assertion:usage-qiongzhou-biejia"]
+    },
+    "caveat": {
+      "text": "是否及如何任事待同期处分文书；当前不生成琼州实际任职。",
+      "assertionIds": ["chs:assertion:usage-qiongzhou-biejia"]
+    },
+    "commonPairingTitleIds": [],
+    "assertionIds": ["chs:assertion:usage-qiongzhou-biejia"],
+    "editorialStatus": "reviewed"
+  }
+]

@@ -1,89 +1,115 @@
 # 除授 Chushou
 
-> 一个用于理解宋代官制、官名、制度沿革与人物官履的交互式知识工具。
+一套从可追溯证据出发、用于理解宋代官制与人物官履的静态优先研究工具。
 
-“除授”不是单纯的宋代官名词典。它希望回答：一个人在某一年拥有的一串官衔中，哪些表示官阶和待遇，哪些体现资望，哪些才是实际职务；这些名称在元丰改制前后是否仍然是同一个意思；一次任命在制度与政治上究竟意味着什么。
+“除授”不把官衔压成一条高低刻度。系统分别保存身份／官阶、荣衔与专长、实际职务、地点和政治状态，并区分任命动作与实际任事。每项可发布主张都能展开到短引文、版本和来源定位。
 
-当前版本是一个无需后端即可运行的前端 MVP，以北宋文官制度为主，并用苏轼的代表性任官节点验证数据模型。
+GitHub Pages 目标地址：[在线研究预览](https://chen-qingxiang.github.io/chushou/)（合并到 `main` 后由 workflow 发布；2026-07-13 核验时尚未上线）。
 
-## 已实现
+![除授首页：证据驱动的宋代官制研究入口](docs/assets/chushou-home.png)
 
-- **制度地图**：中央、地方、官员身份三套视图，并可按时期切换。
-- **官名通解**：按名称、类型和时期筛选，查看官名在完整官衔中的作用。
-- **制度沿革**：用五个阶段展示元丰改制前后的解释框架。
-- **人物官履**：把任官事件拆成实际职务、官阶资序、地点和政治位置。
-- **原文解码**：对示例官衔做规则驱动的关键词拆解与白话总结。
-- **GitHub Pages**：合并到 `main` 后可通过 Actions 自动部署。
+当前是 `0.3.1-research.1` 研究预览版：59 个官名概念、60 个时期版本、3 个局部品秩方案、13 条苏轼任命动作、3 条反例人物任命、121 条结构化主张和 140 条证据关联；《宋史》卷 338 的 38 条任官／身份语句已穷尽枚举为 coverage ledger。数量是覆盖进度，不代表宋代官制或任何人物官履已经完整。
+
+## 目前可用
+
+- 引导首页与三层官衔解释；
+- 简繁体、别名、拼音和轻量容错全局搜索；
+- 时期化官名列表、详情和证据抽屉；
+- 可按时期／范围筛选、聚焦和缩放的制度关系图，以及两个时期并列的沿革对照；
+- 多品秩方案、方案内局部序列，以及带置信度／争议说明的跨方案换官边；
+- 苏轼官履时间线、地点序列、任命原文 span 拆解与实际任事分离；
+- 王安石、司马光、章惇各一条可检索、可下钻的反例任命切片；
+- 五条可分别展开依据的政治位置分类轨迹，不生成总分；
+- 最长匹配、未知片段、动作词、时间副词、动作关系和时期候选驱动的原文解码器；
+- 任命前后、两个官名按时期、四名人物制度位置的可深链接比较；
+- 可按人物／官名／时期筛选并反查所支持断言的来源浏览器、学习路径、可深链接的真实任命路径回放，以及只检查时期／语义的官衔构造实验；
+- 带版本、schema、许可、引用和 SHA-256 manifest 的 release JSON、官名／任命／证据／覆盖 CSV 与机器可读数据字典；
+- 随 release 发布的机器可读 coverage matrices，以及自动生成的分母、缺口和阻塞报告；
+- 可复制并恢复筛选状态的 React Router 深链接、应用内 404、移动端布局和 GitHub Pages base path。
 
 ## 本地运行
 
-项目是原生 HTML、CSS 和 JavaScript，不需要安装依赖。
+需要 Node.js 24 和 npm。
 
 ```bash
-python -m http.server 8000
+npm ci
+npm run data:validate
+npm run dev
 ```
 
-然后打开：
+开发服务器会输出本地地址。生产预览：
+
+```bash
+npm run build
+npm run preview --workspace @chushou/web
+```
+
+## 质量门禁
+
+```bash
+npm run format:check
+npm run lint
+npm run typecheck
+npm run data:validate
+npm run schema:check
+npm test
+npm run build
+npm run quality:budget
+npm run test:e2e
+npm run quality:lighthouse
+```
+
+`npm run ci` 串联除浏览器测试外的全部门禁，包括已提交 JSON Schema 的新鲜度、14 项单元／集成测试和生产产物体积预算。GitHub Actions 还会在 Chromium 中执行 19 条关键与无障碍旅程，再把通过验证的同一份 `dist/` 发布到 Pages。`quality:lighthouse` 使用已安装的 Playwright Chromium 对五个主要路由复测移动模拟基线。终检范围与基线见[性能与无障碍报告](docs/reports/PERFORMANCE_ACCESSIBILITY.md)。
+
+## 仓库结构
 
 ```text
-http://localhost:8000
+apps/web/             React + TypeScript + Vite 应用
+packages/schema/      Zod schema、受控词表、稳定 ID 与跨表校验
+packages/domain/      搜索、原文解码、多维轨迹规则与站点投影
+tools/ingest/         curated loader、生成器、报告与测试
+data/curated/         人工审阅的唯一权威编辑源
+data/generated/       确定性生成的站点投影、release、CSV、manifest 与数据字典
+docs/research/        来源策略、引用规范、研究日志与争议记录
+docs/reports/         自动生成的覆盖和数据质量报告
+docs/goal/            迁移审计、决策、总计划与持续进展
+tests/e2e/            Playwright 关键用户旅程
 ```
 
-也可以使用 VS Code 的 Live Server。
+## 数据与证据模型
 
-## 设计原则
-
-### 1. 系统是底图，人物是轨迹
-
-苏轼不是数据库中心。人物官履只是投影在同一套制度模型上的任命事件。后续录入王安石、司马光、章惇或南宋人物时，不应重新发明一套官名解释。
-
-### 2. 官名与官名版本分离
-
-同一个名称在不同时期可能具有不同制度含义。后续正式数据层应至少区分：
+核心层次是：
 
 ```text
-Title        官名
-TitleVersion 官名在特定时期的制度定义
-Institution  机构
-Rank         官阶与品级
-Appointment  任命事件
-Person       人物
-Source       史料来源
+Source → Edition → Locator → Passage
+                         ↘ EvidenceLink → Assertion
+
+TitleConcept → TitleUsageVersion(time)
+Institution  → InstitutionVersion(time) → typed relation
+RankScheme → Rank(sequence) → RankCrosswalk(confidence / dispute)
+Person → AppointmentAction → ordered components
+                           ↘ ServiceEpisode
 ```
 
-### 3. 任命事件与人物属性分离
+- 史料原文不与现代解释混写；
+- 官名含义、机构和关系按有效期建版本；
+- 品秩序号只在所属方案内有意义；跨方案换算必须有方向、依据、置信度和争议状态；
+- `除`、`授`、`迁`、`责授`等动作不自动证明到任；
+- reviewed／accepted 主张没有支持性 passage 时构建失败；
+- 断裂引用、重复 ID、非法 source span、重叠同义版本、冲突别名和生产占位文字都会触发门禁。
 
-一个人并不永久“拥有”某项官职。每一次除授都应记录开始和结束时间、完整官衔原文、实际差遣、地点、授离任原因、史料出处与校订状态。
+录入前请阅读[贡献指南](CONTRIBUTING.md)、[发布书目](docs/research/BIBLIOGRAPHY.md)、[数据录入指南](docs/research/DATA_ENTRY_GUIDE.md)、[引用规范](docs/research/CITATION_GUIDE.md)和[来源策略](docs/research/SOURCE_STRATEGY.md)。
 
-### 4. 允许不完整和待核数据
+## 研究边界
 
-历史数据录入不能假装一次完成。当前示例中明确保留“待核”“待补”和不完整节点，用于证明数据模型需要支持持续校订与版本追踪。
+当前已穷尽枚举《宋史》卷 338 数字转录中的 38 条任官／制度身份语句：13 条链接到数据库记录且仍为 partial，25 条明确为 gap。这个分母只对该传记锚点成立；尚未取得可合法全文核对的孔凡礼《苏轼年谱》，权威年谱矩阵因此保持 blocked，项目不会声称“完整苏轼官履”。正式研究引用仍应回查可靠点校本。反例人物仅用于检验通用模型，不代表完整生涯；品秩只发布卷 169 可直接核对的局部序列，南宋时段仍在扩充。
 
-## 当前目录
+路径实验室同样遵守这一边界：它可以回放人物当前 release 中的任命顺序并检查到任、处分、未解析成分和时间精度，但不会把顺序伪装成因果、概率或人人适用的晋升树。进士入仕、磨勘、荐举、丁忧、回避、台谏与地方监察等通用规则在证据和反例进入 schema 前保持锁定。
 
-```text
-.
-├── index.html              # 页面结构
-├── styles.css              # 视觉系统与响应式布局
-├── data.js                 # MVP 示例制度、官名和人物数据
-├── app.js                  # 交互、筛选、解码与渲染逻辑
-└── .github/workflows/
-    └── pages.yml           # GitHub Pages 自动部署
-```
+自动生成的最新状态见 [数据质量报告](docs/reports/data-quality.md)与[覆盖报告](docs/reports/coverage.md)。
 
-## 下一阶段建议
+## 引用与许可
 
-1. 将示例数据拆为 JSON 或 SQLite，并为每条定义加入史料引用与校订状态。
-2. 优先建立北宋文官制度骨架和元丰改制前后对照。
-3. 逐条录入苏轼完整官履，用年谱和文集校核每次除授。
-4. 建立任官动词词表：除、授、拜、迁、改、权、试、守、行、责授、落职、量移等。
-5. 增加官名异名、简称、完整形式与原文句法解析。
-6. 再扩展到王安石、司马光、章惇等人物，检验模型是否真正通用。
+数据集仍处研究预览期，引用时应同时给出 release 版本、具体 assertion／passage ID 和底层来源定位。项目代码采用 [MIT](LICENSE)；项目原创整理数据采用 [CC BY 4.0](LICENSE-DATA.md)，并提供机器可读的 [`CITATION.cff`](CITATION.cff)。第三方短引文不因进入数据集而改变权利状态，各数字版本和原始材料的许可／权利说明按 edition 单独记录。
 
-## 史料与数据声明
-
-当前界面内容是用于验证产品结构的示例数据，不可直接作为完整学术结论引用。正式版本应逐条依据《宋史·职官志》、宋会要、诏令、墓志、人物年谱及现代专门研究核订，并记录出处、原文、校订者与可信度。
-
-## License
-
-尚未选择许可证。
+本轮实现与诚实边界汇总于[最终交付说明](docs/goal/FINAL_DELIVERY.md)，逐项验收证据见 [Goal 完成审计](docs/goal/COMPLETION_AUDIT.md)。

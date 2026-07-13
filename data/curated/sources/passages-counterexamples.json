@@ -1,0 +1,68 @@
+[
+  {
+    "id": "chs:passage:song-shi-327-wang-anshi-identity",
+    "locatorId": "chs:locator:song-shi-327-wang-anshi",
+    "originalText": "王安石，字介甫，抚州临川人。",
+    "normalizedText": "王安石，字介甫，抚州临川人。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": null
+  },
+  {
+    "id": "chs:passage:song-shi-327-wang-anshi-canzhi",
+    "locatorId": "chs:locator:song-shi-327-wang-anshi",
+    "originalText": "二年二月，拜参知政事。",
+    "normalizedText": "熙宁二年二月，拜参知政事。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "年号由同一传记段落的熙宁上下文补足；未换算农历月日。"
+  },
+  {
+    "id": "chs:passage:song-shi-336-sima-guang-identity",
+    "locatorId": "chs:locator:song-shi-336-sima-guang",
+    "originalText": "司马光，字君实，陕州夏县人也。",
+    "normalizedText": "司马光，字君实，陕州夏县人。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": null
+  },
+  {
+    "id": "chs:passage:song-shi-336-sima-guang-chancellor",
+    "locatorId": "chs:locator:song-shi-336-sima-guang",
+    "originalText": "拜尚书左仆射兼门下侍郎，免朝觐，许乘肩舆，三日一入省。",
+    "normalizedText": "元祐元年，拜尚书左仆射兼门下侍郎。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "年号见紧邻上段；本短引保留连续任命句，不把免朝觐等礼遇解析为官名成分。"
+  },
+  {
+    "id": "chs:passage:song-shi-471-zhang-dun-identity",
+    "locatorId": "chs:locator:song-shi-471-zhang-dun",
+    "originalText": "章惇，字子厚，建州浦城人。",
+    "normalizedText": "章惇，字子厚，建州浦城人。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": null
+  },
+  {
+    "id": "chs:passage:song-shi-471-zhang-dun-menxia",
+    "locatorId": "chs:locator:song-shi-471-zhang-dun",
+    "originalText": "五年，召拜门下侍郎。",
+    "normalizedText": "元丰五年，召拜门下侍郎。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "年号由同段前文“元丰三年”及顺叙补足。"
+  }
+]

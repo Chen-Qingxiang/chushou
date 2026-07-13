@@ -1,0 +1,5231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "appointmentActions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "actionTypes": {
+            "items": {
+              "enum": [
+                "appoint",
+                "confer",
+                "promote",
+                "demote",
+                "transfer",
+                "change",
+                "act",
+                "try",
+                "hold_above_rank",
+                "hold_below_rank",
+                "punitive_appoint",
+                "dismiss",
+                "remove_title",
+                "remove_office",
+                "relocate",
+                "place_under_restriction",
+                "restore",
+                "recall",
+                "decline",
+                "posthumous_confer",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "appointingAuthorityInstitutionVersionId": {
+            "anyOf": [
+              {
+                "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "componentIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "personId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "previousAppointmentId": {
+            "anyOf": [
+              {
+                "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "rawText": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sequence": {
+            "maximum": 9007199254740991,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "serviceEpisodeIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "time": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "personId",
+          "actionTypes",
+          "rawText",
+          "time",
+          "appointingAuthorityInstitutionVersionId",
+          "componentIds",
+          "serviceEpisodeIds",
+          "previousAppointmentId",
+          "sequence",
+          "assertionIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "appointmentComponents": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "appointmentId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "componentType": {
+            "enum": [
+              "title",
+              "duty",
+              "rank",
+              "honor",
+              "merit",
+              "nobility",
+              "place",
+              "modifier",
+              "punitive_status",
+              "restriction",
+              "unresolved"
+            ],
+            "type": "string"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "modifier": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "order": {
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991,
+            "type": "integer"
+          },
+          "placeVersionId": {
+            "anyOf": [
+              {
+                "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "resolutionStatus": {
+            "enum": ["resolved", "ambiguous", "unresolved"],
+            "type": "string"
+          },
+          "semanticTracks": {
+            "items": {
+              "enum": [
+                "identity_rank",
+                "honor_expertise",
+                "actual_duty",
+                "place",
+                "political_status"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "sourceSpan": {
+            "additionalProperties": false,
+            "properties": {
+              "end": {
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991,
+                "type": "integer"
+              },
+              "start": {
+                "maximum": 9007199254740991,
+                "minimum": 0,
+                "type": "integer"
+              },
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": ["start", "end", "text"],
+            "type": "object"
+          },
+          "titleUsageVersionId": {
+            "anyOf": [
+              {
+                "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "appointmentId",
+          "order",
+          "sourceSpan",
+          "componentType",
+          "titleUsageVersionId",
+          "placeVersionId",
+          "modifier",
+          "semanticTracks",
+          "resolutionStatus",
+          "assertionIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "assertions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertedAt": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "type": "string"
+          },
+          "assertedBy": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "confidence": {
+            "enum": ["high", "medium", "low", "unknown"],
+            "type": "string"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "method": {
+            "enum": [
+              "source_transcription",
+              "manual_curation",
+              "scholarly_interpretation",
+              "contextual_inference",
+              "rule_projection",
+              "external_alignment",
+              "algorithmic_candidate"
+            ],
+            "type": "string"
+          },
+          "objectEntityId": {
+            "anyOf": [
+              {
+                "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "objectLiteral": {
+            "anyOf": [
+              {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "additionalProperties": {},
+                    "propertyNames": {
+                      "type": "string"
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "predicate": {
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "type": "string"
+          },
+          "rationale": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "status": {
+            "enum": ["proposed", "reviewed", "accepted", "contested", "rejected", "superseded"],
+            "type": "string"
+          },
+          "subjectId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "validTime": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "calendar": {
+                    "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                    "type": "string"
+                  },
+                  "conversionMethod": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "conversionVersion": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "edtf": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "eraName": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "eraYear": {
+                    "anyOf": [
+                      {
+                        "exclusiveMinimum": 0,
+                        "maximum": 9007199254740991,
+                        "type": "integer"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "leapMonth": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "lunarDay": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "lunarMonth": {
+                    "anyOf": [
+                      {
+                        "maximum": 12,
+                        "minimum": 1,
+                        "type": "integer"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "normalizedEnd": {
+                    "anyOf": [
+                      {
+                        "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "normalizedStart": {
+                    "anyOf": [
+                      {
+                        "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "note": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "originalText": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "precision": {
+                    "enum": [
+                      "day",
+                      "month",
+                      "season",
+                      "year",
+                      "reign_period",
+                      "interval",
+                      "ordered_only",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "qualification": {
+                    "enum": [
+                      "exact",
+                      "approximate",
+                      "uncertain",
+                      "approximate_and_uncertain",
+                      "inferred",
+                      "disputed",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "sexagenaryDay": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "originalText",
+                  "calendar",
+                  "eraName",
+                  "eraYear",
+                  "lunarMonth",
+                  "leapMonth",
+                  "lunarDay",
+                  "sexagenaryDay",
+                  "normalizedStart",
+                  "normalizedEnd",
+                  "precision",
+                  "qualification",
+                  "edtf",
+                  "conversionMethod",
+                  "conversionVersion",
+                  "note"
+                ],
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "subjectId",
+          "predicate",
+          "objectEntityId",
+          "objectLiteral",
+          "validTime",
+          "status",
+          "assertedBy",
+          "assertedAt",
+          "method",
+          "rationale",
+          "confidence",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "careerMetricAssessments": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "applicableTime": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          },
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "assessmentType": {
+            "enum": ["source_fact", "rule_calculation", "research_judgment"],
+            "type": "string"
+          },
+          "confidence": {
+            "enum": ["high", "medium", "low", "unknown"],
+            "type": "string"
+          },
+          "dimension": {
+            "enum": [
+              "centrality",
+              "actual_power",
+              "nominal_rank",
+              "prestige",
+              "imperial_trust",
+              "geographic_distance",
+              "punitive_restriction"
+            ],
+            "type": "string"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "evaluator": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "method": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "scaleDescription": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "subjectId": {
+            "anyOf": [
+              {
+                "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                "type": "string"
+              },
+              {
+                "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                "type": "string"
+              }
+            ]
+          },
+          "value": {
+            "anyOf": [
+              {
+                "maximum": 100,
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "subjectId",
+          "dimension",
+          "assessmentType",
+          "value",
+          "label",
+          "scaleDescription",
+          "applicableTime",
+          "evaluator",
+          "method",
+          "assertionIds",
+          "confidence",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "coverageMatrices": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "anchorBibliography": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "anchorKind": {
+            "enum": ["authoritative_chronology", "official_biography", "other"],
+            "type": "string"
+          },
+          "anchorSourceId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "blocker": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "completenessClaim": {
+            "enum": ["exhaustive_for_anchor", "preliminary", "blocked"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^[a-z0-9-]+$",
+            "type": "string"
+          },
+          "items": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "anchorEntry": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "anchorPassageIds": {
+                  "items": {
+                    "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "anchorSourceId": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "appointmentIds": {
+                  "items": {
+                    "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "coverageStatus": {
+                  "enum": ["covered", "partial", "gap", "out_of_scope"],
+                  "type": "string"
+                },
+                "evidenceStatus": {
+                  "enum": ["verified", "reviewed", "provisional", "missing"],
+                  "type": "string"
+                },
+                "gapReason": {
+                  "anyOf": [
+                    {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "id": {
+                  "pattern": "^[a-z0-9:-]+$",
+                  "type": "string"
+                },
+                "originalDateText": {
+                  "anyOf": [
+                    {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "personId": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "summary": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "personId",
+                "anchorSourceId",
+                "anchorPassageIds",
+                "anchorEntry",
+                "originalDateText",
+                "summary",
+                "coverageStatus",
+                "appointmentIds",
+                "evidenceStatus",
+                "gapReason"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "lastReviewedAt": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "type": "string"
+          },
+          "scopeDefinition": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "anchorSourceId",
+          "anchorKind",
+          "completenessClaim",
+          "scopeDefinition",
+          "anchorBibliography",
+          "blocker",
+          "lastReviewedAt",
+          "items"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "editions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "accessedAt": {
+            "anyOf": [
+              {
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "editionType": {
+            "enum": ["print", "facsimile", "digital_transcription", "database_record"],
+            "type": "string"
+          },
+          "editor": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "license": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "publicationPlace": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "publicationYear": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "publisher": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "rightsNote": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sourceId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "stableUrl": {
+            "anyOf": [
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "sourceId",
+          "label",
+          "editor",
+          "publisher",
+          "publicationPlace",
+          "publicationYear",
+          "editionType",
+          "stableUrl",
+          "license",
+          "rightsNote",
+          "accessedAt",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "editorialReviews": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "note": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "outcome": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "reviewedAt": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "type": "string"
+          },
+          "reviewer": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "subjectId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          }
+        },
+        "required": ["id", "subjectId", "reviewer", "reviewedAt", "outcome", "note"],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "evidenceLinks": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "basis": {
+            "enum": [
+              "explicit_statement",
+              "contextual_inference",
+              "chronological_inference",
+              "textual_variant",
+              "secondary_scholarship",
+              "external_alignment",
+              "algorithmic_candidate"
+            ],
+            "type": "string"
+          },
+          "directness": {
+            "enum": ["direct", "indirect", "derived"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "note": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "passageId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "relation": {
+            "enum": [
+              "supports",
+              "contradicts",
+              "qualifies",
+              "mentions",
+              "derives_from",
+              "corrects"
+            ],
+            "type": "string"
+          }
+        },
+        "required": ["id", "assertionId", "passageId", "relation", "basis", "directness", "note"],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "externalIdentifiers": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "authority": {
+            "enum": ["CBDB", "CHGIS", "CTP", "Wikidata", "VIAF", "other"],
+            "type": "string"
+          },
+          "checkedAt": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "type": "string"
+          },
+          "entityId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "externalId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "externalUrl": {
+            "anyOf": [
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "matchStatus": {
+            "enum": ["confirmed", "probable", "candidate", "rejected"],
+            "type": "string"
+          },
+          "note": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "entityId",
+          "authority",
+          "externalId",
+          "externalUrl",
+          "matchStatus",
+          "checkedAt",
+          "note"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "institutionRelations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "description": {
+            "additionalProperties": false,
+            "properties": {
+              "assertionIds": {
+                "items": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": ["text", "assertionIds"],
+            "type": "object"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "objectVersionId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "relationType": {
+            "enum": [
+              "reports_to",
+              "supervises",
+              "part_of",
+              "coordinates_with",
+              "checks",
+              "appoints",
+              "parallel_to"
+            ],
+            "type": "string"
+          },
+          "subjectVersionId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "validTime": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "subjectVersionId",
+          "relationType",
+          "objectVersionId",
+          "validTime",
+          "description",
+          "assertionIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "institutions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "names": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "ambiguous": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "kind": {
+                  "enum": ["preferred", "full", "short", "variant", "historical", "translation"],
+                  "type": "string"
+                },
+                "script": {
+                  "enum": ["zh-Hans", "zh-Hant", "pinyin", "english", "other"],
+                  "type": "string"
+                },
+                "text": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": ["text", "script", "kind", "ambiguous"],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "scopeNote": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "slug": {
+            "pattern": "^[a-z0-9-]+$",
+            "type": "string"
+          }
+        },
+        "required": ["id", "slug", "names", "scopeNote", "editorialStatus"],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "institutionVersions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "functions": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "assertionIds": {
+                  "items": {
+                    "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "text": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": ["text", "assertionIds"],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "institutionId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "level": {
+            "enum": ["imperial", "central", "regional", "prefectural", "county", "identity_system"],
+            "type": "string"
+          },
+          "validTime": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "institutionId",
+          "label",
+          "validTime",
+          "level",
+          "functions",
+          "assertionIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "interpretations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "author": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "confidence": {
+            "enum": ["high", "medium", "low", "unknown"],
+            "type": "string"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "kind": {
+            "enum": ["scholarly", "plain_language", "rule_generated", "editorial_note"],
+            "type": "string"
+          },
+          "method": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "subjectId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "text": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "subjectId",
+          "kind",
+          "text",
+          "assertionIds",
+          "author",
+          "method",
+          "confidence",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "citation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "curatedAt": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "type": "string"
+        },
+        "datasetVersion": {
+          "pattern": "^\\d+\\.\\d+\\.\\d+(-[a-z0-9.-]+)?$",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "licenseCode": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "licenseData": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "projectionVersion": {
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "type": "string"
+        },
+        "releaseStage": {
+          "enum": ["research_preview", "release_candidate", "stable"],
+          "type": "string"
+        },
+        "schemaVersion": {
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "vocabularyVersion": {
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "datasetVersion",
+        "schemaVersion",
+        "projectionVersion",
+        "vocabularyVersion",
+        "title",
+        "description",
+        "releaseStage",
+        "curatedAt",
+        "licenseCode",
+        "licenseData",
+        "citation"
+      ],
+      "type": "object"
+    },
+    "passages": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "checkedAt": {
+            "anyOf": [
+              {
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "locatorId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "normalizedText": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "note": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "originalText": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "transcribedBy": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "transcriptionMethod": {
+            "enum": ["edition_transcription", "manual", "ocr", "database_export"],
+            "type": "string"
+          },
+          "transcriptionStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "locatorId",
+          "originalText",
+          "normalizedText",
+          "transcriptionMethod",
+          "transcriptionStatus",
+          "transcribedBy",
+          "checkedAt",
+          "note"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "people": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "description": {
+            "additionalProperties": false,
+            "properties": {
+              "assertionIds": {
+                "items": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": ["text", "assertionIds"],
+            "type": "object"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "externalIdentifierIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "lifeSpan": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "calendar": {
+                    "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                    "type": "string"
+                  },
+                  "conversionMethod": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "conversionVersion": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "edtf": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "eraName": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "eraYear": {
+                    "anyOf": [
+                      {
+                        "exclusiveMinimum": 0,
+                        "maximum": 9007199254740991,
+                        "type": "integer"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "leapMonth": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "lunarDay": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "lunarMonth": {
+                    "anyOf": [
+                      {
+                        "maximum": 12,
+                        "minimum": 1,
+                        "type": "integer"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "normalizedEnd": {
+                    "anyOf": [
+                      {
+                        "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "normalizedStart": {
+                    "anyOf": [
+                      {
+                        "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "note": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "originalText": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "precision": {
+                    "enum": [
+                      "day",
+                      "month",
+                      "season",
+                      "year",
+                      "reign_period",
+                      "interval",
+                      "ordered_only",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "qualification": {
+                    "enum": [
+                      "exact",
+                      "approximate",
+                      "uncertain",
+                      "approximate_and_uncertain",
+                      "inferred",
+                      "disputed",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "sexagenaryDay": {
+                    "anyOf": [
+                      {
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "originalText",
+                  "calendar",
+                  "eraName",
+                  "eraYear",
+                  "lunarMonth",
+                  "leapMonth",
+                  "lunarDay",
+                  "sexagenaryDay",
+                  "normalizedStart",
+                  "normalizedEnd",
+                  "precision",
+                  "qualification",
+                  "edtf",
+                  "conversionMethod",
+                  "conversionVersion",
+                  "note"
+                ],
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "names": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "ambiguous": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "kind": {
+                  "enum": ["preferred", "full", "short", "variant", "historical", "translation"],
+                  "type": "string"
+                },
+                "script": {
+                  "enum": ["zh-Hans", "zh-Hant", "pinyin", "english", "other"],
+                  "type": "string"
+                },
+                "text": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": ["text", "script", "kind", "ambiguous"],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "slug": {
+            "pattern": "^[a-z0-9-]+$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "slug",
+          "names",
+          "lifeSpan",
+          "description",
+          "assertionIds",
+          "externalIdentifierIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "periodLenses": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "focus": {
+            "additionalProperties": false,
+            "properties": {
+              "assertionIds": {
+                "items": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": ["text", "assertionIds"],
+            "type": "object"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "slug": {
+            "pattern": "^[a-z0-9-]+$",
+            "type": "string"
+          },
+          "summary": {
+            "additionalProperties": false,
+            "properties": {
+              "assertionIds": {
+                "items": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": ["text", "assertionIds"],
+            "type": "object"
+          },
+          "validTime": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          }
+        },
+        "required": ["id", "slug", "label", "validTime", "summary", "focus", "editorialStatus"],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "places": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "externalIdentifierIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "names": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "ambiguous": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "kind": {
+                  "enum": ["preferred", "full", "short", "variant", "historical", "translation"],
+                  "type": "string"
+                },
+                "script": {
+                  "enum": ["zh-Hans", "zh-Hant", "pinyin", "english", "other"],
+                  "type": "string"
+                },
+                "text": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": ["text", "script", "kind", "ambiguous"],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "placeType": {
+            "enum": ["polity", "circuit", "prefecture", "county", "settlement", "site", "region"],
+            "type": "string"
+          },
+          "slug": {
+            "pattern": "^[a-z0-9-]+$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "slug",
+          "names",
+          "placeType",
+          "externalIdentifierIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "placeVersions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "geometry": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "assertionIds": {
+                    "items": {
+                      "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "confidence": {
+                    "enum": ["high", "medium", "low", "unknown"],
+                    "type": "string"
+                  },
+                  "latitude": {
+                    "maximum": 90,
+                    "minimum": -90,
+                    "type": "number"
+                  },
+                  "longitude": {
+                    "maximum": 180,
+                    "minimum": -180,
+                    "type": "number"
+                  },
+                  "represents": {
+                    "enum": ["historical_seat", "modern_proxy", "approximate_region"],
+                    "type": "string"
+                  }
+                },
+                "required": ["longitude", "latitude", "represents", "confidence", "assertionIds"],
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "modernCorrespondence": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "assertionIds": {
+                    "items": {
+                      "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "text": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": ["text", "assertionIds"],
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "parentPlaceVersionId": {
+            "anyOf": [
+              {
+                "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "placeId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "seatLabel": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "validTime": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "placeId",
+          "label",
+          "validTime",
+          "parentPlaceVersionId",
+          "seatLabel",
+          "modernCorrespondence",
+          "geometry",
+          "assertionIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "rankCrosswalks": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "basis": {
+            "enum": [
+              "explicit_reform_table",
+              "scholarly_crosswalk",
+              "contextual_inference",
+              "same_label_candidate"
+            ],
+            "type": "string"
+          },
+          "confidence": {
+            "enum": ["high", "medium", "low", "unknown"],
+            "type": "string"
+          },
+          "description": {
+            "additionalProperties": false,
+            "properties": {
+              "assertionIds": {
+                "items": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": ["text", "assertionIds"],
+            "type": "object"
+          },
+          "disputeNote": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "relationType": {
+            "enum": [
+              "replaced_by",
+              "equivalent_to",
+              "approximate_equivalent_to",
+              "broader_than",
+              "narrower_than"
+            ],
+            "type": "string"
+          },
+          "sourceRankId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "targetRankId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "validTime": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "sourceRankId",
+          "targetRankId",
+          "relationType",
+          "basis",
+          "validTime",
+          "description",
+          "confidence",
+          "disputeNote",
+          "assertionIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "ranks": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "description": {
+            "additionalProperties": false,
+            "properties": {
+              "assertionIds": {
+                "items": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": ["text", "assertionIds"],
+            "type": "object"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "gradeText": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "rankSchemeId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "sequence": {
+            "anyOf": [
+              {
+                "maximum": 9007199254740991,
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "validTime": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "rankSchemeId",
+          "label",
+          "gradeText",
+          "sequence",
+          "validTime",
+          "description",
+          "assertionIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "rankSchemes": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "coverageStatus": {
+            "enum": ["complete", "partial", "sample", "unknown"],
+            "type": "string"
+          },
+          "description": {
+            "additionalProperties": false,
+            "properties": {
+              "assertionIds": {
+                "items": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": ["text", "assertionIds"],
+            "type": "object"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "ordering": {
+            "enum": ["lower_sequence_higher", "higher_sequence_higher", "unordered"],
+            "type": "string"
+          },
+          "schemeType": {
+            "enum": ["ordinal", "grade_table", "conversion_source", "other"],
+            "type": "string"
+          },
+          "validTime": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "schemeType",
+          "ordering",
+          "coverageStatus",
+          "validTime",
+          "description",
+          "assertionIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "reforms": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "slug": {
+            "pattern": "^[a-z0-9-]+$",
+            "type": "string"
+          },
+          "summary": {
+            "additionalProperties": false,
+            "properties": {
+              "assertionIds": {
+                "items": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": ["text", "assertionIds"],
+            "type": "object"
+          },
+          "validTime": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "slug",
+          "label",
+          "validTime",
+          "summary",
+          "assertionIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "serviceEpisodes": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "createdByAppointmentId": {
+            "anyOf": [
+              {
+                "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "dutyTitleUsageVersionId": {
+            "anyOf": [
+              {
+                "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "endReason": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "assertionIds": {
+                    "items": {
+                      "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "text": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": ["text", "assertionIds"],
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "episodeType": {
+            "enum": ["service", "residence", "punitive_status", "honorary_status"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "modifiers": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "personId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "placeVersionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "serviceStatus": {
+            "enum": [
+              "attested",
+              "probable",
+              "inferred",
+              "not_assumed",
+              "declined",
+              "remote",
+              "honorary",
+              "posthumous",
+              "unknown",
+              "disputed"
+            ],
+            "type": "string"
+          },
+          "time": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "personId",
+          "createdByAppointmentId",
+          "episodeType",
+          "dutyTitleUsageVersionId",
+          "placeVersionIds",
+          "time",
+          "serviceStatus",
+          "modifiers",
+          "endReason",
+          "assertionIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "sourceLocators": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "anchor": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "editionId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "entry": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "juan": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "page": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "paragraph": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "section": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "stableUrl": {
+            "anyOf": [
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "volume": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "editionId",
+          "volume",
+          "juan",
+          "section",
+          "page",
+          "entry",
+          "paragraph",
+          "anchor",
+          "stableUrl",
+          "label"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "sources": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "bibliography": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "creator": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "language": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "notes": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "shortTitle": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sourceType": {
+            "enum": [
+              "contemporary_primary",
+              "official_history",
+              "institutional_compilation",
+              "later_compilation",
+              "modern_monograph",
+              "modern_article",
+              "authority_database",
+              "popular_reference"
+            ],
+            "type": "string"
+          },
+          "title": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "shortTitle",
+          "creator",
+          "sourceType",
+          "language",
+          "bibliography",
+          "notes",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "titleConcepts": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "externalIdentifierIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "names": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "ambiguous": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "kind": {
+                  "enum": ["preferred", "full", "short", "variant", "historical", "translation"],
+                  "type": "string"
+                },
+                "script": {
+                  "enum": ["zh-Hans", "zh-Hant", "pinyin", "english", "other"],
+                  "type": "string"
+                },
+                "text": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": ["text", "script", "kind", "ambiguous"],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "scopeNote": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "slug": {
+            "pattern": "^[a-z0-9-]+$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "slug",
+          "names",
+          "scopeNote",
+          "externalIdentifierIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "titleUsageVersions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "categories": {
+            "items": {
+              "enum": [
+                "civil_service_rank",
+                "military_service_rank",
+                "functional_office",
+                "assignment",
+                "acting_assignment",
+                "literary_title",
+                "academy_title",
+                "merit_title",
+                "noble_title",
+                "stipend_title",
+                "ritual_title",
+                "punitive_status",
+                "retirement_status",
+                "unresolved"
+              ],
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "caveat": {
+            "additionalProperties": false,
+            "properties": {
+              "assertionIds": {
+                "items": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": ["text", "assertionIds"],
+            "type": "object"
+          },
+          "commonPairingTitleIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "editorialStatus": {
+            "enum": ["verified", "reviewed", "provisional", "disputed", "incomplete"],
+            "type": "string"
+          },
+          "functions": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "assertionIds": {
+                  "items": {
+                    "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "text": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": ["text", "assertionIds"],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "id": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "institutionVersionIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "periodLensIds": {
+            "items": {
+              "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "plainExplanation": {
+            "additionalProperties": false,
+            "properties": {
+              "assertionIds": {
+                "items": {
+                  "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": ["text", "assertionIds"],
+            "type": "object"
+          },
+          "rankId": {
+            "anyOf": [
+              {
+                "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "semanticTracks": {
+            "items": {
+              "enum": [
+                "identity_rank",
+                "honor_expertise",
+                "actual_duty",
+                "place",
+                "political_status"
+              ],
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "titleConceptId": {
+            "pattern": "^chs:(person|title|title-usage|institution|institution-version|institution-relation|rank-scheme|rank|rank-crosswalk|appointment|component|service|place|place-version|period|reform|source|edition|locator|passage|assertion|evidence|interpretation|review|metric|external|lesson|rule):[a-z0-9][a-z0-9-]*$",
+            "type": "string"
+          },
+          "validTime": {
+            "additionalProperties": false,
+            "properties": {
+              "calendar": {
+                "enum": ["chinese_regnal", "gregorian_proleptic", "relative", "unknown"],
+                "type": "string"
+              },
+              "conversionMethod": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "conversionVersion": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edtf": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraName": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "eraYear": {
+                "anyOf": [
+                  {
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leapMonth": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunarMonth": {
+                "anyOf": [
+                  {
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedEnd": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "normalizedStart": {
+                "anyOf": [
+                  {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "note": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "originalText": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "precision": {
+                "enum": [
+                  "day",
+                  "month",
+                  "season",
+                  "year",
+                  "reign_period",
+                  "interval",
+                  "ordered_only",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "qualification": {
+                "enum": [
+                  "exact",
+                  "approximate",
+                  "uncertain",
+                  "approximate_and_uncertain",
+                  "inferred",
+                  "disputed",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              "sexagenaryDay": {
+                "anyOf": [
+                  {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "originalText",
+              "calendar",
+              "eraName",
+              "eraYear",
+              "lunarMonth",
+              "leapMonth",
+              "lunarDay",
+              "sexagenaryDay",
+              "normalizedStart",
+              "normalizedEnd",
+              "precision",
+              "qualification",
+              "edtf",
+              "conversionMethod",
+              "conversionVersion",
+              "note"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "titleConceptId",
+          "label",
+          "validTime",
+          "periodLensIds",
+          "categories",
+          "semanticTracks",
+          "institutionVersionIds",
+          "rankId",
+          "functions",
+          "plainExplanation",
+          "caveat",
+          "commonPairingTitleIds",
+          "assertionIds",
+          "editorialStatus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "metadata",
+    "periodLenses",
+    "reforms",
+    "sources",
+    "editions",
+    "sourceLocators",
+    "passages",
+    "assertions",
+    "evidenceLinks",
+    "interpretations",
+    "editorialReviews",
+    "externalIdentifiers",
+    "people",
+    "titleConcepts",
+    "titleUsageVersions",
+    "institutions",
+    "institutionVersions",
+    "institutionRelations",
+    "rankSchemes",
+    "ranks",
+    "rankCrosswalks",
+    "places",
+    "placeVersions",
+    "appointmentActions",
+    "appointmentComponents",
+    "serviceEpisodes",
+    "careerMetricAssessments",
+    "coverageMatrices"
+  ],
+  "type": "object"
+}

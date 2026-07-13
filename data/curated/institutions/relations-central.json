@@ -1,0 +1,122 @@
+[
+  {
+    "id": "chs:institution-relation:menxia-part-of-three-departments",
+    "subjectVersionId": "chs:institution-version:menxia-sheng-yuanfeng",
+    "relationType": "part_of",
+    "objectVersionId": "chs:institution-version:three-departments-yuanfeng",
+    "validTime": {
+      "originalText": "元丰官制行后（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": null
+    },
+    "description": {
+      "text": "门下省是当前三省组合中的一省。",
+      "assertionIds": ["chs:assertion:institution-three-departments-yuanfeng"]
+    },
+    "assertionIds": ["chs:assertion:institution-three-departments-yuanfeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-relation:zhongshu-part-of-three-departments",
+    "subjectVersionId": "chs:institution-version:zhongshu-sheng-yuanfeng",
+    "relationType": "part_of",
+    "objectVersionId": "chs:institution-version:three-departments-yuanfeng",
+    "validTime": {
+      "originalText": "元丰官制行后（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": null
+    },
+    "description": {
+      "text": "中书省是当前三省组合中的一省。",
+      "assertionIds": ["chs:assertion:institution-three-departments-yuanfeng"]
+    },
+    "assertionIds": ["chs:assertion:institution-three-departments-yuanfeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-relation:shangshu-part-of-three-departments",
+    "subjectVersionId": "chs:institution-version:shangshu-sheng-yuanfeng",
+    "relationType": "part_of",
+    "objectVersionId": "chs:institution-version:three-departments-yuanfeng",
+    "validTime": {
+      "originalText": "元丰官制行后（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1080-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1080/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": null
+    },
+    "description": {
+      "text": "尚书省是当前三省组合中的一省。",
+      "assertionIds": ["chs:assertion:institution-three-departments-yuanfeng"]
+    },
+    "assertionIds": ["chs:assertion:institution-three-departments-yuanfeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution-relation:shumi-coordinates-three-departments",
+    "subjectVersionId": "chs:institution-version:shumi-yuan-yuanfeng-five",
+    "relationType": "coordinates_with",
+    "objectVersionId": "chs:institution-version:three-departments-yuanfeng",
+    "validTime": {
+      "originalText": "元丰五年后（当前范围）",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "1082-01-01",
+      "normalizedEnd": "1127-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "1082/1127",
+      "conversionMethod": "research_scope_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "“分班禀奏／合奏”是有类型协作，不等于上下隶属。"
+    },
+    "description": {
+      "text": "军旅常务与三省分班禀奏，事干国体则与宰相、执政合奏。",
+      "assertionIds": ["chs:assertion:institution-shumi-yuanfeng-five"]
+    },
+    "assertionIds": ["chs:assertion:institution-shumi-yuanfeng-five"],
+    "editorialStatus": "reviewed"
+  }
+]

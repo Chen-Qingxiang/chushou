@@ -1,0 +1,21 @@
+[
+  {
+    "id": "chs:institution:official-identity-system",
+    "slug": "official-identity-system",
+    "names": [
+      { "text": "官员身份与资序体系", "script": "zh-Hans", "kind": "preferred", "ambiguous": false }
+    ],
+    "scopeNote": "用于承载官、职、差遣分层及元丰前后版本，不是历史上单一实体官署。",
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:institution:prefectural-government",
+    "slug": "prefectural-government",
+    "names": [
+      { "text": "州级官府", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "州府军监", "script": "zh-Hans", "kind": "historical", "ambiguous": true }
+    ],
+    "scopeNote": "当前种子只建知州与通判关系，州、府、军、监的类型差异待扩充。",
+    "editorialStatus": "reviewed"
+  }
+]

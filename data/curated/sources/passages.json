@@ -1,0 +1,156 @@
+[
+  {
+    "id": "chs:passage:song-shi-161-system",
+    "locatorId": "chs:locator:song-shi-161-system",
+    "originalText": "故三省、六曹、二十四司，类以他官主判，虽有正官，非别敕不治本司事。其官人受授之别，则有官、有职、有差遣。官以寓禄秩、叙位著，职以待文学之选，而别为差遣以治内外之事。",
+    "normalizedText": "故三省、六曹、二十四司，类以他官主判，虽有正官，非别敕不治本司事。其官人受授之别，则有官、有职、有差遣。官以寓禄秩、叙位著，职以待文学之选，而别为差遣以治内外之事。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "从数字页面对应段落摘录必要句子，未声称等同于中华书局点校本。"
+  },
+  {
+    "id": "chs:passage:song-shi-161-local",
+    "locatorId": "chs:locator:song-shi-161-system",
+    "originalText": "外官，则惩五代藩镇专恣，颇用文臣知州，復设通判以贰之。",
+    "normalizedText": "外官，则惩五代藩镇专恣，颇用文臣知州，复设通判以贰之。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "保留原文异体“復”，规范化文本用于检索。"
+  },
+  {
+    "id": "chs:passage:song-shi-161-reform",
+    "locatorId": "chs:locator:song-shi-161-reform",
+    "originalText": "元豐三年，以摹本赐群臣，乃置局中书，命翰林学士张璪等详定。八月，下诏肇新官制，省、臺、寺、监领空名者一切罢去，而易之以阶。九月，详定所上《寄禄格》。",
+    "normalizedText": "元丰三年，以摹本赐群臣，乃置局中书，命翰林学士张璪等详定。八月，下诏肇新官制，省、台、寺、监领空名者一切罢去，而易之以阶。九月，详定所上《寄禄格》。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": null
+  },
+  {
+    "id": "chs:passage:song-shi-338-identity",
+    "locatorId": "chs:locator:song-shi-338-identity",
+    "originalText": "苏轼，字子瞻，眉州眉山人。",
+    "normalizedText": "苏轼，字子瞻，眉州眉山人。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": null
+  },
+  {
+    "id": "chs:passage:song-shi-338-fengxiang",
+    "locatorId": "chs:locator:song-shi-338-fengxiang",
+    "originalText": "除大理评事、签书凤翔府判官。",
+    "normalizedText": "除大理评事、签书凤翔府判官。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "传记未在此句给出精确月日。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-hangzhou",
+    "locatorId": "chs:locator:song-shi-338-hangzhou-mizhou",
+    "originalText": "轼遂请外，通判杭州。",
+    "normalizedText": "轼遂请外，通判杭州。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": null
+  },
+  {
+    "id": "chs:passage:song-shi-338-mizhou",
+    "locatorId": "chs:locator:song-shi-338-hangzhou-mizhou",
+    "originalText": "时新政日下，轼于其间，每因法以便民，民赖以安。徙知密州。",
+    "normalizedText": "时新政日下，轼于其间，每因法以便民，民赖以安。徙知密州。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "“徙”记任命变化；本句未给出到任日期。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-xuzhou",
+    "locatorId": "chs:locator:song-shi-338-xuzhou",
+    "originalText": "徙知徐州。河决曹村，泛于梁山泊，溢于南清河，汇于城下。",
+    "normalizedText": "徙知徐州。河决曹村，泛于梁山泊，溢于南清河，汇于城下。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "后续防洪叙事可支持实际任事，但本批只录任命与最低限度状态。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-huzhou-huangzhou",
+    "locatorId": "chs:locator:song-shi-338-huzhou-huangzhou",
+    "originalText": "徙知湖州，上表以谢。御史李定、舒亶、何正臣摭其表语，并媒蘖所为诗以为讪谤，逮赴台狱，欲置之死，锻炼久之不决。神宗独怜之，以黄州团练副使安置。",
+    "normalizedText": "徙知湖州，上表以谢。御史李定、舒亶、何正臣摭其表语，并媒蘖所为诗以为讪谤，逮赴台狱，欲置之死，锻炼久之不决。神宗独怜之，以黄州团练副使安置。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "节录同段中直接关联湖州、台狱和黄州处分的句子。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-yuanyou",
+    "locatorId": "chs:locator:song-shi-338-yuanyou",
+    "originalText": "神宗崩，哲宗立，复朝奉郎、知登州，召为礼部郎中。迁起居舍人。元祐元年，轼以七品服入侍延和，即赐银绯，迁中书舍人。寻除翰林学士。",
+    "normalizedText": "神宗崩，哲宗立，复朝奉郎、知登州，召为礼部郎中。迁起居舍人。元祐元年，轼以七品服入侍延和，即赐银绯，迁中书舍人。寻除翰林学士。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "原网页跨三个相邻段落；此处按原顺序摘录任官句，未补造省略的月日。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-hangzhou-second",
+    "locatorId": "chs:locator:song-shi-338-yuanyou",
+    "originalText": "四年，积以论事，为当轴者所恨。轼恐不见容，请外，拜龙图阁学士、知杭州。既至杭，大旱，饥疫并作。",
+    "normalizedText": "四年，积以论事，为当轴者所恨。轼恐不见容，请外，拜龙图阁学士、知杭州。既至杭，大旱，饥疫并作。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "“四年”承上文元祐纪年；标准化为1089年级精度，具体月日未定。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-late",
+    "locatorId": "chs:locator:song-shi-338-late",
+    "originalText": "绍圣初，御史论轼掌内外制日，所作词命，以为讥斥先朝。遂以本官知英州，寻降一官，未至，贬宁远军节度副使，惠州安置。居三年，又贬琼州别驾，居昌化。",
+    "normalizedText": "绍圣初，御史论轼掌内外制日，所作词命，以为讥斥先朝。遂以本官知英州，寻降一官，未至，贬宁远军节度副使，惠州安置。居三年，又贬琼州别驾，居昌化。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "明确保留“未至”，避免把英州任命自动转成实际任职。"
+  },
+  {
+    "id": "chs:passage:dao-huangzhou-xiebiao-opening",
+    "locatorId": "chs:locator:dao-huangzhou-xiebiao-opening",
+    "originalText": "去歲十二月二十九日，準敕，責授臣檢校尚書水部員外郎充黃州團練副使，本州安置，不得僉書公事，臣已於今月一日到本所訖者。",
+    "normalizedText": "去岁十二月二十九日，准敕，责授臣检校尚书水部员外郎充黄州团练副使，本州安置，不得签书公事，臣已于今月一日到本所讫者。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "原文保留繁体；规范化文本只用于检索与界面辅助。"
+  },
+  {
+    "id": "chs:passage:gong-2019-abstract-short",
+    "locatorId": "chs:locator:gong-2019-abstract",
+    "originalText": "北宋前期，“官”变成了“禄”。",
+    "normalizedText": "北宋前期，“官”变成了“禄”。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "河北大学学报论文页面；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "仅保存摘要中的必要短引文。"
+  }
+]
