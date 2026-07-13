@@ -31,5 +31,16 @@
     "bibliography": "龚延明：《宋代文官寄禄官制度》，《河北大学学报（哲学社会科学版）》2019年第6期，DOI: 10.3969/j.issn.1005-6378.2019.06.001。",
     "notes": "当前只保存书目和摘要中的必要短引文，不复制论文全文。",
     "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:source:kong-fanli-su-shi-nianpu",
+    "title": "苏轼年谱",
+    "shortTitle": "孔凡礼《苏轼年谱》",
+    "creator": "孔凡礼",
+    "sourceType": "modern_monograph",
+    "language": "现代汉语",
+    "bibliography": "孔凡礼：《苏轼年谱》（上中下），北京：中华书局，1998年，ISBN 7-101-01473-9。",
+    "notes": "选作苏轼完整官履的权威编年覆盖锚点；当前只核实书目与目录范围，未取得可合法逐条核对的全文，因此不从网络转载本生成史实。",
+    "editorialStatus": "reviewed"
   }
 ]

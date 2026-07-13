@@ -1,11 +1,11 @@
 {
-  "datasetVersion": "0.2.0-research.1",
+  "datasetVersion": "0.3.0-research.1",
   "files": {
-    "release.json": "sha256:53dafaf7977fa4e738a767f14a09e87378f06467f94854ee253c626580a23dc5",
-    "site.json": "sha256:18a7a18b23a9025cbf3b7a8805ab6fb56d04d54820baa17c0e74d20898ea288a",
-    "titles.csv": "sha256:3f688b1fd9a83654355578dbf5278d63e7de552f680d12e21023f48719605473"
+    "release.json": "sha256:5b783cfe7d63989d9e8feda5a71a8b8e538535ef3837fdf1c251125a5b33a753",
+    "site.json": "sha256:5897894a45a837b925f6ecf51a8ab2cbb2ab310ff409763c602a6dcd0658f334",
+    "titles.csv": "sha256:84f41717827708107eb01c9afef4fda2f22f551f3229c9943d9ea66de396563b"
   },
   "generatedAt": "2026-07-13",
-  "projectionVersion": "0.2.0",
-  "schemaVersion": "0.2.0"
+  "projectionVersion": "0.3.0",
+  "schemaVersion": "0.3.0"
 }

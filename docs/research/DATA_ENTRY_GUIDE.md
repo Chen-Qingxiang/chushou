@@ -41,6 +41,13 @@
 - `precision` 与 `qualification` 分开；
 - 保存换算方法、版本和说明；仅知顺序时使用 sequence，不生成虚构年份。
 
+## Coverage ledger
+
+- `CoverageMatrix` 必须声明锚点类型与完整性口径；`exhaustive_for_anchor` 只能表示对所列来源穷尽，不能外推为人物生涯完整；
+- 每个 coverage item 至少连接一个 `Passage`；partial／covered 必须连接正式 appointment；gap 必须填写可操作的原因；
+- 权威锚点因版权、馆藏或访问条件无法逐条核对时使用 `blocked` 并写明 blocker，不从来源不明的转载本补齐；
+- coverage matrix 与领域数据同属 release，外键断裂、重复条目、无记录的“已覆盖”和无原因的 gap 都会阻断构建。
+
 ## 编辑状态
 
 - `incomplete`：必要字段或材料缺失；

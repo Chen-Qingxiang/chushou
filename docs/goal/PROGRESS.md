@@ -16,35 +16,37 @@
 - 建立 59 个时期化官名概念、120 条主张和 139 条证据关联；reviewed 主张证据覆盖率为 100%。
 - 建立 11 个机构、时期化机构版本和 4 条带方向／类型的关系，制度地图可按时期检查证据。
 - 建立 3 个局部品秩方案、13 个阶位条目、3 条原文直载换官边和 1 条低置信度争议候选边。
+- 将 coverage matrices 纳入 release schema；穷尽枚举《宋史》卷338的 38 条任官／身份语句，其中 13 条 partial、25 条 gap，每条均连到 passage。
+- 核实孔凡礼《苏轼年谱》1998年中华书局三册本书目，并把权威年谱分母因合法全文不可得明确标为 blocked。
 - 建成首页、官名、制度地图、沿革、苏轼官履与任命详情、量化、解码器、比较、来源、学习、模拟和数据页面的真实路由。
 - 完成简繁／拼音／轻量模糊搜索、证据抽屉、下载导出、深链接与应用内 404。
-- 增加 8 条单元／集成测试和 7 条 Chromium 关键用户旅程；桌面和 390px 移动端完成首轮视觉复核。
+- 增加 9 条单元／集成测试和 8 条 Chromium 关键用户旅程；桌面和 390px 移动端完成首轮视觉复核。
 - 将 Pages workflow 改为先执行格式、lint、严格类型、数据校验、单测、构建和 E2E，再发布经过验证的 `dist/`。
 
 ## 当前工作
 
 - 继续扩充品秩方案覆盖，但保持局部 sequence 与全表绝对编号的区别。
-- 继续苏轼 coverage matrix；三名反例人物先保持诚实的小切片边界。
+- 在取得合法年谱文本前，按卷338 gap 优先补高价值真实 appointment；三名反例人物先保持诚实的小切片边界。
 - 完成比较器、路径模拟和数据下载的研究级交互与性能优化。
 
 ## 已运行证据
 
 ```text
 npm run data:validate
-Validated 0.2.0-research.1: 59 title concepts, 120 assertions, 139 evidence links.
+Validated 0.3.0-research.1: 59 title concepts, 120 assertions, 139 evidence links.
 
 npm run typecheck
 npm run lint
 npm test
-Test Files 1 passed; Tests 8 passed.
+Test Files 1 passed; Tests 9 passed.
 
 npm run test:e2e
-7 passed (Chromium)
+8 passed (Chromium)
 ```
 
 ## 下一步
 
-1. 继续整理苏轼年谱材料可得性和明确的 coverage 缺口。
+1. 取得可合法使用的孔凡礼年谱纸本／数据库文本并建立权威分母；在此之前不声称完整。
 2. 完成比较器、路径模拟和数据下载的研究级交互。
 3. 建立性能预算并进行 WCAG 审计。
 4. 继续从卷169补全品秩方案，同时逐条核对时段边界。

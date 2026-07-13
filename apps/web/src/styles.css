@@ -2225,6 +2225,34 @@ textarea:focus {
   color: var(--muted);
   font: 10px/1.6 var(--sans);
 }
+.coverage-ledger {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 15px;
+  padding: 25px 28px;
+  border: 1px solid color-mix(in srgb, var(--verm) 28%, var(--line));
+  border-radius: var(--radius-xl);
+  background: color-mix(in srgb, var(--verm) 4%, var(--paper));
+}
+.coverage-ledger h2 {
+  margin: 6px 0 10px;
+  font-size: 27px;
+}
+.coverage-ledger p {
+  color: var(--muted);
+  font: 11px/1.7 var(--sans);
+}
+.coverage-ledger aside {
+  display: grid;
+  gap: 8px;
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+}
+.coverage-ledger aside .status-badge {
+  justify-self: start;
+}
 .data-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2841,6 +2869,15 @@ textarea:focus {
   }
   .rank-context > div:last-child {
     justify-items: start;
+  }
+  .coverage-ledger {
+    grid-template-columns: 1fr;
+  }
+  .coverage-ledger aside {
+    padding-top: 18px;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
   }
   .brand small,
   .release-chip,

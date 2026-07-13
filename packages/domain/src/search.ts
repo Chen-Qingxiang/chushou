@@ -12,6 +12,7 @@ export type SearchRecord = {
 const commonTraditionalToSimplified: Record<string, string> = {
   蘇: "苏",
   軾: "轼",
+  譜: "谱",
   學: "学",
   龍: "龙",
   圖: "图",
@@ -124,18 +125,21 @@ export function searchRecords(records: SearchRecord[], query: string): SearchRec
   return records
     .map((record) => {
       const normalizedAliases = record.aliases.map(normalizeSearchText);
+      const exact = normalizedAliases.some((alias) => alias === normalized);
       const prefix = normalizedAliases.some((alias) => alias.startsWith(normalized));
       const includes = record.searchText.includes(normalized);
       const distance = Math.min(
         ...normalizedAliases.map((alias) => editDistance(alias, normalized)),
       );
-      const score = prefix
+      const score = exact
         ? 0
-        : includes
+        : prefix
           ? 1
-          : distance <= Math.max(1, Math.floor(normalized.length / 3))
-            ? 2 + distance
-            : 99;
+          : includes
+            ? 2
+            : distance <= Math.max(1, Math.floor(normalized.length / 3))
+              ? 3 + distance
+              : 99;
       return { record, score };
     })
     .filter((item) => item.score < 99)

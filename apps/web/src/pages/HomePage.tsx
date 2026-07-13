@@ -35,6 +35,9 @@ export function HomePage() {
   const suShiAppointmentCount = site.appointments.filter(
     (appointment) => appointment.personId === suShi?.id,
   ).length;
+  const suShiBiographyCoverage = site.coverageMatrices.find(
+    (matrix) => matrix.anchorKind === "official_biography",
+  );
   const example =
     site.appointments.find((item) => item.id === "chs:appointment:su-shi-hangzhou-second") ??
     site.appointments[0];
@@ -106,7 +109,7 @@ export function HomePage() {
         <div>
           <strong>{suShiAppointmentCount}</strong>
           <span>条苏轼任命动作</span>
-          <small>《宋史》卷338 初步覆盖</small>
+          <small>卷338 已对照 {suShiBiographyCoverage?.items.length ?? 0} 条锚点</small>
         </div>
         <div>
           <strong>{site.counts.assertions}</strong>

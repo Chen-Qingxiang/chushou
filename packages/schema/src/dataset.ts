@@ -42,6 +42,33 @@ export const datasetMetadataSchema = z.object({
   citation: z.string().min(1),
 });
 
+export const coverageItemSchema = z.object({
+  id: z.string().regex(/^[a-z0-9:-]+$/),
+  personId: stableIdSchema,
+  anchorSourceId: stableIdSchema,
+  anchorPassageIds: z.array(stableIdSchema).min(1),
+  anchorEntry: z.string().min(1),
+  originalDateText: z.string().min(1).nullable(),
+  summary: z.string().min(1),
+  coverageStatus: z.enum(["covered", "partial", "gap", "out_of_scope"]),
+  appointmentIds: z.array(stableIdSchema),
+  evidenceStatus: z.enum(["verified", "reviewed", "provisional", "missing"]),
+  gapReason: z.string().min(1).nullable(),
+});
+
+export const coverageMatrixSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  label: z.string().min(1),
+  anchorSourceId: stableIdSchema,
+  anchorKind: z.enum(["authoritative_chronology", "official_biography", "other"]),
+  completenessClaim: z.enum(["exhaustive_for_anchor", "preliminary", "blocked"]),
+  scopeDefinition: z.string().min(1),
+  anchorBibliography: z.string().min(1),
+  blocker: z.string().min(1).nullable(),
+  lastReviewedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  items: z.array(coverageItemSchema),
+});
+
 export const curatedDatasetSchema = z.object({
   metadata: datasetMetadataSchema,
   periodLenses: z.array(periodLensSchema),
@@ -70,6 +97,7 @@ export const curatedDatasetSchema = z.object({
   appointmentComponents: z.array(appointmentComponentSchema),
   serviceEpisodes: z.array(serviceEpisodeSchema),
   careerMetricAssessments: z.array(careerMetricAssessmentSchema),
+  coverageMatrices: z.array(coverageMatrixSchema),
 });
 
 export const datasetFileManifestSchema = z.object({
@@ -78,28 +106,6 @@ export const datasetFileManifestSchema = z.object({
 });
 
 export const publicIdListSchema = z.array(stableIdSchema);
-
-export const coverageItemSchema = z.object({
-  id: z.string().regex(/^[a-z0-9:-]+$/),
-  personId: stableIdSchema,
-  anchorSourceId: stableIdSchema,
-  anchorEntry: z.string().min(1),
-  originalDateText: z.string().min(1).nullable(),
-  summary: z.string().min(1),
-  coverageStatus: z.enum(["covered", "partial", "gap", "out_of_scope"]),
-  appointmentIds: z.array(stableIdSchema),
-  evidenceStatus: z.enum(["verified", "reviewed", "provisional", "missing"]),
-  gapReason: z.string().min(1).nullable(),
-});
-
-export const coverageMatrixSchema = z.object({
-  id: z.string().regex(/^[a-z0-9-]+$/),
-  label: z.string().min(1),
-  scopeDefinition: z.string().min(1),
-  anchorBibliography: z.string().min(1),
-  lastReviewedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-  items: z.array(coverageItemSchema),
-});
 
 export type CuratedDataset = z.infer<typeof curatedDatasetSchema>;
 export type DatasetMetadata = z.infer<typeof datasetMetadataSchema>;

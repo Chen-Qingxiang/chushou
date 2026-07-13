@@ -1,6 +1,6 @@
 # Data quality report
 
-Generated from dataset 0.2.0-research.1.
+Generated from dataset 0.3.0-research.1.
 
 | Measure                             | Count |
 | ----------------------------------- | ----: |
@@ -12,8 +12,8 @@ Generated from dataset 0.2.0-research.1.
 | Rank crosswalks                     |     4 |
 | Appointment actions                 |    16 |
 | Service episodes                    |     4 |
-| Sources                             |     3 |
-| Passages                            |    53 |
+| Sources                             |     4 |
+| Passages                            |    63 |
 | Assertions                          |   120 |
 | Assertions with supporting evidence |   120 |
 | Evidence links                      |   139 |

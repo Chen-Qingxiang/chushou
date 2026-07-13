@@ -298,6 +298,53 @@ export function validateDatasetIntegrity(dataset: CuratedDataset): ValidationIss
       expectRef(id, `careerMetricAssessments.${index}.assertionIds.${assertionIndex}`),
     );
   });
+  const coverageItemIds = new Set<string>();
+  dataset.coverageMatrices.forEach((matrix, matrixIndex) => {
+    expectRef(matrix.anchorSourceId, `coverageMatrices.${matrixIndex}.anchorSourceId`);
+    if (matrix.completenessClaim === "blocked" && matrix.blocker === null) {
+      issues.push({
+        code: "coverage_blocker_required",
+        path: `coverageMatrices.${matrixIndex}.blocker`,
+        message: `${matrix.id} is blocked but does not explain the blocker`,
+      });
+    }
+    matrix.items.forEach((item, itemIndex) => {
+      const path = `coverageMatrices.${matrixIndex}.items.${itemIndex}`;
+      if (coverageItemIds.has(item.id)) {
+        issues.push({
+          code: "duplicate_coverage_id",
+          path: `${path}.id`,
+          message: `Duplicate coverage item ID ${item.id}`,
+        });
+      }
+      coverageItemIds.add(item.id);
+      expectRef(item.personId, `${path}.personId`);
+      expectRef(item.anchorSourceId, `${path}.anchorSourceId`);
+      item.anchorPassageIds.forEach((id, passageIndex) =>
+        expectRef(id, `${path}.anchorPassageIds.${passageIndex}`),
+      );
+      item.appointmentIds.forEach((id, appointmentIndex) =>
+        expectRef(id, `${path}.appointmentIds.${appointmentIndex}`),
+      );
+      if (
+        (item.coverageStatus === "covered" || item.coverageStatus === "partial") &&
+        item.appointmentIds.length === 0
+      ) {
+        issues.push({
+          code: "coverage_record_required",
+          path: `${path}.appointmentIds`,
+          message: `${item.id} is ${item.coverageStatus} but has no appointment record`,
+        });
+      }
+      if (item.coverageStatus === "gap" && item.gapReason === null) {
+        issues.push({
+          code: "coverage_gap_reason_required",
+          path: `${path}.gapReason`,
+          message: `${item.id} is a gap but does not explain why`,
+        });
+      }
+    });
+  });
 
   const appointmentGroups = new Map<StableId, CuratedDataset["appointmentComponents"]>();
   for (const component of dataset.appointmentComponents) {

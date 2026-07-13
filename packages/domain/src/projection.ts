@@ -14,6 +14,8 @@ export type SiteProjection = {
     rankSchemes: number;
     ranks: number;
     rankCrosswalks: number;
+    coverageItems: number;
+    coverageGaps: number;
   };
   periodLenses: CuratedDataset["periodLenses"];
   reforms: CuratedDataset["reforms"];
@@ -25,6 +27,7 @@ export type SiteProjection = {
   rankSchemes: CuratedDataset["rankSchemes"];
   ranks: CuratedDataset["ranks"];
   rankCrosswalks: CuratedDataset["rankCrosswalks"];
+  coverageMatrices: CuratedDataset["coverageMatrices"];
   people: CuratedDataset["people"];
   places: CuratedDataset["places"];
   placeVersions: CuratedDataset["placeVersions"];
@@ -99,6 +102,10 @@ export function buildSiteProjection(dataset: CuratedDataset): SiteProjection {
       rankSchemes: dataset.rankSchemes.length,
       ranks: dataset.ranks.length,
       rankCrosswalks: dataset.rankCrosswalks.length,
+      coverageItems: dataset.coverageMatrices.flatMap((matrix) => matrix.items).length,
+      coverageGaps: dataset.coverageMatrices
+        .flatMap((matrix) => matrix.items)
+        .filter((item) => item.coverageStatus === "gap").length,
     },
     periodLenses: dataset.periodLenses,
     reforms: dataset.reforms,
@@ -110,6 +117,7 @@ export function buildSiteProjection(dataset: CuratedDataset): SiteProjection {
     rankSchemes: dataset.rankSchemes,
     ranks: dataset.ranks,
     rankCrosswalks: dataset.rankCrosswalks,
+    coverageMatrices: dataset.coverageMatrices,
     people: dataset.people,
     places: dataset.places,
     placeVersions: dataset.placeVersions,

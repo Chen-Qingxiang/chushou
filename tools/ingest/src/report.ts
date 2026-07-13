@@ -1,21 +1,8 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { coverageMatrixSchema, type CuratedDataset } from "@chushou/schema";
+import type { CuratedDataset } from "@chushou/schema";
 import { format } from "prettier";
-import { curatedRoot, reportRoot } from "./paths.js";
-
-async function loadCoverageFiles(): Promise<Array<ReturnType<typeof coverageMatrixSchema.parse>>> {
-  const indexPath = path.join(curatedRoot(), "coverage", "index.json");
-  const index = JSON.parse(await readFile(indexPath, "utf8")) as { files: string[] };
-  return Promise.all(
-    index.files.map(async (file) => {
-      const value = JSON.parse(
-        await readFile(path.join(curatedRoot(), "coverage", file), "utf8"),
-      ) as unknown;
-      return coverageMatrixSchema.parse(value);
-    }),
-  );
-}
+import { reportRoot } from "./paths.js";
 
 export async function generateReports(dataset: CuratedDataset): Promise<void> {
   const root = reportRoot();
@@ -35,8 +22,7 @@ export async function generateReports(dataset: CuratedDataset): Promise<void> {
     "utf8",
   );
 
-  const matrices = await loadCoverageFiles();
-  const sections = matrices.map((matrix) => {
+  const sections = dataset.coverageMatrices.map((matrix) => {
     const counts = Object.fromEntries(
       ["covered", "partial", "gap", "out_of_scope"].map((status) => [
         status,
@@ -49,7 +35,7 @@ export async function generateReports(dataset: CuratedDataset): Promise<void> {
           `| ${item.anchorEntry} | ${item.summary} | ${item.coverageStatus} | ${item.evidenceStatus} | ${item.appointmentIds.join("、") || "—"} | ${item.gapReason ?? "—"} |`,
       )
       .join("\n");
-    return `## ${matrix.label}\n\n${matrix.scopeDefinition}\n\nAnchor: ${matrix.anchorBibliography}\n\n- Covered: ${counts.covered ?? 0}\n- Partial: ${counts.partial ?? 0}\n- Gap: ${counts.gap ?? 0}\n- Out of scope: ${counts.out_of_scope ?? 0}\n\n| Anchor entry | Summary | Coverage | Evidence | Appointments | Gap reason |\n| --- | --- | --- | --- | --- | --- |\n${rows}`;
+    return `## ${matrix.label}\n\n${matrix.scopeDefinition}\n\nAnchor: ${matrix.anchorBibliography}\n\n- Anchor kind: ${matrix.anchorKind}\n- Completeness claim: ${matrix.completenessClaim}\n- Blocker: ${matrix.blocker ?? "—"}\n- Covered: ${counts.covered ?? 0}\n- Partial: ${counts.partial ?? 0}\n- Gap: ${counts.gap ?? 0}\n- Out of scope: ${counts.out_of_scope ?? 0}\n\n| Anchor entry | Summary | Coverage | Evidence | Appointments | Gap reason |\n| --- | --- | --- | --- | --- | --- |\n${rows}`;
   });
   const coverage = `# Coverage report\n\nGenerated from dataset ${dataset.metadata.datasetVersion}; last report input review dates are recorded per matrix.\n\n${sections.join("\n\n")}\n`;
   await writeFile(

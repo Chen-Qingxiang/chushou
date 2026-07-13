@@ -50,6 +50,11 @@ export function CareerPage() {
     );
   const isSuShi = person.slug === "su-shi";
   const personName = preferredName(person);
+  const suCoverage = site.coverageMatrices.find(
+    (matrix) => matrix.anchorKind === "official_biography",
+  );
+  const suCoverageLinked =
+    suCoverage?.items.filter((item) => item.appointmentIds.length > 0).length ?? 0;
 
   return (
     <div className="page-container">
@@ -58,7 +63,7 @@ export function CareerPage() {
         title={`${personName}的官履，不压成一条升降线。`}
         intro={
           isSuShi
-            ? "这里分别保存授命、官衔成分、实际服务与居住／处分状态。当前卷338矩阵是初步覆盖，不宣称已经等于孔凡礼年谱的完整分母。"
+            ? "这里分别保存授命、官衔成分、实际服务与居住／处分状态。卷338任官语句已经穷尽枚举，但只完成部分数据库对照；孔凡礼年谱的权威分母仍因全文可得性而阻塞。"
             : "这是用于检验通用模型的小型反例切片：只发布已经定位的任命，不把一条记录包装成完整生涯。"
         }
         actions={
@@ -198,8 +203,9 @@ export function CareerPage() {
         <strong>覆盖说明</strong>
         {isSuShi ? (
           <p>
-            当前 13 条是《宋史》卷338苏轼传的首轮任官矩阵，全部标为
-            partial。下一步须逐条与孔凡礼《苏轼年谱》及同期原始材料对读，再计算真正覆盖率。
+            《宋史》卷338当前枚举 {suCoverage?.items.length ?? 0} 条任官／身份语句，其中
+            {suCoverageLinked} 条链接到 appointment，且仍全部为 partial。其余明确列为
+            gap；孔凡礼年谱全文未取得前不计算完整生涯覆盖率。
           </p>
         ) : (
           <p>

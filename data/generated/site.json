@@ -3474,15 +3474,640 @@
   "counts": {
     "appointments": 16,
     "assertions": 120,
+    "coverageGaps": 25,
+    "coverageItems": 38,
     "evidenceLinks": 139,
     "people": 4,
     "rankCrosswalks": 4,
     "ranks": 13,
     "rankSchemes": 3,
     "reviewedTitleUsages": 59,
-    "sources": 3,
+    "sources": 4,
     "titleConcepts": 59
   },
+  "coverageMatrices": [
+    {
+      "anchorBibliography": "孔凡礼：《苏轼年谱》（上中下），北京：中华书局，1998年，ISBN 7-101-01473-9。",
+      "anchorKind": "authoritative_chronology",
+      "anchorSourceId": "chs:source:kong-fanli-su-shi-nianpu",
+      "blocker": "已核书目与目录范围，但当前环境没有可合法全文检索的该书版本；网络转载本的授权与文本完整性无法确认。需要馆藏纸本、合法数据库访问或用户提供的可用文本后逐条录入。",
+      "completenessClaim": "blocked",
+      "id": "su-shi-kong-fanli-authoritative",
+      "items": [],
+      "label": "苏轼官履：孔凡礼年谱权威锚点",
+      "lastReviewedAt": "2026-07-13",
+      "scopeDefinition": "目标分母是孔凡礼《苏轼年谱》全部相关除授、罢免、责降、量移和任职转换；在取得可合法逐条核对的全文前，不生成条目清单，也不声称完整。"
+    },
+    {
+      "anchorBibliography": "脱脱等：《宋史》卷338《苏轼传》，维基文库数字转录（访问日期 2026-07-13）。",
+      "anchorKind": "official_biography",
+      "anchorSourceId": "chs:source:song-shi",
+      "blocker": null,
+      "completenessClaim": "exhaustive_for_anchor",
+      "id": "su-shi-song-shi-338-exhaustive",
+      "items": [
+        {
+          "anchorEntry": "五年，调福昌主簿",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-early-career-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "是否实际赴任、主簿制度版本和同期除授材料尚未核入。",
+          "id": "su-shi:song-shi:fuchang-zhuabu",
+          "originalDateText": "嘉祐五年",
+          "personId": "chs:person:su-shi",
+          "summary": "福昌主簿调任语句"
+        },
+        {
+          "anchorEntry": "除大理评事、签书凤翔府判官",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-fengxiang"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-fengxiang"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "精确日期、是否赴任起止和完整官衔需年谱与同期材料。",
+          "id": "su-shi:song-shi:fengxiang",
+          "originalDateText": null,
+          "personId": "chs:person:su-shi",
+          "summary": "凤翔任命"
+        },
+        {
+          "anchorEntry": "治平二年，入判登闻鼓院",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-early-career-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "尚未建立登闻鼓院机构版本、职名用法和 appointment component。",
+          "id": "su-shi:song-shi:dengwen-guyuan",
+          "originalDateText": "治平二年",
+          "personId": "chs:person:su-shi",
+          "summary": "判登闻鼓院"
+        },
+        {
+          "anchorEntry": "得直史馆",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-early-career-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "贴职性质和授命时间需职官志与同期材料交叉核对。",
+          "id": "su-shi:song-shi:zhi-shiguan",
+          "originalDateText": "治平二年后",
+          "personId": "chs:person:su-shi",
+          "summary": "直史馆贴职"
+        },
+        {
+          "anchorEntry": "以判官告院",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-xining-court-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "provisional",
+          "gapReason": "当前数字转录语义不明，须先与可靠点校本核字，禁止据疑文建任命。",
+          "id": "su-shi:song-shi:xining-panguan-gaoyuan",
+          "originalDateText": "熙宁二年",
+          "personId": "chs:person:su-shi",
+          "summary": "熙宁还朝后的转录疑句"
+        },
+        {
+          "anchorEntry": "命权开封府推官",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-xining-court-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "权任修饰、机构版本和实际任事起止尚未建模。",
+          "id": "su-shi:song-shi:kaifeng-tuiguan",
+          "originalDateText": "熙宁二年后",
+          "personId": "chs:person:su-shi",
+          "summary": "权开封府推官"
+        },
+        {
+          "anchorEntry": "通判杭州",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-hangzhou"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-hangzhou-tongpan"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "具体除授和任期起止待年谱。",
+          "id": "su-shi:song-shi:hangzhou-tongpan",
+          "originalDateText": "熙宁四年上下文",
+          "personId": "chs:person:su-shi",
+          "summary": "杭州通判"
+        },
+        {
+          "anchorEntry": "徙知密州",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-mizhou"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-mizhou"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "具体日期与实际任期待年谱。",
+          "id": "su-shi:song-shi:mizhou",
+          "originalDateText": null,
+          "personId": "chs:person:su-shi",
+          "summary": "密州调任"
+        },
+        {
+          "anchorEntry": "徙知徐州",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-xuzhou"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-xuzhou"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "实际任期和离任原因尚未形成 service episode。",
+          "id": "su-shi:song-shi:xuzhou",
+          "originalDateText": null,
+          "personId": "chs:person:su-shi",
+          "summary": "徐州调任"
+        },
+        {
+          "anchorEntry": "徙知湖州",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-huzhou-huangzhou"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-huzhou"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "赴任与台狱之间的精确日期待核。",
+          "id": "su-shi:song-shi:huzhou",
+          "originalDateText": null,
+          "personId": "chs:person:su-shi",
+          "summary": "湖州调任"
+        },
+        {
+          "anchorEntry": "以黄州团练副使安置",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-huzhou-huangzhou"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-huangzhou"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "检校尚书水部员外郎尚未解析；相对日期尚未绝对换算。",
+          "id": "su-shi:song-shi:huangzhou",
+          "originalDateText": "谢表：去岁十二月二十九日；今月一日到本所",
+          "personId": "chs:person:su-shi",
+          "summary": "黄州处分、限制与实际到达"
+        },
+        {
+          "anchorEntry": "手札移轼汝州；轼未至汝",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-ruzhou-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "未赴边界已定位，但汝州 place、量移动作和后续常州居住 episode 尚未录入。",
+          "id": "su-shi:song-shi:ruzhou-not-assumed",
+          "originalDateText": "黄州三年后",
+          "personId": "chs:person:su-shi",
+          "summary": "汝州量移未赴"
+        },
+        {
+          "anchorEntry": "复朝奉郎、知登州",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-chaofeng-zhidengzhou"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "实际是否到任与后续召为礼部郎中尚待拆录。",
+          "id": "su-shi:song-shi:yuanyou-restoration",
+          "originalDateText": "神宗崩，哲宗立",
+          "personId": "chs:person:su-shi",
+          "summary": "哲宗初恢复与登州任命"
+        },
+        {
+          "anchorEntry": "召为礼部郎中",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "礼部郎中 title usage、召还动作与到任起止尚未录入。",
+          "id": "su-shi:song-shi:libu-langzhong",
+          "originalDateText": "哲宗初",
+          "personId": "chs:person:su-shi",
+          "summary": "召为礼部郎中"
+        },
+        {
+          "anchorEntry": "迁起居舍人",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "官名版本已有制度定义，但人物 appointment 与任事 episode 尚未录入。",
+          "id": "su-shi:song-shi:qiju-sheren",
+          "originalDateText": "召为礼部郎中后",
+          "personId": "chs:person:su-shi",
+          "summary": "起居舍人迁任"
+        },
+        {
+          "anchorEntry": "迁中书舍人",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-zhongshu-sheren"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "实际任事起止和职掌证据尚待交叉核对。",
+          "id": "su-shi:song-shi:zhongshu-sheren",
+          "originalDateText": "元祐元年",
+          "personId": "chs:person:su-shi",
+          "summary": "中书舍人任命"
+        },
+        {
+          "anchorEntry": "寻除翰林学士",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-hanlin-xueshi"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "仅有相对顺序，实际入院与起止待核。",
+          "id": "su-shi:song-shi:hanlin-xueshi",
+          "originalDateText": "寻",
+          "personId": "chs:person:su-shi",
+          "summary": "翰林学士任命"
+        },
+        {
+          "anchorEntry": "臣为常州团练副使",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-changzhou-rank-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "传文只有身份回顾，没有授命句；须以年谱或同期制词补动作和日期。",
+          "id": "su-shi:song-shi:changzhou-tuanlian-fushi",
+          "originalDateText": "宣仁后问话中的‘前年’",
+          "personId": "chs:person:su-shi",
+          "summary": "常州团练副使身份自述"
+        },
+        {
+          "anchorEntry": "二年，兼侍读",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou-mid-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "侍读与翰林侍读学士不可按相似名称自动合并，待建立正确 title usage。",
+          "id": "su-shi:song-shi:shidu",
+          "originalDateText": "元祐二年",
+          "personId": "chs:person:su-shi",
+          "summary": "兼侍读"
+        },
+        {
+          "anchorEntry": "三年，权知礼部贡举",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou-mid-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "临时差遣的权、知与贡举职责尚未拆成有序 components。",
+          "id": "su-shi:song-shi:zhi-libu-gongju",
+          "originalDateText": "元祐三年",
+          "personId": "chs:person:su-shi",
+          "summary": "权知礼部贡举"
+        },
+        {
+          "anchorEntry": "拜龙图阁学士、知杭州",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-hangzhou-second"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-hangzhou-second"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "精确日期和完整身份组合待年谱。",
+          "id": "su-shi:song-shi:hangzhou-second",
+          "originalDateText": "元祐四年",
+          "personId": "chs:person:su-shi",
+          "summary": "龙图阁学士与第二次杭州任命"
+        },
+        {
+          "anchorEntry": "召为吏部尚书，未至",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou-six-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "必须建立受命未赴的 appointment 与 not_assumed service 状态，不能写成任职。",
+          "id": "su-shi:song-shi:libu-shangshu-not-assumed",
+          "originalDateText": "元祐六年",
+          "personId": "chs:person:su-shi",
+          "summary": "吏部尚书未赴"
+        },
+        {
+          "anchorEntry": "改翰林承旨",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou-six-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "官名概念已有，人物改授动作和任事起止尚未录入。",
+          "id": "su-shi:song-shi:hanlin-chengzhi",
+          "originalDateText": "元祐六年",
+          "personId": "chs:person:su-shi",
+          "summary": "翰林承旨改授"
+        },
+        {
+          "anchorEntry": "以龙图阁学士出知颍州",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou-six-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "颍州与英州须用不同 place ID；当前颍州地点和复合 appointment 未录入。",
+          "id": "su-shi:song-shi:yingzhou-longtu",
+          "originalDateText": "元祐六年",
+          "personId": "chs:person:su-shi",
+          "summary": "颍州出知"
+        },
+        {
+          "anchorEntry": "七年，徙扬州",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou-seven-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "“徙扬州”省略知州成分，须结合前后文和年谱谨慎解析。",
+          "id": "su-shi:song-shi:yangzhou",
+          "originalDateText": "元祐七年",
+          "personId": "chs:person:su-shi",
+          "summary": "扬州调任"
+        },
+        {
+          "anchorEntry": "以兵部尚书召兼侍读",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou-seven-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "召、兵部尚书与兼侍读三个成分尚未拆录。",
+          "id": "su-shi:song-shi:bingbu-shangshu-shidu",
+          "originalDateText": "元祐七年",
+          "personId": "chs:person:su-shi",
+          "summary": "兵部尚书兼侍读"
+        },
+        {
+          "anchorEntry": "轼为卤簿使",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou-seven-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "临时礼仪任务应建 assignment，不与常任官职混写。",
+          "id": "su-shi:song-shi:lubu-shi",
+          "originalDateText": "元祐七年南郊",
+          "personId": "chs:person:su-shi",
+          "summary": "南郊卤簿使临时任务"
+        },
+        {
+          "anchorEntry": "迁礼部兼端明殿、翰林侍读两学士，为礼部尚书",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou-seven-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "原句结构复杂，须核点校本并按顺序拆解礼部、两学士和礼部尚书。",
+          "id": "su-shi:song-shi:libu-duanming-hanlin-shidu",
+          "originalDateText": "元祐七年",
+          "personId": "chs:person:su-shi",
+          "summary": "礼部尚书与两学士复合身份"
+        },
+        {
+          "anchorEntry": "以两学士出知定州",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-yuanyou-eight-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "“两学士”回指和定州实际任事须跨段连接，尚未建 appointment 与 service。",
+          "id": "su-shi:song-shi:dingzhou",
+          "originalDateText": "元祐八年",
+          "personId": "chs:person:su-shi",
+          "summary": "定州出知"
+        },
+        {
+          "anchorEntry": "以本官知英州，寻降一官，未至",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-late"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-yingzhou-not-assumed"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "“本官”与“降一官”的具体内容尚未解析。",
+          "id": "su-shi:song-shi:yingzhou-not-assumed",
+          "originalDateText": "绍圣初",
+          "personId": "chs:person:su-shi",
+          "summary": "英州未赴任命与降官"
+        },
+        {
+          "anchorEntry": "贬宁远军节度副使，惠州安置",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-late"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-huizhou-punitive"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "实际到达、安置限制和起止待同期材料。",
+          "id": "su-shi:song-shi:huizhou",
+          "originalDateText": "绍圣初",
+          "personId": "chs:person:su-shi",
+          "summary": "惠州处分组合"
+        },
+        {
+          "anchorEntry": "又贬琼州别驾，居昌化",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-late"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [
+            "chs:appointment:su-shi-qiongzhou-biejia"
+          ],
+          "coverageStatus": "partial",
+          "evidenceStatus": "reviewed",
+          "gapReason": "昌化 residence episode、精确日期和离任原因待录。",
+          "id": "su-shi:song-shi:qiongzhou",
+          "originalDateText": "惠州居三年后",
+          "personId": "chs:person:su-shi",
+          "summary": "琼州别驾与昌化居住"
+        },
+        {
+          "anchorEntry": "徽宗立，移廉州",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-huizong-restoration-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "廉州 place、量移动作和实际居住阶段尚未录入。",
+          "id": "su-shi:song-shi:lianzhou",
+          "originalDateText": "徽宗即位后",
+          "personId": "chs:person:su-shi",
+          "summary": "廉州量移"
+        },
+        {
+          "anchorEntry": "改舒州团练副使",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-huizong-restoration-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "舒州限定与团练副使身份须按完整制授语境核录。",
+          "id": "su-shi:song-shi:shuzhou-tuanlian-fushi",
+          "originalDateText": "徽宗即位后",
+          "personId": "chs:person:su-shi",
+          "summary": "舒州团练副使改授"
+        },
+        {
+          "anchorEntry": "徙永州",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-huizong-restoration-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "传文省略具体身份，须与年谱和诏令核对后再建 component。",
+          "id": "su-shi:song-shi:yongzhou",
+          "originalDateText": "改舒州团练副使后",
+          "personId": "chs:person:su-shi",
+          "summary": "永州再移"
+        },
+        {
+          "anchorEntry": "遂提举玉局观，复朝奉郎",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-huizong-restoration-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "提举宫观和复朝奉郎分别属于差遣与身份轨，尚未按两成分建模。",
+          "id": "su-shi:song-shi:yujuguan-chaofeng",
+          "originalDateText": "更三大赦后",
+          "personId": "chs:person:su-shi",
+          "summary": "祠禄差遣与复官"
+        },
+        {
+          "anchorEntry": "高宗即位，赠资政殿学士",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-posthumous-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "追赠必须使用 posthumous_confer 动作并与生前官履分层，尚未录入。",
+          "id": "su-shi:song-shi:posthumous-zizheng",
+          "originalDateText": "高宗即位后",
+          "personId": "chs:person:su-shi",
+          "summary": "身后赠资政殿学士"
+        },
+        {
+          "anchorEntry": "遂崇赠太师，谥文忠",
+          "anchorPassageIds": [
+            "chs:passage:song-shi-338-posthumous-coverage"
+          ],
+          "anchorSourceId": "chs:source:song-shi",
+          "appointmentIds": [],
+          "coverageStatus": "gap",
+          "evidenceStatus": "reviewed",
+          "gapReason": "太师追赠与谥号是不同制度成分，尚未建立 posthumous action 和谥号模型。",
+          "id": "su-shi:song-shi:posthumous-taishi-wenzhong",
+          "originalDateText": "高宗朝",
+          "personId": "chs:person:su-shi",
+          "summary": "身后崇赠与谥号"
+        }
+      ],
+      "label": "苏轼官履：《宋史》卷338任官语句完整对照",
+      "lastReviewedAt": "2026-07-13",
+      "scopeDefinition": "人工通读《宋史》卷338苏轼传全文，按传文顺序枚举其中对苏轼本人的调、除、判、得、命权、通判、徙知、责授、移、复、召、迁、兼、拜、改、出知、量移、追赠等任官或制度身份语句。穷尽性只对这个数字转录锚点成立，不等于孔凡礼年谱定义的完整官履。"
+    }
+  ],
   "evidenceLinks": [
     {
       "assertionId": "chs:assertion:period-pre-reform-system",
@@ -5569,15 +6194,15 @@
     }
   ],
   "metadata": {
-    "citation": "除授项目组：《除授北宋文官制度研究种子集》，0.2.0-research.1，2026-07-13。",
+    "citation": "除授项目组：《除授北宋文官制度研究种子集》，0.3.0-research.1，2026-07-13。",
     "curatedAt": "2026-07-13",
-    "datasetVersion": "0.2.0-research.1",
+    "datasetVersion": "0.3.0-research.1",
     "description": "用于验证官名时期版本、除授动作、任职阶段和证据追溯的首批人工审阅记录；当前覆盖范围会在界面和报告中明确显示。",
     "licenseCode": "MIT",
     "licenseData": "CC BY 4.0；第三方短引文仍遵循各来源标注的权利和引用条件",
-    "projectionVersion": "0.2.0",
+    "projectionVersion": "0.3.0",
     "releaseStage": "research_preview",
-    "schemaVersion": "0.2.0",
+    "schemaVersion": "0.3.0",
     "title": "除授北宋文官制度研究种子集",
     "vocabularyVersion": "0.1.0"
   },
@@ -7481,6 +8106,17 @@
     },
     {
       "aliases": [
+        "苏轼年谱",
+        "孔凡礼《苏轼年谱》"
+      ],
+      "id": "chs:source:kong-fanli-su-shi-nianpu",
+      "kind": "source",
+      "label": "孔凡礼《苏轼年谱》",
+      "searchText": "苏轼年谱 孔凡礼《苏轼年谱》",
+      "status": "reviewed"
+    },
+    {
+      "aliases": [
         "宋史",
         "《宋史》"
       ],
@@ -9224,6 +9860,221 @@
               "section": "职官九·文官",
               "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷169#文官",
               "volume": null
+            },
+            {
+              "anchor": "苏轼",
+              "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+              "entry": "嘉祐五年至治平二年任官",
+              "id": "chs:locator:song-shi-338-early-career-coverage",
+              "juan": "338",
+              "label": "《宋史》卷338苏轼传早期任官诸段",
+              "page": null,
+              "paragraph": "调福昌主簿至得直史馆诸段",
+              "passages": [
+                {
+                  "checkedAt": "2026-07-13",
+                  "id": "chs:passage:song-shi-338-early-career-coverage",
+                  "locatorId": "chs:locator:song-shi-338-early-career-coverage",
+                  "normalizedText": "嘉祐五年调福昌主簿；其后除大理评事、签书凤翔府判官；治平二年入判登闻鼓院；试二论后得直史馆。",
+                  "note": "省略号省去与覆盖枚举无关的叙事；每个任官短语仍按原文保留。",
+                  "originalText": "五年，调福昌主簿。……除大理评事、签书凤翔府判官。……治平二年，入判登闻鼓院。……及试二论，复入三等，得直史馆。",
+                  "transcribedBy": "维基文库贡献者；除授项目复核",
+                  "transcriptionMethod": "edition_transcription",
+                  "transcriptionStatus": "reviewed"
+                }
+              ],
+              "section": "列传第九十七·苏轼",
+              "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷338#苏轼",
+              "volume": null
+            },
+            {
+              "anchor": "苏轼",
+              "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+              "entry": "熙宁二年还朝至权开封府推官",
+              "id": "chs:locator:song-shi-338-xining-court-coverage",
+              "juan": "338",
+              "label": "《宋史》卷338苏轼传熙宁初朝官段",
+              "page": null,
+              "paragraph": "王安石执政背景段",
+              "passages": [
+                {
+                  "checkedAt": "2026-07-13",
+                  "id": "chs:passage:song-shi-338-xining-court-coverage",
+                  "locatorId": "chs:locator:song-shi-338-xining-court-coverage",
+                  "normalizedText": "熙宁二年还朝；“以判官告院”当前转录语义待校；其后命权开封府推官。",
+                  "note": "“以判官告院”先原样入 coverage gap，等待点校本核字，不据此建立任命。",
+                  "originalText": "熙宁二年，还朝。王安石执政，素恶其议论异己，以判官告院。……安石不悦，命权开封府推官，将困之以事。",
+                  "transcribedBy": "维基文库贡献者；除授项目复核",
+                  "transcriptionMethod": "edition_transcription",
+                  "transcriptionStatus": "provisional"
+                }
+              ],
+              "section": "列传第九十七·苏轼",
+              "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷338#苏轼",
+              "volume": null
+            },
+            {
+              "anchor": "苏轼",
+              "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+              "entry": "移汝州与常州团练副使自述",
+              "id": "chs:locator:song-shi-338-ruzhou-changzhou-coverage",
+              "juan": "338",
+              "label": "《宋史》卷338苏轼传汝州、常州段",
+              "page": null,
+              "paragraph": "黄州后至元祐入朝诸段",
+              "passages": [
+                {
+                  "checkedAt": "2026-07-13",
+                  "id": "chs:passage:song-shi-338-ruzhou-coverage",
+                  "locatorId": "chs:locator:song-shi-338-ruzhou-changzhou-coverage",
+                  "normalizedText": "神宗手札移苏轼汝州；苏轼未到汝州，请居常州并获准。",
+                  "note": "直接支持汝州任命未赴；常州居住许可不能自动解释成常州任官。",
+                  "originalText": "遂手札移轼汝州，有曰：‘苏轼黜居思咎，阅岁滋深，人材实难，不忍终弃。’轼未至汝，上书自言饥寒，有田在常，愿得居之。朝奏，夕报可。",
+                  "transcribedBy": "维基文库贡献者；除授项目复核",
+                  "transcriptionMethod": "edition_transcription",
+                  "transcriptionStatus": "reviewed"
+                },
+                {
+                  "checkedAt": "2026-07-13",
+                  "id": "chs:passage:song-shi-338-changzhou-rank-coverage",
+                  "locatorId": "chs:locator:song-shi-338-ruzhou-changzhou-coverage",
+                  "normalizedText": "苏轼自述前年为常州团练副使、当时为翰林学士。",
+                  "note": "这是身份状态自述，不提供常州团练副使的授命原文。",
+                  "originalText": "宣仁后问曰：‘卿前年为何官？’曰：‘臣为常州团练副使。’曰：‘今为何官？’曰：‘臣今待罪翰林学士。’",
+                  "transcribedBy": "维基文库贡献者；除授项目复核",
+                  "transcriptionMethod": "edition_transcription",
+                  "transcriptionStatus": "reviewed"
+                }
+              ],
+              "section": "列传第九十七·苏轼",
+              "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷338#苏轼",
+              "volume": null
+            },
+            {
+              "anchor": "苏轼",
+              "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+              "entry": "元祐二年至三年兼差",
+              "id": "chs:locator:song-shi-338-yuanyou-mid-coverage",
+              "juan": "338",
+              "label": "《宋史》卷338苏轼传元祐二至三年段",
+              "page": null,
+              "paragraph": "兼侍读与权知礼部贡举段",
+              "passages": [
+                {
+                  "checkedAt": "2026-07-13",
+                  "id": "chs:passage:song-shi-338-yuanyou-mid-coverage",
+                  "locatorId": "chs:locator:song-shi-338-yuanyou-mid-coverage",
+                  "normalizedText": "元祐二年兼侍读；三年权知礼部贡举。",
+                  "note": "两个兼差分别作为 coverage 条目，不合并为一条任命。",
+                  "originalText": "二年，兼侍读。……三年，权知礼部贡举。",
+                  "transcribedBy": "维基文库贡献者；除授项目复核",
+                  "transcriptionMethod": "edition_transcription",
+                  "transcriptionStatus": "reviewed"
+                }
+              ],
+              "section": "列传第九十七·苏轼",
+              "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷338#苏轼",
+              "volume": null
+            },
+            {
+              "anchor": "苏轼",
+              "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+              "entry": "元祐六年至八年任官",
+              "id": "chs:locator:song-shi-338-yuanyou-late-coverage",
+              "juan": "338",
+              "label": "《宋史》卷338苏轼传元祐六至八年段",
+              "page": null,
+              "paragraph": "吏部尚书至出知定州诸段",
+              "passages": [
+                {
+                  "checkedAt": "2026-07-13",
+                  "id": "chs:passage:song-shi-338-yuanyou-six-coverage",
+                  "locatorId": "chs:locator:song-shi-338-yuanyou-late-coverage",
+                  "normalizedText": "元祐六年召为吏部尚书而未至，继而改翰林承旨，后以龙图阁学士出知颍州。",
+                  "note": "未赴、改授和出知分列三个 coverage 条目。",
+                  "originalText": "六年，召为吏部尚书，未至。以弟辙除右丞，改翰林承旨。……乃以龙图阁学士出知颍州。",
+                  "transcribedBy": "维基文库贡献者；除授项目复核",
+                  "transcriptionMethod": "edition_transcription",
+                  "transcriptionStatus": "reviewed"
+                },
+                {
+                  "checkedAt": "2026-07-13",
+                  "id": "chs:passage:song-shi-338-yuanyou-seven-coverage",
+                  "locatorId": "chs:locator:song-shi-338-yuanyou-late-coverage",
+                  "normalizedText": "元祐七年徙扬州；未满一年，以兵部尚书召并兼侍读；同年为卤簿使；随后迁礼部，兼端明殿、翰林侍读两学士，为礼部尚书。",
+                  "note": "保留原句的并列和兼任结构；当前尚未建立有序 component。",
+                  "originalText": "七年，徙扬州。……未阅岁，以兵部尚书召兼侍读。是岁，哲宗亲祀南郊，轼为卤簿使。……寻迁礼部兼端明殿、翰林侍读两学士，为礼部尚书。",
+                  "transcribedBy": "维基文库贡献者；除授项目复核",
+                  "transcriptionMethod": "edition_transcription",
+                  "transcriptionStatus": "reviewed"
+                },
+                {
+                  "checkedAt": "2026-07-13",
+                  "id": "chs:passage:song-shi-338-yuanyou-eight-coverage",
+                  "locatorId": "chs:locator:song-shi-338-yuanyou-late-coverage",
+                  "normalizedText": "元祐八年，苏轼以两学士出知定州。",
+                  "note": "“两学士”需回指前段端明殿、翰林侍读两学士，当前不自动展开。",
+                  "originalText": "八年，宣仁后崩，哲宗亲政。轼乞补外，以两学士出知定州。",
+                  "transcribedBy": "维基文库贡献者；除授项目复核",
+                  "transcriptionMethod": "edition_transcription",
+                  "transcriptionStatus": "reviewed"
+                }
+              ],
+              "section": "列传第九十七·苏轼",
+              "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷338#苏轼",
+              "volume": null
+            },
+            {
+              "anchor": "苏轼",
+              "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+              "entry": "徽宗立后量移与复官",
+              "id": "chs:locator:song-shi-338-huizong-restoration-coverage",
+              "juan": "338",
+              "label": "《宋史》卷338苏轼传徽宗初量移复官段",
+              "page": null,
+              "paragraph": "廉州至提举玉局观段",
+              "passages": [
+                {
+                  "checkedAt": "2026-07-13",
+                  "id": "chs:passage:song-shi-338-huizong-restoration-coverage",
+                  "locatorId": "chs:locator:song-shi-338-huizong-restoration-coverage",
+                  "normalizedText": "徽宗即位后，移廉州，改舒州团练副使，徙永州；经三次大赦，提举玉局观并复朝奉郎。",
+                  "note": "四个动作按原顺序进入 coverage，尚未全部建 appointment。",
+                  "originalText": "徽宗立，移廉州，改舒州团练副使，徙永州。更三大赦，遂提举玉局观，复朝奉郎。",
+                  "transcribedBy": "维基文库贡献者；除授项目复核",
+                  "transcriptionMethod": "edition_transcription",
+                  "transcriptionStatus": "reviewed"
+                }
+              ],
+              "section": "列传第九十七·苏轼",
+              "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷338#苏轼",
+              "volume": null
+            },
+            {
+              "anchor": "苏轼",
+              "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+              "entry": "高宗朝赠官与谥号",
+              "id": "chs:locator:song-shi-338-posthumous-coverage",
+              "juan": "338",
+              "label": "《宋史》卷338苏轼传高宗朝追赠段",
+              "page": null,
+              "paragraph": "传末追赠段",
+              "passages": [
+                {
+                  "checkedAt": "2026-07-13",
+                  "id": "chs:passage:song-shi-338-posthumous-coverage",
+                  "locatorId": "chs:locator:song-shi-338-posthumous-coverage",
+                  "normalizedText": "高宗即位后赠资政殿学士，后来崇赠太师，谥文忠。",
+                  "note": "身后追赠与生前任命分开计入 coverage。",
+                  "originalText": "高宗即位，赠资政殿学士。……遂崇赠太师，谥‘文忠’。",
+                  "transcribedBy": "维基文库贡献者；除授项目复核",
+                  "transcriptionMethod": "edition_transcription",
+                  "transcriptionStatus": "reviewed"
+                }
+              ],
+              "section": "列传第九十七·苏轼",
+              "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷338#苏轼",
+              "volume": null
             }
           ],
           "publicationPlace": null,
@@ -9353,6 +10204,35 @@
       "shortTitle": "龚延明《宋代文官寄禄官制度》",
       "sourceType": "modern_article",
       "title": "宋代文官寄禄官制度"
+    },
+    {
+      "bibliography": "孔凡礼：《苏轼年谱》（上中下），北京：中华书局，1998年，ISBN 7-101-01473-9。",
+      "creator": "孔凡礼",
+      "editions": [
+        {
+          "accessedAt": "2026-07-13",
+          "editionType": "print",
+          "editor": null,
+          "editorialStatus": "reviewed",
+          "id": "chs:edition:kong-fanli-su-shi-nianpu-1998",
+          "label": "中华书局1998年三册本（书目记录）",
+          "license": null,
+          "locators": [],
+          "publicationPlace": "北京",
+          "publicationYear": "1998",
+          "publisher": "中华书局",
+          "rightsNote": "现代著作受版权保护；当前仅保存书目，不保存或再发布全文。",
+          "sourceId": "chs:source:kong-fanli-su-shi-nianpu",
+          "stableUrl": "https://opac.lib.uibe.edu.cn/opac/book/6714076368c7a32d91941efc18d87c40"
+        }
+      ],
+      "editorialStatus": "reviewed",
+      "id": "chs:source:kong-fanli-su-shi-nianpu",
+      "language": "现代汉语",
+      "notes": "选作苏轼完整官履的权威编年覆盖锚点；当前只核实书目与目录范围，未取得可合法逐条核对的全文，因此不从网络转载本生成史实。",
+      "shortTitle": "孔凡礼《苏轼年谱》",
+      "sourceType": "modern_monograph",
+      "title": "苏轼年谱"
     }
   ],
   "titleConcepts": [

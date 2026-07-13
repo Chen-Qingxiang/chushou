@@ -88,6 +88,23 @@ test("rank schemes expose local order, crosswalk confidence, and evidence", asyn
   await expect(page.getByText(/元丰寄禄官二十四阶/u)).toBeVisible();
 });
 
+test("coverage ledger distinguishes biography alignment from authoritative completeness", async ({
+  page,
+}) => {
+  await page.goto("./data");
+
+  await expect(page.getByText("13 / 38 条", { exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { level: 2, name: "权威分母尚未取得，系统明确停在这里。" }),
+  ).toBeVisible();
+  await expect(page.getByText(/数据库对照进度，不是完整生涯覆盖率/u)).toBeVisible();
+
+  await page.getByRole("link", { name: /查看已核书目与权利边界/u }).click();
+  await expect(page).toHaveURL(/\/chushou\/sources\/chs%3Asource%3Akong-fanli-su-shi-nianpu$/u);
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("孔凡礼《苏轼年谱》");
+  await expect(page.getByText(/ISBN 7-101-01473-9/u)).toBeVisible();
+});
+
 test("unknown routes render a deliberate in-app 404", async ({ page }) => {
   await page.goto("./not-a-real-route");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("这条路径尚未入图");

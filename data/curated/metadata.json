@@ -1,7 +1,7 @@
 {
-  "datasetVersion": "0.2.0-research.1",
-  "schemaVersion": "0.2.0",
-  "projectionVersion": "0.2.0",
+  "datasetVersion": "0.3.0-research.1",
+  "schemaVersion": "0.3.0",
+  "projectionVersion": "0.3.0",
   "vocabularyVersion": "0.1.0",
   "title": "除授北宋文官制度研究种子集",
   "description": "用于验证官名时期版本、除授动作、任职阶段和证据追溯的首批人工审阅记录；当前覆盖范围会在界面和报告中明确显示。",
@@ -9,5 +9,5 @@
   "curatedAt": "2026-07-13",
   "licenseCode": "MIT",
   "licenseData": "CC BY 4.0；第三方短引文仍遵循各来源标注的权利和引用条件",
-  "citation": "除授项目组：《除授北宋文官制度研究种子集》，0.2.0-research.1，2026-07-13。"
+  "citation": "除授项目组：《除授北宋文官制度研究种子集》，0.3.0-research.1，2026-07-13。"
 }

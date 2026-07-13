@@ -9,13 +9,15 @@
       "sources/locators.json",
       "sources/locators-core-offices.json",
       "sources/locators-counterexamples.json",
-      "sources/locators-ranks.json"
+      "sources/locators-ranks.json",
+      "sources/locators-su-shi-coverage.json"
     ],
     "passages": [
       "sources/passages.json",
       "sources/passages-core-offices.json",
       "sources/passages-counterexamples.json",
-      "sources/passages-ranks.json"
+      "sources/passages-ranks.json",
+      "sources/passages-su-shi-coverage.json"
     ],
     "assertions": [
       "evidence/assertions.json",
@@ -54,6 +56,7 @@
       "appointments/components-counterexamples.json"
     ],
     "serviceEpisodes": "appointments/service-episodes.json",
-    "careerMetricAssessments": "appointments/metrics.json"
+    "careerMetricAssessments": "appointments/metrics.json",
+    "coverageMatrices": "coverage/matrices.json"
   }
 }

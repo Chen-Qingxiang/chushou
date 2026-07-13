@@ -732,7 +732,20 @@ export function SimulatorPage() {
 }
 
 export function DataPage() {
-  const titleProgress = Math.round((site.counts.reviewedTitleUsages / 50) * 100);
+  const titleProgress = Math.min(100, Math.round((site.counts.reviewedTitleUsages / 50) * 100));
+  const biographyCoverage = site.coverageMatrices.find(
+    (matrix) => matrix.anchorKind === "official_biography",
+  );
+  const authorityCoverage = site.coverageMatrices.find(
+    (matrix) => matrix.anchorKind === "authoritative_chronology",
+  );
+  const linkedBiographyItems =
+    biographyCoverage?.items.filter((item) => item.appointmentIds.length > 0).length ?? 0;
+  const biographyTotal = biographyCoverage?.items.length ?? 0;
+  const biographyProgress =
+    biographyTotal === 0 ? 0 : Math.round((linkedBiographyItems / biographyTotal) * 100);
+  const biographyGaps =
+    biographyCoverage?.items.filter((item) => item.coverageStatus === "gap").length ?? 0;
   return (
     <div className="page-container">
       <PageHeader
@@ -763,17 +776,36 @@ export function DataPage() {
         </article>
         <article>
           <div>
-            <span>苏轼任官覆盖</span>
-            <strong>13 条 · partial</strong>
+            <span>苏轼《宋史》语句对照</span>
+            <strong>
+              {linkedBiographyItems} / {biographyTotal} 条
+            </strong>
           </div>
           <div className="progress-track">
-            <i style={{ width: "35%" }} />
+            <i style={{ width: `${biographyProgress}%` }} />
           </div>
           <p>
-            卷338首轮矩阵已入库；孔凡礼年谱尚未形成完整分母，因此 35%
-            只表示工作阶段，不是史实覆盖率。
+            卷338已穷尽枚举当前数字转录中的 {biographyTotal} 条任官／身份语句；{biographyGaps}
+            条尚无 appointment。这个比例只表示数据库对照进度，不是完整生涯覆盖率。
           </p>
         </article>
+      </section>
+      <section className="coverage-ledger">
+        <div>
+          <p className="eyebrow">COVERAGE CONTRACT</p>
+          <h2>权威分母尚未取得，系统明确停在这里。</h2>
+          <p>{authorityCoverage?.scopeDefinition}</p>
+        </div>
+        <aside>
+          <StatusBadge status="incomplete" />
+          <strong>{authorityCoverage?.label}</strong>
+          <p>{authorityCoverage?.blocker}</p>
+          {authorityCoverage === undefined ? null : (
+            <Link className="text-link" to={sourcePath(authorityCoverage.anchorSourceId)}>
+              查看已核书目与权利边界 →
+            </Link>
+          )}
+        </aside>
       </section>
       <div className="data-grid">
         <section className="quality-gates">

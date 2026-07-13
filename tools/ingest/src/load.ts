@@ -34,6 +34,7 @@ const arrayKeys = [
   "appointmentComponents",
   "serviceEpisodes",
   "careerMetricAssessments",
+  "coverageMatrices",
 ] as const satisfies ReadonlyArray<keyof Omit<CuratedDataset, "metadata">>;
 
 async function readJson(filePath: string): Promise<unknown> {

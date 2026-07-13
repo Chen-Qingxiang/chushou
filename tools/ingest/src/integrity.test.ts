@@ -120,9 +120,40 @@ describe("curated research release", () => {
     );
   });
 
+  it("publishes an exhaustive biography ledger while blocking the unavailable chronology", () => {
+    const authority = dataset.coverageMatrices.find(
+      (matrix) => matrix.anchorKind === "authoritative_chronology",
+    );
+    const biography = dataset.coverageMatrices.find(
+      (matrix) => matrix.anchorKind === "official_biography",
+    );
+
+    expect(authority).toMatchObject({
+      completenessClaim: "blocked",
+      items: [],
+    });
+    expect(authority?.blocker).toContain("可合法全文");
+    expect(biography).toMatchObject({ completenessClaim: "exhaustive_for_anchor" });
+    expect(biography?.items).toHaveLength(38);
+    expect(biography?.items.filter((item) => item.coverageStatus === "partial")).toHaveLength(13);
+    expect(biography?.items.filter((item) => item.coverageStatus === "gap")).toHaveLength(25);
+    expect(biography?.items.every((item) => item.anchorPassageIds.length > 0)).toBe(true);
+
+    const broken = structuredClone(dataset);
+    const gap = broken.coverageMatrices
+      .flatMap((matrix) => matrix.items)
+      .find((item) => item.coverageStatus === "gap");
+    if (gap === undefined) throw new Error("Fixture requires a coverage gap");
+    gap.gapReason = null;
+    expect(validateDatasetIntegrity(broken)).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "coverage_gap_reason_required" })]),
+    );
+  });
+
   it("searches across traditional forms, pinyin aliases, and minor typos", () => {
     const records = buildSearchRecords(dataset);
     expect(searchRecords(records, "蘇軾")[0]?.label).toBe("苏轼");
+    expect(searchRecords(records, "蘇軾年譜")[0]?.label).toBe("孔凡礼《苏轼年谱》");
     expect(searchRecords(records, "longtu ge xueshi")[0]?.label).toBe("龙图阁学士");
     expect(searchRecords(records, "參知政事")[0]?.label).toBe("参知政事");
   });

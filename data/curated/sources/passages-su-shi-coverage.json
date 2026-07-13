@@ -1,0 +1,112 @@
+[
+  {
+    "id": "chs:passage:song-shi-338-early-career-coverage",
+    "locatorId": "chs:locator:song-shi-338-early-career-coverage",
+    "originalText": "五年，调福昌主簿。……除大理评事、签书凤翔府判官。……治平二年，入判登闻鼓院。……及试二论，复入三等，得直史馆。",
+    "normalizedText": "嘉祐五年调福昌主簿；其后除大理评事、签书凤翔府判官；治平二年入判登闻鼓院；试二论后得直史馆。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "省略号省去与覆盖枚举无关的叙事；每个任官短语仍按原文保留。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-xining-court-coverage",
+    "locatorId": "chs:locator:song-shi-338-xining-court-coverage",
+    "originalText": "熙宁二年，还朝。王安石执政，素恶其议论异己，以判官告院。……安石不悦，命权开封府推官，将困之以事。",
+    "normalizedText": "熙宁二年还朝；“以判官告院”当前转录语义待校；其后命权开封府推官。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "provisional",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "“以判官告院”先原样入 coverage gap，等待点校本核字，不据此建立任命。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-ruzhou-coverage",
+    "locatorId": "chs:locator:song-shi-338-ruzhou-changzhou-coverage",
+    "originalText": "遂手札移轼汝州，有曰：‘苏轼黜居思咎，阅岁滋深，人材实难，不忍终弃。’轼未至汝，上书自言饥寒，有田在常，愿得居之。朝奏，夕报可。",
+    "normalizedText": "神宗手札移苏轼汝州；苏轼未到汝州，请居常州并获准。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "直接支持汝州任命未赴；常州居住许可不能自动解释成常州任官。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-changzhou-rank-coverage",
+    "locatorId": "chs:locator:song-shi-338-ruzhou-changzhou-coverage",
+    "originalText": "宣仁后问曰：‘卿前年为何官？’曰：‘臣为常州团练副使。’曰：‘今为何官？’曰：‘臣今待罪翰林学士。’",
+    "normalizedText": "苏轼自述前年为常州团练副使、当时为翰林学士。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "这是身份状态自述，不提供常州团练副使的授命原文。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-yuanyou-mid-coverage",
+    "locatorId": "chs:locator:song-shi-338-yuanyou-mid-coverage",
+    "originalText": "二年，兼侍读。……三年，权知礼部贡举。",
+    "normalizedText": "元祐二年兼侍读；三年权知礼部贡举。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "两个兼差分别作为 coverage 条目，不合并为一条任命。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-yuanyou-six-coverage",
+    "locatorId": "chs:locator:song-shi-338-yuanyou-late-coverage",
+    "originalText": "六年，召为吏部尚书，未至。以弟辙除右丞，改翰林承旨。……乃以龙图阁学士出知颍州。",
+    "normalizedText": "元祐六年召为吏部尚书而未至，继而改翰林承旨，后以龙图阁学士出知颍州。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "未赴、改授和出知分列三个 coverage 条目。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-yuanyou-seven-coverage",
+    "locatorId": "chs:locator:song-shi-338-yuanyou-late-coverage",
+    "originalText": "七年，徙扬州。……未阅岁，以兵部尚书召兼侍读。是岁，哲宗亲祀南郊，轼为卤簿使。……寻迁礼部兼端明殿、翰林侍读两学士，为礼部尚书。",
+    "normalizedText": "元祐七年徙扬州；未满一年，以兵部尚书召并兼侍读；同年为卤簿使；随后迁礼部，兼端明殿、翰林侍读两学士，为礼部尚书。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "保留原句的并列和兼任结构；当前尚未建立有序 component。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-yuanyou-eight-coverage",
+    "locatorId": "chs:locator:song-shi-338-yuanyou-late-coverage",
+    "originalText": "八年，宣仁后崩，哲宗亲政。轼乞补外，以两学士出知定州。",
+    "normalizedText": "元祐八年，苏轼以两学士出知定州。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "“两学士”需回指前段端明殿、翰林侍读两学士，当前不自动展开。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-huizong-restoration-coverage",
+    "locatorId": "chs:locator:song-shi-338-huizong-restoration-coverage",
+    "originalText": "徽宗立，移廉州，改舒州团练副使，徙永州。更三大赦，遂提举玉局观，复朝奉郎。",
+    "normalizedText": "徽宗即位后，移廉州，改舒州团练副使，徙永州；经三次大赦，提举玉局观并复朝奉郎。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "四个动作按原顺序进入 coverage，尚未全部建 appointment。"
+  },
+  {
+    "id": "chs:passage:song-shi-338-posthumous-coverage",
+    "locatorId": "chs:locator:song-shi-338-posthumous-coverage",
+    "originalText": "高宗即位，赠资政殿学士。……遂崇赠太师，谥‘文忠’。",
+    "normalizedText": "高宗即位后赠资政殿学士，后来崇赠太师，谥文忠。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "身后追赠与生前任命分开计入 coverage。"
+  }
+]
