@@ -1,0 +1,336 @@
+{
+  "citation": "除授项目组：《除授北宋文官制度研究种子集》，0.3.0-research.1，2026-07-13。",
+  "datasetVersion": "0.3.0-research.1",
+  "entities": {
+    "appointmentActions": {
+      "description": "一次有序的任命、迁转、处分或恢复动作。",
+      "fields": [
+        {
+          "meaning": "受命人物。",
+          "name": "personId",
+          "references": "people.id"
+        },
+        {
+          "meaning": "一条记录可含多个受控动作。",
+          "name": "actionTypes"
+        },
+        {
+          "meaning": "用于成分 span 校验的任官原文。",
+          "name": "rawText"
+        },
+        {
+          "meaning": "按原文顺序拆分的官衔成分。",
+          "name": "componentIds",
+          "references": "appointmentComponents.id"
+        },
+        {
+          "meaning": "与授命分离的实际任事记录。",
+          "name": "serviceEpisodeIds",
+          "references": "serviceEpisodes.id"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "appointmentComponents": {
+      "description": "任命原文中有顺序且可回指 span 的语义成分。",
+      "fields": [
+        {
+          "meaning": "所属任命。",
+          "name": "appointmentId",
+          "references": "appointmentActions.id"
+        },
+        {
+          "meaning": "原文起止位置和逐字文本。",
+          "name": "sourceSpan"
+        },
+        {
+          "meaning": "解析后的时期化官名。",
+          "name": "titleUsageVersionId",
+          "references": "titleUsageVersions.id"
+        },
+        {
+          "meaning": "resolved、ambiguous 或 unresolved。",
+          "name": "resolutionStatus"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "assertions": {
+      "description": "可独立审核的 subject-predicate-object 主张。",
+      "fields": [
+        {
+          "meaning": "主张主体。",
+          "name": "subjectId"
+        },
+        {
+          "meaning": "实体宾语，与 objectLiteral 二选一。",
+          "name": "objectEntityId"
+        },
+        {
+          "meaning": "字面宾语，与 objectEntityId 二选一。",
+          "name": "objectLiteral"
+        },
+        {
+          "meaning": "转录、人工整理、解释、推断或规则投影方法。",
+          "name": "method"
+        },
+        {
+          "meaning": "高、中、低置信度，不是概率。",
+          "name": "confidence"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "coverageMatrices": {
+      "description": "以选定锚点定义分母并显式保存覆盖缺口。",
+      "fields": [
+        {
+          "meaning": "对该锚点穷尽、初步或 blocked。",
+          "name": "completenessClaim"
+        },
+        {
+          "meaning": "分母如何定义。",
+          "name": "scopeDefinition"
+        },
+        {
+          "meaning": "无法建立分母时的具体阻塞条件。",
+          "name": "blocker"
+        },
+        {
+          "meaning": "锚点条目及 covered、partial、gap 或 out_of_scope 状态。",
+          "name": "items"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "evidenceLinks": {
+      "description": "主张与具体引文之间的支持、反驳或限定关系。",
+      "fields": [
+        {
+          "meaning": "被评估的主张。",
+          "name": "assertionId",
+          "references": "assertions.id"
+        },
+        {
+          "meaning": "具体引文。",
+          "name": "passageId",
+          "references": "passages.id"
+        },
+        {
+          "meaning": "direct、indirect 或 derived。",
+          "name": "directness"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "institutions": {
+      "description": "跨时期稳定的机构入口。",
+      "fields": [
+        {
+          "meaning": "机构名称变体。",
+          "name": "names"
+        },
+        {
+          "meaning": "概念范围。",
+          "name": "scopeNote"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "institutionVersions": {
+      "description": "机构在特定时期的层级与职掌。",
+      "fields": [
+        {
+          "meaning": "稳定机构入口。",
+          "name": "institutionId",
+          "references": "institutions.id"
+        },
+        {
+          "meaning": "制度版本有效期。",
+          "name": "validTime"
+        },
+        {
+          "meaning": "带主张引用的职掌。",
+          "name": "functions"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "passages": {
+      "description": "版本定位点下的最小可引用文本。",
+      "fields": [
+        {
+          "meaning": "版本内定位。",
+          "name": "locatorId",
+          "references": "sourceLocators.id"
+        },
+        {
+          "meaning": "保留的原文。",
+          "name": "originalText"
+        },
+        {
+          "meaning": "检索用规范化文本，不覆盖原文。",
+          "name": "normalizedText"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "rankCrosswalks": {
+      "description": "两个品秩方案之间有依据、有置信度的映射。",
+      "fields": [
+        {
+          "meaning": "源阶位。",
+          "name": "sourceRankId",
+          "references": "ranks.id"
+        },
+        {
+          "meaning": "目标阶位。",
+          "name": "targetRankId",
+          "references": "ranks.id"
+        },
+        {
+          "meaning": "换官表、研究映射、语境推断或同名候选。",
+          "name": "basis"
+        },
+        {
+          "meaning": "争议映射的显式边界。",
+          "name": "disputeNote"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "ranks": {
+      "description": "一个指定品秩方案内部的阶位。",
+      "fields": [
+        {
+          "meaning": "所属方案。",
+          "name": "rankSchemeId",
+          "references": "rankSchemes.id"
+        },
+        {
+          "meaning": "仅在所属方案内可比较的序位，可为空。",
+          "name": "sequence"
+        },
+        {
+          "meaning": "史料中的品级文字，不等同于跨方案总分。",
+          "name": "gradeText"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "serviceEpisodes": {
+      "description": "实际任事、居住、处分或荣誉状态的时间段。",
+      "fields": [
+        {
+          "meaning": "触发本阶段的任命，可为空。",
+          "name": "createdByAppointmentId",
+          "references": "appointmentActions.id"
+        },
+        {
+          "meaning": "是否到任、未赴、推定或未知。",
+          "name": "serviceStatus"
+        },
+        {
+          "meaning": "独立于授命时间的任事区间。",
+          "name": "time"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "sources": {
+      "description": "作品级来源记录，与版本、定位和引文分层。",
+      "fields": [
+        {
+          "meaning": "可复用的完整书目信息。",
+          "name": "bibliography"
+        },
+        {
+          "meaning": "当事人文献、官修史书、现代研究等类型。",
+          "name": "sourceType"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "titleConcepts": {
+      "description": "跨时期稳定的官名词汇入口。",
+      "fields": [
+        {
+          "meaning": "首选名、异名、繁简体、拼音或外文名。",
+          "name": "names"
+        },
+        {
+          "meaning": "概念边界，不承载时期化职掌。",
+          "name": "scopeNote"
+        },
+        {
+          "meaning": "编辑复核状态。",
+          "name": "editorialStatus"
+        }
+      ],
+      "primaryKey": "id"
+    },
+    "titleUsageVersions": {
+      "description": "官名在特定有效期内的制度含义。",
+      "fields": [
+        {
+          "meaning": "稳定官名入口。",
+          "name": "titleConceptId",
+          "references": "titleConcepts.id"
+        },
+        {
+          "meaning": "原纪年、规范化边界、精度与换算说明。",
+          "name": "validTime"
+        },
+        {
+          "meaning": "身份、资望、实职、地点或政治状态轨道。",
+          "name": "semanticTracks"
+        },
+        {
+          "meaning": "仅在指定品秩方案内的定位。",
+          "name": "rankId",
+          "references": "ranks.id"
+        },
+        {
+          "meaning": "支持当前版本解释的主张。",
+          "name": "assertionIds",
+          "references": "assertions.id"
+        }
+      ],
+      "primaryKey": "id"
+    }
+  },
+  "formatVersion": "1.0.0",
+  "license": "CC BY 4.0；第三方短引文仍遵循各来源标注的权利和引用条件",
+  "nullSemantics": "null means not applicable, unresolved, or not yet established according to the field schema; it never means zero.",
+  "schemaVersion": "0.3.0",
+  "vocabularies": {
+    "appointmentActionTypes": [
+      "appoint",
+      "demote",
+      "place_under_restriction",
+      "promote",
+      "punitive_appoint",
+      "recall",
+      "restore",
+      "transfer",
+      "unknown"
+    ],
+    "coverageStatus": [
+      "covered",
+      "partial",
+      "gap",
+      "out_of_scope"
+    ],
+    "editorialStatus": [
+      "disputed",
+      "reviewed"
+    ],
+    "semanticTracks": [
+      "actual_duty",
+      "honor_expertise",
+      "identity_rank",
+      "place",
+      "political_status"
+    ]
+  }
+}

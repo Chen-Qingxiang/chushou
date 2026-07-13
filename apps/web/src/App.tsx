@@ -25,7 +25,7 @@ const DecoderPage = lazy(async () => ({
   default: (await import("./pages/ExplorerPages")).DecoderPage,
 }));
 const ComparePage = lazy(async () => ({
-  default: (await import("./pages/ExplorerPages")).ComparePage,
+  default: (await import("./pages/ComparePage")).ComparePage,
 }));
 const SourcesPage = lazy(async () => ({
   default: (await import("./pages/ExplorerPages")).SourcesPage,

@@ -1894,6 +1894,41 @@ textarea:focus {
   color: var(--gold);
   font: 11px var(--sans);
 }
+.compare-modes {
+  display: inline-flex;
+  gap: 4px;
+  margin-bottom: 14px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.34);
+}
+.compare-modes a {
+  padding: 9px 15px;
+  border-radius: 999px;
+  color: var(--muted);
+  font: 650 11px var(--sans);
+  text-decoration: none;
+}
+.compare-modes a.is-active {
+  color: var(--surface-solid);
+  background: var(--ink);
+}
+.compare-period {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.3fr) minmax(240px, 0.7fr);
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.34);
+}
+.compare-period > span {
+  color: var(--muted);
+  font: 650 11px var(--sans);
+}
 .compare-selectors {
   display: grid;
   grid-template-columns: 1fr 46px 1fr;
@@ -1905,18 +1940,26 @@ textarea:focus {
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.34);
 }
-.compare-selectors button {
+.compare-swap {
+  display: grid;
   width: 42px;
   height: 42px;
+  place-items: center;
   border: 1px solid var(--line);
   border-radius: 50%;
+  color: var(--ink);
   background: white;
+  font: 600 16px var(--sans);
+  text-decoration: none;
 }
 .compare-table {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   background: var(--line);
+}
+.compare-scroll-hint {
+  display: none;
 }
 .compare-head,
 .compare-row,
@@ -1962,6 +2005,14 @@ textarea:focus {
 .compare-duty p {
   color: var(--jade);
   font-weight: 650;
+}
+.compare-caveat p {
+  color: var(--verm-dark);
+}
+.compare-method-note {
+  margin: 13px 0 0;
+  color: var(--muted);
+  font: 10px/1.6 var(--sans);
 }
 .source-stats {
   display: flex;
@@ -2252,6 +2303,72 @@ textarea:focus {
 }
 .coverage-ledger aside .status-badge {
   justify-self: start;
+}
+.download-catalog {
+  margin-bottom: 15px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.39);
+}
+.download-catalog > header {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 25px;
+  align-items: end;
+  margin-bottom: 20px;
+}
+.download-catalog h2 {
+  margin: 5px 0 0;
+  font-size: 30px;
+}
+.download-catalog > header > p,
+.download-catalog > footer {
+  color: var(--muted);
+  font: 10px/1.65 var(--sans);
+}
+.download-catalog > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.download-catalog > div > a {
+  display: flex;
+  min-height: 185px;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.42);
+  text-decoration: none;
+}
+.download-catalog > div > a:hover {
+  border-color: color-mix(in srgb, var(--verm) 42%, var(--line));
+  background: var(--surface-solid);
+}
+.download-catalog > div span {
+  align-self: start;
+  padding: 3px 7px;
+  border-radius: 999px;
+  color: var(--verm-dark);
+  background: color-mix(in srgb, var(--verm) 9%, transparent);
+  font: 700 9px var(--sans);
+}
+.download-catalog > div strong {
+  margin-top: 18px;
+}
+.download-catalog > div p {
+  color: var(--muted);
+  font: 10px/1.6 var(--sans);
+}
+.download-catalog > div small {
+  margin-top: auto;
+  color: var(--verm-dark);
+  font: 10px var(--sans);
+}
+.download-catalog > footer {
+  margin-top: 15px;
 }
 .data-grid {
   display: grid;
@@ -2879,6 +2996,12 @@ textarea:focus {
     border-top: 1px solid var(--line);
     border-left: 0;
   }
+  .download-catalog > header {
+    grid-template-columns: 1fr;
+  }
+  .download-catalog > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .brand small,
   .release-chip,
   .search-trigger span {
@@ -3155,12 +3278,31 @@ textarea:focus {
   .compare-selectors {
     grid-template-columns: 1fr;
   }
-  .compare-selectors button {
+  .compare-selectors .compare-swap {
     transform: rotate(90deg);
     justify-self: center;
   }
+  .compare-modes {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    border-radius: var(--radius-lg);
+  }
+  .compare-modes a {
+    text-align: center;
+  }
+  .compare-period {
+    grid-template-columns: 1fr;
+  }
   .compare-table {
     overflow-x: auto;
+  }
+  .compare-scroll-hint {
+    display: block;
+    margin: 0 0 7px;
+    color: var(--muted);
+    font: 10px var(--sans);
+    text-align: right;
   }
   .compare-head,
   .compare-row,
@@ -3168,6 +3310,9 @@ textarea:focus {
     min-width: 620px;
   }
   .edition-meta {
+    grid-template-columns: 1fr;
+  }
+  .download-catalog > div {
     grid-template-columns: 1fr;
   }
   .learning-example > div {

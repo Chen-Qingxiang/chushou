@@ -8,6 +8,11 @@ function titleUsages(titleId: string) {
   return site.titleUsageVersions.filter((usage) => usage.titleConceptId === titleId);
 }
 
+function csvCell(value: string | number): string {
+  const text = String(value);
+  return /[",\r\n]/u.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+}
+
 export function TitlesPage() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
@@ -29,6 +34,36 @@ export function TitlesPage() {
       }),
     [category, period, query],
   );
+  const filteredCsvUrl = useMemo(() => {
+    const header = [
+      "id",
+      "preferred_name",
+      "aliases",
+      "usage_versions",
+      "query_filter",
+      "category_filter",
+      "period_filter",
+      "dataset_version",
+      "schema_version",
+      "data_license",
+      "citation",
+    ];
+    const rows = filtered.map((title) => [
+      title.id,
+      preferredName(title),
+      title.names.map((name) => name.text).join("|"),
+      titleUsages(title.id).length,
+      query,
+      category,
+      period,
+      site.metadata.datasetVersion,
+      site.metadata.schemaVersion,
+      site.metadata.licenseData,
+      site.metadata.citation,
+    ]);
+    const csv = `${[header, ...rows].map((row) => row.map(csvCell).join(",")).join("\n")}\n`;
+    return `data:text/csv;charset=utf-8,${encodeURIComponent(`\uFEFF${csv}`)}`;
+  }, [category, filtered, period, query]);
 
   return (
     <div className="page-container">
@@ -37,9 +72,18 @@ export function TitlesPage() {
         title="一个名称，必须带着时期解释。"
         intro="官名入口保持稳定；真正的性质、职掌与通俗解释存在带有效期的版本里。当前仅显示已经过证据门禁的研究种子。"
         actions={
-          <Link className="button secondary-button" to="/compare">
-            比较两条任命
-          </Link>
+          <div className="download-actions">
+            <Link className="button secondary-button" to="/compare?mode=title">
+              比较两个官名
+            </Link>
+            <a
+              className="button primary-button"
+              href={filteredCsvUrl}
+              download={`chushou-filtered-titles-${site.metadata.datasetVersion}.csv`}
+            >
+              导出当前 {filtered.length} 项
+            </a>
+          </div>
         }
       />
       <section className="filter-bar" aria-label="官名筛选">

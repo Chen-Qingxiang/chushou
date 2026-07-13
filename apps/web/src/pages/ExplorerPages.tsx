@@ -1,16 +1,6 @@
 import { useMemo, useState, type ReactNode } from "react";
 import { Link, useParams } from "react-router-dom";
-import {
-  actionLabels,
-  appointmentPlace,
-  dateLabel,
-  downloadBase,
-  preferredName,
-  site,
-  sourcePath,
-  statusLabels,
-  trackLabels,
-} from "../data";
+import { downloadBase, preferredName, site, sourcePath, statusLabels, trackLabels } from "../data";
 import { EvidenceButton } from "../evidence";
 import { EmptyState, PageHeader, StatusBadge } from "../Page";
 
@@ -235,144 +225,6 @@ export function DecoderPage() {
           <p className="decoder-warning">⚑ 可解释候选解析 · 不自动写入正式数据库</p>
         </section>
       </div>
-    </div>
-  );
-}
-
-function compareRows(appointment: (typeof site.appointments)[number]) {
-  const byTrack = (track: string) =>
-    appointment.components
-      .filter((component) => component.semanticTracks.includes(track as never))
-      .map((component) => component.sourceSpan.text)
-      .join("、") || "—";
-  return {
-    rank: byTrack("identity_rank"),
-    honor: byTrack("honor_expertise"),
-    duty: byTrack("actual_duty"),
-    political: byTrack("political_status"),
-    place: appointmentPlace(appointment),
-    service:
-      appointment.serviceEpisodes.length > 0
-        ? appointment.serviceEpisodes.map((item) => item.serviceStatus).join("、")
-        : "无已发布服务记录",
-  };
-}
-
-function appointmentPersonName(appointment: (typeof site.appointments)[number]): string {
-  return preferredName(site.people.find((person) => person.id === appointment.personId));
-}
-
-export function ComparePage() {
-  const [leftId, setLeftId] = useState(site.appointments[0]?.id ?? "");
-  const [rightId, setRightId] = useState(
-    site.appointments.find((item) => item.id.includes("huangzhou-punitive"))?.id ??
-      site.appointments[1]?.id ??
-      "",
-  );
-  const left = site.appointments.find((item) => item.id === leftId);
-  const right = site.appointments.find((item) => item.id === rightId);
-  const leftRows = left === undefined ? null : compareRows(left);
-  const rightRows = right === undefined ? null : compareRows(right);
-  const rowDefs = [
-    [
-      "date",
-      "时间",
-      left === undefined ? "—" : dateLabel(left.time),
-      right === undefined ? "—" : dateLabel(right.time),
-    ],
-    [
-      "action",
-      "任命动作",
-      left?.actionTypes.map((item) => actionLabels[item] ?? item).join("、") ?? "—",
-      right?.actionTypes.map((item) => actionLabels[item] ?? item).join("、") ?? "—",
-    ],
-    ["rank", "身份／官阶", leftRows?.rank ?? "—", rightRows?.rank ?? "—"],
-    ["honor", "荣衔／专长", leftRows?.honor ?? "—", rightRows?.honor ?? "—"],
-    ["duty", "实际职务", leftRows?.duty ?? "—", rightRows?.duty ?? "—"],
-    ["place", "地点", leftRows?.place ?? "—", rightRows?.place ?? "—"],
-    ["political", "政治状态", leftRows?.political ?? "—", rightRows?.political ?? "—"],
-    ["service", "实际任事证据", leftRows?.service ?? "—", rightRows?.service ?? "—"],
-  ] as const;
-  return (
-    <div className="page-container">
-      <PageHeader
-        eyebrow="任命比较 · MULTI-TRACK"
-        title="不要只问“哪个官更大”。"
-        intro="比较同时展开身份、资望、实际工作、地点、政治状态和是否到任。任何一条轨道都不能替代其他轨道。"
-      />
-      <div className="compare-selectors">
-        <label>
-          <span>任命 A</span>
-          <select value={leftId} onChange={(event) => setLeftId(event.target.value)}>
-            {site.appointments.map((item) => (
-              <option value={item.id} key={item.id}>
-                {appointmentPersonName(item)} · {dateLabel(item.time)} · {item.rawText}
-              </option>
-            ))}
-          </select>
-        </label>
-        <button
-          type="button"
-          onClick={() => {
-            setLeftId(rightId);
-            setRightId(leftId);
-          }}
-          aria-label="交换两条任命"
-        >
-          ⇄
-        </button>
-        <label>
-          <span>任命 B</span>
-          <select value={rightId} onChange={(event) => setRightId(event.target.value)}>
-            {site.appointments.map((item) => (
-              <option value={item.id} key={item.id}>
-                {appointmentPersonName(item)} · {dateLabel(item.time)} · {item.rawText}
-              </option>
-            ))}
-          </select>
-        </label>
-      </div>
-      <section className="compare-table">
-        <div className="compare-head">
-          <span>观察维度</span>
-          <div>
-            <strong>{left?.rawText}</strong>
-            <small>
-              {left === undefined
-                ? ""
-                : `${appointmentPersonName(left)} · ${appointmentPlace(left)}`}
-            </small>
-          </div>
-          <div>
-            <strong>{right?.rawText}</strong>
-            <small>
-              {right === undefined
-                ? ""
-                : `${appointmentPersonName(right)} · ${appointmentPlace(right)}`}
-            </small>
-          </div>
-        </div>
-        {rowDefs.map(([key, label, leftValue, rightValue]) => (
-          <div className={`compare-row compare-${key}`} key={key}>
-            <strong>{label}</strong>
-            <p>{leftValue}</p>
-            <p>{rightValue}</p>
-          </div>
-        ))}
-        <div className="compare-evidence">
-          <span>证据</span>
-          {left === undefined ? (
-            <span />
-          ) : (
-            <EvidenceButton assertionIds={[...left.assertionIds]} title={left.rawText} />
-          )}
-          {right === undefined ? (
-            <span />
-          ) : (
-            <EvidenceButton assertionIds={[...right.assertionIds]} title={right.rawText} />
-          )}
-        </div>
-      </section>
     </div>
   );
 }
@@ -746,6 +598,15 @@ export function DataPage() {
     biographyTotal === 0 ? 0 : Math.round((linkedBiographyItems / biographyTotal) * 100);
   const biographyGaps =
     biographyCoverage?.items.filter((item) => item.coverageStatus === "gap").length ?? 0;
+  const downloads: Array<[file: string, label: string, description: string]> = [
+    ["release.json", "完整 release", "全部规范化实体、证据、版本与许可元数据"],
+    ["manifest.json", "哈希清单", "每个正式导出物的 SHA-256 与版本号"],
+    ["titles.csv", "官名 CSV", "官名入口、异名、版本数与编辑状态"],
+    ["appointments.csv", "任命 CSV", "人物、时间、动作、原文成分、任事状态与引用"],
+    ["evidence.csv", "证据 CSV", "主张—引文—版本—定位的可追溯连接"],
+    ["coverage.csv", "覆盖账本 CSV", "权威 blocker 与卷338逐条 partial／gap 分母"],
+    ["data-dictionary.json", "机器可读数据字典", "实体、字段语义、外键与受控词表"],
+  ];
   return (
     <div className="page-container">
       <PageHeader
@@ -755,10 +616,14 @@ export function DataPage() {
         actions={
           <div className="download-actions">
             <a className="button primary-button" href={`${downloadBase}/release.json`} download>
-              下载 JSON
+              下载完整 release
             </a>
-            <a className="button secondary-button" href={`${downloadBase}/titles.csv`} download>
-              下载官名 CSV
+            <a
+              className="button secondary-button"
+              href={`${downloadBase}/data-dictionary.json`}
+              download
+            >
+              下载数据字典
             </a>
           </div>
         }
@@ -806,6 +671,29 @@ export function DataPage() {
             </Link>
           )}
         </aside>
+      </section>
+      <section className="download-catalog" aria-labelledby="download-heading">
+        <header>
+          <div>
+            <p className="eyebrow">VERSIONED EXPORTS</p>
+            <h2 id="download-heading">同一事实模型，七种可复核文件。</h2>
+          </div>
+          <p>
+            数据版本 {site.metadata.datasetVersion} · schema {site.metadata.schemaVersion} ·{" "}
+            {site.metadata.licenseData}
+          </p>
+        </header>
+        <div>
+          {downloads.map(([file, label, description]) => (
+            <a href={`${downloadBase}/${file}`} download key={file}>
+              <span>{file.endsWith(".json") ? "JSON" : "CSV"}</span>
+              <strong>{label}</strong>
+              <p>{description}</p>
+              <small>下载 {file} ↓</small>
+            </a>
+          ))}
+        </div>
+        <footer>建议发表或共享时同时保存 manifest；引用格式：{site.metadata.citation}</footer>
       </section>
       <div className="data-grid">
         <section className="quality-gates">

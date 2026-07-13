@@ -7,6 +7,15 @@ import { defineConfig, type Plugin } from "vite";
 const appRoot = path.dirname(fileURLToPath(import.meta.url));
 const repositoryRoot = path.resolve(appRoot, "../..");
 const outputRoot = path.resolve(repositoryRoot, "dist");
+const downloadFiles = [
+  "release.json",
+  "manifest.json",
+  "titles.csv",
+  "appointments.csv",
+  "evidence.csv",
+  "coverage.csv",
+  "data-dictionary.json",
+];
 
 function researchArtifacts(): Plugin {
   return {
@@ -32,13 +41,11 @@ function researchArtifacts(): Plugin {
       ]);
       await Promise.all([
         copyFile(path.join(outputRoot, "index.html"), path.join(outputRoot, "404.html")),
-        copyFile(
-          path.join(repositoryRoot, "data/generated/release.json"),
-          path.join(outputRoot, "downloads/release.json"),
-        ),
-        copyFile(
-          path.join(repositoryRoot, "data/generated/titles.csv"),
-          path.join(outputRoot, "downloads/titles.csv"),
+        ...downloadFiles.map((file) =>
+          copyFile(
+            path.join(repositoryRoot, "data/generated", file),
+            path.join(outputRoot, "downloads", file),
+          ),
         ),
         copyFile(
           path.join(repositoryRoot, "data/generated/site.json"),

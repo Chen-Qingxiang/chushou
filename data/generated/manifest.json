@@ -1,6 +1,10 @@
 {
   "datasetVersion": "0.3.0-research.1",
   "files": {
+    "appointments.csv": "sha256:81ede18d9ca0a08960d290da117c81831f952ccbd64c526fa7fa063f8405f784",
+    "coverage.csv": "sha256:ab8959875e4d7f0e8fb3d8d8010b8bc7be624fe30993e652295d85171bae5ebb",
+    "data-dictionary.json": "sha256:e1f495b97893856d4e1a78c6cf3d1d5e477e03ed714b2d7d1a1ced4dbf096a06",
+    "evidence.csv": "sha256:9a22f761c994bbc344b5f7ae8c8dc7febeb401ed956ad8f9af11b3d8b3ec3f08",
     "release.json": "sha256:5b783cfe7d63989d9e8feda5a71a8b8e538535ef3837fdf1c251125a5b33a753",
     "site.json": "sha256:5897894a45a837b925f6ecf51a8ab2cbb2ab310ff409763c602a6dcd0658f334",
     "titles.csv": "sha256:84f41717827708107eb01c9afef4fda2f22f551f3229c9943d9ea66de396563b"

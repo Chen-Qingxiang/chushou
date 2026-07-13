@@ -105,6 +105,52 @@ test("coverage ledger distinguishes biography alignment from authoritative compl
   await expect(page.getByText(/ISBN 7-101-01473-9/u)).toBeVisible();
 });
 
+test("comparison deep links cover appointments, periodized titles, and people", async ({
+  page,
+}) => {
+  await page.goto(
+    "./compare?mode=title&left=chs%3Atitle%3Atongpan&right=chs%3Atitle%3Azhizhou&period=chs%3Aperiod%3Ayuanfeng-reform",
+  );
+
+  await expect(page.getByRole("link", { name: "官名与时期" })).toHaveAttribute(
+    "aria-current",
+    "page",
+  );
+  await expect(page.getByLabel("通判与知州比较")).toContainText("与知州并置的州级副贰");
+  await expect(page.getByLabel("通判与知州比较")).toContainText("品秩定位");
+
+  await page.getByRole("link", { name: "人物制度位置" }).click();
+  await expect(page.getByLabel("苏轼与王安石比较")).toContainText("13/38 条《宋史》锚点已对照");
+  await page.getByLabel("人物 B").selectOption({ label: "司马光" });
+  await expect(page).toHaveURL(/right=chs%3Aperson%3Asima-guang/u);
+  await expect(page.getByLabel("苏轼与司马光比较")).toContainText("1 条已发布任命小切片");
+});
+
+test("versioned research downloads expose hashes, coverage blockers, and a data dictionary", async ({
+  page,
+  request,
+}) => {
+  await page.goto("./data");
+  await expect(page.getByRole("heading", { name: "同一事实模型，七种可复核文件。" })).toBeVisible();
+  await expect(page.getByRole("link", { name: /任命 CSV/u })).toHaveAttribute(
+    "href",
+    /appointments\.csv$/u,
+  );
+
+  const manifestResponse = await request.get("./downloads/manifest.json");
+  expect(manifestResponse.ok()).toBe(true);
+  const manifest = (await manifestResponse.json()) as { files: Record<string, string> };
+  expect(manifest.files["appointments.csv"]).toMatch(/^sha256:[a-f0-9]{64}$/u);
+  expect(manifest.files["data-dictionary.json"]).toMatch(/^sha256:[a-f0-9]{64}$/u);
+
+  const coverageResponse = await request.get("./downloads/coverage.csv");
+  expect(await coverageResponse.text()).toContain("authoritative_chronology,blocked");
+  const dictionaryResponse = await request.get("./downloads/data-dictionary.json");
+  const dictionary = (await dictionaryResponse.json()) as { entities: Record<string, unknown> };
+  expect(dictionary.entities).toHaveProperty("appointmentActions");
+  expect(dictionary.entities).toHaveProperty("coverageMatrices");
+});
+
 test("unknown routes render a deliberate in-app 404", async ({ page }) => {
   await page.goto("./not-a-real-route");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("这条路径尚未入图");

@@ -11,6 +11,8 @@
 7. 运行 `npm run data:validate` 和 coverage 报告；
 8. 检查生成 diff，确认没有无意新增的公开解释。
 
+生成器会从同一份通过门禁的数据产出 `release.json`、带 SHA-256 的 `manifest.json`、四种研究 CSV 和 `data-dictionary.json`。不得手工编辑 `data/generated/`；需要新增导出字段时应修改生成器，并同时更新字典中的字段语义与引用边界。
+
 ## 官名录入
 
 - 先建立跨时期 `TitleConcept`，名称、异名、简繁、拼音只是可变属性；

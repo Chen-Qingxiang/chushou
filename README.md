@@ -17,7 +17,9 @@
 - 王安石、司马光、章惇各一条可检索、可下钻的反例任命切片；
 - 动作分布和明确评分规则下的量化探索；
 - 最长匹配、未知片段保留和时期镜头驱动的原文解码器；
-- 任命比较、来源浏览、学习路径、沙盒模拟器和 release 下载；
+- 任命前后、两个官名按时期、四名人物制度位置的可深链接比较；
+- 来源浏览、学习路径、沙盒模拟器和当前官名筛选结果下载；
+- 带版本、schema、许可、引用和 SHA-256 manifest 的 release JSON、官名／任命／证据／覆盖 CSV 与机器可读数据字典；
 - 随 release 发布的机器可读 coverage matrices，以及自动生成的分母、缺口和阻塞报告；
 - React Router 深链接、应用内 404、移动端布局和 GitHub Pages base path。
 
@@ -60,7 +62,7 @@ packages/schema/      Zod schema、受控词表、稳定 ID 与跨表校验
 packages/domain/      搜索、原文解码与站点投影
 tools/ingest/         curated loader、生成器、报告与测试
 data/curated/         人工审阅的唯一权威编辑源
-data/generated/       确定性生成的站点投影、release JSON 与 CSV
+data/generated/       确定性生成的站点投影、release、CSV、manifest 与数据字典
 docs/research/        来源策略、引用规范、研究日志与争议记录
 docs/reports/         自动生成的覆盖和数据质量报告
 docs/goal/            迁移审计、决策、总计划与持续进展
@@ -99,4 +101,4 @@ Person → AppointmentAction → ordered components
 
 ## 引用与许可
 
-数据集仍处研究预览期，引用时应同时给出 release 版本、具体 assertion／passage ID 和底层来源定位。源码与整理数据尚未选择最终许可证；各数字版本和原始材料的权利说明按 edition 单独记录。
+数据集仍处研究预览期，引用时应同时给出 release 版本、具体 assertion／passage ID 和底层来源定位。项目代码采用 MIT；项目原创整理数据采用 CC BY 4.0。第三方短引文不因进入数据集而改变权利状态，各数字版本和原始材料的许可／权利说明按 edition 单独记录。
