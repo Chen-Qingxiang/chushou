@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { buildSiteProjection } from "@chushou/domain";
 import { curatedDatasetSchema, validateDatasetIntegrity } from "@chushou/schema";
 import { z } from "zod";
@@ -16,6 +16,12 @@ async function validatedDataset() {
     throw new Error(`Dataset validation failed with ${issues.length} issue(s)`);
   }
   return dataset;
+}
+
+const schemaPath = repoPath("packages", "schema", "json-schema", "curated-dataset.schema.json");
+
+function generatedSchema(): string {
+  return stableStringify(z.toJSONSchema(curatedDatasetSchema));
 }
 
 async function main(): Promise<void> {
@@ -39,14 +45,18 @@ async function main(): Promise<void> {
     return;
   }
   if (command === "schema") {
-    const schemaRoot = repoPath("packages", "schema", "json-schema");
-    await mkdir(schemaRoot, { recursive: true });
-    await writeFile(
-      `${schemaRoot}/curated-dataset.schema.json`,
-      stableStringify(z.toJSONSchema(curatedDatasetSchema)),
-      "utf8",
-    );
+    await mkdir(repoPath("packages", "schema", "json-schema"), { recursive: true });
+    await writeFile(schemaPath, generatedSchema(), "utf8");
     console.log("Generated curated dataset JSON Schema.");
+    return;
+  }
+  if (command === "schema-check") {
+    const committedSchema = await readFile(schemaPath, "utf8");
+    const normalizedCommittedSchema = stableStringify(JSON.parse(committedSchema) as unknown);
+    if (normalizedCommittedSchema !== generatedSchema()) {
+      throw new Error("Committed JSON Schema is stale; run npm run schema:json.");
+    }
+    console.log("Committed curated dataset JSON Schema is current.");
     return;
   }
   if (command === "projection-check") {

@@ -40,8 +40,7 @@ export const stableIdSchema = z
   .regex(
     new RegExp(`^chs:(${idKindPattern}):[a-z0-9][a-z0-9-]*$`),
     "ID must be a stable chs:type:slug identifier",
-  )
-  .transform((value) => value as StableId);
+  ) as z.ZodType<StableId, string>;
 
 export const idFor = (kind: IdKind) =>
   stableIdSchema.refine((value) => value.startsWith(`chs:${kind}:`), {

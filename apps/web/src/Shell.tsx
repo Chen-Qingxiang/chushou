@@ -1,5 +1,12 @@
 import { searchRecords } from "@chushou/domain";
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type KeyboardEvent as ReactKeyboardEvent,
+  type ReactNode,
+} from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { recordPath, site } from "./data";
 
@@ -22,19 +29,41 @@ const kindLabels: Record<string, string> = {
   place: "地点",
 };
 
-function GlobalSearch({ onClose }: { onClose: () => void }) {
+function focusableElements(container: HTMLElement): HTMLElement[] {
+  return [
+    ...container.querySelectorAll<HTMLElement>("a[href], button, input, select, textarea"),
+  ].filter((element) => !element.hasAttribute("disabled") && element.tabIndex >= 0);
+}
+
+function trapFocus(event: ReactKeyboardEvent<HTMLElement>) {
+  if (event.key !== "Tab") return;
+  const focusable = focusableElements(event.currentTarget);
+  const first = focusable[0];
+  const last = focusable.at(-1);
+  if (first === undefined || last === undefined) return;
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
+function GlobalSearch({ onClose }: { onClose: (restoreFocus?: boolean) => void }) {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
   const results = useMemo(() => searchRecords(site.searchIndex, query).slice(0, 12), [query]);
 
   return (
-    <div className="search-layer" role="presentation" onMouseDown={onClose}>
+    <div className="search-layer" role="presentation" onMouseDown={() => onClose()}>
       <section
         className="search-dialog"
         role="dialog"
         aria-modal="true"
         aria-label="全站搜索"
         onMouseDown={(event) => event.stopPropagation()}
+        onKeyDown={trapFocus}
       >
         <label className="search-command">
           <span aria-hidden="true">⌕</span>
@@ -53,7 +82,7 @@ function GlobalSearch({ onClose }: { onClose: () => void }) {
               key={record.id}
               onClick={() => {
                 void navigate(recordPath(record));
-                onClose();
+                onClose(false);
               }}
             >
               <span className={`kind-dot kind-${record.kind}`} />
@@ -79,18 +108,39 @@ export function Shell({ children }: { children: ReactNode }) {
   const [menuOpenPath, setMenuOpenPath] = useState<string | null>(null);
   const location = useLocation();
   const menuOpen = menuOpenPath === location.pathname;
+  const mainRef = useRef<HTMLElement>(null);
+  const previousPath = useRef(location.pathname);
+  const searchTriggerRef = useRef<HTMLButtonElement>(null);
+  const returnFocusRef = useRef<HTMLElement | null>(null);
+
+  const openSearch = () => {
+    returnFocusRef.current = document.activeElement as HTMLElement | null;
+    setSearchOpen(true);
+  };
+
+  const closeSearch = (restoreFocus = true) => {
+    setSearchOpen(false);
+    if (restoreFocus) requestAnimationFrame(() => returnFocusRef.current?.focus());
+  };
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
+    if (previousPath.current !== location.pathname) mainRef.current?.focus({ preventScroll: true });
+    previousPath.current = location.pathname;
   }, [location.pathname]);
 
   useEffect(() => {
-    const handleKey = (event: KeyboardEvent) => {
+    const handleKey = (event: globalThis.KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLocaleLowerCase() === "k") {
         event.preventDefault();
+        returnFocusRef.current = document.activeElement as HTMLElement | null;
         setSearchOpen(true);
       }
-      if (event.key === "Escape") setSearchOpen(false);
+      if (event.key === "Escape") {
+        setSearchOpen(false);
+        setMenuOpenPath(null);
+        requestAnimationFrame(() => returnFocusRef.current?.focus());
+      }
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
@@ -106,7 +156,11 @@ export function Shell({ children }: { children: ReactNode }) {
             <small>CHUSHOU · SONG OFFICIAL SYSTEM</small>
           </span>
         </Link>
-        <nav className={menuOpen ? "main-nav is-open" : "main-nav"} aria-label="主导航">
+        <nav
+          className={menuOpen ? "main-nav is-open" : "main-nav"}
+          aria-label="主导航"
+          id="main-navigation"
+        >
           {navItems.map(([path, label]) => (
             <NavLink
               key={path}
@@ -120,7 +174,14 @@ export function Shell({ children }: { children: ReactNode }) {
           ))}
         </nav>
         <div className="header-tools">
-          <button className="search-trigger" type="button" onClick={() => setSearchOpen(true)}>
+          <button
+            className="search-trigger"
+            type="button"
+            onClick={openSearch}
+            aria-haspopup="dialog"
+            aria-expanded={searchOpen}
+            ref={searchTriggerRef}
+          >
             <span>搜索</span>
             <kbd>⌘ K</kbd>
           </button>
@@ -132,13 +193,16 @@ export function Shell({ children }: { children: ReactNode }) {
             type="button"
             onClick={() => setMenuOpenPath(menuOpen ? null : location.pathname)}
             aria-expanded={menuOpen}
+            aria-controls="main-navigation"
             aria-label="切换导航"
           >
             {menuOpen ? "×" : "☰"}
           </button>
         </div>
       </header>
-      <main id="main-content">{children}</main>
+      <main id="main-content" tabIndex={-1} ref={mainRef}>
+        {children}
+      </main>
       <footer className="site-footer">
         <div>
           <Link className="footer-brand" to="/">
@@ -158,7 +222,7 @@ export function Shell({ children }: { children: ReactNode }) {
           {site.metadata.curatedAt}
         </p>
       </footer>
-      {searchOpen ? <GlobalSearch onClose={() => setSearchOpen(false)} /> : null}
+      {searchOpen ? <GlobalSearch onClose={closeSearch} /> : null}
     </div>
   );
 }

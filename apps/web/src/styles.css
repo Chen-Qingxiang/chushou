@@ -8,8 +8,8 @@
   --surface: rgba(255, 253, 248, 0.78);
   --surface-solid: #faf7f0;
   --ink: #202621;
-  --muted: #69716b;
-  --faint: #8c928d;
+  --muted: #5f6661;
+  --faint: #646b65;
   --line: rgba(32, 38, 33, 0.14);
   --line-strong: rgba(32, 38, 33, 0.24);
   --verm: #a23c2e;
@@ -214,6 +214,9 @@ kbd {
 main {
   min-height: 70vh;
   padding-top: 62px;
+}
+main:focus {
+  outline: none;
 }
 
 .eyebrow,
@@ -578,6 +581,9 @@ main {
   font-size: clamp(34px, 4vw, 56px);
   font-weight: 520;
   line-height: 1.15;
+}
+.principle-panel .eyebrow {
+  color: #e7aaa0;
 }
 .principle-tracks {
   display: grid;
@@ -1286,6 +1292,16 @@ textarea:focus {
 }
 .period-focus aside small {
   color: #a8b1ab;
+}
+.period-focus .evidence-button {
+  border-color: #c8877c;
+  color: #fff7f3;
+  background: #7a3027;
+}
+.period-focus .evidence-button:hover {
+  border-color: #e3aaa0;
+  color: white;
+  background: #8d382d;
 }
 .reform-comparison {
   padding: 35px;
@@ -2174,6 +2190,10 @@ textarea:focus {
   font-weight: 530;
   line-height: 1.45;
 }
+.learning-example .eyebrow,
+.observed-transition .eyebrow {
+  color: #e7aaa0;
+}
 .learning-example > div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2278,6 +2298,9 @@ textarea:focus {
 .path-sequence a.is-active {
   border-color: var(--verm);
   background: color-mix(in srgb, var(--verm) 6%, var(--surface-solid));
+}
+.path-sequence a.is-active small {
+  color: #594a45;
 }
 .path-sequence a span {
   color: var(--verm);
@@ -2486,6 +2509,9 @@ textarea:focus {
 .coverage-ledger h2 {
   margin: 6px 0 10px;
   font-size: 27px;
+}
+.coverage-ledger .eyebrow {
+  color: var(--verm-dark);
 }
 .coverage-ledger p {
   color: var(--muted);

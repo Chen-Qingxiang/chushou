@@ -19,13 +19,16 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
+    "quality:budget": "tsx tools/quality/performance-budget.ts",
     "data:validate": "tsx tools/ingest/src/cli.ts validate",
     "data:generate": "tsx tools/ingest/src/cli.ts generate",
     "data:report": "tsx tools/ingest/src/cli.ts report",
     "schema:json": "tsx tools/ingest/src/cli.ts schema",
-    "ci": "npm run format:check && npm run lint && npm run typecheck && npm run data:validate && npm run test && npm run build"
+    "schema:check": "tsx tools/ingest/src/cli.ts schema-check",
+    "ci": "npm run format:check && npm run lint && npm run typecheck && npm run data:validate && npm run schema:check && npm run test && npm run build && npm run quality:budget"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
     "@eslint/js": "10.0.1",
     "@playwright/test": "1.61.1",
     "@testing-library/jest-dom": "6.9.1",

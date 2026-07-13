@@ -47,12 +47,14 @@ npm run format:check
 npm run lint
 npm run typecheck
 npm run data:validate
+npm run schema:check
 npm test
 npm run build
+npm run quality:budget
 npm run test:e2e
 ```
 
-`npm run ci` 串联除浏览器测试外的全部门禁。GitHub Actions 还会在 Chromium 中执行关键用户旅程，再把通过验证的 `dist/` 发布到 Pages。
+`npm run ci` 串联除浏览器测试外的全部门禁，包括已提交 JSON Schema 的新鲜度和生产产物体积预算。GitHub Actions 还会在 Chromium 中执行 13 条关键与无障碍旅程，再把通过验证的同一份 `dist/` 发布到 Pages。终检范围与基线见[性能与无障碍报告](docs/reports/PERFORMANCE_ACCESSIBILITY.md)。
 
 ## 仓库结构
 
@@ -91,7 +93,7 @@ Person → AppointmentAction → ordered components
 - reviewed／accepted 主张没有支持性 passage 时构建失败；
 - 断裂引用、重复 ID、非法 source span、重叠同义版本、冲突别名和生产占位文字都会触发门禁。
 
-录入前请阅读 [数据录入指南](docs/research/DATA_ENTRY_GUIDE.md)、[引用规范](docs/research/CITATION_GUIDE.md)和[来源策略](docs/research/SOURCE_STRATEGY.md)。
+录入前请阅读[贡献指南](CONTRIBUTING.md)、[数据录入指南](docs/research/DATA_ENTRY_GUIDE.md)、[引用规范](docs/research/CITATION_GUIDE.md)和[来源策略](docs/research/SOURCE_STRATEGY.md)。
 
 ## 研究边界
 
@@ -103,4 +105,6 @@ Person → AppointmentAction → ordered components
 
 ## 引用与许可
 
-数据集仍处研究预览期，引用时应同时给出 release 版本、具体 assertion／passage ID 和底层来源定位。项目代码采用 MIT；项目原创整理数据采用 CC BY 4.0。第三方短引文不因进入数据集而改变权利状态，各数字版本和原始材料的许可／权利说明按 edition 单独记录。
+数据集仍处研究预览期，引用时应同时给出 release 版本、具体 assertion／passage ID 和底层来源定位。项目代码采用 [MIT](LICENSE)；项目原创整理数据采用 [CC BY 4.0](LICENSE-DATA.md)，并提供机器可读的 [`CITATION.cff`](CITATION.cff)。第三方短引文不因进入数据集而改变权利状态，各数字版本和原始材料的许可／权利说明按 edition 单独记录。
+
+本轮实现与诚实边界汇总于[最终交付说明](docs/goal/FINAL_DELIVERY.md)。
