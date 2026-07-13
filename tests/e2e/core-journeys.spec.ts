@@ -151,6 +151,27 @@ test("versioned research downloads expose hashes, coverage blockers, and a data 
   expect(dictionary.entities).toHaveProperty("coverageMatrices");
 });
 
+test("path lab replays evidenced appointments and locks unsupported universal rules", async ({
+  page,
+}) => {
+  await page.goto("./simulator?mode=replay&person=su-shi&step=5");
+
+  await expect(page.getByRole("link", { name: "证据路径回放" })).toHaveAttribute(
+    "aria-current",
+    "page",
+  );
+  await expect(page.getByRole("heading", { name: /责授检校尚书水部员外郎/u })).toBeVisible();
+  await expect(page.getByText("史料明载已到／在事", { exact: true })).toBeVisible();
+  await expect(page.getByText(/这些通用路径与情境尚未开放选择/u)).toBeVisible();
+
+  await page.getByRole("link", { name: "前进到下一条已发布记录" }).click();
+  await expect(page).toHaveURL(/step=6/u);
+  await expect(page.getByRole("heading", { name: "复朝奉郎、知登州", exact: true })).toBeVisible();
+
+  await page.getByRole("link", { name: "官衔构造实验" }).click();
+  await expect(page.getByText("这是一项教学组合，不对应真实任命。")).toBeVisible();
+});
+
 test("unknown routes render a deliberate in-app 404", async ({ page }) => {
   await page.goto("./not-a-real-route");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("这条路径尚未入图");

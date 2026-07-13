@@ -37,7 +37,7 @@ const LearnPage = lazy(async () => ({
   default: (await import("./pages/ExplorerPages")).LearnPage,
 }));
 const SimulatorPage = lazy(async () => ({
-  default: (await import("./pages/ExplorerPages")).SimulatorPage,
+  default: (await import("./pages/SimulatorPage")).SimulatorPage,
 }));
 const DataPage = lazy(async () => ({ default: (await import("./pages/ExplorerPages")).DataPage }));
 
