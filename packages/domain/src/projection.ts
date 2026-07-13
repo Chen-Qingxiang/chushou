@@ -11,6 +11,9 @@ export type SiteProjection = {
     sources: number;
     assertions: number;
     evidenceLinks: number;
+    rankSchemes: number;
+    ranks: number;
+    rankCrosswalks: number;
   };
   periodLenses: CuratedDataset["periodLenses"];
   reforms: CuratedDataset["reforms"];
@@ -19,6 +22,9 @@ export type SiteProjection = {
   institutions: CuratedDataset["institutions"];
   institutionVersions: CuratedDataset["institutionVersions"];
   institutionRelations: CuratedDataset["institutionRelations"];
+  rankSchemes: CuratedDataset["rankSchemes"];
+  ranks: CuratedDataset["ranks"];
+  rankCrosswalks: CuratedDataset["rankCrosswalks"];
   people: CuratedDataset["people"];
   places: CuratedDataset["places"];
   placeVersions: CuratedDataset["placeVersions"];
@@ -90,6 +96,9 @@ export function buildSiteProjection(dataset: CuratedDataset): SiteProjection {
       sources: dataset.sources.length,
       assertions: dataset.assertions.length,
       evidenceLinks: dataset.evidenceLinks.length,
+      rankSchemes: dataset.rankSchemes.length,
+      ranks: dataset.ranks.length,
+      rankCrosswalks: dataset.rankCrosswalks.length,
     },
     periodLenses: dataset.periodLenses,
     reforms: dataset.reforms,
@@ -98,6 +107,9 @@ export function buildSiteProjection(dataset: CuratedDataset): SiteProjection {
     institutions: dataset.institutions,
     institutionVersions: dataset.institutionVersions,
     institutionRelations: dataset.institutionRelations,
+    rankSchemes: dataset.rankSchemes,
+    ranks: dataset.ranks,
+    rankCrosswalks: dataset.rankCrosswalks,
     people: dataset.people,
     places: dataset.places,
     placeVersions: dataset.placeVersions,

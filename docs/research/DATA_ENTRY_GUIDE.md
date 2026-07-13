@@ -26,6 +26,14 @@
 - `ServiceEpisode` 单独记录是否赴任、实际起止、代理／权／试／守／行／兼／领和离任原因；
 - 受命未赴、辞免、追赠、遥授、安置和不得签书公事都不得伪装为正常任职。
 
+## 品秩与跨方案映射
+
+- 每个 `Rank` 必须属于一个 `RankScheme`；`sequence` 只在该方案及其声明的覆盖范围内比较；
+- 方案必须说明排序方向和覆盖状态，局部切片不得使用完整表的措辞；
+- 跨制度方案的换官、等值或近似关系写入 `RankCrosswalk`，不把目标 rank 直接覆盖到源记录；
+- 原文换官表可用 `explicit_reform_table`；同名只能建立 `same_label_candidate`，并按证据设置低置信度和争议说明；
+- 不确定映射仍需 assertion 与 evidence；`disputed` 映射缺少 `disputeNote` 时 schema 直接拒绝。
+
 ## 时间录入
 
 - 保存原始年号日期和相对时间文本；

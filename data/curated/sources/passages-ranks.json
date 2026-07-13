@@ -1,0 +1,35 @@
+[
+  {
+    "id": "chs:passage:song-shi-169-civil-scattered-rank-slice",
+    "locatorId": "chs:locator:song-shi-169-civil-scattered-ranks",
+    "originalText": "文散官二十九：……中散大夫〈正五上〉、朝奉大夫〈正五〉、朝散大夫〈从五上〉、朝请大夫〈从五〉、朝奉郎〈正六上〉、承直郎〈正六〉。",
+    "normalizedText": "文散官二十九：……中散大夫（正五上）、朝奉大夫（正五）、朝散大夫（从五上）、朝请大夫（从五）、朝奉郎（正六上）、承直郎（正六）。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "省略号只省去表中本切片以外的阶名；当前仅发布中散大夫至承直郎的局部相邻次序，不据此宣称已录全二十九阶。"
+  },
+  {
+    "id": "chs:passage:song-shi-169-yuanfeng-jilu-overview",
+    "locatorId": "chs:locator:song-shi-169-yuanfeng-crosswalk",
+    "originalText": "《元丰寄禄格》以阶易官，杂取唐及国朝旧制，自开府仪同三司至将仕郎，定为二十四阶，崇宁初，因刑部尚书邓洵武请，又换选人七阶。",
+    "normalizedText": "《元丰寄禄格》以阶易官，杂取唐及国朝旧制，自开府仪同三司至将仕郎，定为二十四阶，崇宁初，因刑部尚书邓洵武请，又换选人七阶。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "支持元丰寄禄格的方案存在、二十四阶概括及崇宁后继续变动；不把后世扩充倒灌进元丰局部序列。"
+  },
+  {
+    "id": "chs:passage:song-shi-169-yuanfeng-yuanwailang-crosswalk",
+    "locatorId": "chs:locator:song-shi-169-yuanfeng-crosswalk",
+    "originalText": "新官　旧官：朝请郎，前行员外郎、侍御史；朝散郎，中行员外郎、起居舍人；朝奉郎，后行员外郎、左、右司谏；承议郎，左、右正言、太常、国子博士。",
+    "normalizedText": "新官—旧官：朝请郎对应前行员外郎、侍御史；朝散郎对应中行员外郎、起居舍人；朝奉郎对应后行员外郎、左、右司谏；承议郎对应左、右正言、太常、国子博士。",
+    "transcriptionMethod": "edition_transcription",
+    "transcriptionStatus": "reviewed",
+    "transcribedBy": "维基文库贡献者；除授项目复核",
+    "checkedAt": "2026-07-13",
+    "note": "原表为新官在前、旧官在后；规范化文本只补足表格关系词，不改变对应内容。"
+  }
+]

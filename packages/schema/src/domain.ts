@@ -121,6 +121,9 @@ export const institutionRelationSchema = z.object({
 export const rankSchemeSchema = z.object({
   id: idFor("rank-scheme"),
   label: z.string().min(1),
+  schemeType: z.enum(["ordinal", "grade_table", "conversion_source", "other"]),
+  ordering: z.enum(["lower_sequence_higher", "higher_sequence_higher", "unordered"]),
+  coverageStatus: z.enum(["complete", "partial", "sample", "unknown"]),
   validTime: historicalDateSchema,
   description: claimTextSchema,
   assertionIds: z.array(idFor("assertion")).min(1),
@@ -138,6 +141,48 @@ export const rankSchema = z.object({
   assertionIds: z.array(idFor("assertion")).min(1),
   editorialStatus: editorialStatusSchema,
 });
+
+export const rankCrosswalkSchema = z
+  .object({
+    id: idFor("rank-crosswalk"),
+    sourceRankId: idFor("rank"),
+    targetRankId: idFor("rank"),
+    relationType: z.enum([
+      "replaced_by",
+      "equivalent_to",
+      "approximate_equivalent_to",
+      "broader_than",
+      "narrower_than",
+    ]),
+    basis: z.enum([
+      "explicit_reform_table",
+      "scholarly_crosswalk",
+      "contextual_inference",
+      "same_label_candidate",
+    ]),
+    validTime: historicalDateSchema,
+    description: claimTextSchema,
+    confidence: confidenceSchema,
+    disputeNote: z.string().min(1).nullable(),
+    assertionIds: z.array(idFor("assertion")).min(1),
+    editorialStatus: editorialStatusSchema,
+  })
+  .superRefine((value, context) => {
+    if (value.sourceRankId === value.targetRankId) {
+      context.addIssue({
+        code: "custom",
+        path: ["targetRankId"],
+        message: "A rank crosswalk cannot point to itself",
+      });
+    }
+    if (value.editorialStatus === "disputed" && value.disputeNote === null) {
+      context.addIssue({
+        code: "custom",
+        path: ["disputeNote"],
+        message: "A disputed rank crosswalk requires a dispute note",
+      });
+    }
+  });
 
 export const placeSchema = z.object({
   id: idFor("place"),
@@ -248,3 +293,6 @@ export type TitleUsageVersion = z.infer<typeof titleUsageVersionSchema>;
 export type AppointmentAction = z.infer<typeof appointmentActionSchema>;
 export type AppointmentComponent = z.infer<typeof appointmentComponentSchema>;
 export type ServiceEpisode = z.infer<typeof serviceEpisodeSchema>;
+export type RankScheme = z.infer<typeof rankSchemeSchema>;
+export type Rank = z.infer<typeof rankSchema>;
+export type RankCrosswalk = z.infer<typeof rankCrosswalkSchema>;

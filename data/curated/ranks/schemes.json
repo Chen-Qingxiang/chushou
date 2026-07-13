@@ -1,1 +1,95 @@
-[]
+[
+  {
+    "id": "chs:rank-scheme:pre-yuanfeng-yuanwailang-lines",
+    "label": "元丰前员外郎三行资序（换官表局部）",
+    "schemeType": "conversion_source",
+    "ordering": "lower_sequence_higher",
+    "coverageStatus": "partial",
+    "validTime": {
+      "originalText": "元丰三年九月换官前",
+      "calendar": "chinese_regnal",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "month",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "只表示《宋史》换官表中前行、中行、后行员外郎这一局部，不外推为全部旧官资。"
+    },
+    "description": {
+      "text": "把元丰换官表中的前行、中行、后行员外郎保存为一个局部有序方案，专用于与新寄禄阶逐项对读。",
+      "assertionIds": ["chs:assertion:rank-scheme-pre-yuanfeng-yuanwailang-lines"]
+    },
+    "assertionIds": ["chs:assertion:rank-scheme-pre-yuanfeng-yuanwailang-lines"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank-scheme:yuanfeng-jilu-24",
+    "label": "元丰寄禄官二十四阶（局部序列种子）",
+    "schemeType": "ordinal",
+    "ordering": "lower_sequence_higher",
+    "coverageStatus": "partial",
+    "validTime": {
+      "originalText": "元丰三年九月起至崇宁初增阶前（当前镜头）",
+      "calendar": "relative",
+      "eraName": "元丰",
+      "eraYear": 3,
+      "lunarMonth": 9,
+      "leapMonth": false,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "当前只录朝请郎至承议郎四个相邻条目；sequence 是本切片内部顺序，不是完整二十四阶绝对编号。"
+    },
+    "description": {
+      "text": "《宋史》称元丰寄禄格以阶易官、定为二十四阶；本版本只发布朝请郎、朝散郎、朝奉郎、承议郎四个相邻条目。",
+      "assertionIds": ["chs:assertion:rank-scheme-yuanfeng-jilu-24"]
+    },
+    "assertionIds": ["chs:assertion:rank-scheme-yuanfeng-jilu-24"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:rank-scheme:civil-scattered-29-songzhi",
+    "label": "文散官二十九阶表（卷169局部）",
+    "schemeType": "grade_table",
+    "ordering": "lower_sequence_higher",
+    "coverageStatus": "sample",
+    "validTime": {
+      "originalText": "《宋史·职官志》所列文散官表；制度适用时段待限定",
+      "calendar": "unknown",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": null,
+      "normalizedEnd": null,
+      "precision": "unknown",
+      "qualification": "uncertain",
+      "edtf": null,
+      "conversionMethod": null,
+      "conversionVersion": null,
+      "note": "表内品级文字可直接转录，但当前证据不足以把整张表固定到单一宋代时段。"
+    },
+    "description": {
+      "text": "保存《宋史》卷169文散官表的局部品级与顺序，用于展示同名阶在不同方案中不能自动判为同一实体。",
+      "assertionIds": ["chs:assertion:rank-scheme-civil-scattered-29"]
+    },
+    "assertionIds": ["chs:assertion:rank-scheme-civil-scattered-29"],
+    "editorialStatus": "provisional"
+  }
+]

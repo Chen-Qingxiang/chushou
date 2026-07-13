@@ -308,7 +308,7 @@
     "categories": ["civil_service_rank"],
     "semanticTracks": ["identity_rank"],
     "institutionVersionIds": [],
-    "rankId": null,
+    "rankId": "chs:rank:yuanfeng-chaofeng-lang",
     "functions": [
       {
         "text": "在“复朝奉郎、知登州”中作为与地方工作并列的身份／资序成分。",
@@ -320,11 +320,14 @@
       "assertionIds": ["chs:assertion:usage-chaofeng-lang"]
     },
     "caveat": {
-      "text": "具体品位和迁转序列尚未核入寄禄格。",
-      "assertionIds": ["chs:assertion:usage-chaofeng-lang"]
+      "text": "已连接到元丰寄禄格的四阶局部切片；完整二十四阶绝对编号和元祐运行细节仍未发布。",
+      "assertionIds": ["chs:assertion:usage-chaofeng-lang-rank-link"]
     },
     "commonPairingTitleIds": ["chs:title:zhizhou"],
-    "assertionIds": ["chs:assertion:usage-chaofeng-lang"],
+    "assertionIds": [
+      "chs:assertion:usage-chaofeng-lang",
+      "chs:assertion:usage-chaofeng-lang-rank-link"
+    ],
     "editorialStatus": "reviewed"
   },
   {

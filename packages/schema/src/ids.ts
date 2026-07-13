@@ -9,6 +9,7 @@ export const idKinds = [
   "institution-relation",
   "rank-scheme",
   "rank",
+  "rank-crosswalk",
   "appointment",
   "component",
   "service",

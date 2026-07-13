@@ -8,6 +8,7 @@ import {
   preferredName,
   site,
   sourcePath,
+  statusLabels,
   trackLabels,
 } from "../data";
 import { EvidenceButton } from "../evidence";
@@ -821,6 +822,92 @@ export function DataPage() {
           <p>AppointmentAction 记录“授了什么”；ServiceEpisode 记录“是否实际做了”。</p>
         </section>
       </div>
+      <section className="rank-model" id="rank-model">
+        <header>
+          <div>
+            <p className="eyebrow">多方案品秩 · RANK SCHEMES</p>
+            <h2>一条 rank 字段不够表达制度变化。</h2>
+          </div>
+          <p>
+            {site.counts.rankSchemes} 个方案 · {site.counts.ranks} 个阶位条目 ·{" "}
+            {site.counts.rankCrosswalks} 条跨方案边
+          </p>
+        </header>
+        <div className="rank-scheme-grid">
+          {site.rankSchemes.map((scheme) => {
+            const ranks = site.ranks
+              .filter((rank) => rank.rankSchemeId === scheme.id)
+              .toSorted(
+                (left, right) =>
+                  (left.sequence ?? Number.MAX_SAFE_INTEGER) -
+                  (right.sequence ?? Number.MAX_SAFE_INTEGER),
+              );
+            return (
+              <article key={scheme.id}>
+                <div className="rank-scheme-heading">
+                  <StatusBadge status={scheme.editorialStatus} />
+                  <span>{statusLabels[scheme.coverageStatus] ?? scheme.coverageStatus}覆盖</span>
+                </div>
+                <h3>{scheme.label}</h3>
+                <p>{scheme.description.text}</p>
+                <ol className="rank-ladder">
+                  {ranks.map((rank) => (
+                    <li key={rank.id}>
+                      <span>{rank.sequence ?? "?"}</span>
+                      <strong>{rank.label}</strong>
+                      <small>{rank.gradeText ?? "表内未标传统品级"}</small>
+                    </li>
+                  ))}
+                </ol>
+                <EvidenceButton
+                  assertionIds={[...scheme.assertionIds]}
+                  title={scheme.label}
+                  label="核对方案依据"
+                />
+              </article>
+            );
+          })}
+        </div>
+        <div className="rank-crosswalks">
+          <header>
+            <div>
+              <p className="eyebrow">CROSSWALKS</p>
+              <h3>跨方案映射不是无条件等号</h3>
+            </div>
+            <p>明确换官与同名候选使用不同关系、置信度和编辑状态。</p>
+          </header>
+          {site.rankCrosswalks.map((crosswalk) => {
+            const source = site.ranks.find((rank) => rank.id === crosswalk.sourceRankId);
+            const target = site.ranks.find((rank) => rank.id === crosswalk.targetRankId);
+            return (
+              <article key={crosswalk.id}>
+                <div className="crosswalk-path">
+                  <strong>{source?.label ?? "未识别"}</strong>
+                  <span>{crosswalk.relationType === "replaced_by" ? "换为" : "约略候选"} →</span>
+                  <strong>{target?.label ?? "未识别"}</strong>
+                </div>
+                <div className="crosswalk-meta">
+                  <StatusBadge status={crosswalk.editorialStatus} />
+                  <span>置信度：{statusLabels[crosswalk.confidence]}</span>
+                  <span>{crosswalk.basis}</span>
+                </div>
+                <p>{crosswalk.description.text}</p>
+                {crosswalk.disputeNote === null ? null : (
+                  <aside>
+                    <strong>争议边界</strong>
+                    <span>{crosswalk.disputeNote}</span>
+                  </aside>
+                )}
+                <EvidenceButton
+                  assertionIds={[...crosswalk.assertionIds]}
+                  title={crosswalk.description.text}
+                  label="查看映射证据"
+                />
+              </article>
+            );
+          })}
+        </div>
+      </section>
       <section className="method-links">
         <article>
           <strong>来源策略</strong>

@@ -167,50 +167,75 @@ export function TitleDetailPage() {
       </header>
       <div className="detail-grid">
         <div className="detail-main">
-          {usages.map((usage) => (
-            <article className="usage-panel" key={usage.id}>
-              <div className="usage-heading">
-                <div>
-                  <p className="eyebrow">有效版本</p>
-                  <h2>{usage.label}</h2>
-                </div>
-                <StatusBadge status={usage.editorialStatus} />
-              </div>
-              <div className="version-period">
-                <strong>{usage.validTime.originalText}</strong>
-                <span>{usage.validTime.edtf ?? "绝对年代未定"}</span>
-              </div>
-              <div className="semantic-track-grid">
-                {usage.semanticTracks.map((track) => (
-                  <div className={`semantic-track track-${track}`} key={track}>
-                    <span>{trackLabels[track] ?? track}</span>
-                    <strong>
-                      {usage.categories.map((item) => categoryLabels[item] ?? item).join(" · ")}
-                    </strong>
+          {usages.map((usage) => {
+            const rank =
+              usage.rankId === null
+                ? undefined
+                : site.ranks.find((item) => item.id === usage.rankId);
+            const rankScheme = site.rankSchemes.find((scheme) => scheme.id === rank?.rankSchemeId);
+            return (
+              <article className="usage-panel" key={usage.id}>
+                <div className="usage-heading">
+                  <div>
+                    <p className="eyebrow">有效版本</p>
+                    <h2>{usage.label}</h2>
                   </div>
-                ))}
-              </div>
-              <section className="explanation-block">
-                <p className="block-label">一句话解释</p>
-                <p className="large-explanation">{usage.plainExplanation.text}</p>
-              </section>
-              <section className="explanation-block">
-                <p className="block-label">当前可证职掌</p>
-                {usage.functions.map((item) => (
-                  <p key={item.text}>{item.text}</p>
-                ))}
-              </section>
-              <aside className="caveat">
-                <strong>⚑ 阅读边界</strong>
-                <p>{usage.caveat.text}</p>
-              </aside>
-              <EvidenceButton
-                assertionIds={[...usage.assertionIds]}
-                title={usage.label}
-                label="展开主张、引文与定位"
-              />
-            </article>
-          ))}
+                  <StatusBadge status={usage.editorialStatus} />
+                </div>
+                <div className="version-period">
+                  <strong>{usage.validTime.originalText}</strong>
+                  <span>{usage.validTime.edtf ?? "绝对年代未定"}</span>
+                </div>
+                {rank === undefined || rankScheme === undefined ? null : (
+                  <section className="rank-context">
+                    <div>
+                      <p className="block-label">品秩方案内定位</p>
+                      <strong>{rank.label}</strong>
+                      <span>
+                        {rankScheme.label} · 切片序位 {rank.sequence ?? "未定"}
+                        {rank.gradeText === null ? "" : ` · ${rank.gradeText}`}
+                      </span>
+                    </div>
+                    <div>
+                      <StatusBadge status={rankScheme.coverageStatus} />
+                      <Link className="text-link" to="/data#rank-model">
+                        查看跨方案映射 →
+                      </Link>
+                    </div>
+                  </section>
+                )}
+                <div className="semantic-track-grid">
+                  {usage.semanticTracks.map((track) => (
+                    <div className={`semantic-track track-${track}`} key={track}>
+                      <span>{trackLabels[track] ?? track}</span>
+                      <strong>
+                        {usage.categories.map((item) => categoryLabels[item] ?? item).join(" · ")}
+                      </strong>
+                    </div>
+                  ))}
+                </div>
+                <section className="explanation-block">
+                  <p className="block-label">一句话解释</p>
+                  <p className="large-explanation">{usage.plainExplanation.text}</p>
+                </section>
+                <section className="explanation-block">
+                  <p className="block-label">当前可证职掌</p>
+                  {usage.functions.map((item) => (
+                    <p key={item.text}>{item.text}</p>
+                  ))}
+                </section>
+                <aside className="caveat">
+                  <strong>⚑ 阅读边界</strong>
+                  <p>{usage.caveat.text}</p>
+                </aside>
+                <EvidenceButton
+                  assertionIds={[...usage.assertionIds]}
+                  title={usage.label}
+                  label="展开主张、引文与定位"
+                />
+              </article>
+            );
+          })}
         </div>
         <aside className="detail-aside">
           <section>

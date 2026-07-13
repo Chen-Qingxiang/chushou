@@ -27,6 +27,7 @@ const arrayKeys = [
   "institutionRelations",
   "rankSchemes",
   "ranks",
+  "rankCrosswalks",
   "places",
   "placeVersions",
   "appointmentActions",

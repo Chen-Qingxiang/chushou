@@ -53,6 +53,7 @@ export function validateDatasetIntegrity(dataset: CuratedDataset): ValidationIss
     ["institutionRelations", dataset.institutionRelations],
     ["rankSchemes", dataset.rankSchemes],
     ["ranks", dataset.ranks],
+    ["rankCrosswalks", dataset.rankCrosswalks],
     ["places", dataset.places],
     ["placeVersions", dataset.placeVersions],
     ["appointmentActions", dataset.appointmentActions],
@@ -202,6 +203,23 @@ export function validateDatasetIntegrity(dataset: CuratedDataset): ValidationIss
     record.assertionIds.forEach((id, assertionIndex) =>
       expectRef(id, `ranks.${index}.assertionIds.${assertionIndex}`),
     );
+  });
+  dataset.rankCrosswalks.forEach((record, index) => {
+    expectRef(record.sourceRankId, `rankCrosswalks.${index}.sourceRankId`);
+    expectRef(record.targetRankId, `rankCrosswalks.${index}.targetRankId`);
+    checkClaim(record.description, `rankCrosswalks.${index}.description`);
+    record.assertionIds.forEach((id, assertionIndex) =>
+      expectRef(id, `rankCrosswalks.${index}.assertionIds.${assertionIndex}`),
+    );
+    const sourceRank = dataset.ranks.find((rank) => rank.id === record.sourceRankId);
+    const targetRank = dataset.ranks.find((rank) => rank.id === record.targetRankId);
+    if (sourceRank !== undefined && targetRank?.rankSchemeId === sourceRank.rankSchemeId) {
+      issues.push({
+        code: "rank_crosswalk_same_scheme",
+        path: `rankCrosswalks.${index}`,
+        message: `${record.id} must connect ranks from different schemes`,
+      });
+    }
   });
   dataset.places.forEach((record, index) =>
     record.externalIdentifierIds.forEach((id, externalIndex) =>

@@ -8,24 +8,28 @@
     "sourceLocators": [
       "sources/locators.json",
       "sources/locators-core-offices.json",
-      "sources/locators-counterexamples.json"
+      "sources/locators-counterexamples.json",
+      "sources/locators-ranks.json"
     ],
     "passages": [
       "sources/passages.json",
       "sources/passages-core-offices.json",
-      "sources/passages-counterexamples.json"
+      "sources/passages-counterexamples.json",
+      "sources/passages-ranks.json"
     ],
     "assertions": [
       "evidence/assertions.json",
       "evidence/assertions-core-offices.json",
       "evidence/assertions-institutions.json",
-      "evidence/assertions-counterexamples.json"
+      "evidence/assertions-counterexamples.json",
+      "evidence/assertions-ranks.json"
     ],
     "evidenceLinks": [
       "evidence/evidence-links.json",
       "evidence/evidence-links-core-offices.json",
       "evidence/evidence-links-institutions.json",
-      "evidence/evidence-links-counterexamples.json"
+      "evidence/evidence-links-counterexamples.json",
+      "evidence/evidence-links-ranks.json"
     ],
     "interpretations": "evidence/interpretations.json",
     "editorialReviews": "evidence/reviews.json",
@@ -38,6 +42,7 @@
     "institutionRelations": ["institutions/relations.json", "institutions/relations-central.json"],
     "rankSchemes": "ranks/schemes.json",
     "ranks": "ranks/ranks.json",
+    "rankCrosswalks": "ranks/crosswalks.json",
     "places": "places/places.json",
     "placeVersions": "places/versions.json",
     "appointmentActions": [

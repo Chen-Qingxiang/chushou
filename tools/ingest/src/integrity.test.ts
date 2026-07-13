@@ -77,6 +77,49 @@ describe("curated research release", () => {
     ).toBe(true);
   });
 
+  it("models rank order and cross-scheme mappings without a universal scalar", () => {
+    expect(dataset.rankSchemes.length).toBeGreaterThanOrEqual(2);
+    expect(
+      dataset.rankSchemes.every((scheme) =>
+        dataset.ranks.some((rank) => rank.rankSchemeId === scheme.id),
+      ),
+    ).toBe(true);
+    expect(
+      dataset.rankSchemes.some(
+        (scheme) =>
+          scheme.ordering !== "unordered" &&
+          dataset.ranks.filter((rank) => rank.rankSchemeId === scheme.id).length >= 3,
+      ),
+    ).toBe(true);
+    expect(
+      dataset.rankCrosswalks.some(
+        (crosswalk) => crosswalk.relationType === "replaced_by" && crosswalk.confidence === "high",
+      ),
+    ).toBe(true);
+    expect(
+      dataset.rankCrosswalks.some(
+        (crosswalk) =>
+          crosswalk.editorialStatus === "disputed" &&
+          crosswalk.confidence === "low" &&
+          crosswalk.disputeNote !== null,
+      ),
+    ).toBe(true);
+
+    const broken = structuredClone(dataset);
+    const crosswalk = broken.rankCrosswalks[0];
+    if (crosswalk === undefined) throw new Error("Fixture requires a rank crosswalk");
+    const sourceRank = broken.ranks.find((rank) => rank.id === crosswalk.sourceRankId);
+    if (sourceRank === undefined) throw new Error("Fixture requires a crosswalk source rank");
+    const sameSchemeTarget = broken.ranks.find(
+      (rank) => rank.rankSchemeId === sourceRank.rankSchemeId && rank.id !== sourceRank.id,
+    );
+    if (sameSchemeTarget === undefined) throw new Error("Fixture requires a same-scheme rank pair");
+    crosswalk.targetRankId = sameSchemeTarget.id;
+    expect(validateDatasetIntegrity(broken)).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "rank_crosswalk_same_scheme" })]),
+    );
+  });
+
   it("searches across traditional forms, pinyin aliases, and minor typos", () => {
     const records = buildSearchRecords(dataset);
     expect(searchRecords(records, "蘇軾")[0]?.label).toBe("苏轼");

@@ -66,6 +66,28 @@ test("a counterexample person reuses the same career and decomposition routes", 
   await expect(page.getByLabel("任命原文拆解")).toContainText("门下侍郎");
 });
 
+test("rank schemes expose local order, crosswalk confidence, and evidence", async ({ page }) => {
+  await page.goto("./data#rank-model");
+  const model = page.locator("#rank-model");
+
+  await expect(model.getByRole("heading", { level: 2 })).toContainText("一条 rank 字段不够");
+  await expect(model.getByText("元丰寄禄官二十四阶（局部序列种子）")).toBeVisible();
+  await expect(model.getByText("置信度：低", { exact: true })).toBeVisible();
+  await expect(model.getByText("争议边界")).toBeVisible();
+
+  const yuanfengScheme = model
+    .locator(".rank-scheme-grid > article")
+    .filter({ hasText: "元丰寄禄官二十四阶" });
+  await yuanfengScheme.getByRole("button", { name: "核对方案依据" }).click();
+  const drawer = page.getByRole("dialog", { name: /元丰寄禄官二十四阶/u });
+  await expect(drawer.locator("blockquote").first()).toContainText("元丰寄禄格");
+  await page.keyboard.press("Escape");
+
+  await page.goto("./titles/chaofeng-lang");
+  await expect(page.getByText("品秩方案内定位")).toBeVisible();
+  await expect(page.getByText(/元丰寄禄官二十四阶/u)).toBeVisible();
+});
+
 test("unknown routes render a deliberate in-app 404", async ({ page }) => {
   await page.goto("./not-a-real-route");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("这条路径尚未入图");
