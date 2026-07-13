@@ -1,5 +1,5 @@
 {
-  "measuredAt": "2026-07-13T11:41:31.910Z",
+  "measuredAt": "2026-07-13T12:40:42.263Z",
   "environment": {
     "node": "v24.18.0",
     "lighthouse": "12.6.1",
@@ -15,29 +15,52 @@
     {
       "name": "home",
       "path": "/chushou/",
-      "performance": 98,
+      "performance": 90,
       "accessibility": 100,
-      "largestContentfulPaintMs": 2124.47755,
-      "totalBlockingTimeMs": 28,
-      "cumulativeLayoutShift": 0.00850546780072904
+      "largestContentfulPaintMs": 2241.069,
+      "totalBlockingTimeMs": 327.1723999999999,
+      "cumulativeLayoutShift": 0.00850546780072904,
+      "attempts": 1
     },
     {
       "name": "title-detail",
       "path": "/chushou/titles/canzhi-zhengshi",
-      "performance": 93,
+      "performance": 98,
       "accessibility": 100,
-      "largestContentfulPaintMs": 2487.3526,
-      "totalBlockingTimeMs": 191.10789999999997,
-      "cumulativeLayoutShift": 0.00850546780072904
+      "largestContentfulPaintMs": 2208.32535,
+      "totalBlockingTimeMs": 62,
+      "cumulativeLayoutShift": 0,
+      "attempts": 1
     },
     {
       "name": "su-shi-career",
       "path": "/chushou/people/su-shi/career",
       "performance": 98,
       "accessibility": 100,
-      "largestContentfulPaintMs": 2144.48385,
-      "totalBlockingTimeMs": 57,
-      "cumulativeLayoutShift": 0.00850546780072904
+      "largestContentfulPaintMs": 2110.15335,
+      "totalBlockingTimeMs": 49,
+      "cumulativeLayoutShift": 0.00850546780072904,
+      "attempts": 1
+    },
+    {
+      "name": "institution-map",
+      "path": "/chushou/map?period=chs%3Aperiod%3Ayuanfeng-reform",
+      "performance": 98,
+      "accessibility": 100,
+      "largestContentfulPaintMs": 2114.69695,
+      "totalBlockingTimeMs": 31,
+      "cumulativeLayoutShift": 0.00850546780072904,
+      "attempts": 1
+    },
+    {
+      "name": "career-metrics",
+      "path": "/chushou/metrics",
+      "performance": 98,
+      "accessibility": 100,
+      "largestContentfulPaintMs": 2122.9267,
+      "totalBlockingTimeMs": 15,
+      "cumulativeLayoutShift": 0.00850546780072904,
+      "attempts": 1
     }
   ]
 }

@@ -8,24 +8,24 @@ GitHub Pages 目标地址：[在线研究预览](https://chen-qingxiang.github.i
 
 ![除授首页：证据驱动的宋代官制研究入口](docs/assets/chushou-home.png)
 
-当前是 `0.3.0-research.1` 研究预览版：59 个时期化官名概念、3 个局部品秩方案、13 条苏轼任命动作、3 条反例人物任命、120 条结构化主张和 139 条证据关联；《宋史》卷 338 的 38 条任官／身份语句已穷尽枚举为 coverage ledger。数量是覆盖进度，不代表宋代官制或任何人物官履已经完整。
+当前是 `0.3.1-research.1` 研究预览版：59 个官名概念、60 个时期版本、3 个局部品秩方案、13 条苏轼任命动作、3 条反例人物任命、121 条结构化主张和 140 条证据关联；《宋史》卷 338 的 38 条任官／身份语句已穷尽枚举为 coverage ledger。数量是覆盖进度，不代表宋代官制或任何人物官履已经完整。
 
 ## 目前可用
 
 - 引导首页与三层官衔解释；
 - 简繁体、别名、拼音和轻量容错全局搜索；
 - 时期化官名列表、详情和证据抽屉；
-- 制度地图、元丰改制对照和研究缺口提示；
+- 可按时期／范围筛选、聚焦和缩放的制度关系图，以及两个时期并列的沿革对照；
 - 多品秩方案、方案内局部序列，以及带置信度／争议说明的跨方案换官边；
 - 苏轼官履时间线、地点序列、任命原文 span 拆解与实际任事分离；
 - 王安石、司马光、章惇各一条可检索、可下钻的反例任命切片；
-- 动作分布和明确评分规则下的量化探索；
-- 最长匹配、未知片段保留和时期镜头驱动的原文解码器；
+- 五条可分别展开依据的政治位置分类轨迹，不生成总分；
+- 最长匹配、未知片段、动作词、时间副词、动作关系和时期候选驱动的原文解码器；
 - 任命前后、两个官名按时期、四名人物制度位置的可深链接比较；
-- 来源浏览、学习路径、可深链接的真实任命路径回放，以及只检查时期／语义的官衔构造实验；
+- 可按人物／官名／时期筛选并反查所支持断言的来源浏览器、学习路径、可深链接的真实任命路径回放，以及只检查时期／语义的官衔构造实验；
 - 带版本、schema、许可、引用和 SHA-256 manifest 的 release JSON、官名／任命／证据／覆盖 CSV 与机器可读数据字典；
 - 随 release 发布的机器可读 coverage matrices，以及自动生成的分母、缺口和阻塞报告；
-- React Router 深链接、应用内 404、移动端布局和 GitHub Pages base path。
+- 可复制并恢复筛选状态的 React Router 深链接、应用内 404、移动端布局和 GitHub Pages base path。
 
 ## 本地运行
 
@@ -59,14 +59,14 @@ npm run test:e2e
 npm run quality:lighthouse
 ```
 
-`npm run ci` 串联除浏览器测试外的全部门禁，包括已提交 JSON Schema 的新鲜度和生产产物体积预算。GitHub Actions 还会在 Chromium 中执行 13 条关键与无障碍旅程，再把通过验证的同一份 `dist/` 发布到 Pages。`quality:lighthouse` 使用已安装的 Playwright Chromium 对三个主要路由复测移动模拟基线。终检范围与基线见[性能与无障碍报告](docs/reports/PERFORMANCE_ACCESSIBILITY.md)。
+`npm run ci` 串联除浏览器测试外的全部门禁，包括已提交 JSON Schema 的新鲜度、14 项单元／集成测试和生产产物体积预算。GitHub Actions 还会在 Chromium 中执行 19 条关键与无障碍旅程，再把通过验证的同一份 `dist/` 发布到 Pages。`quality:lighthouse` 使用已安装的 Playwright Chromium 对五个主要路由复测移动模拟基线。终检范围与基线见[性能与无障碍报告](docs/reports/PERFORMANCE_ACCESSIBILITY.md)。
 
 ## 仓库结构
 
 ```text
 apps/web/             React + TypeScript + Vite 应用
 packages/schema/      Zod schema、受控词表、稳定 ID 与跨表校验
-packages/domain/      搜索、原文解码与站点投影
+packages/domain/      搜索、原文解码、多维轨迹规则与站点投影
 tools/ingest/         curated loader、生成器、报告与测试
 data/curated/         人工审阅的唯一权威编辑源
 data/generated/       确定性生成的站点投影、release、CSV、manifest 与数据字典
@@ -98,7 +98,7 @@ Person → AppointmentAction → ordered components
 - reviewed／accepted 主张没有支持性 passage 时构建失败；
 - 断裂引用、重复 ID、非法 source span、重叠同义版本、冲突别名和生产占位文字都会触发门禁。
 
-录入前请阅读[贡献指南](CONTRIBUTING.md)、[数据录入指南](docs/research/DATA_ENTRY_GUIDE.md)、[引用规范](docs/research/CITATION_GUIDE.md)和[来源策略](docs/research/SOURCE_STRATEGY.md)。
+录入前请阅读[贡献指南](CONTRIBUTING.md)、[发布书目](docs/research/BIBLIOGRAPHY.md)、[数据录入指南](docs/research/DATA_ENTRY_GUIDE.md)、[引用规范](docs/research/CITATION_GUIDE.md)和[来源策略](docs/research/SOURCE_STRATEGY.md)。
 
 ## 研究边界
 
@@ -112,4 +112,4 @@ Person → AppointmentAction → ordered components
 
 数据集仍处研究预览期，引用时应同时给出 release 版本、具体 assertion／passage ID 和底层来源定位。项目代码采用 [MIT](LICENSE)；项目原创整理数据采用 [CC BY 4.0](LICENSE-DATA.md)，并提供机器可读的 [`CITATION.cff`](CITATION.cff)。第三方短引文不因进入数据集而改变权利状态，各数字版本和原始材料的许可／权利说明按 edition 单独记录。
 
-本轮实现与诚实边界汇总于[最终交付说明](docs/goal/FINAL_DELIVERY.md)。
+本轮实现与诚实边界汇总于[最终交付说明](docs/goal/FINAL_DELIVERY.md)，逐项验收证据见 [Goal 完成审计](docs/goal/COMPLETION_AUDIT.md)。
