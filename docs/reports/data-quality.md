@@ -1,12 +1,12 @@
 # Data quality report
 
-Generated from dataset 0.3.0-research.1.
+Generated from dataset 0.3.1-research.1.
 
 | Measure                             | Count |
 | ----------------------------------- | ----: |
 | Title concepts                      |    59 |
-| Title usage versions                |    59 |
-| Reviewed or verified title usages   |    59 |
+| Title usage versions                |    60 |
+| Reviewed or verified title usages   |    60 |
 | Rank schemes                        |     3 |
 | Rank entries                        |    13 |
 | Rank crosswalks                     |     4 |
@@ -14,9 +14,9 @@ Generated from dataset 0.3.0-research.1.
 | Service episodes                    |     4 |
 | Sources                             |     4 |
 | Passages                            |    63 |
-| Assertions                          |   120 |
-| Assertions with supporting evidence |   120 |
-| Evidence links                      |   139 |
+| Assertions                          |   121 |
+| Assertions with supporting evidence |   121 |
+| Evidence links                      |   140 |
 
 ## Gate
 

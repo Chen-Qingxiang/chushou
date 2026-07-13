@@ -1,60 +1,60 @@
 id,preferred_name,aliases,usage_versions,editorial_status,dataset_version
-chs:title:dali-pingshi,大理评事,大理评事|大理評事|dali pingshi,1,reviewed,0.3.0-research.1
-chs:title:qianshu-panguan,签书判官,签书判官|签书某府判官|簽書判官|qianshu panguan,1,reviewed,0.3.0-research.1
-chs:title:tongpan,通判,通判|通判某州|tongpan,1,reviewed,0.3.0-research.1
-chs:title:zhizhou,知州,知州|知某州|知某州军州事|知某州軍州事|zhizhou,1,reviewed,0.3.0-research.1
-chs:title:tuanlian-fushi,团练副使,团练副使|團練副使|tuanlian fushi,1,reviewed,0.3.0-research.1
-chs:title:anzhi,安置,安置|本州安置|安置|anzhi,1,reviewed,0.3.0-research.1
-chs:title:chaofeng-lang,朝奉郎,朝奉郎|chaofeng lang,1,reviewed,0.3.0-research.1
-chs:title:zhongshu-sheren,中书舍人,中书舍人|中書舍人|zhongshu sheren,1,reviewed,0.3.0-research.1
-chs:title:hanlin-xueshi,翰林学士,翰林学士|翰林學士|hanlin xueshi,1,reviewed,0.3.0-research.1
-chs:title:longtu-xueshi,龙图阁学士,龙图阁学士|龍圖閣學士|longtu ge xueshi,1,reviewed,0.3.0-research.1
-chs:title:ningyuan-jiedu-fushi,宁远军节度副使,宁远军节度副使|寧遠軍節度副使|ningyuan jun jiedu fushi,1,reviewed,0.3.0-research.1
-chs:title:qiongzhou-biejia,琼州别驾,琼州别驾|瓊州別駕|qiongzhou biejia,1,reviewed,0.3.0-research.1
-chs:title:taishi,太师,太师|太師|taishi,1,reviewed,0.3.0-research.1
-chs:title:taifu,太傅,太傅|taifu,1,reviewed,0.3.0-research.1
-chs:title:taibao,太保,太保|taibao,1,reviewed,0.3.0-research.1
-chs:title:taiwei,太尉,太尉|taiwei,1,reviewed,0.3.0-research.1
-chs:title:situ,司徒,司徒|situ,1,reviewed,0.3.0-research.1
-chs:title:sikong,司空,司空|sikong,1,reviewed,0.3.0-research.1
-chs:title:tongpingzhangshi,同平章事,同平章事|同平章事|tong pingzhang shi,1,reviewed,0.3.0-research.1
-chs:title:canzhi-zhengshi,参知政事,参知政事|參知政事|canzhi zhengshi,1,reviewed,0.3.0-research.1
-chs:title:shizhong,侍中,侍中|shizhong,1,reviewed,0.3.0-research.1
-chs:title:menxia-shilang,门下侍郎,门下侍郎|門下侍郎|menxia shilang,1,reviewed,0.3.0-research.1
-chs:title:zuo-jianyi-dafu,左谏议大夫,左谏议大夫|左諫議大夫|zuo jianyi dafu,1,reviewed,0.3.0-research.1
-chs:title:zuo-sijian,左司谏,左司谏|左司諫|zuo sijian,1,reviewed,0.3.0-research.1
-chs:title:zuo-zhengyan,左正言,左正言|zuo zhengyan,1,reviewed,0.3.0-research.1
-chs:title:jishizhong,给事中,给事中|給事中|jishizhong,1,reviewed,0.3.0-research.1
-chs:title:qiju-lang,起居郎,起居郎|qiju lang,1,reviewed,0.3.0-research.1
-chs:title:fubao-lang,符宝郎,符宝郎|符寶郎|fubao lang,1,reviewed,0.3.0-research.1
-chs:title:zhongshu-ling,中书令,中书令|中書令|zhongshu ling,1,reviewed,0.3.0-research.1
-chs:title:zhongshu-shilang,中书侍郎,中书侍郎|中書侍郎|zhongshu shilang,1,reviewed,0.3.0-research.1
-chs:title:qiju-sheren,起居舍人,起居舍人|qiju sheren,1,reviewed,0.3.0-research.1
-chs:title:you-jianyi-dafu,右谏议大夫,右谏议大夫|右諫議大夫|you jianyi dafu,1,reviewed,0.3.0-research.1
-chs:title:you-sijian,右司谏,右司谏|右司諫|you sijian,1,reviewed,0.3.0-research.1
-chs:title:you-zhengyan,右正言,右正言|you zhengyan,1,reviewed,0.3.0-research.1
-chs:title:jianzheng-guan,检正官,检正官|檢正官|jianzheng guan,1,reviewed,0.3.0-research.1
-chs:title:shangshu-ling,尚书令,尚书令|尚書令|shangshu ling,1,reviewed,0.3.0-research.1
-chs:title:shangshu-zuo-pushe,尚书左仆射,尚书左仆射|尚書左僕射|左仆射|shangshu zuo pushe,1,reviewed,0.3.0-research.1
-chs:title:shangshu-you-pushe,尚书右仆射,尚书右仆射|尚書右僕射|右仆射|shangshu you pushe,1,reviewed,0.3.0-research.1
-chs:title:shangshu-zuo-cheng,尚书左丞,尚书左丞|尚書左丞|左丞|shangshu zuo cheng,1,reviewed,0.3.0-research.1
-chs:title:shangshu-you-cheng,尚书右丞,尚书右丞|尚書右丞|右丞|shangshu you cheng,1,reviewed,0.3.0-research.1
-chs:title:zuosi-langzhong,左司郎中,左司郎中|zuosi langzhong,1,reviewed,0.3.0-research.1
-chs:title:yousi-langzhong,右司郎中,右司郎中|yousi langzhong,1,reviewed,0.3.0-research.1
-chs:title:zuosi-yuanwailang,左司员外郎,左司员外郎|左司員外郎|zuosi yuanwailang,1,reviewed,0.3.0-research.1
-chs:title:yousi-yuanwailang,右司员外郎,右司员外郎|右司員外郎|yousi yuanwailang,1,reviewed,0.3.0-research.1
-chs:title:shumishi,枢密使,枢密使|樞密使|shumishi,1,reviewed,0.3.0-research.1
-chs:title:zhi-shumiyuan-shi,知枢密院事,知枢密院事|知樞密院事|知院事|zhi shumiyuan shi,1,reviewed,0.3.0-research.1
-chs:title:tongzhi-shumiyuan-shi,同知枢密院事,同知枢密院事|同知樞密院事|同知院事|tongzhi shumiyuan shi,1,reviewed,0.3.0-research.1
-chs:title:shumi-fushi,枢密副使,枢密副使|樞密副使|shumi fushi,1,reviewed,0.3.0-research.1
-chs:title:qianshu-shumiyuan-shi,签书枢密院事,签书枢密院事|簽書樞密院事|签书院事|qianshu shumiyuan shi,1,reviewed,0.3.0-research.1
-chs:title:sansi-shi,三司使,三司使|三司使|计相|sansi shi,1,reviewed,0.3.0-research.1
-chs:title:hanlin-xueshi-chengzhi,翰林学士承旨,翰林学士承旨|翰林學士承旨|承旨|hanlin xueshi chengzhi,1,reviewed,0.3.0-research.1
-chs:title:zhizhigao,知制诰,知制诰|知制誥|zhizhigao,1,reviewed,0.3.0-research.1
-chs:title:hanlin-shidu-xueshi,翰林侍读学士,翰林侍读学士|翰林侍讀學士|hanlin shidu xueshi,1,reviewed,0.3.0-research.1
-chs:title:longtu-zhixueshi,龙图阁直学士,龙图阁直学士|龍圖閣直學士|longtu ge zhixueshi,1,reviewed,0.3.0-research.1
-chs:title:longtu-daizhi,龙图阁待制,龙图阁待制|龍圖閣待制|longtu ge daizhi,1,reviewed,0.3.0-research.1
-chs:title:yushi-zhongcheng,御史中丞,御史中丞|御史中丞|中丞|yushi zhongcheng,1,reviewed,0.3.0-research.1
-chs:title:shiyushi,侍御史,侍御史|侍御史|shiyushi,1,reviewed,0.3.0-research.1
-chs:title:dianzhong-shiyushi,殿中侍御史,殿中侍御史|殿中侍御史|dianzhong shiyushi,1,reviewed,0.3.0-research.1
-chs:title:jiancha-yushi,监察御史,监察御史|監察御史|jiancha yushi,1,reviewed,0.3.0-research.1
+chs:title:dali-pingshi,大理评事,大理评事|大理評事|dali pingshi,1,reviewed,0.3.1-research.1
+chs:title:qianshu-panguan,签书判官,签书判官|签书某府判官|簽書判官|qianshu panguan,1,reviewed,0.3.1-research.1
+chs:title:tongpan,通判,通判|通判某州|tongpan,1,reviewed,0.3.1-research.1
+chs:title:zhizhou,知州,知州|知某州|知某州军州事|知某州軍州事|zhizhou,1,reviewed,0.3.1-research.1
+chs:title:tuanlian-fushi,团练副使,团练副使|團練副使|tuanlian fushi,1,reviewed,0.3.1-research.1
+chs:title:anzhi,安置,安置|本州安置|安置|anzhi,1,reviewed,0.3.1-research.1
+chs:title:chaofeng-lang,朝奉郎,朝奉郎|chaofeng lang,1,reviewed,0.3.1-research.1
+chs:title:zhongshu-sheren,中书舍人,中书舍人|中書舍人|zhongshu sheren,1,reviewed,0.3.1-research.1
+chs:title:hanlin-xueshi,翰林学士,翰林学士|翰林學士|hanlin xueshi,1,reviewed,0.3.1-research.1
+chs:title:longtu-xueshi,龙图阁学士,龙图阁学士|龍圖閣學士|longtu ge xueshi,1,reviewed,0.3.1-research.1
+chs:title:ningyuan-jiedu-fushi,宁远军节度副使,宁远军节度副使|寧遠軍節度副使|ningyuan jun jiedu fushi,1,reviewed,0.3.1-research.1
+chs:title:qiongzhou-biejia,琼州别驾,琼州别驾|瓊州別駕|qiongzhou biejia,1,reviewed,0.3.1-research.1
+chs:title:taishi,太师,太师|太師|taishi,1,reviewed,0.3.1-research.1
+chs:title:taifu,太傅,太傅|taifu,1,reviewed,0.3.1-research.1
+chs:title:taibao,太保,太保|taibao,1,reviewed,0.3.1-research.1
+chs:title:taiwei,太尉,太尉|taiwei,1,reviewed,0.3.1-research.1
+chs:title:situ,司徒,司徒|situ,1,reviewed,0.3.1-research.1
+chs:title:sikong,司空,司空|sikong,1,reviewed,0.3.1-research.1
+chs:title:tongpingzhangshi,同平章事,同平章事|同平章事|tong pingzhang shi,1,reviewed,0.3.1-research.1
+chs:title:canzhi-zhengshi,参知政事,参知政事|參知政事|canzhi zhengshi,1,reviewed,0.3.1-research.1
+chs:title:shizhong,侍中,侍中|shizhong,2,reviewed,0.3.1-research.1
+chs:title:menxia-shilang,门下侍郎,门下侍郎|門下侍郎|menxia shilang,1,reviewed,0.3.1-research.1
+chs:title:zuo-jianyi-dafu,左谏议大夫,左谏议大夫|左諫議大夫|zuo jianyi dafu,1,reviewed,0.3.1-research.1
+chs:title:zuo-sijian,左司谏,左司谏|左司諫|zuo sijian,1,reviewed,0.3.1-research.1
+chs:title:zuo-zhengyan,左正言,左正言|zuo zhengyan,1,reviewed,0.3.1-research.1
+chs:title:jishizhong,给事中,给事中|給事中|jishizhong,1,reviewed,0.3.1-research.1
+chs:title:qiju-lang,起居郎,起居郎|qiju lang,1,reviewed,0.3.1-research.1
+chs:title:fubao-lang,符宝郎,符宝郎|符寶郎|fubao lang,1,reviewed,0.3.1-research.1
+chs:title:zhongshu-ling,中书令,中书令|中書令|zhongshu ling,1,reviewed,0.3.1-research.1
+chs:title:zhongshu-shilang,中书侍郎,中书侍郎|中書侍郎|zhongshu shilang,1,reviewed,0.3.1-research.1
+chs:title:qiju-sheren,起居舍人,起居舍人|qiju sheren,1,reviewed,0.3.1-research.1
+chs:title:you-jianyi-dafu,右谏议大夫,右谏议大夫|右諫議大夫|you jianyi dafu,1,reviewed,0.3.1-research.1
+chs:title:you-sijian,右司谏,右司谏|右司諫|you sijian,1,reviewed,0.3.1-research.1
+chs:title:you-zhengyan,右正言,右正言|you zhengyan,1,reviewed,0.3.1-research.1
+chs:title:jianzheng-guan,检正官,检正官|檢正官|jianzheng guan,1,reviewed,0.3.1-research.1
+chs:title:shangshu-ling,尚书令,尚书令|尚書令|shangshu ling,1,reviewed,0.3.1-research.1
+chs:title:shangshu-zuo-pushe,尚书左仆射,尚书左仆射|尚書左僕射|左仆射|shangshu zuo pushe,1,reviewed,0.3.1-research.1
+chs:title:shangshu-you-pushe,尚书右仆射,尚书右仆射|尚書右僕射|右仆射|shangshu you pushe,1,reviewed,0.3.1-research.1
+chs:title:shangshu-zuo-cheng,尚书左丞,尚书左丞|尚書左丞|左丞|shangshu zuo cheng,1,reviewed,0.3.1-research.1
+chs:title:shangshu-you-cheng,尚书右丞,尚书右丞|尚書右丞|右丞|shangshu you cheng,1,reviewed,0.3.1-research.1
+chs:title:zuosi-langzhong,左司郎中,左司郎中|zuosi langzhong,1,reviewed,0.3.1-research.1
+chs:title:yousi-langzhong,右司郎中,右司郎中|yousi langzhong,1,reviewed,0.3.1-research.1
+chs:title:zuosi-yuanwailang,左司员外郎,左司员外郎|左司員外郎|zuosi yuanwailang,1,reviewed,0.3.1-research.1
+chs:title:yousi-yuanwailang,右司员外郎,右司员外郎|右司員外郎|yousi yuanwailang,1,reviewed,0.3.1-research.1
+chs:title:shumishi,枢密使,枢密使|樞密使|shumishi,1,reviewed,0.3.1-research.1
+chs:title:zhi-shumiyuan-shi,知枢密院事,知枢密院事|知樞密院事|知院事|zhi shumiyuan shi,1,reviewed,0.3.1-research.1
+chs:title:tongzhi-shumiyuan-shi,同知枢密院事,同知枢密院事|同知樞密院事|同知院事|tongzhi shumiyuan shi,1,reviewed,0.3.1-research.1
+chs:title:shumi-fushi,枢密副使,枢密副使|樞密副使|shumi fushi,1,reviewed,0.3.1-research.1
+chs:title:qianshu-shumiyuan-shi,签书枢密院事,签书枢密院事|簽書樞密院事|签书院事|qianshu shumiyuan shi,1,reviewed,0.3.1-research.1
+chs:title:sansi-shi,三司使,三司使|三司使|计相|sansi shi,1,reviewed,0.3.1-research.1
+chs:title:hanlin-xueshi-chengzhi,翰林学士承旨,翰林学士承旨|翰林學士承旨|承旨|hanlin xueshi chengzhi,1,reviewed,0.3.1-research.1
+chs:title:zhizhigao,知制诰,知制诰|知制誥|zhizhigao,1,reviewed,0.3.1-research.1
+chs:title:hanlin-shidu-xueshi,翰林侍读学士,翰林侍读学士|翰林侍讀學士|hanlin shidu xueshi,1,reviewed,0.3.1-research.1
+chs:title:longtu-zhixueshi,龙图阁直学士,龙图阁直学士|龍圖閣直學士|longtu ge zhixueshi,1,reviewed,0.3.1-research.1
+chs:title:longtu-daizhi,龙图阁待制,龙图阁待制|龍圖閣待制|longtu ge daizhi,1,reviewed,0.3.1-research.1
+chs:title:yushi-zhongcheng,御史中丞,御史中丞|御史中丞|中丞|yushi zhongcheng,1,reviewed,0.3.1-research.1
+chs:title:shiyushi,侍御史,侍御史|侍御史|shiyushi,1,reviewed,0.3.1-research.1
+chs:title:dianzhong-shiyushi,殿中侍御史,殿中侍御史|殿中侍御史|dianzhong shiyushi,1,reviewed,0.3.1-research.1
+chs:title:jiancha-yushi,监察御史,监察御史|監察御史|jiancha yushi,1,reviewed,0.3.1-research.1

@@ -120,6 +120,21 @@
     "editorialStatus": "reviewed"
   },
   {
+    "id": "chs:assertion:usage-shizhong-pre-yuanfeng",
+    "subjectId": "chs:title-usage:shizhong-pre-yuanfeng",
+    "predicate": "has_formal_duty_but_is_rarely_filled",
+    "objectEntityId": null,
+    "objectLiteral": "元丰改制前，侍中有议大政、审出纳的正式职掌，但北宋以秩高罕除，名号不等于实际行职。",
+    "validTime": null,
+    "status": "reviewed",
+    "assertedBy": "除授项目组",
+    "assertedAt": "2026-07-13",
+    "method": "source_transcription",
+    "rationale": "依据《宋史》卷161侍中条的职掌与“国朝以秩高罕除”，并以元丰改制边界与后版本分开。",
+    "confidence": "high",
+    "editorialStatus": "reviewed"
+  },
+  {
     "id": "chs:assertion:usage-shizhong",
     "subjectId": "chs:title-usage:shizhong-yuanfeng",
     "predicate": "has_formal_duty_but_rarely_filled",

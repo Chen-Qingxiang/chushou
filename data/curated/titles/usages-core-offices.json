@@ -391,6 +391,51 @@
     "editorialStatus": "reviewed"
   },
   {
+    "id": "chs:title-usage:shizhong-pre-yuanfeng",
+    "titleConceptId": "chs:title:shizhong",
+    "label": "侍中（元丰改制前高秩罕除）",
+    "validTime": {
+      "originalText": "北宋初至元丰改制前",
+      "calendar": "gregorian_proleptic",
+      "eraName": null,
+      "eraYear": null,
+      "lunarMonth": null,
+      "leapMonth": null,
+      "lunarDay": null,
+      "sexagenaryDay": null,
+      "normalizedStart": "0960-01-01",
+      "normalizedEnd": "1079-12-31",
+      "precision": "interval",
+      "qualification": "approximate",
+      "edtf": "0960/1079",
+      "conversionMethod": "reform_boundary",
+      "conversionVersion": "1.0.0",
+      "note": "元丰改制具体施行月日与此前个别真除情形待任命材料细化。"
+    },
+    "periodLensIds": ["chs:period:north-song-pre-yuanfeng"],
+    "categories": ["functional_office"],
+    "semanticTracks": ["identity_rank", "political_status"],
+    "institutionVersionIds": [],
+    "rankId": null,
+    "functions": [
+      {
+        "text": "条文保存侍中议大政、审出纳的正式职掌，但北宋改制前因秩高罕除，不能由名号推定实际行职。",
+        "assertionIds": ["chs:assertion:usage-shizhong-pre-yuanfeng"]
+      }
+    ],
+    "plainExplanation": {
+      "text": "元丰改制前读到“侍中”，首先要核查是否真除和是否实际预政，不能直接套用改制后的门下省组织位置。",
+      "assertionIds": ["chs:assertion:usage-shizhong-pre-yuanfeng"]
+    },
+    "caveat": {
+      "text": "“罕除”不等于从未授予；具体人物仍须逐案查任命与任事材料。",
+      "assertionIds": ["chs:assertion:usage-shizhong-pre-yuanfeng"]
+    },
+    "commonPairingTitleIds": ["chs:title:tongpingzhangshi"],
+    "assertionIds": ["chs:assertion:usage-shizhong-pre-yuanfeng"],
+    "editorialStatus": "reviewed"
+  },
+  {
     "id": "chs:title-usage:shizhong-yuanfeng",
     "titleConceptId": "chs:title:shizhong",
     "label": "侍中（元丰后三省长官虚位）",

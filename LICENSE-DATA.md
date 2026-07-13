@@ -4,7 +4,7 @@
 
 建议署名：
 
-> 除授 Chushou contributors，数据集版本 0.3.0-research.1，CC BY 4.0。
+> 除授 Chushou contributors，数据集版本 0.3.1-research.1，CC BY 4.0。
 
 使用时还应给出具体 assertion／passage ID 和底层来源定位，以便他人复核。机器可读导出逐行带有版本、许可和引用提示。
 

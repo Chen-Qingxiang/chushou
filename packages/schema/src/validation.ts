@@ -90,9 +90,26 @@ export function validateDatasetIntegrity(dataset: CuratedDataset): ValidationIss
   dataset.editions.forEach((record, index) =>
     expectRef(record.sourceId, `editions.${index}.sourceId`),
   );
-  dataset.sourceLocators.forEach((record, index) =>
-    expectRef(record.editionId, `sourceLocators.${index}.editionId`),
-  );
+  dataset.sourceLocators.forEach((record, index) => {
+    expectRef(record.editionId, `sourceLocators.${index}.editionId`);
+    const hasStructuredLocator = [
+      record.volume,
+      record.juan,
+      record.section,
+      record.page,
+      record.entry,
+      record.paragraph,
+      record.anchor,
+      record.stableUrl,
+    ].some((value) => value !== null);
+    if (!hasStructuredLocator) {
+      issues.push({
+        code: "citation_locator_incomplete",
+        path: `sourceLocators.${index}`,
+        message: `${record.id} needs a structured locator field or stable URL in addition to its display label`,
+      });
+    }
+  });
   dataset.passages.forEach((record, index) =>
     expectRef(record.locatorId, `passages.${index}.locatorId`),
   );

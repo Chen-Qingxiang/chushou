@@ -4,7 +4,7 @@ test("home presents current corpus coverage and navigates to title research", as
   await page.goto("./");
 
   await expect(page.getByRole("heading", { level: 1 })).toContainText("一纸除授");
-  await expect(page.getByText("59", { exact: true }).first()).toBeVisible();
+  await expect(page.getByText("60", { exact: true }).first()).toBeVisible();
   await page.getByRole("link", { name: "官名", exact: true }).click();
   await expect(page).toHaveURL(/\/chushou\/titles$/u);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("必须带着时期解释");
@@ -48,6 +48,55 @@ test("Su Shi career supports appointment deep links and component decomposition"
   await expect(page).toHaveURL(/\/chushou\/people\/su-shi\/appointments\//u);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("除大理评事");
   await expect(page.getByLabel("任命原文拆解")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "只连接已经建模的关系" })).toBeVisible();
+  await expect(page.getByText("人物关系覆盖缺口")).toBeVisible();
+});
+
+test("decoder switches period and exposes temporal action relationships without hiding gaps", async ({
+  page,
+}) => {
+  await page.goto("./decoder");
+  await page.getByLabel("任官原文或官衔串").fill("除龙图阁学士、知杭州，寻迁翰林学士承旨");
+  await page.getByLabel("解释时期").selectOption({ label: "元祐时期" });
+
+  await expect(page).toHaveURL(/text=%E9%99%A4/u);
+  await expect(page).toHaveURL(/period=chs%3Aperiod%3Ayuanyou/u);
+  await expect(page.locator("mark.mark-temporal", { hasText: "寻" })).toBeVisible();
+  const actionSequence = page.getByLabel("动作与官衔关系候选");
+  await expect(actionSequence).toContainText("除 → 龙图阁学士、知州");
+  await expect(actionSequence).toContainText("随后：迁 → 翰林学士承旨");
+  await expect(page.getByText(/不自动写入正式数据库/u)).toBeVisible();
+});
+
+test("institution map filters by period, scopes the graph, zooms, and deep-links focus", async ({
+  page,
+}) => {
+  await page.goto("./map");
+  await page.getByLabel("时期镜头").selectOption({ label: "元丰改制" });
+  await page.getByRole("button", { name: "中央", exact: true }).click();
+  await page.getByRole("button", { name: "放大制度地图" }).click();
+
+  await expect(page.locator(".map-zoom output")).toHaveText("110%");
+  await expect(page).toHaveURL(/period=chs%3Aperiod%3Ayuanfeng-reform/u);
+  await expect(page).toHaveURL(/scope=central/u);
+  await page.getByRole("button", { name: /门下省/u }).click();
+  await expect(page).toHaveURL(/focus=chs%3Ainstitution%3Amenxia-sheng/u);
+});
+
+test("reform view compares two URL-addressable periods and title detail preserves both usages", async ({
+  page,
+}) => {
+  await page.goto("./reforms");
+  await page.getByLabel("时期 A").selectOption({ label: "元丰改制前" });
+  await page.getByLabel("时期 B").selectOption({ label: "元祐时期" });
+
+  await expect(page).toHaveURL(/left=chs%3Aperiod%3Anorth-song-pre-yuanfeng/u);
+  await expect(page).toHaveURL(/right=chs%3Aperiod%3Ayuanyou/u);
+  await expect(page.getByLabel("元丰改制前与元祐时期比较")).toContainText("官名时期版本");
+
+  await page.goto("./titles/shizhong");
+  await expect(page.getByText("侍中（元丰改制前高秩罕除）")).toBeVisible();
+  await expect(page.getByText("侍中（元丰后三省长官虚位）")).toBeVisible();
 });
 
 test("a counterexample person reuses the same career and decomposition routes", async ({
@@ -124,6 +173,56 @@ test("comparison deep links cover appointments, periodized titles, and people", 
   await page.getByLabel("人物 B").selectOption({ label: "司马光" });
   await expect(page).toHaveURL(/right=chs%3Aperson%3Asima-guang/u);
   await expect(page.getByLabel("苏轼与司马光比较")).toContainText("1 条已发布任命小切片");
+});
+
+test("current filtered URL can be copied as an exact deep link", async ({ page, context }) => {
+  await context.grantPermissions(["clipboard-read", "clipboard-write"], {
+    origin: "http://127.0.0.1:43179",
+  });
+  await page.goto(
+    "./compare?mode=title&left=chs%3Atitle%3Atongpan&right=chs%3Atitle%3Azhizhou&period=chs%3Aperiod%3Ayuanfeng-reform",
+  );
+  const expected = page.url();
+
+  await page.getByRole("button", { name: "复制当前深链接", exact: true }).click();
+  await expect(page.getByRole("button", { name: "已复制当前深链接" })).toBeVisible();
+  await expect.poll(async () => page.evaluate(() => navigator.clipboard.readText())).toBe(expected);
+});
+
+test("source browser filters through assertions and reverses passages back to supported claims", async ({
+  page,
+}) => {
+  await page.goto("./sources");
+  await page.getByLabel("人物").selectOption({ label: "苏轼" });
+  await page.getByLabel("时期").selectOption({ label: "元祐时期" });
+
+  await expect(page).toHaveURL(/person=chs%3Aperson%3Asu-shi/u);
+  await expect(page).toHaveURL(/period=chs%3Aperiod%3Ayuanyou/u);
+  await expect(page.getByText(/种来源符合当前筛选/u)).toBeVisible();
+
+  await page.locator(".source-card", { hasText: "《宋史》" }).click();
+  await expect(page.getByRole("heading", { name: "这份来源支持的已发布断言" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "查看这条断言的引文" }).first()).toBeVisible();
+});
+
+test("career metrics expose five separate inspectable tracks and no aggregate score", async ({
+  page,
+}) => {
+  await page.goto("./metrics");
+  const table = page.getByRole("table", {
+    name: /苏轼已发布任命的中央核心程度、实际权力、名义品级、资望与皇帝信任相关信号/u,
+  });
+
+  await expect(table.getByRole("rowheader", { name: /中央核心程度/u })).toBeVisible();
+  await expect(table.getByRole("rowheader", { name: /实际权力/u })).toBeVisible();
+  await expect(table.getByRole("rowheader", { name: /名义品级/u })).toBeVisible();
+  await expect(table.getByRole("rowheader", { name: /资望／荣衔/u })).toBeVisible();
+  await expect(table.getByRole("rowheader", { name: /皇帝信任相关/u })).toBeVisible();
+
+  const actualPowerRow = table.getByRole("row", { name: /实际权力/u });
+  await actualPowerRow.locator("summary").first().click();
+  await expect(actualPowerRow.getByText(/方法：/u).first()).toBeVisible();
+  await expect(page.getByText("当前版本没有“政治位置总分”")).toBeVisible();
 });
 
 test("versioned research downloads expose hashes, coverage blockers, and a data dictionary", async ({

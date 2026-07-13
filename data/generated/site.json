@@ -2335,6 +2335,21 @@
       "assertedBy": "除授项目组",
       "confidence": "high",
       "editorialStatus": "reviewed",
+      "id": "chs:assertion:usage-shizhong-pre-yuanfeng",
+      "method": "source_transcription",
+      "objectEntityId": null,
+      "objectLiteral": "元丰改制前，侍中有议大政、审出纳的正式职掌，但北宋以秩高罕除，名号不等于实际行职。",
+      "predicate": "has_formal_duty_but_is_rarely_filled",
+      "rationale": "依据《宋史》卷161侍中条的职掌与“国朝以秩高罕除”，并以元丰改制边界与后版本分开。",
+      "status": "reviewed",
+      "subjectId": "chs:title-usage:shizhong-pre-yuanfeng",
+      "validTime": null
+    },
+    {
+      "assertedAt": "2026-07-13",
+      "assertedBy": "除授项目组",
+      "confidence": "high",
+      "editorialStatus": "reviewed",
       "id": "chs:assertion:usage-shizhong",
       "method": "source_transcription",
       "objectEntityId": null,
@@ -3473,15 +3488,15 @@
   ],
   "counts": {
     "appointments": 16,
-    "assertions": 120,
+    "assertions": 121,
     "coverageGaps": 25,
     "coverageItems": 38,
-    "evidenceLinks": 139,
+    "evidenceLinks": 140,
     "people": 4,
     "rankCrosswalks": 4,
     "ranks": 13,
     "rankSchemes": 3,
-    "reviewedTitleUsages": 59,
+    "reviewedTitleUsages": 60,
     "sources": 4,
     "titleConcepts": 59
   },
@@ -4566,6 +4581,15 @@
       "id": "chs:evidence:core-canzhi-zhengshi-yuanfeng",
       "note": "改革条直接说明元丰废置及替代官名。",
       "passageId": "chs:passage:song-shi-161-canzhi-yuanfeng",
+      "relation": "supports"
+    },
+    {
+      "assertionId": "chs:assertion:usage-shizhong-pre-yuanfeng",
+      "basis": "explicit_statement",
+      "directness": "direct",
+      "id": "chs:evidence:core-shizhong-pre-yuanfeng",
+      "note": "门下省侍中条同时明载正式职掌与北宋秩高罕除，支持改制前版本的谨慎解释。",
+      "passageId": "chs:passage:song-shi-161-menxia-offices",
       "relation": "supports"
     },
     {
@@ -6194,13 +6218,13 @@
     }
   ],
   "metadata": {
-    "citation": "除授项目组：《除授北宋文官制度研究种子集》，0.3.0-research.1，2026-07-13。",
+    "citation": "除授项目组：《除授北宋文官制度研究种子集》，0.3.1-research.1，2026-07-13。",
     "curatedAt": "2026-07-13",
-    "datasetVersion": "0.3.0-research.1",
+    "datasetVersion": "0.3.1-research.1",
     "description": "用于验证官名时期版本、除授动作、任职阶段和证据追溯的首批人工审阅记录；当前覆盖范围会在界面和报告中明确显示。",
     "licenseCode": "MIT",
     "licenseData": "CC BY 4.0；第三方短引文仍遵循各来源标注的权利和引用条件",
-    "projectionVersion": "0.3.0",
+    "projectionVersion": "0.3.1",
     "releaseStage": "research_preview",
     "schemaVersion": "0.3.0",
     "title": "除授北宋文官制度研究种子集",
@@ -13107,6 +13131,68 @@
         "normalizedStart": "0964-01-01",
         "note": "职位权能在宋初逐步变化，当前只给出总括版本。",
         "originalText": "乾德二年至元丰改制前",
+        "precision": "interval",
+        "qualification": "approximate",
+        "sexagenaryDay": null
+      }
+    },
+    {
+      "assertionIds": [
+        "chs:assertion:usage-shizhong-pre-yuanfeng"
+      ],
+      "categories": [
+        "functional_office"
+      ],
+      "caveat": {
+        "assertionIds": [
+          "chs:assertion:usage-shizhong-pre-yuanfeng"
+        ],
+        "text": "“罕除”不等于从未授予；具体人物仍须逐案查任命与任事材料。"
+      },
+      "commonPairingTitleIds": [
+        "chs:title:tongpingzhangshi"
+      ],
+      "editorialStatus": "reviewed",
+      "functions": [
+        {
+          "assertionIds": [
+            "chs:assertion:usage-shizhong-pre-yuanfeng"
+          ],
+          "text": "条文保存侍中议大政、审出纳的正式职掌，但北宋改制前因秩高罕除，不能由名号推定实际行职。"
+        }
+      ],
+      "id": "chs:title-usage:shizhong-pre-yuanfeng",
+      "institutionVersionIds": [],
+      "label": "侍中（元丰改制前高秩罕除）",
+      "periodLensIds": [
+        "chs:period:north-song-pre-yuanfeng"
+      ],
+      "plainExplanation": {
+        "assertionIds": [
+          "chs:assertion:usage-shizhong-pre-yuanfeng"
+        ],
+        "text": "元丰改制前读到“侍中”，首先要核查是否真除和是否实际预政，不能直接套用改制后的门下省组织位置。"
+      },
+      "rankId": null,
+      "semanticTracks": [
+        "identity_rank",
+        "political_status"
+      ],
+      "titleConceptId": "chs:title:shizhong",
+      "validTime": {
+        "calendar": "gregorian_proleptic",
+        "conversionMethod": "reform_boundary",
+        "conversionVersion": "1.0.0",
+        "edtf": "0960/1079",
+        "eraName": null,
+        "eraYear": null,
+        "leapMonth": null,
+        "lunarDay": null,
+        "lunarMonth": null,
+        "normalizedEnd": "1079-12-31",
+        "normalizedStart": "0960-01-01",
+        "note": "元丰改制具体施行月日与此前个别真除情形待任命材料细化。",
+        "originalText": "北宋初至元丰改制前",
         "precision": "interval",
         "qualification": "approximate",
         "sexagenaryDay": null

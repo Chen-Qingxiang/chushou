@@ -1,6 +1,6 @@
 {
-  "citation": "除授项目组：《除授北宋文官制度研究种子集》，0.3.0-research.1，2026-07-13。",
-  "datasetVersion": "0.3.0-research.1",
+  "citation": "除授项目组：《除授北宋文官制度研究种子集》，0.3.1-research.1，2026-07-13。",
+  "datasetVersion": "0.3.1-research.1",
   "entities": {
     "appointmentActions": {
       "description": "一次有序的任命、迁转、处分或恢复动作。",

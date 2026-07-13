@@ -81,6 +81,15 @@
     "note": "改革条直接说明元丰废置及替代官名。"
   },
   {
+    "id": "chs:evidence:core-shizhong-pre-yuanfeng",
+    "assertionId": "chs:assertion:usage-shizhong-pre-yuanfeng",
+    "passageId": "chs:passage:song-shi-161-menxia-offices",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "门下省侍中条同时明载正式职掌与北宋秩高罕除，支持改制前版本的谨慎解释。"
+  },
+  {
     "id": "chs:evidence:core-shizhong",
     "assertionId": "chs:assertion:usage-shizhong",
     "passageId": "chs:passage:song-shi-161-menxia-offices",

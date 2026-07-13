@@ -1,11 +1,17 @@
 import {
+  deriveCareerSignals,
   decodeAppointmentText,
   buildSearchRecords,
   buildSiteProjection,
   searchRecords,
 } from "@chushou/domain";
-import { validateDatasetIntegrity, type CuratedDataset } from "@chushou/schema";
+import {
+  curatedDatasetSchema,
+  validateDatasetIntegrity,
+  type CuratedDataset,
+} from "@chushou/schema";
 import { beforeAll, describe, expect, it } from "vitest";
+import { generateArtifacts } from "./generate.js";
 import { loadCuratedDataset } from "./load.js";
 
 describe("curated research release", () => {
@@ -35,6 +41,91 @@ describe("curated research release", () => {
           issue.code === "missing_supporting_evidence" && issue.message.includes(reviewed.id),
       ),
     ).toBe(true);
+  });
+
+  it("detects duplicate IDs, broken references, and incomplete citation locators", () => {
+    const duplicate = structuredClone(dataset);
+    const firstTitle = duplicate.titleConcepts[0];
+    const secondTitle = duplicate.titleConcepts[1];
+    if (firstTitle === undefined || secondTitle === undefined) {
+      throw new Error("Fixture requires two titles");
+    }
+    secondTitle.id = firstTitle.id;
+    expect(validateDatasetIntegrity(duplicate)).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "duplicate_id" })]),
+    );
+
+    const brokenReference = structuredClone(dataset);
+    const edition = brokenReference.editions[0];
+    if (edition === undefined) throw new Error("Fixture requires an edition");
+    edition.sourceId = "chs:source:does-not-exist";
+    expect(validateDatasetIntegrity(brokenReference)).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "missing_reference" })]),
+    );
+
+    const incompleteLocator = structuredClone(dataset);
+    const locator = incompleteLocator.sourceLocators[0];
+    if (locator === undefined) throw new Error("Fixture requires a locator");
+    locator.volume = null;
+    locator.juan = null;
+    locator.section = null;
+    locator.page = null;
+    locator.entry = null;
+    locator.paragraph = null;
+    locator.anchor = null;
+    locator.stableUrl = null;
+    expect(validateDatasetIntegrity(incompleteLocator)).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "citation_locator_incomplete" })]),
+    );
+  });
+
+  it("rejects inverted date intervals, alias conflicts, version overlaps, and component gaps", () => {
+    const invertedDate = structuredClone(dataset);
+    const period = invertedDate.periodLenses[0];
+    if (period === undefined) throw new Error("Fixture requires a period lens");
+    period.validTime.normalizedStart = "1127-01-01";
+    period.validTime.normalizedEnd = "0960-01-01";
+    expect(curatedDatasetSchema.safeParse(invertedDate).success).toBe(false);
+
+    const aliasConflict = structuredClone(dataset);
+    const owner = aliasConflict.titleConcepts[0];
+    const conflicting = aliasConflict.titleConcepts[1];
+    if (owner?.names[0] === undefined || conflicting?.names[0] === undefined) {
+      throw new Error("Fixture requires named titles");
+    }
+    conflicting.names[0].text = owner.names[0].text;
+    conflicting.names[0].ambiguous = false;
+    expect(validateDatasetIntegrity(aliasConflict)).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "alias_conflict" })]),
+    );
+
+    const overlap = structuredClone(dataset);
+    const pre = overlap.titleUsageVersions.find(
+      (usage) => usage.id === "chs:title-usage:shizhong-pre-yuanfeng",
+    );
+    const post = overlap.titleUsageVersions.find(
+      (usage) => usage.id === "chs:title-usage:shizhong-yuanfeng",
+    );
+    if (pre === undefined || post === undefined) {
+      throw new Error("Fixture requires both 侍中 versions");
+    }
+    post.categories = [...pre.categories];
+    post.semanticTracks = [...pre.semanticTracks];
+    post.validTime.normalizedStart = pre.validTime.normalizedStart;
+    expect(validateDatasetIntegrity(overlap)).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "overlapping_title_versions" })]),
+    );
+
+    const componentGap = structuredClone(dataset);
+    const appointmentId = componentGap.appointmentComponents[0]?.appointmentId;
+    const components = componentGap.appointmentComponents.filter(
+      (component) => component.appointmentId === appointmentId,
+    );
+    if (components[1] === undefined) throw new Error("Fixture requires a multi-part appointment");
+    components[1].order = components[0]?.order ?? 1;
+    expect(validateDatasetIntegrity(componentGap)).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "component_order" })]),
+    );
   });
 
   it("rejects placeholder language from a production corpus", () => {
@@ -120,6 +211,58 @@ describe("curated research release", () => {
     );
   });
 
+  it("keeps period-specific meanings for the same title concept", () => {
+    const shizhong = dataset.titleConcepts.find((title) => title.slug === "shizhong");
+    const usages = dataset.titleUsageVersions
+      .filter((usage) => usage.titleConceptId === shizhong?.id)
+      .toSorted((left, right) =>
+        (left.validTime.normalizedStart ?? "").localeCompare(right.validTime.normalizedStart ?? ""),
+      );
+    expect(usages).toHaveLength(2);
+    expect(usages[0]).toMatchObject({
+      id: "chs:title-usage:shizhong-pre-yuanfeng",
+      semanticTracks: ["identity_rank", "political_status"],
+    });
+    expect(usages[1]).toMatchObject({
+      id: "chs:title-usage:shizhong-yuanfeng",
+      semanticTracks: ["actual_duty", "political_status"],
+    });
+  });
+
+  it("separates service, non-assumption, punitive status, and categorical career signals", () => {
+    const projection = buildSiteProjection(dataset);
+    const yingzhou = projection.appointments.find((appointment) =>
+      appointment.id.includes("yingzhou-not-assumed"),
+    );
+    const huangzhou = projection.appointments.find(
+      (appointment) => appointment.id === "chs:appointment:su-shi-huangzhou",
+    );
+    if (yingzhou === undefined || huangzhou === undefined) {
+      throw new Error("Fixture requires Yingzhou and Huangzhou appointments");
+    }
+    expect(yingzhou.serviceEpisodes).toHaveLength(0);
+    expect(yingzhou.components.some((component) => component.sourceSpan.text === "未至")).toBe(
+      true,
+    );
+    expect(
+      huangzhou.serviceEpisodes.some((episode) => episode.episodeType === "punitive_status"),
+    ).toBe(true);
+
+    const signals = deriveCareerSignals(huangzhou, projection);
+    const actualPower = signals.find((signal) => signal.dimension === "actual_power");
+    const imperialTrust = signals.find((signal) => signal.dimension === "imperial_trust");
+    expect(actualPower).toMatchObject({ signalType: "source_fact" });
+    expect(actualPower?.label).toContain("限制");
+    expect(imperialTrust).toMatchObject({ signalType: "structural_rule" });
+    expect(signals).toHaveLength(5);
+  });
+
+  it("generates byte-identical release artifacts on repeated runs", async () => {
+    const first = await generateArtifacts(dataset);
+    const second = await generateArtifacts(dataset);
+    expect(second).toEqual(first);
+  });
+
   it("publishes an exhaustive biography ledger while blocking the unavailable chronology", () => {
     const authority = dataset.coverageMatrices.find(
       (matrix) => matrix.anchorKind === "authoritative_chronology",
@@ -174,5 +317,19 @@ describe("curated research release", () => {
     );
     expect(result.unknownSpans.map((span) => span.text).join("")).toContain("检校尚书水部员外郎");
     expect(result.warning).toContain("不会自动写入");
+
+    const sequence = decodeAppointmentText(
+      dataset,
+      "除龙图阁学士、知杭州，寻迁翰林学士承旨",
+      "1089-01-01",
+    );
+    expect(sequence.matches).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ kind: "temporal", text: "寻", label: "随后" }),
+      ]),
+    );
+    expect(sequence.actionGroups).toHaveLength(2);
+    expect(sequence.actionGroups[0]?.statement).toContain("除 → 龙图阁学士、知州");
+    expect(sequence.actionGroups[1]?.statement).toContain("随后：迁 → 翰林学士承旨");
   });
 });
