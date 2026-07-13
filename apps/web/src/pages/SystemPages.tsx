@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { preferredName, site } from "../data";
 import { EvidenceButton } from "../evidence";
@@ -20,26 +20,72 @@ const relationLabels: Record<string, string> = {
   parallel_to: "平行",
 };
 
+function periodsOverlap(
+  left: { normalizedStart: string | null; normalizedEnd: string | null },
+  right: { normalizedStart: string | null; normalizedEnd: string | null },
+): boolean {
+  return !(
+    (left.normalizedEnd !== null &&
+      right.normalizedStart !== null &&
+      left.normalizedEnd < right.normalizedStart) ||
+    (right.normalizedEnd !== null &&
+      left.normalizedStart !== null &&
+      right.normalizedEnd < left.normalizedStart)
+  );
+}
+
 export function MapPage() {
-  const [params] = useSearchParams();
-  const initial = params.get("focus");
-  const [selectedId, setSelectedId] = useState(initial ?? site.institutions[0]?.id ?? "");
-  const [scope, setScope] = useState("all");
-  const selected = site.institutions.find((item) => item.id === selectedId);
-  const versions = site.institutionVersions.filter((item) => item.institutionId === selectedId);
-  const visible = site.institutions.filter(
-    (item) => scope === "all" || institutionScope(item.id) === scope,
+  const [params, setParams] = useSearchParams();
+  const [zoom, setZoom] = useState(100);
+  const requestedScope = params.get("scope") ?? "all";
+  const scope = ["all", "central", "local", "official_identity"].includes(requestedScope)
+    ? requestedScope
+    : "all";
+  const periodId = params.get("period") ?? "all";
+  const period = site.periodLenses.find((item) => item.id === periodId);
+  const setParam = (key: string, value: string) => {
+    setParams((current) => {
+      const next = new URLSearchParams(current);
+      if (value === "all") next.delete(key);
+      else next.set(key, value);
+      return next;
+    });
+  };
+  const visible = site.institutions.filter((institution) => {
+    const scopeMatches = scope === "all" || institutionScope(institution.id) === scope;
+    const periodMatches =
+      period === undefined ||
+      site.institutionVersions.some(
+        (version) =>
+          version.institutionId === institution.id &&
+          periodsOverlap(version.validTime, period.validTime),
+      );
+    return scopeMatches && periodMatches;
+  });
+  const requestedId = params.get("focus") ?? "";
+  const selected =
+    visible.find((item) => item.id === requestedId) ?? visible[0] ?? site.institutions[0];
+  const selectedId = selected?.id ?? "";
+  const versions = site.institutionVersions.filter(
+    (item) =>
+      item.institutionId === selectedId &&
+      (period === undefined || periodsOverlap(item.validTime, period.validTime)),
   );
   const visibleIds = new Set(visible.map((item) => item.id));
   const visibleVersionIds = new Set(
     site.institutionVersions
-      .filter((version) => visibleIds.has(version.institutionId))
+      .filter(
+        (version) =>
+          visibleIds.has(version.institutionId) &&
+          (period === undefined || periodsOverlap(version.validTime, period.validTime)),
+      )
       .map((version) => version.id),
   );
   const visibleRelations = site.institutionRelations.filter(
     (relation) =>
       visibleVersionIds.has(relation.subjectVersionId) &&
-      visibleVersionIds.has(relation.objectVersionId),
+      visibleVersionIds.has(relation.objectVersionId) &&
+      (period === undefined || periodsOverlap(relation.validTime, period.validTime)),
   );
   const institutionForVersion = (versionId: string) => {
     const institutionId = site.institutionVersions.find(
@@ -50,8 +96,9 @@ export function MapPage() {
   const selectedVersionIds = new Set(versions.map((version) => version.id));
   const selectedRelations = site.institutionRelations.filter(
     (relation) =>
-      selectedVersionIds.has(relation.subjectVersionId) ||
-      selectedVersionIds.has(relation.objectVersionId),
+      (selectedVersionIds.has(relation.subjectVersionId) ||
+        selectedVersionIds.has(relation.objectVersionId)) &&
+      (period === undefined || periodsOverlap(relation.validTime, period.validTime)),
   );
 
   return (
@@ -68,7 +115,7 @@ export function MapPage() {
               type="button"
               key={item}
               className={scope === item ? "is-active" : undefined}
-              onClick={() => setScope(item)}
+              onClick={() => setParam("scope", item)}
             >
               {
                 (
@@ -82,6 +129,34 @@ export function MapPage() {
               }
             </button>
           ))}
+        </div>
+        <label className="map-period-select">
+          <span>时期镜头</span>
+          <select value={periodId} onChange={(event) => setParam("period", event.target.value)}>
+            <option value="all">全部有效期</option>
+            {site.periodLenses.map((item) => (
+              <option value={item.id} key={item.id}>
+                {item.label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <div className="map-zoom" aria-label="地图缩放">
+          <button
+            type="button"
+            aria-label="缩小制度地图"
+            onClick={() => setZoom((value) => Math.max(80, value - 10))}
+          >
+            −
+          </button>
+          <output aria-live="polite">{zoom}%</output>
+          <button
+            type="button"
+            aria-label="放大制度地图"
+            onClick={() => setZoom((value) => Math.min(120, value + 10))}
+          >
+            +
+          </button>
         </div>
         <p>
           <span className="legend-dot reviewed-dot" />
@@ -97,58 +172,66 @@ export function MapPage() {
             </div>
             <span>选择节点查看有效版本与证据</span>
           </header>
-          <div className="institution-node-grid">
-            {visible.map((institution) => {
-              const institutionKind = institutionScope(institution.id);
-              return (
-                <button
-                  className={`institution-node node-${institutionKind} ${institution.id === selectedId ? "is-active" : ""}`}
-                  type="button"
-                  key={institution.id}
-                  onClick={() => setSelectedId(institution.id)}
-                >
-                  <span>
-                    {institutionKind === "official_identity"
-                      ? "身份模型"
-                      : institutionKind === "local"
-                        ? "地方"
-                        : "中央"}
-                  </span>
-                  <strong>{preferredName(institution)}</strong>
-                  <small>
-                    {
-                      site.institutionVersions.filter(
-                        (item) => item.institutionId === institution.id,
-                      ).length
-                    }{" "}
-                    个有效版本
-                  </small>
-                </button>
-              );
-            })}
-          </div>
-          <section className="relation-lane" aria-label="有向机构关系">
-            <header>
-              <p className="eyebrow">TYPED EDGES</p>
-              <h3>有向关系</h3>
-            </header>
-            {visibleRelations.length === 0 ? (
-              <p className="muted">当前筛选范围没有已核关系边。</p>
-            ) : (
-              visibleRelations.map((relation) => (
-                <article key={relation.id}>
-                  <strong>{preferredName(institutionForVersion(relation.subjectVersionId))}</strong>
-                  <span>→ {relationLabels[relation.relationType] ?? relation.relationType} →</span>
-                  <strong>{preferredName(institutionForVersion(relation.objectVersionId))}</strong>
-                  <small>{relation.validTime.originalText}</small>
-                </article>
-              ))
-            )}
-          </section>
-          <div className="research-gap-node">
-            <span>明确缺口</span>
-            <strong>台谏、寺监与六部的更多时段关系</strong>
-            <small>没有来源和有效期就不连线</small>
+          <div className="map-zoom-surface" style={{ "--map-zoom": zoom / 100 } as CSSProperties}>
+            <div className="institution-node-grid">
+              {visible.map((institution) => {
+                const institutionKind = institutionScope(institution.id);
+                return (
+                  <button
+                    className={`institution-node node-${institutionKind} ${institution.id === selectedId ? "is-active" : ""}`}
+                    type="button"
+                    key={institution.id}
+                    onClick={() => setParam("focus", institution.id)}
+                  >
+                    <span>
+                      {institutionKind === "official_identity"
+                        ? "身份模型"
+                        : institutionKind === "local"
+                          ? "地方"
+                          : "中央"}
+                    </span>
+                    <strong>{preferredName(institution)}</strong>
+                    <small>
+                      {
+                        site.institutionVersions.filter(
+                          (item) => item.institutionId === institution.id,
+                        ).length
+                      }{" "}
+                      个有效版本
+                    </small>
+                  </button>
+                );
+              })}
+            </div>
+            <section className="relation-lane" aria-label="有向机构关系">
+              <header>
+                <p className="eyebrow">TYPED EDGES</p>
+                <h3>有向关系</h3>
+              </header>
+              {visibleRelations.length === 0 ? (
+                <p className="muted">当前筛选范围没有已核关系边。</p>
+              ) : (
+                visibleRelations.map((relation) => (
+                  <article key={relation.id}>
+                    <strong>
+                      {preferredName(institutionForVersion(relation.subjectVersionId))}
+                    </strong>
+                    <span>
+                      → {relationLabels[relation.relationType] ?? relation.relationType} →
+                    </span>
+                    <strong>
+                      {preferredName(institutionForVersion(relation.objectVersionId))}
+                    </strong>
+                    <small>{relation.validTime.originalText}</small>
+                  </article>
+                ))
+              )}
+            </section>
+            <div className="research-gap-node">
+              <span>明确缺口</span>
+              <strong>台谏、寺监与六部的更多时段关系</strong>
+              <small>没有来源和有效期就不连线</small>
+            </div>
           </div>
         </section>
         <aside className="map-detail-panel">
@@ -216,10 +299,35 @@ export function MapPage() {
 }
 
 export function ReformsPage() {
-  const [selectedId, setSelectedId] = useState(
-    site.periodLenses[1]?.id ?? site.periodLenses[0]?.id ?? "",
-  );
-  const selected = site.periodLenses.find((item) => item.id === selectedId);
+  const [params, setParams] = useSearchParams();
+  const leftId = params.get("left") ?? site.periodLenses[0]?.id ?? "";
+  const rightId = params.get("right") ?? site.periodLenses[1]?.id ?? leftId;
+  const left = site.periodLenses.find((item) => item.id === leftId) ?? site.periodLenses[0];
+  const right =
+    site.periodLenses.find((item) => item.id === rightId) ?? site.periodLenses[1] ?? left;
+  const setLens = (side: "left" | "right", value: string) => {
+    setParams((current) => {
+      const next = new URLSearchParams(current);
+      next.set(side, value);
+      return next;
+    });
+  };
+  const lensStats = (periodId: string) => {
+    const lens = site.periodLenses.find((item) => item.id === periodId);
+    if (lens === undefined) return { institutions: 0, titles: 0, ranks: 0, categories: "—" };
+    const usages = site.titleUsageVersions.filter((usage) => usage.periodLensIds.includes(lens.id));
+    return {
+      institutions: site.institutionVersions.filter((version) =>
+        periodsOverlap(version.validTime, lens.validTime),
+      ).length,
+      titles: usages.length,
+      ranks: site.rankSchemes.filter((scheme) => periodsOverlap(scheme.validTime, lens.validTime))
+        .length,
+      categories: [...new Set(usages.flatMap((usage) => usage.categories))].join("、") || "—",
+    };
+  };
+  const leftStats = lensStats(left?.id ?? "");
+  const rightStats = lensStats(right?.id ?? "");
   const reform = site.reforms[0];
   return (
     <div className="page-container">
@@ -232,11 +340,11 @@ export function ReformsPage() {
         {site.periodLenses.map((period) => (
           <button
             role="tab"
-            aria-selected={period.id === selectedId}
+            aria-selected={period.id === right?.id}
             type="button"
             key={period.id}
-            onClick={() => setSelectedId(period.id)}
-            className={period.id === selectedId ? "is-active" : undefined}
+            onClick={() => setLens("right", period.id)}
+            className={period.id === right?.id ? "is-active" : undefined}
           >
             <span>{period.validTime.normalizedStart?.slice(0, 4) ?? "?"}</span>
             <strong>{period.label}</strong>
@@ -244,23 +352,78 @@ export function ReformsPage() {
           </button>
         ))}
       </div>
-      {selected === undefined ? null : (
-        <section className="period-focus">
-          <div>
-            <p className="eyebrow">当前阅读镜头</p>
-            <h2>{selected.label}</h2>
-            <p className="large-explanation">{selected.summary.text}</p>
-            <EvidenceButton
-              assertionIds={[...selected.summary.assertionIds]}
-              title={selected.label}
-            />
-          </div>
-          <aside>
-            <strong>阅读重点</strong>
-            <p>{selected.focus.text}</p>
-            <small>{selected.validTime.note}</small>
-          </aside>
-        </section>
+      <section className="lens-compare-controls" aria-label="选择两个制度时期">
+        <label>
+          <span>时期 A</span>
+          <select value={left?.id} onChange={(event) => setLens("left", event.target.value)}>
+            {site.periodLenses.map((period) => (
+              <option value={period.id} key={period.id}>
+                {period.label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <span aria-hidden="true">对照</span>
+        <label>
+          <span>时期 B</span>
+          <select value={right?.id} onChange={(event) => setLens("right", event.target.value)}>
+            {site.periodLenses.map((period) => (
+              <option value={period.id} key={period.id}>
+                {period.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      </section>
+      {left === undefined || right === undefined ? null : (
+        <>
+          <section className="period-focus-grid">
+            {[left, right].map((period, index) => (
+              <article className="period-focus" key={`${index}-${period.id}`}>
+                <div>
+                  <p className="eyebrow">时期 {index === 0 ? "A" : "B"}</p>
+                  <h2>{period.label}</h2>
+                  <p className="large-explanation">{period.summary.text}</p>
+                  <EvidenceButton
+                    assertionIds={[...period.summary.assertionIds]}
+                    title={period.label}
+                  />
+                </div>
+                <aside>
+                  <strong>阅读重点</strong>
+                  <p>{period.focus.text}</p>
+                  <small>{period.validTime.note}</small>
+                </aside>
+              </article>
+            ))}
+          </section>
+          <section
+            className="lens-difference-table"
+            aria-label={`${left.label}与${right.label}比较`}
+          >
+            <header>
+              <span>当前 release 可比项</span>
+              <strong>{left.label}</strong>
+              <strong>{right.label}</strong>
+            </header>
+            {[
+              ["官名时期版本", leftStats.titles, rightStats.titles],
+              ["有效机构版本", leftStats.institutions, rightStats.institutions],
+              ["相交品秩方案", leftStats.ranks, rightStats.ranks],
+              ["已发布官名类别", leftStats.categories, rightStats.categories],
+            ].map(([label, before, after]) => (
+              <div key={label}>
+                <span>{label}</span>
+                <strong>{before}</strong>
+                <strong>{after}</strong>
+              </div>
+            ))}
+            <p>
+              这些数值只表示当前 release
+              中有证据的版本覆盖，不表示历史制度规模；制度文本与实际运行的差异尚无足够断言时保持明确缺口。
+            </p>
+          </section>
+        </>
       )}
       <section className="reform-comparison">
         <header>

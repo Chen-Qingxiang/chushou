@@ -1,118 +1,31 @@
-import { useMemo, useState, type ReactNode } from "react";
-import { Link, useParams } from "react-router-dom";
-import { downloadBase, preferredName, site, sourcePath, statusLabels, trackLabels } from "../data";
+import { decodeAppointmentTextForPeriod } from "@chushou/domain";
+import type { StableId } from "@chushou/schema";
+import { useMemo, type ReactNode } from "react";
+import { Link, useParams, useSearchParams } from "react-router-dom";
+import { downloadBase, site, sourcePath, statusLabels, trackLabels } from "../data";
 import { EvidenceButton } from "../evidence";
 import { EmptyState, PageHeader, StatusBadge } from "../Page";
 
-type DecodeMatch = {
-  start: number;
-  end: number;
-  text: string;
-  kind: "title" | "action";
-  label: string;
-  titleId: string | null;
-  usageIds: string[];
-  tracks: string[];
-};
-const decoderActions = [
-  ["不得签书公事", "任事限制"],
-  ["不得僉書公事", "任事限制"],
-  ["责授", "责授"],
-  ["責授", "责授"],
-  ["安置", "安置"],
-  ["贬", "贬"],
-  ["貶", "贬"],
-  ["拜", "拜"],
-  ["除", "除"],
-  ["迁", "迁"],
-  ["遷", "迁"],
-  ["徙", "徙"],
-  ["复", "复"],
-  ["復", "复"],
-] as const;
-
-function decodeInput(
-  input: string,
-  periodId: string,
-): { matches: DecodeMatch[]; unknown: string[] } {
-  const candidates: DecodeMatch[] = [];
-  for (const title of site.titleConcepts) {
-    const usages = site.titleUsageVersions.filter(
-      (usage) =>
-        usage.titleConceptId === title.id &&
-        (periodId === "all" || usage.periodLensIds.includes(periodId as never)),
-    );
-    for (const name of title.names.filter(
-      (item) => item.script !== "pinyin" && item.script !== "english",
-    )) {
-      let cursor = 0;
-      while (cursor < input.length) {
-        const start = input.indexOf(name.text, cursor);
-        if (start < 0) break;
-        candidates.push({
-          start,
-          end: start + name.text.length,
-          text: name.text,
-          kind: "title",
-          label: preferredName(title),
-          titleId: title.id,
-          usageIds: usages.map((usage) => usage.id),
-          tracks: [...new Set(usages.flatMap((usage) => usage.semanticTracks))],
-        });
-        cursor = start + name.text.length;
-      }
-    }
-  }
-  for (const [term, label] of decoderActions) {
-    let cursor = 0;
-    while (cursor < input.length) {
-      const start = input.indexOf(term, cursor);
-      if (start < 0) break;
-      candidates.push({
-        start,
-        end: start + term.length,
-        text: term,
-        kind: "action",
-        label,
-        titleId: null,
-        usageIds: [],
-        tracks: [],
-      });
-      cursor = start + term.length;
-    }
-  }
-  const matches: DecodeMatch[] = [];
-  const occupied = new Set<number>();
-  for (const candidate of candidates.sort(
-    (a, b) => b.end - b.start - (a.end - a.start) || a.start - b.start,
-  )) {
-    const positions = Array.from(
-      { length: candidate.end - candidate.start },
-      (_, index) => candidate.start + index,
-    );
-    if (positions.some((position) => occupied.has(position))) continue;
-    positions.forEach((position) => occupied.add(position));
-    matches.push(candidate);
-  }
-  matches.sort((a, b) => a.start - b.start);
-  const unknown: string[] = [];
-  let cursor = 0;
-  for (const match of matches) {
-    const gap = input.slice(cursor, match.start).replaceAll(/[\s、，。；：,.;:]+/gu, "");
-    if (gap !== "") unknown.push(gap);
-    cursor = match.end;
-  }
-  const tail = input.slice(cursor).replaceAll(/[\s、，。；：,.;:]+/gu, "");
-  if (tail !== "") unknown.push(tail);
-  return { matches, unknown };
-}
-
 export function DecoderPage() {
-  const [input, setInput] = useState(
-    "责授检校尚书水部员外郎充黄州团练副使，本州安置，不得签书公事",
+  const [params, setParams] = useSearchParams();
+  const input =
+    params.get("text") ?? "责授检校尚书水部员外郎充黄州团练副使，本州安置，不得签书公事";
+  const period = params.get("period") ?? "chs:period:yuanfeng-reform";
+  const setDecoderParam = (key: "text" | "period", value: string) => {
+    setParams(
+      (current) => {
+        const next = new URLSearchParams(current);
+        next.set(key, value);
+        return next;
+      },
+      { replace: true },
+    );
+  };
+  const decoded = useMemo(
+    () =>
+      decodeAppointmentTextForPeriod(site, input, period === "all" ? null : (period as StableId)),
+    [input, period],
   );
-  const [period, setPeriod] = useState("chs:period:yuanfeng-reform");
-  const decoded = useMemo(() => decodeInput(input, period), [input, period]);
   let cursor = 0;
   const fragments: ReactNode[] = [];
   decoded.matches.forEach((match) => {
@@ -137,7 +50,11 @@ export function DecoderPage() {
         <section className="decoder-input-panel">
           <label>
             <span>任官原文或官衔串</span>
-            <textarea value={input} onChange={(event) => setInput(event.target.value)} rows={8} />
+            <textarea
+              value={input}
+              onChange={(event) => setDecoderParam("text", event.target.value)}
+              rows={8}
+            />
           </label>
           <div className="sample-buttons">
             <span>试试：</span>
@@ -146,14 +63,17 @@ export function DecoderPage() {
               "除大理评事、签书凤翔府判官",
               "以本官知英州，寻降一官，未至",
             ].map((sample) => (
-              <button type="button" onClick={() => setInput(sample)} key={sample}>
+              <button type="button" onClick={() => setDecoderParam("text", sample)} key={sample}>
                 {sample.slice(0, 8)}…
               </button>
             ))}
           </div>
           <label>
             <span>解释时期</span>
-            <select value={period} onChange={(event) => setPeriod(event.target.value)}>
+            <select
+              value={period}
+              onChange={(event) => setDecoderParam("period", event.target.value)}
+            >
               <option value="all">不限定（可能多版本）</option>
               {site.periodLenses.map((item) => (
                 <option value={item.id} key={item.id}>
@@ -178,6 +98,10 @@ export function DecoderPage() {
               <i className="mark-action" />
               动作／限制
             </span>
+            <span>
+              <i className="mark-temporal" />
+              时间／顺序信号
+            </span>
           </div>
           <div className="decode-list">
             {decoded.matches.map((match) => (
@@ -187,7 +111,9 @@ export function DecoderPage() {
                   <small>
                     {match.kind === "action"
                       ? "动作或限制词"
-                      : `${match.usageIds.length} 个时期版本候选`}
+                      : match.kind === "temporal"
+                        ? "时间或顺序副词"
+                        : `${match.candidateUsageIds.length} 个时期版本候选`}
                   </small>
                   <h3>
                     {match.text} <em>→ {match.label}</em>
@@ -195,19 +121,27 @@ export function DecoderPage() {
                   {match.kind === "title" ? (
                     <>
                       <div className="tag-row">
-                        {match.tracks.map((track) => (
+                        {[
+                          ...new Set(
+                            site.titleUsageVersions
+                              .filter((usage) => match.candidateUsageIds.includes(usage.id))
+                              .flatMap((usage) => usage.semanticTracks),
+                          ),
+                        ].map((track) => (
                           <span key={track}>{trackLabels[track] ?? track}</span>
                         ))}
                       </div>
-                      {match.titleId === null ? null : (
+                      {match.normalizedId === null ? null : (
                         <Link
                           className="text-link"
-                          to={`/titles/${site.titleConcepts.find((item) => item.id === match.titleId)?.slug}`}
+                          to={`/titles/${site.titleConcepts.find((item) => item.id === match.normalizedId)?.slug}`}
                         >
                           查看受控官名 →
                         </Link>
                       )}
                     </>
+                  ) : match.kind === "temporal" ? (
+                    <p>只说明文本中的相对先后，不自动换算成绝对日期。</p>
                   ) : (
                     <p>作为任命动作或政治状态信号保存，不与官名合并。</p>
                   )}
@@ -215,10 +149,22 @@ export function DecoderPage() {
               </article>
             ))}
           </div>
-          {decoded.unknown.length > 0 ? (
+          {decoded.actionGroups.length > 0 ? (
+            <section className="action-sequence" aria-label="动作与官衔关系候选">
+              <p className="block-label">动作关系候选</p>
+              {decoded.actionGroups.map((group) => (
+                <article key={`${group.action.start}-${group.action.end}`}>
+                  <span>{group.temporalCue?.text ?? "顺序"}</span>
+                  <strong>{group.statement}</strong>
+                  <small>按文本邻近关系生成 · 需回查句法与史料上下文</small>
+                </article>
+              ))}
+            </section>
+          ) : null}
+          {decoded.unknownSpans.length > 0 ? (
             <aside className="unknown-box">
               <strong>未识别文本</strong>
-              <p>{decoded.unknown.join(" · ")}</p>
+              <p>{decoded.unknownSpans.map((span) => span.text).join(" · ")}</p>
               <small>这些片段不会被丢弃，也不会被猜成已有官名。</small>
             </aside>
           ) : null}
@@ -229,7 +175,158 @@ export function DecoderPage() {
   );
 }
 
+function sourceAssertions(sourceId: StableId) {
+  const source = site.sources.find((item) => item.id === sourceId);
+  const passageIds = new Set(
+    source?.editions.flatMap((edition) =>
+      edition.locators.flatMap((locator) => locator.passages.map((passage) => passage.id)),
+    ) ?? [],
+  );
+  const assertionIds = new Set(
+    site.evidenceLinks
+      .filter((link) => passageIds.has(link.passageId))
+      .map((link) => link.assertionId),
+  );
+  return site.assertions.filter((assertion) => assertionIds.has(assertion.id));
+}
+
+function subjectLabel(subjectId: StableId): string {
+  const person = site.people.find((item) => item.id === subjectId);
+  if (person !== undefined)
+    return person.names.find((name) => name.kind === "preferred")?.text ?? person.slug;
+  const title = site.titleConcepts.find((item) => item.id === subjectId);
+  if (title !== undefined)
+    return title.names.find((name) => name.kind === "preferred")?.text ?? title.slug;
+  const usage = site.titleUsageVersions.find((item) => item.id === subjectId);
+  if (usage !== undefined) return usage.label;
+  const appointment = site.appointments.find((item) => item.id === subjectId);
+  if (appointment !== undefined) return appointment.rawText;
+  const component = site.appointments
+    .flatMap((item) => item.components)
+    .find((item) => item.id === subjectId);
+  if (component !== undefined) return component.sourceSpan.text;
+  const institution = site.institutions.find((item) => item.id === subjectId);
+  if (institution !== undefined)
+    return institution.names.find((name) => name.kind === "preferred")?.text ?? institution.slug;
+  const institutionVersion = site.institutionVersions.find((item) => item.id === subjectId);
+  if (institutionVersion !== undefined) return institutionVersion.label;
+  const rank = site.ranks.find((item) => item.id === subjectId);
+  if (rank !== undefined) return rank.label;
+  const period = site.periodLenses.find((item) => item.id === subjectId);
+  if (period !== undefined) return period.label;
+  return subjectId;
+}
+
+function literalLabel(value: unknown): string {
+  if (typeof value === "string" || typeof value === "number" || typeof value === "boolean")
+    return String(value);
+  return value === null ? "—" : JSON.stringify(value);
+}
+
+function overlapsLens(
+  value: { normalizedStart: string | null; normalizedEnd: string | null } | null,
+  lens: (typeof site.periodLenses)[number],
+): boolean {
+  if (value === null) return false;
+  return !(
+    (value.normalizedEnd !== null &&
+      lens.validTime.normalizedStart !== null &&
+      value.normalizedEnd < lens.validTime.normalizedStart) ||
+    (lens.validTime.normalizedEnd !== null &&
+      value.normalizedStart !== null &&
+      lens.validTime.normalizedEnd < value.normalizedStart)
+  );
+}
+
+function assertionMatchesPeriod(
+  assertion: (typeof site.assertions)[number],
+  periodId: string,
+): boolean {
+  if (periodId === "all") return true;
+  const lens = site.periodLenses.find((item) => item.id === periodId);
+  if (lens === undefined) return true;
+  if (overlapsLens(assertion.validTime, lens)) return true;
+  const usage = site.titleUsageVersions.find((item) => item.id === assertion.subjectId);
+  if (usage?.periodLensIds.includes(lens.id) === true) return true;
+  const institution = site.institutionVersions.find((item) => item.id === assertion.subjectId);
+  if (institution !== undefined && overlapsLens(institution.validTime, lens)) return true;
+  const directAppointment = site.appointments.find((item) => item.id === assertion.subjectId);
+  if (directAppointment !== undefined && overlapsLens(directAppointment.time, lens)) return true;
+  const componentAppointment = site.appointments.find((appointment) =>
+    appointment.components.some((component) => component.id === assertion.subjectId),
+  );
+  return componentAppointment !== undefined && overlapsLens(componentAppointment.time, lens);
+}
+
 export function SourcesPage() {
+  const [params, setParams] = useSearchParams();
+  const personId = params.get("person") ?? "all";
+  const titleId = params.get("title") ?? "all";
+  const periodId = params.get("period") ?? "all";
+  const query = params.get("q") ?? "";
+  const setFilter = (key: string, value: string) => {
+    setParams((current) => {
+      const next = new URLSearchParams(current);
+      if (value === "" || value === "all") next.delete(key);
+      else next.set(key, value);
+      return next;
+    });
+  };
+  const personSubjects = new Set<string>();
+  if (personId !== "all") {
+    personSubjects.add(personId);
+    for (const appointment of site.appointments.filter((item) => item.personId === personId)) {
+      personSubjects.add(appointment.id);
+      appointment.components.forEach((item) => personSubjects.add(item.id));
+      appointment.serviceEpisodes.forEach((item) => personSubjects.add(item.id));
+      appointment.metrics.forEach((item) => personSubjects.add(item.id));
+    }
+  }
+  const titleSubjects = new Set<string>();
+  if (titleId !== "all") {
+    titleSubjects.add(titleId);
+    const usageIds = new Set(
+      site.titleUsageVersions
+        .filter((usage) => usage.titleConceptId === titleId)
+        .map((usage) => usage.id),
+    );
+    usageIds.forEach((id) => titleSubjects.add(id));
+    site.appointments
+      .flatMap((appointment) => appointment.components)
+      .filter(
+        (component) =>
+          component.titleUsageVersionId !== null && usageIds.has(component.titleUsageVersionId),
+      )
+      .forEach((component) => titleSubjects.add(component.id));
+  }
+  const catalog = site.sources
+    .map((source) => ({ source, assertions: sourceAssertions(source.id) }))
+    .filter(({ source, assertions }) => {
+      const personMatches =
+        personId === "all" || assertions.some((item) => personSubjects.has(item.subjectId));
+      const titleMatches =
+        titleId === "all" || assertions.some((item) => titleSubjects.has(item.subjectId));
+      const periodMatches =
+        periodId === "all" || assertions.some((item) => assertionMatchesPeriod(item, periodId));
+      const queryText = [
+        source.shortTitle,
+        source.creator,
+        source.bibliography,
+        ...assertions.flatMap((item) => [
+          subjectLabel(item.subjectId),
+          item.predicate,
+          literalLabel(item.objectLiteral),
+        ]),
+      ]
+        .join(" ")
+        .toLocaleLowerCase();
+      return (
+        personMatches &&
+        titleMatches &&
+        periodMatches &&
+        (query === "" || queryText.includes(query.toLocaleLowerCase()))
+      );
+    });
   return (
     <div className="page-container">
       <PageHeader
@@ -266,8 +363,55 @@ export function SourcesPage() {
           段引文
         </span>
       </div>
+      <section className="source-filter-bar" aria-label="按证据关系筛选来源">
+        <label className="wide-field">
+          <span>来源、断言或对象</span>
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => setFilter("q", event.target.value)}
+            placeholder="例如：苏轼、知州、元丰官制"
+          />
+        </label>
+        <label>
+          <span>人物</span>
+          <select value={personId} onChange={(event) => setFilter("person", event.target.value)}>
+            <option value="all">全部人物</option>
+            {site.people.map((person) => (
+              <option value={person.id} key={person.id}>
+                {subjectLabel(person.id)}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          <span>官名</span>
+          <select value={titleId} onChange={(event) => setFilter("title", event.target.value)}>
+            <option value="all">全部官名</option>
+            {site.titleConcepts.map((title) => (
+              <option value={title.id} key={title.id}>
+                {subjectLabel(title.id)}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          <span>时期</span>
+          <select value={periodId} onChange={(event) => setFilter("period", event.target.value)}>
+            <option value="all">全部时期</option>
+            {site.periodLenses.map((period) => (
+              <option value={period.id} key={period.id}>
+                {period.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      </section>
+      <p className="catalog-count">
+        {catalog.length} 种来源符合当前筛选；每张卡片另列其已发布支持性断言数
+      </p>
       <div className="sources-catalog">
-        {site.sources.map((source) => {
+        {catalog.map(({ source, assertions }) => {
           const locators = source.editions.flatMap((edition) => edition.locators);
           const passages = locators.flatMap((locator) => locator.passages);
           return (
@@ -289,6 +433,7 @@ export function SourcesPage() {
                 <span>{source.editions.length} 个版本</span>
                 <span>{locators.length} 个定位</span>
                 <span>{passages.length} 段引文</span>
+                <span>{assertions.length} 条断言</span>
               </footer>
             </Link>
           );
@@ -307,6 +452,7 @@ export function SourceDetailPage() {
         <EmptyState title="未找到来源">该来源可能尚未发布。</EmptyState>
       </div>
     );
+  const supportedAssertions = sourceAssertions(source.id);
   return (
     <div className="page-container detail-page">
       <nav className="breadcrumbs">
@@ -324,6 +470,41 @@ export function SourceDetailPage() {
       </header>
       <div className="detail-grid">
         <div className="detail-main">
+          <section className="source-assertions-panel">
+            <div>
+              <div>
+                <p className="eyebrow">SUPPORTED ASSERTIONS</p>
+                <h2>这份来源支持的已发布断言</h2>
+              </div>
+              <span>{supportedAssertions.length} 条</span>
+            </div>
+            {supportedAssertions.length === 0 ? (
+              <EmptyState title="尚无支持性断言">
+                这份来源目前只保存书目／coverage blocker，不会被计入已核历史结论。
+              </EmptyState>
+            ) : (
+              supportedAssertions.map((assertion) => (
+                <article key={assertion.id}>
+                  <div>
+                    <StatusBadge status={assertion.editorialStatus} />
+                    <span>{assertion.method}</span>
+                  </div>
+                  <h3>{subjectLabel(assertion.subjectId)}</h3>
+                  <p>
+                    {assertion.predicate} →{" "}
+                    {assertion.objectEntityId === null
+                      ? literalLabel(assertion.objectLiteral)
+                      : subjectLabel(assertion.objectEntityId)}
+                  </p>
+                  <EvidenceButton
+                    assertionIds={[assertion.id]}
+                    title={subjectLabel(assertion.subjectId)}
+                    label="查看这条断言的引文"
+                  />
+                </article>
+              ))
+            )}
+          </section>
           {source.editions.map((edition) => (
             <section className="edition-panel" key={edition.id}>
               <div className="usage-heading">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { deriveCareerSignals, type CareerSignalDimension } from "@chushou/domain";
 import {
   actionLabels,
   appointmentPlace,
@@ -24,6 +25,16 @@ const componentLabels: Record<string, string> = {
   punitive_status: "处分状态",
   restriction: "限制",
   unresolved: "未决成分",
+};
+
+const institutionRelationLabels: Record<string, string> = {
+  reports_to: "上报",
+  supervises: "监督",
+  part_of: "隶属",
+  coordinates_with: "协作",
+  checks: "监察／牵制",
+  appoints: "任命",
+  parallel_to: "平行",
 };
 
 export function CareerPage() {
@@ -233,6 +244,36 @@ export function AppointmentDetailPage() {
         <EmptyState title="未找到这条任命">链接可能已失效，或该记录尚未发布。</EmptyState>
       </div>
     );
+  const previousAppointment =
+    appointment.previousAppointmentId === null
+      ? undefined
+      : site.appointments.find((item) => item.id === appointment.previousAppointmentId);
+  const nextAppointments = site.appointments.filter(
+    (item) => item.previousAppointmentId === appointment.id,
+  );
+  const appointingAuthority = site.institutionVersions.find(
+    (item) => item.id === appointment.appointingAuthorityInstitutionVersionId,
+  );
+  const appointingInstitution = site.institutions.find(
+    (item) => item.id === appointingAuthority?.institutionId,
+  );
+  const usageInstitutionVersionIds = new Set(
+    appointment.components.flatMap((component) => {
+      const usage = titleUsage(component.titleUsageVersionId);
+      return usage?.institutionVersionIds ?? [];
+    }),
+  );
+  const institutionalRelations = site.institutionRelations.filter(
+    (relation) =>
+      usageInstitutionVersionIds.has(relation.subjectVersionId) ||
+      usageInstitutionVersionIds.has(relation.objectVersionId),
+  );
+  const institutionForVersion = (versionId: string) => {
+    const version = site.institutionVersions.find((item) => item.id === versionId);
+    return site.institutions.find((item) => item.id === version?.institutionId);
+  };
+  const appointmentPath = (id: string) =>
+    `/people/${person.slug}/appointments/${encodeURIComponent(id)}`;
   return (
     <div className="page-container detail-page">
       <nav className="breadcrumbs">
@@ -337,6 +378,87 @@ export function AppointmentDetailPage() {
               ))
             )}
           </section>
+          <section className="appointment-context-panel">
+            <header>
+              <div>
+                <p className="block-label">前后变化与制度关系</p>
+                <h2>只连接已经建模的关系</h2>
+              </div>
+              <p>前后任命链不等于同一职位的前任／后任；机构关系也不自动等于人物间关系。</p>
+            </header>
+            <div className="appointment-context-grid">
+              <article>
+                <span>上一任命动作</span>
+                {previousAppointment === undefined ? (
+                  <p>当前没有已发布的前序链接。</p>
+                ) : (
+                  <Link to={appointmentPath(previousAppointment.id)}>
+                    <strong>{previousAppointment.rawText}</strong>
+                    <small>{dateLabel(previousAppointment.time)}</small>
+                  </Link>
+                )}
+              </article>
+              <article>
+                <span>下一任命动作</span>
+                {nextAppointments.length === 0 ? (
+                  <p>当前没有已发布的后序链接。</p>
+                ) : (
+                  nextAppointments.map((item) => (
+                    <Link to={appointmentPath(item.id)} key={item.id}>
+                      <strong>{item.rawText}</strong>
+                      <small>{dateLabel(item.time)}</small>
+                    </Link>
+                  ))
+                )}
+              </article>
+              <article>
+                <span>任命机关</span>
+                {appointingAuthority === undefined || appointingInstitution === undefined ? (
+                  <p>当前证据未发布任命机关；不从动作词自动补造。</p>
+                ) : (
+                  <Link to={`/map?focus=${encodeURIComponent(appointingInstitution.id)}`}>
+                    <strong>{preferredName(appointingInstitution)}</strong>
+                    <small>{appointingAuthority.label}</small>
+                  </Link>
+                )}
+              </article>
+            </div>
+            <div className="institutional-relation-list">
+              <h3>官名版本关联的机构关系</h3>
+              {institutionalRelations.length === 0 ? (
+                <p className="context-gap">
+                  当前任命尚无可发布的上报／协作／监察关系；这不是“没有关系”的历史结论。
+                </p>
+              ) : (
+                institutionalRelations.map((relation) => {
+                  const subject = institutionForVersion(relation.subjectVersionId);
+                  const object = institutionForVersion(relation.objectVersionId);
+                  return (
+                    <article key={relation.id}>
+                      <span>{preferredName(subject)}</span>
+                      <strong>
+                        →{" "}
+                        {institutionRelationLabels[relation.relationType] ?? relation.relationType}{" "}
+                        →
+                      </strong>
+                      <span>{preferredName(object)}</span>
+                      <EvidenceButton
+                        assertionIds={[...relation.assertionIds]}
+                        title={`${preferredName(subject)}与${preferredName(object)}`}
+                      />
+                    </article>
+                  );
+                })
+              )}
+            </div>
+            <aside className="person-relation-gap">
+              <strong>人物关系覆盖缺口</strong>
+              <p>
+                当前 release
+                未建立这一任命的同一职位前任／后任、同期上司、同僚或下属；不得由官名、时间接近或常识自动推断。
+              </p>
+            </aside>
+          </section>
         </div>
         <aside className="detail-aside appointment-aside">
           <section>
@@ -397,18 +519,36 @@ export function MetricsPage() {
     item.serviceEpisodes.some((episode) => episode.episodeType === "service"),
   ).length;
   const metrics = site.appointments.flatMap((item) => item.metrics);
+  const suShi = site.people.find((person) => person.slug === "su-shi");
+  const suAppointments = site.appointments
+    .filter((appointment) => appointment.personId === suShi?.id)
+    .toSorted((left, right) => left.sequence - right.sequence);
+  const signalsByAppointment = new Map(
+    suAppointments.map((appointment) => [appointment.id, deriveCareerSignals(appointment, site)]),
+  );
+  const dimensions: Array<{
+    id: CareerSignalDimension;
+    label: string;
+    note: string;
+  }> = [
+    { id: "centrality", label: "中央核心程度", note: "机构层级与地点结构信号" },
+    { id: "actual_power", label: "实际权力", note: "服务记录与明载限制" },
+    { id: "nominal_rank", label: "名义品级", note: "受控 Rank 显式连接" },
+    { id: "prestige", label: "资望／荣衔", note: "荣誉资历轨原文成分" },
+    { id: "imperial_trust", label: "皇帝信任相关", note: "动作代理或明确不判断" },
+  ];
   return (
     <div className="page-container">
       <PageHeader
         eyebrow="量化探索 · EXPLICIT RUBRICS ONLY"
         title="可计算，不等于假装精确。"
-        intro="这里优先展示记录覆盖、动作分布与证据状态。身份高低、实际权力和政治中心度没有可复核评分规则时，就不生成漂亮但虚假的折线。"
+        intro="五个维度分别展示史料事实、规则信号与覆盖缺口。没有可复核量尺时，以可展开的状态轨代替虚假折线；绝不生成一个总分。"
       />
       <div className="metric-overview">
         <article>
           <span>任命动作</span>
           <strong>{site.counts.appointments}</strong>
-          <small>卷338 初步矩阵</small>
+          <small>当前 release（含反例切片）</small>
         </article>
         <article>
           <span>有实际服务记录</span>
@@ -426,6 +566,88 @@ export function MetricsPage() {
           <small>规则未建立，不输出</small>
         </article>
       </div>
+      <section className="career-signal-panel" aria-labelledby="career-signal-heading">
+        <header>
+          <div>
+            <p className="eyebrow">苏轼多维轨迹 · CATEGORICAL SIGNALS</p>
+            <h2 id="career-signal-heading">同一次变化，在五个维度上分别是什么？</h2>
+          </div>
+          <p>
+            每格都可展开方法与证据。横向是传记顺序，不等距代表时间；空缺不是零值，规则代理也不是心理事实。
+          </p>
+        </header>
+        <div className="signal-legend" aria-label="信号类型图例">
+          <span className="signal-source_fact">史料／结构事实</span>
+          <span className="signal-structural_rule">透明规则信号</span>
+          <span className="signal-coverage_gap">覆盖缺口</span>
+        </div>
+        <div className="career-signal-scroll" tabIndex={0}>
+          <table className="career-signal-table">
+            <caption className="visually-hidden">
+              苏轼已发布任命的中央核心程度、实际权力、名义品级、资望与皇帝信任相关信号
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">维度</th>
+                {suAppointments.map((appointment) => (
+                  <th scope="col" key={appointment.id}>
+                    <Link to={`/people/su-shi/appointments/${encodeURIComponent(appointment.id)}`}>
+                      <small>{dateLabel(appointment.time)}</small>
+                      <strong>{appointment.rawText}</strong>
+                    </Link>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {dimensions.map((dimension) => (
+                <tr key={dimension.id}>
+                  <th scope="row">
+                    <strong>{dimension.label}</strong>
+                    <small>{dimension.note}</small>
+                  </th>
+                  {suAppointments.map((appointment) => {
+                    const item = signalsByAppointment
+                      .get(appointment.id)
+                      ?.find((candidate) => candidate.dimension === dimension.id);
+                    return (
+                      <td key={appointment.id}>
+                        {item === undefined ? null : (
+                          <details className={`career-signal signal-${item.signalType}`}>
+                            <summary>{item.label}</summary>
+                            <p>{item.explanation}</p>
+                            <small>
+                              类型：
+                              {item.signalType === "source_fact"
+                                ? "史料／结构事实"
+                                : item.signalType === "structural_rule"
+                                  ? "规则计算"
+                                  : "覆盖缺口"}
+                              <br />
+                              方法：{item.method}
+                            </small>
+                            <EvidenceButton
+                              assertionIds={item.assertionIds}
+                              title={`${dateLabel(appointment.time)} · ${dimension.label}`}
+                              label="查看依据"
+                            />
+                          </details>
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="small-note">
+          当前版本没有“政治位置总分”。只有
+          TitleUsageVersion→InstitutionVersion、ServiceEpisode、Rank
+          显式连接或动作词规则足够时才发布分类信号；研究性数值评定仍由 CareerMetricAssessment
+          独立承载。
+        </p>
+      </section>
       <div className="metrics-grid">
         <section className="chart-panel">
           <p className="block-label">任命动作类型分布</p>
