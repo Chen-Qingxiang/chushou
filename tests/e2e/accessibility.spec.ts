@@ -47,6 +47,16 @@ test("keyboard focus enters, stays within, and returns from interactive layers",
   page,
 }) => {
   await page.goto("./");
+  const footerLinks = page.getByRole("navigation", { name: "页脚导航" }).getByRole("link");
+  for (const link of await footerLinks.all()) {
+    const box = await link.boundingBox();
+    expect(box, "footer link should have a measurable hit target").not.toBeNull();
+    expect(
+      box?.height,
+      "footer link hit target should be at least 24px tall",
+    ).toBeGreaterThanOrEqual(24);
+  }
+
   await page.keyboard.press("Tab");
   await expect(page.getByRole("link", { name: "跳到正文" })).toBeFocused();
   await page.keyboard.press("Enter");
