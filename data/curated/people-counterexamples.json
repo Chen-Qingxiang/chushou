@@ -1,0 +1,54 @@
+[
+  {
+    "id": "chs:person:wang-anshi",
+    "slug": "wang-anshi",
+    "names": [
+      { "text": "王安石", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "介甫", "script": "zh-Hans", "kind": "historical", "ambiguous": true },
+      { "text": "Wang Anshi", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "lifeSpan": null,
+    "description": {
+      "text": "王安石，字介甫，抚州临川人；当前只录一条熙宁二年执政任命，用来检验元丰前宰执模型。",
+      "assertionIds": ["chs:assertion:wang-anshi-identity"]
+    },
+    "assertionIds": ["chs:assertion:wang-anshi-identity"],
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:person:sima-guang",
+    "slug": "sima-guang",
+    "names": [
+      { "text": "司马光", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "司馬光", "script": "zh-Hant", "kind": "variant", "ambiguous": false },
+      { "text": "君实", "script": "zh-Hans", "kind": "historical", "ambiguous": true },
+      { "text": "Sima Guang", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "lifeSpan": null,
+    "description": {
+      "text": "司马光，字君实，陕州夏县人；当前以元祐元年复合宰相官衔检验多成分任命。",
+      "assertionIds": ["chs:assertion:sima-guang-identity"]
+    },
+    "assertionIds": ["chs:assertion:sima-guang-identity"],
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:person:zhang-dun",
+    "slug": "zhang-dun",
+    "names": [
+      { "text": "章惇", "script": "zh-Hans", "kind": "preferred", "ambiguous": false },
+      { "text": "子厚", "script": "zh-Hans", "kind": "historical", "ambiguous": true },
+      { "text": "Zhang Dun", "script": "pinyin", "kind": "translation", "ambiguous": false }
+    ],
+    "lifeSpan": null,
+    "description": {
+      "text": "章惇，字子厚，建州浦城人；当前以元丰五年门下侍郎任命检验改制后的官名版本。",
+      "assertionIds": ["chs:assertion:zhang-dun-identity"]
+    },
+    "assertionIds": ["chs:assertion:zhang-dun-identity"],
+    "externalIdentifierIds": [],
+    "editorialStatus": "reviewed"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "chs:evidence:wang-anshi-identity",
+    "assertionId": "chs:assertion:wang-anshi-identity",
+    "passageId": "chs:passage:song-shi-327-wang-anshi-identity",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "传记首句直接支持姓名、字与籍贯。"
+  },
+  {
+    "id": "chs:evidence:wang-anshi-canzhi",
+    "assertionId": "chs:assertion:appointment-wang-anshi-canzhi",
+    "passageId": "chs:passage:song-shi-327-wang-anshi-canzhi",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "传记直接记“拜参知政事”。"
+  },
+  {
+    "id": "chs:evidence:sima-guang-identity",
+    "assertionId": "chs:assertion:sima-guang-identity",
+    "passageId": "chs:passage:song-shi-336-sima-guang-identity",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "传记首句直接支持姓名、字与籍贯。"
+  },
+  {
+    "id": "chs:evidence:sima-guang-chancellor",
+    "assertionId": "chs:assertion:appointment-sima-guang-chancellor",
+    "passageId": "chs:passage:song-shi-336-sima-guang-chancellor",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "元祐元年上下文中的任命句直接支持复合宰相官衔。"
+  },
+  {
+    "id": "chs:evidence:zhang-dun-identity",
+    "assertionId": "chs:assertion:zhang-dun-identity",
+    "passageId": "chs:passage:song-shi-471-zhang-dun-identity",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "传记首句直接支持姓名、字与籍贯。"
+  },
+  {
+    "id": "chs:evidence:zhang-dun-menxia",
+    "assertionId": "chs:assertion:appointment-zhang-dun-menxia",
+    "passageId": "chs:passage:song-shi-471-zhang-dun-menxia",
+    "relation": "supports",
+    "basis": "explicit_statement",
+    "directness": "direct",
+    "note": "传记直接记元丰五年召拜门下侍郎。"
+  }
+]

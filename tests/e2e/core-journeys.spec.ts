@@ -50,6 +50,22 @@ test("Su Shi career supports appointment deep links and component decomposition"
   await expect(page.getByLabel("任命原文拆解")).toBeVisible();
 });
 
+test("a counterexample person reuses the same career and decomposition routes", async ({
+  page,
+}) => {
+  await page.goto("./");
+  await expect(page.getByRole("button", { name: /搜索/u })).toBeVisible();
+  await page.keyboard.press("Control+K");
+  await page.getByPlaceholder("搜索官名、人物、机构、地点或来源……").fill("司馬光");
+  await page.getByRole("button", { name: /司马光/u }).click();
+
+  await expect(page).toHaveURL(/\/chushou\/people\/sima-guang\/career$/u);
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("司马光");
+  await page.getByRole("link", { name: /尚书左仆射兼门下侍郎/u }).click();
+  await expect(page.getByLabel("任命原文拆解")).toContainText("尚书左仆射");
+  await expect(page.getByLabel("任命原文拆解")).toContainText("门下侍郎");
+});
+
 test("unknown routes render a deliberate in-app 404", async ({ page }) => {
   await page.goto("./not-a-real-route");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("这条路径尚未入图");

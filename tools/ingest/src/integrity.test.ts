@@ -63,6 +63,20 @@ describe("curated research release", () => {
     ).toBe(true);
   });
 
+  it("keeps three non-Su counterexamples on the same person and appointment model", () => {
+    const counterexamples = dataset.people.filter((person) => person.slug !== "su-shi");
+    expect(counterexamples.map((person) => person.slug).toSorted()).toEqual([
+      "sima-guang",
+      "wang-anshi",
+      "zhang-dun",
+    ]);
+    expect(
+      counterexamples.every((person) =>
+        dataset.appointmentActions.some((appointment) => appointment.personId === person.id),
+      ),
+    ).toBe(true);
+  });
+
   it("searches across traditional forms, pinyin aliases, and minor typos", () => {
     const records = buildSearchRecords(dataset);
     expect(searchRecords(records, "蘇軾")[0]?.label).toBe("苏轼");

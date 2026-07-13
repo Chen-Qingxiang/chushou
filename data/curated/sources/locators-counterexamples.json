@@ -1,0 +1,41 @@
+[
+  {
+    "id": "chs:locator:song-shi-327-wang-anshi",
+    "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+    "volume": null,
+    "juan": "327",
+    "section": "列传第八十六·王安石",
+    "page": null,
+    "entry": "王安石身份与熙宁任官",
+    "paragraph": "王安石条首段及熙宁二年段",
+    "anchor": "王安石",
+    "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷327#王安石",
+    "label": "《宋史》卷327王安石传首段、熙宁二年段"
+  },
+  {
+    "id": "chs:locator:song-shi-336-sima-guang",
+    "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+    "volume": null,
+    "juan": "336",
+    "section": "列传第九十五·司马光",
+    "page": null,
+    "entry": "司马光身份与元祐拜相",
+    "paragraph": "司马光条首段及元祐元年段",
+    "anchor": "司马光",
+    "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷336#司马光",
+    "label": "《宋史》卷336司马光传首段、元祐元年段"
+  },
+  {
+    "id": "chs:locator:song-shi-471-zhang-dun",
+    "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+    "volume": null,
+    "juan": "471",
+    "section": "列传第二百三十·章惇",
+    "page": null,
+    "entry": "章惇身份与元丰五年任官",
+    "paragraph": "章惇条首段及元丰五年段",
+    "anchor": "章惇",
+    "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷471#章惇",
+    "label": "《宋史》卷471章惇传首段、元丰五年段"
+  }
+]

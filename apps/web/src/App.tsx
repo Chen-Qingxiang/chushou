@@ -71,9 +71,9 @@ export function App() {
             <Route path="/titles" element={<TitlesPage />} />
             <Route path="/titles/:slug" element={<TitleDetailPage />} />
             <Route path="/reforms" element={<ReformsPage />} />
-            <Route path="/people/su-shi/career" element={<CareerPage />} />
+            <Route path="/people/:personSlug/career" element={<CareerPage />} />
             <Route
-              path="/people/su-shi/appointments/:appointmentId"
+              path="/people/:personSlug/appointments/:appointmentId"
               element={<AppointmentDetailPage />}
             />
             <Route path="/metrics" element={<MetricsPage />} />

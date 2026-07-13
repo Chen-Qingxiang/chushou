@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   actionLabels,
@@ -27,30 +27,40 @@ const componentLabels: Record<string, string> = {
 };
 
 export function CareerPage() {
+  const { personSlug = "su-shi" } = useParams();
   const [track, setTrack] = useState("all");
   const [view, setView] = useState<"timeline" | "route">("timeline");
-  const person = site.people[0];
-  const appointments = useMemo(
-    () =>
-      site.appointments.filter(
-        (appointment) =>
-          track === "all" ||
-          appointment.components.some((component) =>
-            component.semanticTracks.includes(track as never),
-          ),
-      ),
-    [track],
+  const person = site.people.find((item) => item.slug === personSlug);
+  const personAppointments = site.appointments.filter(
+    (appointment) => appointment.personId === person?.id,
+  );
+  const appointments = personAppointments.filter(
+    (appointment) =>
+      track === "all" ||
+      appointment.components.some((component) => component.semanticTracks.includes(track as never)),
   );
   const places = [
-    ...new Set(site.appointments.map(appointmentPlace).filter((place) => place !== "地点未定")),
+    ...new Set(personAppointments.map(appointmentPlace).filter((place) => place !== "地点未定")),
   ];
+  if (person === undefined)
+    return (
+      <div className="page-container">
+        <EmptyState title="未找到这位人物">人物可能尚未进入受控数据集。</EmptyState>
+      </div>
+    );
+  const isSuShi = person.slug === "su-shi";
+  const personName = preferredName(person);
 
   return (
     <div className="page-container">
       <PageHeader
         eyebrow="人物官履 · CAREER AS MODEL TEST"
-        title="苏轼的官履，不压成一条升降线。"
-        intro="这里分别保存授命、官衔成分、实际服务与居住／处分状态。当前卷338矩阵是初步覆盖，不宣称已经等于孔凡礼年谱的完整分母。"
+        title={`${personName}的官履，不压成一条升降线。`}
+        intro={
+          isSuShi
+            ? "这里分别保存授命、官衔成分、实际服务与居住／处分状态。当前卷338矩阵是初步覆盖，不宣称已经等于孔凡礼年谱的完整分母。"
+            : "这是用于检验通用模型的小型反例切片：只发布已经定位的任命，不把一条记录包装成完整生涯。"
+        }
         actions={
           <Link className="button secondary-button" to="/compare">
             比较任命
@@ -58,29 +68,27 @@ export function CareerPage() {
         }
       />
       <section className="person-banner">
-        <div className="person-monogram">轼</div>
+        <div className="person-monogram">{personName.slice(-1)}</div>
         <div>
-          <span>首个完整纵切人物</span>
-          <h2>{preferredName(person)}</h2>
-          <p>{person === undefined ? "人物资料缺失" : person.description.text}</p>
+          <span>{isSuShi ? "首个纵向压力测试" : "反例小切片"}</span>
+          <h2>{personName}</h2>
+          <p>{person.description.text}</p>
         </div>
         <dl>
           <div>
             <dt>任命动作</dt>
-            <dd>{site.appointments.length}</dd>
+            <dd>{personAppointments.length}</dd>
           </div>
           <div>
             <dt>实际服务记录</dt>
-            <dd>{site.appointments.flatMap((item) => item.serviceEpisodes).length}</dd>
+            <dd>{personAppointments.flatMap((item) => item.serviceEpisodes).length}</dd>
           </div>
           <div>
             <dt>涉及地点</dt>
             <dd>{places.length}</dd>
           </div>
         </dl>
-        {person === undefined ? null : (
-          <EvidenceButton assertionIds={[...person.assertionIds]} title={preferredName(person)} />
-        )}
+        <EvidenceButton assertionIds={[...person.assertionIds]} title={personName} />
       </section>
       <div className="career-toolbar">
         <div className="segmented-control">
@@ -115,46 +123,52 @@ export function CareerPage() {
         </div>
       </div>
       {view === "timeline" ? (
-        <section className="career-timeline">
-          {appointments.map((appointment, index) => (
-            <article className="career-node" key={appointment.id}>
-              <div className="timeline-marker">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-              </div>
-              <div className="career-node-date">
-                <strong>{dateLabel(appointment.time)}</strong>
-                <small>{appointment.time.originalText}</small>
-              </div>
-              <Link
-                className="career-node-card"
-                to={`/people/su-shi/appointments/${encodeURIComponent(appointment.id)}`}
-              >
-                <div>
-                  <div className="tag-row action-tags">
-                    {appointment.actionTypes.map((action) => (
-                      <span key={action}>{actionLabels[action] ?? action}</span>
-                    ))}
+        appointments.length === 0 ? (
+          <EmptyState title="这一轨暂无任命成分">
+            切换到“综合”查看全部已发布记录；空白不表示历史上没有该类身份。
+          </EmptyState>
+        ) : (
+          <section className="career-timeline">
+            {appointments.map((appointment, index) => (
+              <article className="career-node" key={appointment.id}>
+                <div className="timeline-marker">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                </div>
+                <div className="career-node-date">
+                  <strong>{dateLabel(appointment.time)}</strong>
+                  <small>{appointment.time.originalText}</small>
+                </div>
+                <Link
+                  className="career-node-card"
+                  to={`/people/${person.slug}/appointments/${encodeURIComponent(appointment.id)}`}
+                >
+                  <div>
+                    <div className="tag-row action-tags">
+                      {appointment.actionTypes.map((action) => (
+                        <span key={action}>{actionLabels[action] ?? action}</span>
+                      ))}
+                    </div>
+                    <h3>{appointment.rawText}</h3>
+                    <p>
+                      {appointment.components
+                        .map((component) => component.sourceSpan.text)
+                        .join(" · ")}
+                    </p>
                   </div>
-                  <h3>{appointment.rawText}</h3>
-                  <p>
-                    {appointment.components
-                      .map((component) => component.sourceSpan.text)
-                      .join(" · ")}
-                  </p>
-                </div>
-                <div className="career-card-meta">
-                  <strong>{appointmentPlace(appointment)}</strong>
-                  <StatusBadge status={appointment.editorialStatus} />
-                  <small>
-                    {appointment.serviceEpisodes.length > 0
-                      ? `${appointment.serviceEpisodes.length} 条服务／状态记录`
-                      : "不自动推定到任"}
-                  </small>
-                </div>
-              </Link>
-            </article>
-          ))}
-        </section>
+                  <div className="career-card-meta">
+                    <strong>{appointmentPlace(appointment)}</strong>
+                    <StatusBadge status={appointment.editorialStatus} />
+                    <small>
+                      {appointment.serviceEpisodes.length > 0
+                        ? `${appointment.serviceEpisodes.length} 条服务／状态记录`
+                        : "不自动推定到任"}
+                    </small>
+                  </div>
+                </Link>
+              </article>
+            ))}
+          </section>
+        )
       ) : (
         <section className="route-sequence">
           <header>
@@ -165,11 +179,11 @@ export function CareerPage() {
             <p>历史地理坐标尚未与 CHGIS 对齐，因此这里按传记顺序排列，不伪造经纬度或行政边界。</p>
           </header>
           <div className="route-line">
-            {site.appointments
+            {personAppointments
               .filter((item) => appointmentPlace(item) !== "地点未定")
               .map((appointment, index) => (
                 <Link
-                  to={`/people/su-shi/appointments/${encodeURIComponent(appointment.id)}`}
+                  to={`/people/${person.slug}/appointments/${encodeURIComponent(appointment.id)}`}
                   key={appointment.id}
                 >
                   <span>{index + 1}</span>
@@ -182,10 +196,17 @@ export function CareerPage() {
       )}
       <aside className="coverage-warning">
         <strong>覆盖说明</strong>
-        <p>
-          当前 13 条是《宋史》卷338苏轼传的首轮任官矩阵，全部标为
-          partial。下一步须逐条与孔凡礼《苏轼年谱》及同期原始材料对读，再计算真正覆盖率。
-        </p>
+        {isSuShi ? (
+          <p>
+            当前 13 条是《宋史》卷338苏轼传的首轮任官矩阵，全部标为
+            partial。下一步须逐条与孔凡礼《苏轼年谱》及同期原始材料对读，再计算真正覆盖率。
+          </p>
+        ) : (
+          <p>
+            当前仅 {personAppointments.length}{" "}
+            条已定位任命，用于检验人物、任命动作和官名版本能否复用；不提供完整生涯覆盖率。
+          </p>
+        )}
         <Link className="text-link" to="/data">
           查看覆盖矩阵与研究日志 →
         </Link>
@@ -195,9 +216,12 @@ export function CareerPage() {
 }
 
 export function AppointmentDetailPage() {
-  const { appointmentId } = useParams();
-  const appointment = site.appointments.find((item) => item.id === appointmentId);
-  if (appointment === undefined)
+  const { appointmentId, personSlug } = useParams();
+  const person = site.people.find((item) => item.slug === personSlug);
+  const appointment = site.appointments.find(
+    (item) => item.id === appointmentId && item.personId === person?.id,
+  );
+  if (appointment === undefined || person === undefined)
     return (
       <div className="page-container">
         <EmptyState title="未找到这条任命">链接可能已失效，或该记录尚未发布。</EmptyState>
@@ -206,7 +230,7 @@ export function AppointmentDetailPage() {
   return (
     <div className="page-container detail-page">
       <nav className="breadcrumbs">
-        <Link to="/people/su-shi/career">苏轼官履</Link>
+        <Link to={`/people/${person.slug}/career`}>{preferredName(person)}官履</Link>
         <span>/</span>
         <span>{dateLabel(appointment.time)}</span>
       </nav>

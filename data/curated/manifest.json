@@ -5,22 +5,32 @@
     "reforms": "reforms.json",
     "sources": "sources/sources.json",
     "editions": "sources/editions.json",
-    "sourceLocators": ["sources/locators.json", "sources/locators-core-offices.json"],
-    "passages": ["sources/passages.json", "sources/passages-core-offices.json"],
+    "sourceLocators": [
+      "sources/locators.json",
+      "sources/locators-core-offices.json",
+      "sources/locators-counterexamples.json"
+    ],
+    "passages": [
+      "sources/passages.json",
+      "sources/passages-core-offices.json",
+      "sources/passages-counterexamples.json"
+    ],
     "assertions": [
       "evidence/assertions.json",
       "evidence/assertions-core-offices.json",
-      "evidence/assertions-institutions.json"
+      "evidence/assertions-institutions.json",
+      "evidence/assertions-counterexamples.json"
     ],
     "evidenceLinks": [
       "evidence/evidence-links.json",
       "evidence/evidence-links-core-offices.json",
-      "evidence/evidence-links-institutions.json"
+      "evidence/evidence-links-institutions.json",
+      "evidence/evidence-links-counterexamples.json"
     ],
     "interpretations": "evidence/interpretations.json",
     "editorialReviews": "evidence/reviews.json",
     "externalIdentifiers": "external-identifiers.json",
-    "people": "people.json",
+    "people": ["people.json", "people-counterexamples.json"],
     "titleConcepts": ["titles/concepts.json", "titles/concepts-core-offices.json"],
     "titleUsageVersions": ["titles/usages.json", "titles/usages-core-offices.json"],
     "institutions": ["institutions/institutions.json", "institutions/institutions-central.json"],
@@ -30,8 +40,14 @@
     "ranks": "ranks/ranks.json",
     "places": "places/places.json",
     "placeVersions": "places/versions.json",
-    "appointmentActions": "appointments/actions.json",
-    "appointmentComponents": "appointments/components.json",
+    "appointmentActions": [
+      "appointments/actions.json",
+      "appointments/actions-counterexamples.json"
+    ],
+    "appointmentComponents": [
+      "appointments/components.json",
+      "appointments/components-counterexamples.json"
+    ],
     "serviceEpisodes": "appointments/service-episodes.json",
     "careerMetricAssessments": "appointments/metrics.json"
   }

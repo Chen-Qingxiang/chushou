@@ -31,6 +31,10 @@ const questions = [
 ] as const;
 
 export function HomePage() {
+  const suShi = site.people.find((person) => person.slug === "su-shi");
+  const suShiAppointmentCount = site.appointments.filter(
+    (appointment) => appointment.personId === suShi?.id,
+  ).length;
   const example =
     site.appointments.find((item) => item.id === "chs:appointment:su-shi-hangzhou-second") ??
     site.appointments[0];
@@ -100,7 +104,7 @@ export function HomePage() {
           <small>目标首批 50</small>
         </div>
         <div>
-          <strong>{site.counts.appointments}</strong>
+          <strong>{suShiAppointmentCount}</strong>
           <span>条苏轼任命动作</span>
           <small>《宋史》卷338 初步覆盖</small>
         </div>

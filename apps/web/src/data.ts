@@ -116,7 +116,10 @@ export function recordPath(record: SiteProjection["searchIndex"][number]): strin
     const title = site.titleConcepts.find((item) => item.id === record.id);
     return `/titles/${title?.slug ?? ""}`;
   }
-  if (record.kind === "person") return "/people/su-shi/career";
+  if (record.kind === "person") {
+    const person = site.people.find((item) => item.id === record.id);
+    return `/people/${person?.slug ?? "su-shi"}/career`;
+  }
   if (record.kind === "source") return sourcePath(record.id);
   if (record.kind === "institution") return `/map?focus=${encodeURIComponent(record.id)}`;
   return `/people/su-shi/career?place=${encodeURIComponent(record.id)}`;

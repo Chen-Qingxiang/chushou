@@ -257,6 +257,10 @@ function compareRows(appointment: (typeof site.appointments)[number]) {
   };
 }
 
+function appointmentPersonName(appointment: (typeof site.appointments)[number]): string {
+  return preferredName(site.people.find((person) => person.id === appointment.personId));
+}
+
 export function ComparePage() {
   const [leftId, setLeftId] = useState(site.appointments[0]?.id ?? "");
   const [rightId, setRightId] = useState(
@@ -301,7 +305,7 @@ export function ComparePage() {
           <select value={leftId} onChange={(event) => setLeftId(event.target.value)}>
             {site.appointments.map((item) => (
               <option value={item.id} key={item.id}>
-                {dateLabel(item.time)} · {item.rawText}
+                {appointmentPersonName(item)} · {dateLabel(item.time)} · {item.rawText}
               </option>
             ))}
           </select>
@@ -321,7 +325,7 @@ export function ComparePage() {
           <select value={rightId} onChange={(event) => setRightId(event.target.value)}>
             {site.appointments.map((item) => (
               <option value={item.id} key={item.id}>
-                {dateLabel(item.time)} · {item.rawText}
+                {appointmentPersonName(item)} · {dateLabel(item.time)} · {item.rawText}
               </option>
             ))}
           </select>
@@ -332,11 +336,19 @@ export function ComparePage() {
           <span>观察维度</span>
           <div>
             <strong>{left?.rawText}</strong>
-            <small>{left === undefined ? "" : appointmentPlace(left)}</small>
+            <small>
+              {left === undefined
+                ? ""
+                : `${appointmentPersonName(left)} · ${appointmentPlace(left)}`}
+            </small>
           </div>
           <div>
             <strong>{right?.rawText}</strong>
-            <small>{right === undefined ? "" : appointmentPlace(right)}</small>
+            <small>
+              {right === undefined
+                ? ""
+                : `${appointmentPersonName(right)} · ${appointmentPlace(right)}`}
+            </small>
           </div>
         </div>
         {rowDefs.map(([key, label, leftValue, rightValue]) => (

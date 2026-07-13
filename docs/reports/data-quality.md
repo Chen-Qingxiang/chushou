@@ -7,13 +7,13 @@ Generated from dataset 0.1.0-research.1.
 | Title concepts                      |    59 |
 | Title usage versions                |    59 |
 | Reviewed or verified title usages   |    59 |
-| Appointment actions                 |    13 |
+| Appointment actions                 |    16 |
 | Service episodes                    |     4 |
 | Sources                             |     3 |
-| Passages                            |    44 |
-| Assertions                          |    93 |
-| Assertions with supporting evidence |    93 |
-| Evidence links                      |   109 |
+| Passages                            |    50 |
+| Assertions                          |    99 |
+| Assertions with supporting evidence |    99 |
+| Evidence links                      |   115 |
 
 ## Gate
 

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "chs:component:wang-anshi-canzhi-zhengshi",
+    "appointmentId": "chs:appointment:wang-anshi-canzhi-zhengshi",
+    "order": 1,
+    "sourceSpan": { "start": 1, "end": 5, "text": "参知政事" },
+    "componentType": "duty",
+    "titleUsageVersionId": "chs:title-usage:canzhi-zhengshi-pre-yuanfeng",
+    "placeVersionId": null,
+    "modifier": null,
+    "semanticTracks": ["actual_duty", "political_status"],
+    "resolutionStatus": "resolved",
+    "assertionIds": ["chs:assertion:appointment-wang-anshi-canzhi"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:component:sima-guang-shangshu-zuo-pushe",
+    "appointmentId": "chs:appointment:sima-guang-chancellor",
+    "order": 1,
+    "sourceSpan": { "start": 1, "end": 6, "text": "尚书左仆射" },
+    "componentType": "duty",
+    "titleUsageVersionId": "chs:title-usage:shangshu-zuo-pushe-yuanfeng",
+    "placeVersionId": null,
+    "modifier": null,
+    "semanticTracks": ["actual_duty", "political_status"],
+    "resolutionStatus": "resolved",
+    "assertionIds": ["chs:assertion:appointment-sima-guang-chancellor"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:component:sima-guang-menxia-shilang",
+    "appointmentId": "chs:appointment:sima-guang-chancellor",
+    "order": 2,
+    "sourceSpan": { "start": 7, "end": 11, "text": "门下侍郎" },
+    "componentType": "duty",
+    "titleUsageVersionId": "chs:title-usage:menxia-shilang-yuanfeng",
+    "placeVersionId": null,
+    "modifier": "兼",
+    "semanticTracks": ["actual_duty", "political_status"],
+    "resolutionStatus": "resolved",
+    "assertionIds": ["chs:assertion:appointment-sima-guang-chancellor"],
+    "editorialStatus": "reviewed"
+  },
+  {
+    "id": "chs:component:zhang-dun-menxia-shilang",
+    "appointmentId": "chs:appointment:zhang-dun-menxia-shilang",
+    "order": 1,
+    "sourceSpan": { "start": 2, "end": 6, "text": "门下侍郎" },
+    "componentType": "duty",
+    "titleUsageVersionId": "chs:title-usage:menxia-shilang-yuanfeng",
+    "placeVersionId": null,
+    "modifier": "召拜",
+    "semanticTracks": ["actual_duty", "political_status"],
+    "resolutionStatus": "resolved",
+    "assertionIds": ["chs:assertion:appointment-zhang-dun-menxia"],
+    "editorialStatus": "reviewed"
+  }
+]

@@ -242,20 +242,27 @@ export function TitleDetailPage() {
             </section>
           )}
           <section>
-            <p className="block-label">苏轼个案</p>
+            <p className="block-label">人物个案</p>
             {relatedAppointments.length === 0 ? (
               <p className="muted">当前无已核任命。</p>
             ) : (
               <div className="aside-links">
-                {relatedAppointments.map((appointment) => (
-                  <Link
-                    to={`/people/su-shi/appointments/${encodeURIComponent(appointment.id)}`}
-                    key={appointment.id}
-                  >
-                    <strong>{appointment.rawText}</strong>
-                    <small>{appointment.time.originalText}</small>
-                  </Link>
-                ))}
+                {relatedAppointments.map((appointment) => {
+                  const appointmentPerson = site.people.find(
+                    (person) => person.id === appointment.personId,
+                  );
+                  return (
+                    <Link
+                      to={`/people/${appointmentPerson?.slug ?? "su-shi"}/appointments/${encodeURIComponent(appointment.id)}`}
+                      key={appointment.id}
+                    >
+                      <strong>{appointment.rawText}</strong>
+                      <small>
+                        {preferredName(appointmentPerson)} · {appointment.time.originalText}
+                      </small>
+                    </Link>
+                  );
+                })}
               </div>
             )}
           </section>

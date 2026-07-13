@@ -509,6 +509,119 @@
         "qualification": "inferred",
         "sexagenaryDay": null
       }
+    },
+    {
+      "actionTypes": [
+        "appoint"
+      ],
+      "appointingAuthorityInstitutionVersionId": null,
+      "assertionIds": [
+        "chs:assertion:appointment-wang-anshi-canzhi"
+      ],
+      "componentIds": [
+        "chs:component:wang-anshi-canzhi-zhengshi"
+      ],
+      "editorialStatus": "reviewed",
+      "id": "chs:appointment:wang-anshi-canzhi-zhengshi",
+      "personId": "chs:person:wang-anshi",
+      "previousAppointmentId": null,
+      "rawText": "拜参知政事",
+      "sequence": 10,
+      "serviceEpisodeIds": [],
+      "time": {
+        "calendar": "chinese_regnal",
+        "conversionMethod": "coarse_era_year_mapping",
+        "conversionVersion": "1.0.0",
+        "edtf": "1069",
+        "eraName": "熙宁",
+        "eraYear": 2,
+        "leapMonth": false,
+        "lunarDay": null,
+        "lunarMonth": 2,
+        "normalizedEnd": "1069-12-31",
+        "normalizedStart": "1069-01-01",
+        "note": "保留农历二月原文；未做公历月日换算。",
+        "originalText": "熙宁二年二月",
+        "precision": "year",
+        "qualification": "approximate",
+        "sexagenaryDay": null
+      }
+    },
+    {
+      "actionTypes": [
+        "appoint"
+      ],
+      "appointingAuthorityInstitutionVersionId": null,
+      "assertionIds": [
+        "chs:assertion:appointment-sima-guang-chancellor"
+      ],
+      "componentIds": [
+        "chs:component:sima-guang-shangshu-zuo-pushe",
+        "chs:component:sima-guang-menxia-shilang"
+      ],
+      "editorialStatus": "reviewed",
+      "id": "chs:appointment:sima-guang-chancellor",
+      "personId": "chs:person:sima-guang",
+      "previousAppointmentId": null,
+      "rawText": "拜尚书左仆射兼门下侍郎",
+      "sequence": 10,
+      "serviceEpisodeIds": [],
+      "time": {
+        "calendar": "chinese_regnal",
+        "conversionMethod": "coarse_era_year_mapping",
+        "conversionVersion": "1.0.0",
+        "edtf": "1086",
+        "eraName": "元祐",
+        "eraYear": 1,
+        "leapMonth": null,
+        "lunarDay": null,
+        "lunarMonth": null,
+        "normalizedEnd": "1086-12-31",
+        "normalizedStart": "1086-01-01",
+        "note": "传记给年号而无任命月日。",
+        "originalText": "元祐元年",
+        "precision": "year",
+        "qualification": "approximate",
+        "sexagenaryDay": null
+      }
+    },
+    {
+      "actionTypes": [
+        "recall",
+        "appoint"
+      ],
+      "appointingAuthorityInstitutionVersionId": null,
+      "assertionIds": [
+        "chs:assertion:appointment-zhang-dun-menxia"
+      ],
+      "componentIds": [
+        "chs:component:zhang-dun-menxia-shilang"
+      ],
+      "editorialStatus": "reviewed",
+      "id": "chs:appointment:zhang-dun-menxia-shilang",
+      "personId": "chs:person:zhang-dun",
+      "previousAppointmentId": null,
+      "rawText": "召拜门下侍郎",
+      "sequence": 10,
+      "serviceEpisodeIds": [],
+      "time": {
+        "calendar": "chinese_regnal",
+        "conversionMethod": "coarse_era_year_mapping",
+        "conversionVersion": "1.0.0",
+        "edtf": "1082",
+        "eraName": "元丰",
+        "eraYear": 5,
+        "leapMonth": null,
+        "lunarDay": null,
+        "lunarMonth": null,
+        "normalizedEnd": "1082-12-31",
+        "normalizedStart": "1082-01-01",
+        "note": "传记顺叙给年号年次，未给月日。",
+        "originalText": "元丰五年",
+        "precision": "year",
+        "qualification": "approximate",
+        "sexagenaryDay": null
+      }
     }
   ],
   "appointmentComponents": [
@@ -1209,6 +1322,98 @@
         "text": "琼州别驾"
       },
       "titleUsageVersionId": "chs:title-usage:qiongzhou-biejia-shaosheng"
+    },
+    {
+      "appointmentId": "chs:appointment:wang-anshi-canzhi-zhengshi",
+      "assertionIds": [
+        "chs:assertion:appointment-wang-anshi-canzhi"
+      ],
+      "componentType": "duty",
+      "editorialStatus": "reviewed",
+      "id": "chs:component:wang-anshi-canzhi-zhengshi",
+      "modifier": null,
+      "order": 1,
+      "placeVersionId": null,
+      "resolutionStatus": "resolved",
+      "semanticTracks": [
+        "actual_duty",
+        "political_status"
+      ],
+      "sourceSpan": {
+        "end": 5,
+        "start": 1,
+        "text": "参知政事"
+      },
+      "titleUsageVersionId": "chs:title-usage:canzhi-zhengshi-pre-yuanfeng"
+    },
+    {
+      "appointmentId": "chs:appointment:sima-guang-chancellor",
+      "assertionIds": [
+        "chs:assertion:appointment-sima-guang-chancellor"
+      ],
+      "componentType": "duty",
+      "editorialStatus": "reviewed",
+      "id": "chs:component:sima-guang-shangshu-zuo-pushe",
+      "modifier": null,
+      "order": 1,
+      "placeVersionId": null,
+      "resolutionStatus": "resolved",
+      "semanticTracks": [
+        "actual_duty",
+        "political_status"
+      ],
+      "sourceSpan": {
+        "end": 6,
+        "start": 1,
+        "text": "尚书左仆射"
+      },
+      "titleUsageVersionId": "chs:title-usage:shangshu-zuo-pushe-yuanfeng"
+    },
+    {
+      "appointmentId": "chs:appointment:sima-guang-chancellor",
+      "assertionIds": [
+        "chs:assertion:appointment-sima-guang-chancellor"
+      ],
+      "componentType": "duty",
+      "editorialStatus": "reviewed",
+      "id": "chs:component:sima-guang-menxia-shilang",
+      "modifier": "兼",
+      "order": 2,
+      "placeVersionId": null,
+      "resolutionStatus": "resolved",
+      "semanticTracks": [
+        "actual_duty",
+        "political_status"
+      ],
+      "sourceSpan": {
+        "end": 11,
+        "start": 7,
+        "text": "门下侍郎"
+      },
+      "titleUsageVersionId": "chs:title-usage:menxia-shilang-yuanfeng"
+    },
+    {
+      "appointmentId": "chs:appointment:zhang-dun-menxia-shilang",
+      "assertionIds": [
+        "chs:assertion:appointment-zhang-dun-menxia"
+      ],
+      "componentType": "duty",
+      "editorialStatus": "reviewed",
+      "id": "chs:component:zhang-dun-menxia-shilang",
+      "modifier": "召拜",
+      "order": 1,
+      "placeVersionId": null,
+      "resolutionStatus": "resolved",
+      "semanticTracks": [
+        "actual_duty",
+        "political_status"
+      ],
+      "sourceSpan": {
+        "end": 6,
+        "start": 2,
+        "text": "门下侍郎"
+      },
+      "titleUsageVersionId": "chs:title-usage:menxia-shilang-yuanfeng"
     }
   ],
   "assertions": [
@@ -2610,6 +2815,96 @@
       "status": "reviewed",
       "subjectId": "chs:institution-version:yushitai-northern-song",
       "validTime": null
+    },
+    {
+      "assertedAt": "2026-07-13",
+      "assertedBy": "除授研究编辑",
+      "confidence": "high",
+      "editorialStatus": "reviewed",
+      "id": "chs:assertion:wang-anshi-identity",
+      "method": "source_transcription",
+      "objectEntityId": null,
+      "objectLiteral": "王安石，字介甫，抚州临川人。",
+      "predicate": "has_identity",
+      "rationale": "《宋史》卷327王安石传首句。",
+      "status": "reviewed",
+      "subjectId": "chs:person:wang-anshi",
+      "validTime": null
+    },
+    {
+      "assertedAt": "2026-07-13",
+      "assertedBy": "除授研究编辑",
+      "confidence": "high",
+      "editorialStatus": "reviewed",
+      "id": "chs:assertion:appointment-wang-anshi-canzhi",
+      "method": "source_transcription",
+      "objectEntityId": null,
+      "objectLiteral": "熙宁二年二月，王安石拜参知政事。",
+      "predicate": "records_appointment",
+      "rationale": "《宋史》卷327直接记任命动作与官名。",
+      "status": "reviewed",
+      "subjectId": "chs:appointment:wang-anshi-canzhi-zhengshi",
+      "validTime": null
+    },
+    {
+      "assertedAt": "2026-07-13",
+      "assertedBy": "除授研究编辑",
+      "confidence": "high",
+      "editorialStatus": "reviewed",
+      "id": "chs:assertion:sima-guang-identity",
+      "method": "source_transcription",
+      "objectEntityId": null,
+      "objectLiteral": "司马光，字君实，陕州夏县人。",
+      "predicate": "has_identity",
+      "rationale": "《宋史》卷336司马光传首句。",
+      "status": "reviewed",
+      "subjectId": "chs:person:sima-guang",
+      "validTime": null
+    },
+    {
+      "assertedAt": "2026-07-13",
+      "assertedBy": "除授研究编辑",
+      "confidence": "high",
+      "editorialStatus": "reviewed",
+      "id": "chs:assertion:appointment-sima-guang-chancellor",
+      "method": "source_transcription",
+      "objectEntityId": null,
+      "objectLiteral": "元祐元年，司马光拜尚书左仆射兼门下侍郎。",
+      "predicate": "records_appointment",
+      "rationale": "《宋史》卷336元祐元年上下文及连续任命句。",
+      "status": "reviewed",
+      "subjectId": "chs:appointment:sima-guang-chancellor",
+      "validTime": null
+    },
+    {
+      "assertedAt": "2026-07-13",
+      "assertedBy": "除授研究编辑",
+      "confidence": "high",
+      "editorialStatus": "reviewed",
+      "id": "chs:assertion:zhang-dun-identity",
+      "method": "source_transcription",
+      "objectEntityId": null,
+      "objectLiteral": "章惇，字子厚，建州浦城人。",
+      "predicate": "has_identity",
+      "rationale": "《宋史》卷471章惇传首句。",
+      "status": "reviewed",
+      "subjectId": "chs:person:zhang-dun",
+      "validTime": null
+    },
+    {
+      "assertedAt": "2026-07-13",
+      "assertedBy": "除授研究编辑",
+      "confidence": "high",
+      "editorialStatus": "reviewed",
+      "id": "chs:assertion:appointment-zhang-dun-menxia",
+      "method": "source_transcription",
+      "objectEntityId": null,
+      "objectLiteral": "元丰五年，章惇召拜门下侍郎。",
+      "predicate": "records_appointment",
+      "rationale": "《宋史》卷471元丰顺叙直接记召拜。",
+      "status": "reviewed",
+      "subjectId": "chs:appointment:zhang-dun-menxia-shilang",
+      "validTime": null
     }
   ],
   "careerMetricAssessments": [
@@ -3676,6 +3971,60 @@
       "id": "chs:evidence:institution-yushitai",
       "note": "御史台条直接支持监察职掌与三院结构。",
       "passageId": "chs:passage:song-shi-164-yushitai",
+      "relation": "supports"
+    },
+    {
+      "assertionId": "chs:assertion:wang-anshi-identity",
+      "basis": "explicit_statement",
+      "directness": "direct",
+      "id": "chs:evidence:wang-anshi-identity",
+      "note": "传记首句直接支持姓名、字与籍贯。",
+      "passageId": "chs:passage:song-shi-327-wang-anshi-identity",
+      "relation": "supports"
+    },
+    {
+      "assertionId": "chs:assertion:appointment-wang-anshi-canzhi",
+      "basis": "explicit_statement",
+      "directness": "direct",
+      "id": "chs:evidence:wang-anshi-canzhi",
+      "note": "传记直接记“拜参知政事”。",
+      "passageId": "chs:passage:song-shi-327-wang-anshi-canzhi",
+      "relation": "supports"
+    },
+    {
+      "assertionId": "chs:assertion:sima-guang-identity",
+      "basis": "explicit_statement",
+      "directness": "direct",
+      "id": "chs:evidence:sima-guang-identity",
+      "note": "传记首句直接支持姓名、字与籍贯。",
+      "passageId": "chs:passage:song-shi-336-sima-guang-identity",
+      "relation": "supports"
+    },
+    {
+      "assertionId": "chs:assertion:appointment-sima-guang-chancellor",
+      "basis": "explicit_statement",
+      "directness": "direct",
+      "id": "chs:evidence:sima-guang-chancellor",
+      "note": "元祐元年上下文中的任命句直接支持复合宰相官衔。",
+      "passageId": "chs:passage:song-shi-336-sima-guang-chancellor",
+      "relation": "supports"
+    },
+    {
+      "assertionId": "chs:assertion:zhang-dun-identity",
+      "basis": "explicit_statement",
+      "directness": "direct",
+      "id": "chs:evidence:zhang-dun-identity",
+      "note": "传记首句直接支持姓名、字与籍贯。",
+      "passageId": "chs:passage:song-shi-471-zhang-dun-identity",
+      "relation": "supports"
+    },
+    {
+      "assertionId": "chs:assertion:appointment-zhang-dun-menxia",
+      "basis": "explicit_statement",
+      "directness": "direct",
+      "id": "chs:evidence:zhang-dun-menxia",
+      "note": "传记直接记元丰五年召拜门下侍郎。",
+      "passageId": "chs:passage:song-shi-471-zhang-dun-menxia",
       "relation": "supports"
     }
   ],
@@ -5009,6 +5358,72 @@
       "transcribedBy": "维基文库贡献者；除授项目复核",
       "transcriptionMethod": "edition_transcription",
       "transcriptionStatus": "reviewed"
+    },
+    {
+      "checkedAt": "2026-07-13",
+      "id": "chs:passage:song-shi-327-wang-anshi-identity",
+      "locatorId": "chs:locator:song-shi-327-wang-anshi",
+      "normalizedText": "王安石，字介甫，抚州临川人。",
+      "note": null,
+      "originalText": "王安石，字介甫，抚州临川人。",
+      "transcribedBy": "维基文库贡献者；除授项目复核",
+      "transcriptionMethod": "edition_transcription",
+      "transcriptionStatus": "reviewed"
+    },
+    {
+      "checkedAt": "2026-07-13",
+      "id": "chs:passage:song-shi-327-wang-anshi-canzhi",
+      "locatorId": "chs:locator:song-shi-327-wang-anshi",
+      "normalizedText": "熙宁二年二月，拜参知政事。",
+      "note": "年号由同一传记段落的熙宁上下文补足；未换算农历月日。",
+      "originalText": "二年二月，拜参知政事。",
+      "transcribedBy": "维基文库贡献者；除授项目复核",
+      "transcriptionMethod": "edition_transcription",
+      "transcriptionStatus": "reviewed"
+    },
+    {
+      "checkedAt": "2026-07-13",
+      "id": "chs:passage:song-shi-336-sima-guang-identity",
+      "locatorId": "chs:locator:song-shi-336-sima-guang",
+      "normalizedText": "司马光，字君实，陕州夏县人。",
+      "note": null,
+      "originalText": "司马光，字君实，陕州夏县人也。",
+      "transcribedBy": "维基文库贡献者；除授项目复核",
+      "transcriptionMethod": "edition_transcription",
+      "transcriptionStatus": "reviewed"
+    },
+    {
+      "checkedAt": "2026-07-13",
+      "id": "chs:passage:song-shi-336-sima-guang-chancellor",
+      "locatorId": "chs:locator:song-shi-336-sima-guang",
+      "normalizedText": "元祐元年，拜尚书左仆射兼门下侍郎。",
+      "note": "年号见紧邻上段；本短引保留连续任命句，不把免朝觐等礼遇解析为官名成分。",
+      "originalText": "拜尚书左仆射兼门下侍郎，免朝觐，许乘肩舆，三日一入省。",
+      "transcribedBy": "维基文库贡献者；除授项目复核",
+      "transcriptionMethod": "edition_transcription",
+      "transcriptionStatus": "reviewed"
+    },
+    {
+      "checkedAt": "2026-07-13",
+      "id": "chs:passage:song-shi-471-zhang-dun-identity",
+      "locatorId": "chs:locator:song-shi-471-zhang-dun",
+      "normalizedText": "章惇，字子厚，建州浦城人。",
+      "note": null,
+      "originalText": "章惇，字子厚，建州浦城人。",
+      "transcribedBy": "维基文库贡献者；除授项目复核",
+      "transcriptionMethod": "edition_transcription",
+      "transcriptionStatus": "reviewed"
+    },
+    {
+      "checkedAt": "2026-07-13",
+      "id": "chs:passage:song-shi-471-zhang-dun-menxia",
+      "locatorId": "chs:locator:song-shi-471-zhang-dun",
+      "normalizedText": "元丰五年，召拜门下侍郎。",
+      "note": "年号由同段前文“元丰三年”及顺叙补足。",
+      "originalText": "五年，召拜门下侍郎。",
+      "transcribedBy": "维基文库贡献者；除授项目复核",
+      "transcriptionMethod": "edition_transcription",
+      "transcriptionStatus": "reviewed"
     }
   ],
   "people": [
@@ -5053,6 +5468,120 @@
         }
       ],
       "slug": "su-shi"
+    },
+    {
+      "assertionIds": [
+        "chs:assertion:wang-anshi-identity"
+      ],
+      "description": {
+        "assertionIds": [
+          "chs:assertion:wang-anshi-identity"
+        ],
+        "text": "王安石，字介甫，抚州临川人；当前只录一条熙宁二年执政任命，用来检验元丰前宰执模型。"
+      },
+      "editorialStatus": "reviewed",
+      "externalIdentifierIds": [],
+      "id": "chs:person:wang-anshi",
+      "lifeSpan": null,
+      "names": [
+        {
+          "ambiguous": false,
+          "kind": "preferred",
+          "script": "zh-Hans",
+          "text": "王安石"
+        },
+        {
+          "ambiguous": true,
+          "kind": "historical",
+          "script": "zh-Hans",
+          "text": "介甫"
+        },
+        {
+          "ambiguous": false,
+          "kind": "translation",
+          "script": "pinyin",
+          "text": "Wang Anshi"
+        }
+      ],
+      "slug": "wang-anshi"
+    },
+    {
+      "assertionIds": [
+        "chs:assertion:sima-guang-identity"
+      ],
+      "description": {
+        "assertionIds": [
+          "chs:assertion:sima-guang-identity"
+        ],
+        "text": "司马光，字君实，陕州夏县人；当前以元祐元年复合宰相官衔检验多成分任命。"
+      },
+      "editorialStatus": "reviewed",
+      "externalIdentifierIds": [],
+      "id": "chs:person:sima-guang",
+      "lifeSpan": null,
+      "names": [
+        {
+          "ambiguous": false,
+          "kind": "preferred",
+          "script": "zh-Hans",
+          "text": "司马光"
+        },
+        {
+          "ambiguous": false,
+          "kind": "variant",
+          "script": "zh-Hant",
+          "text": "司馬光"
+        },
+        {
+          "ambiguous": true,
+          "kind": "historical",
+          "script": "zh-Hans",
+          "text": "君实"
+        },
+        {
+          "ambiguous": false,
+          "kind": "translation",
+          "script": "pinyin",
+          "text": "Sima Guang"
+        }
+      ],
+      "slug": "sima-guang"
+    },
+    {
+      "assertionIds": [
+        "chs:assertion:zhang-dun-identity"
+      ],
+      "description": {
+        "assertionIds": [
+          "chs:assertion:zhang-dun-identity"
+        ],
+        "text": "章惇，字子厚，建州浦城人；当前以元丰五年门下侍郎任命检验改制后的官名版本。"
+      },
+      "editorialStatus": "reviewed",
+      "externalIdentifierIds": [],
+      "id": "chs:person:zhang-dun",
+      "lifeSpan": null,
+      "names": [
+        {
+          "ambiguous": false,
+          "kind": "preferred",
+          "script": "zh-Hans",
+          "text": "章惇"
+        },
+        {
+          "ambiguous": true,
+          "kind": "historical",
+          "script": "zh-Hans",
+          "text": "子厚"
+        },
+        {
+          "ambiguous": false,
+          "kind": "translation",
+          "script": "pinyin",
+          "text": "Zhang Dun"
+        }
+      ],
+      "slug": "zhang-dun"
     }
   ],
   "periodLenses": [
@@ -6277,6 +6806,45 @@
       "paragraph": "御史台第1至5段",
       "section": "职官四·御史台",
       "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷164#御史臺",
+      "volume": null
+    },
+    {
+      "anchor": "王安石",
+      "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+      "entry": "王安石身份与熙宁任官",
+      "id": "chs:locator:song-shi-327-wang-anshi",
+      "juan": "327",
+      "label": "《宋史》卷327王安石传首段、熙宁二年段",
+      "page": null,
+      "paragraph": "王安石条首段及熙宁二年段",
+      "section": "列传第八十六·王安石",
+      "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷327#王安石",
+      "volume": null
+    },
+    {
+      "anchor": "司马光",
+      "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+      "entry": "司马光身份与元祐拜相",
+      "id": "chs:locator:song-shi-336-sima-guang",
+      "juan": "336",
+      "label": "《宋史》卷336司马光传首段、元祐元年段",
+      "page": null,
+      "paragraph": "司马光条首段及元祐元年段",
+      "section": "列传第九十五·司马光",
+      "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷336#司马光",
+      "volume": null
+    },
+    {
+      "anchor": "章惇",
+      "editionId": "chs:edition:song-shi-wikisource-zh-hans",
+      "entry": "章惇身份与元丰五年任官",
+      "id": "chs:locator:song-shi-471-zhang-dun",
+      "juan": "471",
+      "label": "《宋史》卷471章惇传首段、元丰五年段",
+      "page": null,
+      "paragraph": "章惇条首段及元丰五年段",
+      "section": "列传第二百三十·章惇",
+      "stableUrl": "https://zh.wikisource.org/zh-hans/宋史/卷471#章惇",
       "volume": null
     }
   ],
